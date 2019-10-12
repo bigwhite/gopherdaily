@@ -1,0 +1,9 @@
+Gopher Daily (2019.10.11)
+
+1. wasmer: 用于执行WebAssembly二进制文件的Go语言库 - https://github.com/wasmerio/go-ext-wasm
+2. 基础架构是代码：COBOL和Go的故事 - https://opensource.com/article/19/8/command-line-heroes-cobol-golang
+3. docx2md: Go实现的微软word格式转换为markdown格式的工具 - https://github.com/mattn/docx2md
+4. 基础架构即代码实践: 使用Terraform以声明式和版本控制的方式管理Cloudflare配置 - https://blog.cloudflare.com/terraforming-cloudflare/
+5. Go包的大规模单元测试 - https://www.researchgate.net/publication/335712808_Large_Scale_Unit_Testing_for_Go_Programming_Language_Packages
+
+

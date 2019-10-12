@@ -1,0 +1,15 @@
+Gopher Daily (2019.10.01)
+
+1. 我仍然爱你，GOPATH - https://divan.dev/posts/gopath/ 
+2. jet：用于在Go中编写类型安全的SQL查询的框架，能够轻松地将数据库查询结果转换为所需的任意对象结构。目前支持PostgreSQL，MySQL和MariaDB。- https://github.com/go-jet/jet
+3. goda: Go依赖分析工具 - https://github.com/loov/goda
+4. 长文Writing an One-to-Many Event Feed Library in Go - https://rauljordan.com/2019/09/23/how-to-write-an-event-feed-library.html
+5. microk8s添加cluster功能 - https://discuss.kubernetes.io/t/microk8s-clustering-preview/7472
+
+探索类项目 bento: 一种Go语言实现的、基于英语语法的自动化语言，旨在供非技术人员使用。 - https://github.com/elliotchance/bento
+
+
+
+
+
+

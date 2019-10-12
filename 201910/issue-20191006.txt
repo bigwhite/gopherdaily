@@ -1,0 +1,14 @@
+Gopher Daily (2019.10.06)
+
+1. sprig: 有用的Go模板函数 - https://github.com/Masterminds/sprig 
+2. Goland的Top 25编辑技巧(第一部分) - https://blog.jetbrains.com/go/2019/10/04/top-25-editing-features-of-goland-ide-part-1/
+3. 使用Go重振Linux编程课程 - http://www.ccsc.org/publications/journals/MW2019.pdf#page=61
+4. unsafe包的使用介绍 - https://medium.com/a-journey-with-go/go-what-is-the-unsafe-package-d2443da36350
+5. 使用Go实现支持并发的Each、Map和select方法 - https://www.beenverified.com/engineering/writing-concurrent-methods-in-go/ 
+
+
+
+
+
+
+

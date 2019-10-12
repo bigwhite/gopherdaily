@@ -1,0 +1,9 @@
+Gopher Daily (2019.09.27)
+
+1. Go 1.13.1和Go 1.12.10发布(安全更新) - https://groups.google.com/forum/#!topic/golang-dev/vPVvLh_NB-s  
+2. 理解Go包的可见性(基础级) - digitalocean.com/community/tutorials/understanding-package-visibility-in-go
+3. beagle: 在互联网上查找特定用户名的命令行工具 - https://github.com/danielkvist/beagle
+4. shardmap: 一个简单、高性能的线程安全的分片hashmap - https://github.com/tidwall/shardmap
+5. 使用Go完成更好的调度 - https://stephenafamo.com/blog/better-scheduling-in-go/
+
+

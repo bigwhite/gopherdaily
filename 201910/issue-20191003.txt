@@ -1,0 +1,16 @@
+Gopher Daily (2019.10.03)
+
+1. Go接口，棘手的部分 - https://timr.co/go-interfaces-the-tricky-parts
+2. Go语言GC是如何监视你的应用程序的 - https://medium.com/a-journey-with-go/go-how-does-the-garbage-collector-watch-your-application-dbef99be2c35
+3. 使用专用服务器和Go来处理来自约1000万个项目的40 TB代码 - https://boyter.org/posts/an-informal-survey-of-10-million-github-bitbucket-gitlab-projects/
+4. 如何使用go-fuzz对Go代码进行模糊测试(fuzz test) - https://fuzzit.dev/2019/10/02/how-to-fuzz-go-code-with-go-fuzz-continuously/
+5. ent: Facebook开源的实体(entity)框架 - https://github.com/facebookincubator/ent 
+
+GopherCon UK 2019视频合集 - https://www.youtube.com/playlist?list=PLDWZ5uzn69ezokLCB-nGgYInxL0uP1PeZ
+
+
+
+
+
+
+

@@ -1,0 +1,15 @@
+Gopher Daily (2019.10.02)
+
+1. 加速Json编解码的最佳实践 - https://yalantis.com/blog/speed-up-json-encoding-decoding/
+2. Go语言学习指南 - https://www.calhoun.io/guide-to-go/
+3. rain: BitTorrent客户端库和工具 - https://github.com/cenkalti/rain 
+4. “Programming for Lovers”在线编程课程宣言 - http://compeau.cbd.cmu.edu/online-education/programming-for-lovers-a-manifesto/
+5. Go注释的魔法 - https://blog.jbowen.dev/2019/09/the-magic-of-go-comments/ 
+
+程序员的游戏 - https://bot.land/
+
+
+
+
+
+

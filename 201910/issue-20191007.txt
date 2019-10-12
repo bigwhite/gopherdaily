@@ -1,0 +1,12 @@
+Gopher Daily (2019.10.07)
+
+1. 使用Go控制大疆tello无人机 - https://muetsch.io/flying-a-dji-tello-drone-with-go.html 
+2. 学习Go语言-从新手到专家 - https://medium.com/free-code-camp/learning-go-from-zero-to-hero-d2a3223b3d86
+3. 使用Go与RabbitMQ交互 - https://dev.to/olushola_k/working-with-rabbitmq-in-golang-1kmj
+4. 使用internal包降低公共API暴露面 - https://dave.cheney.net/2019/10/06/use-internal-packages-to-reduce-your-public-api-surface
+5. 工作goroutine的优雅退出 - https://callistaenterprise.se/blogg/teknik/2019/10/05/go-worker-cancellation/
+
+
+
+
+

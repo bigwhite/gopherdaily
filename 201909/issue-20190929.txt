@@ -1,0 +1,15 @@
+Gopher Daily (2019.09.29)
+
+1. 如何在Go语言中使用Websockets：最佳工具与行动指南(中文版) - https://dwz.cn/Bkve9u2O
+2. 理解Go中的init - https://www.digitalocean.com/community/tutorials/understanding-init-in-go 
+3. 如何管理Goroutine组 - https://medium.com/swlh/managing-groups-of-gorutines-in-go-ee7523e3eaca
+4. Go channel的实时性能监控 - https://medium.com/@elliotchance/reporting-real-time-performance-of-channels-fd560b90ae69
+5. Go module与protobuf结合使用 - https://stepan.wtf/importing-protobuf-with-go-modules
+6. 工具：pprof-merge 将多个pprof文件合并为一个 - https://github.com/rakyll/pprof-merge
+
+
+好项目推荐：Caddy 2.0 beta2发布 - https://github.com/caddyserver/caddy/releases/tag/v2.0.0-beta2
+
+
+
+

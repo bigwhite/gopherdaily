@@ -1,0 +1,11 @@
+Gopher Daily (2019.10.10)
+
+1. 用Go语言讲解设计模式(西班牙语) - https://www.designpatternsingo.com/
+2. 从AWS lambda functions迁移到Kubernetes OpenFaaS - https://www.openfaas.com/blog/lambda-to-openfaas/
+3. 软件设计和架构学习路线图 - https://www.freecodecamp.org/news/software-design/ 
+4. Salesforce：为什么我们在Einstein Analytics中放弃了Python，选择了Google的Go语言 - https://www.zdnet.com/article/salesforce-why-we-ditched-python-for-googles-go-language-in-einstein-analytics/
+5. 从大型机到PC：机器人创业公司可以从计算机革命中学到什么 - https://spectrum.ieee.org/automaton/robotics/industrial-robots/from-mainframes-to-pcs-what-robot-startups-can-learn-from-the-computer-revolution
+ 
+node-red: 针对事件驱动应用程序的低代码编程工具 - https://github.com/node-red/node-red
+
+

@@ -1,0 +1,8 @@
+Gopher Daily (2019.10.12)
+
+1. 为不同的操作系统和体系结构构建Go应用程序 - https://www.digitalocean.com/community/tutorials/building-go-applications-for-different-operating-systems-and-architectures
+2. 使用bazel和go module构建单体Go仓库 - https://medium.com/@tduble94/create-go-monorepo-with-go-modules-and-bazel-95f00cf571d3
+3. 速度为王：我们是如何将服务延迟降低98%的 by gojek - https://blog.gojekengineering.com/the-need-for-speed-how-we-reduced-service-latency-by-98-5c45d1acdc81 
+4. 在Kubernetes上如何基于自定义指标实现应用的自动缩放 - https://tonybai.com/2019/10/11/autoscaling-apps-on-kubernetes/
+5. 我们最喜欢的Go 1.13特性 by Banzai Cloud - https://banzaicloud.com/blog/go-1-13-favorite-features/ 
+

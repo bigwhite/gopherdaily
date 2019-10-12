@@ -1,0 +1,6 @@
+Gopher Daily (2019.09.25)
+
+1. Go team新Proposal：通过inline实现低损耗的defer https://github.com/golang/proposal/blob/master/design/34481-opencoded-defers.md
+2. 使用Go替代Bash脚本 - https://presstige.io/p/Using-Go-instead-of-bash-for-scripts-6b51885c1f6940aeb40476000d0eb0fc 
+3. 警惕带有多个相同类型参数的函数 by Dave Cheney https://dave.cheney.net/2019/09/24/be-wary-of-functions-which-take-several-parameters-of-the-same-type API应该易于使用且难以滥用。
+4. Maesh介绍：一种为Kubernetes打造的service mesh实现 https://www.infoq.com/news/2019/09/maesh-kube-service-mesh

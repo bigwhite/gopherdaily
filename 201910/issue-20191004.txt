@@ -1,0 +1,14 @@
+Gopher Daily (2019.10.04)
+
+1. 从Javascript到Go - https://dev.to/bjhaid_93/switching-from-javascript-to-golang-15km
+2. 使用Kafka和Go进行有状态流处理 - https://mux.com/blog/stateful-stream-processing-with-kafka-and-go/
+3. Go语言中如何应对可选参数 - https://medium.com/@petomalina/dealing-with-optional-parameters-in-go-9780f9bfbd1d
+4. golicense: 从编译的Go二进制文件中扫描和分析开源依赖关系和许可证 - https://github.com/mitchellh/golicense
+5. 为什么软件开发人员讨厌敏捷 - https://www.objectstyle.com/agile/why-developers-hate-agile
+
+
+
+
+
+
+

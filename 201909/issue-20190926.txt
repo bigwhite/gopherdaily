@@ -1,0 +1,10 @@
+Gopher Daily (2019.09.26)
+
+1. gev: 基于Reactor模式的轻量级，快速，无阻塞的TCP网络库。- https://github.com/Allenxuxu/gev
+2. Go语言事件驱动架构开发框架watermill发布1.0.0版本 - https://github.com/ThreeDotsLabs/watermill/releases/tag/v1.0.0
+3. 在Go语言中正确使用指针(基础) - https://qvault.io/2019/09/25/the-proper-use-of-pointers-in-go-golang/
+4. 好文：如何在Go语言中使用Websockets：最佳工具和分步指南 - https://yalantis.com/blog/how-to-build-websockets-in-go/
+5. 如何在Go中使用Postgres - https://medium.com/avitotech/how-to-work-with-postgres-in-go-bad2dabd13e4
+
+动脑筋：如何养活一百万人的火星殖民地 - https://www.space.com/how-feed-one-million-mars-colonists.html 
+

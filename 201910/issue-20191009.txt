@@ -1,0 +1,9 @@
+Gopher Daily (2019.10.09)
+
+1. imgproxy: 高性能且安全的图片size和格式转换服务器 - https://github.com/imgproxy/imgproxy
+2. go-admin: 为Go开发人员开发的构建数据可视化和管理平台的框架 - https://github.com/chenhg5/go-admin
+3. 使用interface进行mock test实战 - https://deployeveryday.com/2019/10/08/golang-auth-mock.html
+4. Kubernetes学习路径 by azure - https://azure.microsoft.com/mediahandler/files/resourcefiles/kubernetes-learning-path/Kubernetes%20Learning%20Path%20version%201.0.pdf
+5. Einstein Analytics和Go:  将企业级软件从C、Python混合迁移到（几乎）完全用Go的经验 by Salesforce - https://stackoverflow.blog/2019/10/07/how-salesforce-converted-einstein-analytics-to-go/ 
+
+

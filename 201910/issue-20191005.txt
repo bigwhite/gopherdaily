@@ -1,0 +1,16 @@
+Gopher Daily (2019.10.05)
+
+1. Go 1.14前瞻 - https://docs.google.com/presentation/d/1HfIwlVTmVWQk94OLKfTGvXpQxyp0U4ywG1u5j2tjiuE/edit
+2. Go语言集成测试第一部分：在Docker中执行测试 - https://www.ardanlabs.com/blog/2019/03/integration-testing-in-go-executing-tests-with-docker.html
+3. Go语言集成测试第二部分：配置(外部系统）和编写测试 - https://ardanlabs.com/blog/2019/10/integration-testing-in-go-set-up-and-writing-tests.html
+4. 为什么我们决定大规模重写 - https://tech.channable.com/posts/2019-10-04-why-we-decided-to-go-for-the-big-rewrite.html 
+5. gontroller: 用于创建k8s controller的Go库(无需依赖k8s资源) - https://github.com/spotahome/gontroller
+
+ktsan: Google出品的高性能linux内核竞态检查器，已经帮助Kernel检测出上百个竞态条件 - https://github.com/google/ktsan
+
+
+
+
+
+
+

@@ -1,0 +1,15 @@
+Gopher Daily (2019.09.28)
+
+1. Go官博Go modules系列第三部分：发布Go modules - https://blog.golang.org/publishing-go-modules
+2. 何时包装错误（wrap error) - https://www.efekarakus.com/golang/2019/09/26/when-to-wrap-errors.html
+3. 从C＃开发人员的角度谈Go语言学习 - https://devblogs.microsoft.com/premier-developer/go-from-a-csharp-developer-perspective/
+4. Go官方Wiki：测试代码最佳实践 - https://github.com/golang/go/wiki/TestComments
+5. changelog播客: 与Rob Pike和Robert Griesemer两位Go的创建者一起谈Go起源、增长、影响力和未来。- https://changelog.com/gotime/100
+
+推荐小工具：thefuck 纠正以前的控制台命令中的错误 - https://github.com/nvbn/thefuck 
+CEO观点： 在云原生世界中，服务名称是新的IP号 by HashiCorp首席执行官Dave McJannet - https://thenewstack.io/hashicorp-ceo-dave-mcjannet-in-a-cloud-native-world-service-names-are-the-new-ip-numbers/
+
+
+
+
+

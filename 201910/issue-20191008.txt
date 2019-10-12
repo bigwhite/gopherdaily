@@ -1,0 +1,13 @@
+Gopher Daily (2019.10.08)
+
+1. env: 将环境变量解析为struct - https://github.com/caarlos0/env
+2. oauth2_proxy: 反向代理和静态文件服务器，支持使用Google，GitHub和其他提供商账号提供身份验证 - https://github.com/pusher/oauth2_proxy
+3. guard: kubernetes webhook身份验证服务器，支持使用各种身份验证提供程序(比如：github账号等)登录Kubernetes集群。- https://github.com/appscode/guard 
+4. script: 在Go中写类shell脚本更容易 - https://github.com/bitfield/script
+5. gocryptfs: Go编写的加密overlay文件系统 - https://github.com/rfjakob/gocryptfs
+
+
+免费电子书 《The State of State: New Approaches to Cloud Native Storage》-  https://thenewstack.io/new-ebook-the-new-stacks-quick-guide-to-cloud-native-storage/
+
+
+

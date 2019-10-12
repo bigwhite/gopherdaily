@@ -1,0 +1,16 @@
+Gopher Daily (2019.09.30)
+
+1. Go项目最佳结构布局 - https://martinheinz.dev/blog/5 
+2. Windows 10上的Docker和Kubernetes入门 - https://www.imooc.com/article/293017
+3. 使用Go重写top命令 - http://dspace.calstate.edu/bitstream/handle/10211.3/207868/Hunt-Daniel-thesis-2019.pdf
+4. 在Go语言中执行Javascript - https://github.com/rogchap/v8go
+5. go-spring: didi开发人员开源的模仿Java Spring全家桶实现的一套Go的应用程序开发框架 - https://github.com/didi/go-spring
+
+关于Gopher Daily的说明：
+
+a) Gopher Daily是笔者（tonybai.com)每天收集并分享给大家的Go语言生态相关的优秀资料、工具、项目;
+b) Gopher Daily发布渠道有两个: 公众号(iamtonybai)和微博号(https://weibo.com/bigwhite20xx);
+c) 由于微信公众号每天仅能群发一篇，因此当公众号群发笔者原创文章的那天，Gopher Daily将无法推送，Gopher们可以到微博号上查看；
+d) 遇重大节假日，Gopher Daily可能有中断。
+
+
