@@ -1,0 +1,10 @@
+Gopher Daily (2019.10.13)
+
+1. Uber Go语言编码规范(中文版) - https://tonybai.com/2019/10/12/uber-go-style-guide/
+2. zerolog: 专用于JSON形式输出的快速、简单的零内存分配go log库 - https://github.com/rs/zerolog
+3. Go函数柯里化(currying) - https://medium.com/@meeusdylan/function-currying-in-go-a88672d6ebcf
+4. 使用值接收者构建简单的不可变构建器 - https://preslav.me/2019/10/06/simple-immutable-builders-in-go-using-value-receivers/
+5. 如何从头开始构建神经网络 - https://www.freecodecamp.org/news/building-a-neural-network-from-scratch/
+
+
+
