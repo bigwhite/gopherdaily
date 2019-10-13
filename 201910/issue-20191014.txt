@@ -1,0 +1,11 @@
+Gopher Daily (2019.10.14)
+
+1. Go Modules系列第一部分：Why And What - https://www.ardanlabs.com/blog/2019/10/modules-01-why-and-what.html
+2. 如何利用标准库AST Parser解析Go代码 - http://notes.eatonphil.com/interpreting-go.html
+3. Go.Sed: 使用Go重写实现sed - https://github.com/rwtodd/Go.Sed
+4. act: 在本地运行github action - https://github.com/nektos/act
+5. findlock: 解析Go traceback结果并寻找可能的死锁 - https://github.com/napsy/findlock
+
+Tea：用于自动统计分析的高级语言和运行时系统 -  https://www.microsoft.com/en-us/research/video/tea-a-high-level-language-and-runtime-system-for-automating-statistical-analysis/
+
+
