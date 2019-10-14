@@ -1,0 +1,10 @@
+Gopher Daily (2019.10.15)
+
+1. Practical Go workshop摘要 - https://skarlso.github.io/2019/10/10/practical-go-summary/
+2. discordgo: 著名实时游戏聊天软件discord的Go API库 - https://github.com/bwmarrin/discordgo
+3. 入门：理解Go指针 - https://www.digitalocean.com/community/conceptual_articles/understanding-pointers-in-go
+4. pg_query_go: 使用PostgreSQL服务器源码来解析SQL查询并返回内部PostgreSQL解析树的Go库 - https://github.com/lfittl/pg_query_go
+5. 构建高性能的现代网络爬虫(in Go) - https://creekorful.me/building-fast-modern-web-crawler/
+
+很多朋友问我文章中的图都是用啥画的？关于画图这事我也是尝试了许多工具，比如microsoft的visio等。直到几年前遇到processon，现在几乎所有文章中的图都是在processon上制作的。有兴趣尝试该工具的朋友可以点击链接注册会员试用 - https://www.processon.com/i/201910/54f91a1ce4b0b51f56a568fb 也顺带给我的账号"扩扩容"。
+
