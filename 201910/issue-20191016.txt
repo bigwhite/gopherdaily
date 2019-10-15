@@ -1,0 +1,9 @@
+Gopher Daily (2019.10.16)
+
+1. vulcain: 使用HTTP/2 Server Push创建高性能且客户端驱动的REST API - https://github.com/dunglas/vulcain
+2. Go与Javascript中的常量比较 - https://qvault.io/2019/10/14/constants-in-go-vs-javascript-and-when-to-use-them/
+3. Go程序的持续profile - https://medium.com/@tvii/continuous-profiling-and-go-6c0ab4d2504b
+4. 像顶点一样思考：使用Go的并发进行图形计算 - https://blog.owulveryck.info/2019/10/14/think-like-a-vertex-using-gos-concurrency-for-graph-computation.html
+5. 小工具refreturn: 查找返回引用并引起分配的函数，用于查找阻碍程序性能优化的点 - https://github.com/dominikbraun/refreturn
+
+100最佳编程书籍 - https://bookauthority.org/books/best-programming-books 
