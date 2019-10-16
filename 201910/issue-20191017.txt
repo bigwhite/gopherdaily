@@ -1,0 +1,9 @@
+Gopher Daily (2019.10.17)
+
+1. Go 1.14中defer性能将再次提升 - https://go-review.googlesource.com/c/go/+/190098
+2. 微软和阿里联合发布Open Application Model (OAM) - https://cloudblogs.microsoft.com/opensource/2019/10/16/announcing-open-application-model/
+3. 微软开源dapr: 一种可移植的，事件驱动的运行时，用于跨云和边缘构建分布式应用程序 - https://github.com/dapr/dapr
+4. 理解Go语言defer(入门) - https://www.digitalocean.com/community/tutorials/understanding-defer-in-go
+5. 【命令行英雄播客】基础设施效应: 从上一代基础设施(大型机）语言COBOL所学到的，我们如何用Go构建现代基础设施 - https://www.redhat.com/en/command-line-heroes/season-3/the-infrastructure-effect
+
+gopherdaily仓库：https://github.com/bigwhite/gopherdaily
