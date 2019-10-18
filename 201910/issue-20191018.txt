@@ -1,0 +1,9 @@
+Gopher Daily (2019.10.18)
+
+1. 官博：Go 1.13中的错误处理 - https://blog.golang.org/go1.13-errors
+2. 采用平坦结构的Go应用项目 - https://www.calhoun.io/flat-application-structure/
+3. 使用Go语言实现Dijkstra算法 - https://deployeveryday.com/2019/10/16/dijkstra-algorithm-golang.html
+4. 使用gofmt进行源码替换 - https://medium.com/@val_deleplace/a-sample-of-source-transformation-of-go-code-c96a6ab2b47c
+5. 使用结构体嵌入在Go中实现Decorator模式 - https://fabianlindfors.se/blog/decorators-in-go-using-embedded-structs/
+
+gopherdaily仓库：https://github.com/bigwhite/gopherdaily
