@@ -1,0 +1,10 @@
+Gopher Daily (2019.10.20)
+
+1. Go 1.14编译器增加-d=checkptr选项帮助Gopher检查对unsaft.Pointer的使用是否符合要求 - https://go-review.googlesource.com/c/go/+/162237
+2. 使用Go在Windows中创建任务栏托盘图标（使用原生Windows API) - https://hallazzang.github.io/post/go-tray-icons/
+3. Go语言已经足够好 - https://www.notion.so/Go-is-Good-Enough-44f9c57aa40541c0a6cf0d721200a281
+4. genji: 在键值存储之上构建的嵌入式SQL数据库，支持Bolt、Badger等 - https://github.com/asdine/genji
+5. Node.js/JavaScript开发人员的Go简要指南 - https://itnext.io/googles-go-essentials-for-node-js-javascript-developers-6d71f08d2531
+
+开发人员实际花费多少时间编写代码？- 实际花费多少时间编写代码？
+gopherdaily仓库：https://github.com/bigwhite/gopherdaily

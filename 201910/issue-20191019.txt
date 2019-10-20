@@ -1,0 +1,9 @@
+Gopher Daily (2019.10.19)
+
+1. 官博：Go 1.13中的错误处理(中文版) - https://tonybai.com/2019/10/18/errors-handling-in-go-1-13/
+2. 使用Go构建自定义Kubernetes Ingress Controller - http://www.doxsey.net/blog/how-to-build-a-custom-kubernetes-ingress-controller-in-go
+3. Go io.Reader之美 - https://www.yellowduck.be/posts/the-beauty-of-io-reader-in-go
+4. 用Go构建一个复杂的数据驱动系统来提醒我喝水 - https://wanderdata.com/water-platform
+5. 使用Go进行NFTables高级应用 - https://tomdnetto.net/post/advanced_nftables_with_go
+
+gopherdaily仓库：https://github.com/bigwhite/gopherdaily
