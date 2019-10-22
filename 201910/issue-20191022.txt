@@ -1,0 +1,9 @@
+Gopher Daily (2019.10.22)
+
+1. gatekeeper: didi开源的Go实现的可在线配置的API Gateway - https://github.com/didi/gatekeeper
+2. 如何在Ubuntu 18.04 Server上安装Kubernetes - https://tonybai.com/2019/10/21/how-to-deploy-a-kubernetes-cluster-with-ubuntu-server-18-04/
+3. 用Go语言实现Python的惯用法 - https://deployeveryday.com/2019/10/21/python-idioms-go.html
+4. Go语言并发的乐趣 - https://www.alexsears.com/2019/10/fun-with-concurrency-in-golang/
+5. json-iterator/go: 高性能且100％兼容标准库的encoding/json - https://github.com/json-iterator/go
+
+gopherdaily仓库：https://github.com/bigwhite/gopherdaily
