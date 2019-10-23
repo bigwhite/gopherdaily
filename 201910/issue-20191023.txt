@@ -1,0 +1,9 @@
+Gopher Daily (2019.10.23)
+
+1. gerrit-linter: go实现的与Gerrit Checks插件一起使用的代码样式验证工具 - https://github.com/google/gerrit-linter
+2. kf: go打造的类cloud foundry命令行工具，与Cloud Foundry应用程序和生命周期完全兼容。它支持日志，构建包，应用清单，路由，服务代理和注入。 - https://github.com/google/kf
+3. Go是python的替代者吗? - https://www.agiratech.com/go-vs-python/
+4. yaml2go: 将yaml转换为Go结构体 - https://github.com/PrasadG193/yaml2go
+5. 如何在Kubernetes中开发Go应用 - https://okteto.com/blog/how-to-develop-go-apps-in-kubernetes/
+
+gopherdaily仓库：https://github.com/bigwhite/gopherdaily
