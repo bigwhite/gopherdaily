@@ -1,0 +1,9 @@
+Gopher Daily (2019.10.24)
+
+1. benchdraw: 将go benchmark的结果转换为图片的工具 - https://github.com/cep21/benchdraw
+2. 如何编写一个Container Storage Interface(CSI)插件？- https://arslan.io/2018/06/21/how-to-write-a-container-storage-interface-csi-plugin/ 
+3. 播客: Go应用设计 - 原则、权衡、模式和常见问题 - https://changelog.com/gotime/102
+4. 使用可编程超导处理器的量子霸权: 200秒内完成的目标计算够目前最快的传统计算机算上10000年 - https://ai.googleblog.com/2019/10/quantum-supremacy-using-programmable.html
+5. go-sx: Go标准库database/sql的扩展 - https://github.com/travelaudience/go-sx
+
+gopherdaily仓库：https://github.com/bigwhite/gopherdaily
