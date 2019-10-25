@@ -1,0 +1,9 @@
+Gopher Daily (2019.10.25)
+
+1. 使用Go编写TCP扫描器 - https://developer20.com/tcp-scanner-in-go/
+2. 常见的Go陷阱 - https://medium.com/@tylfin/common-go-pitfalls-a92197cd96d2
+3. Go内存模型 by Russ Cox - http://nil.csail.mit.edu/6.824/2016/notes/gomem.pdf
+4. Go context使用例解 - http://asheetbhaskar.net/2019/10/19/context-about-context-package-in-golang.html
+5. 为什么C程序员应该使用Go - https://medium.com/@accounts_76224/why-a-c-developer-should-use-go-3f4143895818
+
+gopherdaily仓库：https://github.com/bigwhite/gopherdaily
