@@ -1,0 +1,9 @@
+Gopher Daily (2019.10.26)
+
+1. Go语言Fuzz testing - https://medium.com/a-journey-with-go/go-fuzz-testing-in-go-deb36abc971f
+2. 终极Go学习指南 - https://github.com/hoanhan101/ultimate-go
+3. Go Time播客：关于Cache - https://changelog.com/gotime/103
+4. go-jose: JOSE标准(JWE, JWS, JWT) 的Go实现 
+5. 剖析Go Struct - https://lachlaneagling.com/anatomy-of-structs-in-go
+
+gopherdaily仓库：https://github.com/bigwhite/gopherdaily

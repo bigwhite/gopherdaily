@@ -1,0 +1,10 @@
+Gopher Daily (2019.10.27)
+
+1. 从pkg/errors迁移到go 1.13 error处理 - https://mycodesmells.com/post/migrating-pkg-errors-to-go-113-errors
+2. 编译期注入变量 - https://www.yellowduck.be/posts/injecting-build-time-variables/
+3. Go语言中的生成器、wait group和闭包 - https://www.acim.net/generators-waitgroups-closures-golang
+4. go-imap: Go语言imap(交互邮件访问协议)客户端和服务端库 - https://github.com/emersion/go-imap
+5. 价值1000w美刀的工程问题 - https://segment.com/blog/the-10m-engineering-problem/
+6. 了解和利用Go的DSA验证漏洞 - https://paul.querna.org/articles/2019/10/24/dsa-verify-poc/
+
+gopherdaily仓库：https://github.com/bigwhite/gopherdaily
