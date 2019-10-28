@@ -1,0 +1,9 @@
+Gopher Daily (2019.10.28)
+
+1. Go 1.13中值得关注的几个变化 - https://tonybai.com/2019/10/27/some-changes-in-go-1-13/
+2. 使用Go重实现Memcached - https://healeycodes.com/go/tutorial/beginners/showdev/2019/10/21/cloning-memcached-with-go.html
+3. 入门：如何解析Json请求 - https://www.alexedwards.net/blog/how-to-properly-parse-a-json-request-body
+4. 图解OAuth和OpenID连接 - https://developer.okta.com/blog/2019/10/21/illustrated-guide-to-oauth-and-oidc
+5. golang.cafe: 一个Go实现的开源招聘web站点 - https://github.com/golang-cafe/golang.cafe
+
+gopherdaily仓库：https://github.com/bigwhite/gopherdaily
