@@ -1,0 +1,11 @@
+Gopher Daily (2019.10.30)
+
+1. Go的遗产 by Go核心团队的Steve Francia on Golab - https://spf13.com/presentation/the-legacy-of-go/
+2. 使用hugo和buffercms创建一个静态站点 - https://buttercms.com/blog/creating-a-static-website-with-hugo-and-buttercms
+3. 一个Go语言的图灵机器库 - https://madeddu.xyz/posts/golang-turing-machine/
+4. go-gitdir: 基于一个目录的git托管服务 - https://github.com/belak/go-gitdir
+5. 建立原生GraphQL数据库：挑战，学习和未来 - https://blog.dgraph.io/post/building-native-graphql-database-dgraph/
+6. Linux性能调优 by Brendan Gregg on USENIX LISA 2019 - https://www.slideshare.net/brendangregg/lisa2019-linux-systems-performance
+7. [高级]使用Go实现行多态性? - https://hypirion.com/musings/row-polymorphism-in-go
+
+gopherdaily仓库：https://github.com/bigwhite/gopherdaily
