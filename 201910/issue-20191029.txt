@@ -1,0 +1,9 @@
+Gopher Daily (2019.10.29)
+
+1. Kilo: 一个为k8s设计的、基于wireguard构建的多云overlay网络插件 - https://github.com/squat/kilo
+2. 使用Go操作linux网络接口和防火墙 - https://tomdnetto.net/post/linux_networking_from_go_nftables
+3. 观点：Go是新Ruby - https://00f.net/2019/10/28/go-is-the-new-ruby/
+4. imgcrypt: 为容器提供API扩展以支持加密的容器映像 - https://github.com/containerd/imgcrypt
+5. 使用Rudr在k8s上部署微服务(OAM模型的一次实践) - https://thenewstack.io/tutorial-deploy-microservices-on-kubernetes-through-rudr/ (Rudr由Rust实现)
+
+gopherdaily仓库：https://github.com/bigwhite/gopherdaily
