@@ -1,0 +1,11 @@
+Gopher Daily (2019.10.31)
+
+1. Asta Xie: 玩转Go语言，从beego开始 - https://mp.weixin.qq.com/s?__biz=MjM5OTcxMzE0MQ==&mid=2653373165&idx=1&sn=fc7229bb87f54a691cc755c197887880&pass_ticket=F1aIQ2PdQgP%2BZjetcSFasUX%2F9hiVLT54004gwB7eWH3EK1ulBm2ghgUxahHcHQX1
+2. Go语言pure function编程 - https://qvault.io/2019/10/30/purity-in-my-programming-please/
+3. dnscrypt-proxy: 支持加密DNS协议的dns代理 - https://github.com/DNSCrypt/dnscrypt-proxy
+4. 入门：详解Go语言的switch语句 - https://www.digitalocean.com/community/tutorials/how-to-write-switch-statements-in-go
+5. 四个能够”欺骗“C#程序员的Go代码片段 - https://itnext.io/4-golang-code-snippets-that-will-deceive-c-developers-6f50a31f0548
+6. snake-go: Go实现的贪吃蛇终端小游戏 - https://github.com/tristangoossens/snake-go
+7. gazette/core: 构建流处理平台的基础设施代码库 - https://github.com/gazette/core
+
+gopherdaily仓库：https://github.com/bigwhite/gopherdaily
