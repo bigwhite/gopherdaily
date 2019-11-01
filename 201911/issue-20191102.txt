@@ -1,0 +1,11 @@
+Gopher Daily (2019.11.02)
+
+1. 学习使用Go编写游戏(几十个免费视频) - https://gameswithgo.org/
+2. ktunnel: 将本地资源暴露到k8s集群的命令行工具 - https://github.com/omrikiei/ktunnel
+3. 为Go API添加Swagger文档 - https://towardsdatascience.com/setting-up-swagger-docs-for-golang-api-8d0442263641
+4. goldmark: Go编写的markdown解析器 - https://github.com/yuin/goldmark
+5. go-restful: 构建restful web service的Go包 - https://github.com/emicklei/go-restful
+6. 使用action cache加速Go应用构建 - https://www.markphelps.me/2019/11/speed-up-your-go-builds-with-actions-cache/
+
+* Ebook: 静态程序分析 - https://cs.au.dk/~amoeller/spa/
+* gopherdaily仓库：https://github.com/bigwhite/gopherdaily
