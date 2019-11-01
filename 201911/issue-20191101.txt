@@ -1,0 +1,9 @@
+Gopher Daily (2019.11.01)
+
+1. Rob Pike谈Go成功应归功的5件事 - https://changelog.com/posts/5-things-rob-pike-attributes-to-gos-success
+2. 从Javascript到Go(第二部分) - https://dev.to/kaleman15/from-javascript-to-go-ii-4cmo
+3. 使用gocv创建你的”隐形斗篷“ - https://dev.to/aarushikansal/how-to-create-your-own-invisibility-cloak-4ndg
+4. hemera: 一个零依赖的statsd的Go语言实现 - https://github.com/andresoro/hemera
+5. tson: Go实现的json查看器 - https://github.com/skanehira/tson
+
+gopherdaily仓库：https://github.com/bigwhite/gopherdaily
