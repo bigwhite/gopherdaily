@@ -1,0 +1,10 @@
+Gopher Daily (2019.11.03)
+
+1. Go ElasticSearch客户包使用案例 - https://medium.com/a-journey-with-go/go-elasticsearch-clients-study-case-dbaee1e02c7
+2. Go内存管理与分配(基于go 1.13) - https://medium.com/a-journey-with-go/go-memory-management-and-allocation-a7396d430f44
+3. 观点：我将使用pkg而不是internal(关于Go项目结构布局) - https://travisjeffery.com/b/2019/11/i-ll-take-pkg-over-internal/
+4. 在公司内部引入Go语言的三个步骤 - https://superhighway.dev/piloting-go
+5. SSH握手详解 - https://gravitational.com/blog/ssh-handshake-explained/
+6. OpenSSL命令速查表 - https://www.freecodecamp.org/news/openssl-command-cheatsheet-b441be1e8c4a/
+
+* gopherdaily仓库：https://github.com/bigwhite/gopherdaily
