@@ -1,0 +1,9 @@
+Gopher Daily (2019.11.04)
+
+1. Go如何进行URL编码 - https://www.urlencoder.io/golang/
+2. Go垃圾收集器是如何标记内存的 - https://medium.com/a-journey-with-go/go-how-does-the-garbage-collector-mark-the-memory-72cfc12c6976
+3. 如何编写Fuzzable代码 - https://blog.regehr.org/archives/1687
+4. frp: 快速反向代理，可帮助您将NAT或防火墙后面的本地服务器公开到Internet - https://github.com/fatedier/frp
+5. cgo的代价与复杂性 - https://www.cockroachlabs.com/blog/the-cost-and-complexity-of-cgo/
+
+* gopherdaily仓库：https://github.com/bigwhite/gopherdaily
