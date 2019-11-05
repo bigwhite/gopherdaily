@@ -1,0 +1,9 @@
+Gopher Daily (2019.11.05)
+
+1. Go语言的遗产(中译版) - https://tonybai.com/2019/11/04/the-legacy-of-go/
+2. go-testdeep: 灵活的Go深度比较包，用于扩展go testing包 - https://github.com/maxatome/go-testdeep
+3. 基于Raft构建大规模分布式存储系统 - https://www.cncf.io/blog/2019/11/04/building-a-large-scale-distributed-storage-system-based-on-raft/ 
+4. DNS战争 - https://www.potaroo.net/ispcol/2019-11/dnswars.html
+5. 使用Weave Ignite构建高效安全的Kubernetes集群 - https://www.weave.works/blog/firekube-fast-and-secure-kubernetes-clusters-using-weave-ignite
+
+* gopherdaily仓库：https://github.com/bigwhite/gopherdaily
