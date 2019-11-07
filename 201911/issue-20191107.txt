@@ -1,0 +1,10 @@
+Gopher Daily (2019.11.07)
+
+1. gox: 一个超级简单的跨平台Go编译器 - https://github.com/mitchellh/gox
+2. stripe-cli: 用于简化与国际支付服务Stripe集成的工作 - https://github.com/stripe/stripe-cli
+3. kube-ovn: 灵雀云开源的基于ovn的kubernetes网络方案 - https://github.com/alauda/kube-ovn
+4. 我编写了gocache：一个完整且可扩展的Go缓存库 - https://vincent.composieux.fr/article/i-wrote-gocache-a-complete-and-extensible-go-cache-library
+5. 小型计算机找到了工业利基市场：树莓派创始人Eben Upton专访 - https://prod-physicsworld-iop.content.pugpig.com/blog/2019/10/23/small-computers-find-an-industrial-niche/pugpig_index.html
+
+* gopherdaily仓库：https://github.com/bigwhite/gopherdaily
+* 慕课网实战课：《Kubernetes实战 高可用集群搭建,配置,运维与应用》(学时约8h) - https://coding.imooc.com/class/284.html 欢迎学习和交流。双十一领券更优惠 https://www.imooc.com/act/nov2019
