@@ -1,0 +1,10 @@
+Gopher Daily (2019.11.08)
+
+1. 图解中文字符编码-Go语言例解 - https://tonybai.com/2019/11/07/non-ascii-character-encoding-illustrated/
+2. staticcheck实战 - https://superhighway.dev/staticcheck-in-action
+3. 如何使用Go构建矢量SQL引擎 by cockroach lab - https://www.cockroachlabs.com/blog/how-we-built-a-vectorized-sql-engine
+4. 在浏览器中运行一个Go数据库：浏览器中的tidb by pingcap - https://pingcap.com/blog/tidb-in-the-browser-running-a-golang-database-on-webassembly/
+5. 使用Go管理CPU负载 - https://blog.ellation.com/managing-cpu-load-in-golang-515b9356bc5
+
+* gopherdaily仓库：https://github.com/bigwhite/gopherdaily
+* 慕课网实战课：《Kubernetes实战 高可用集群搭建,配置,运维与应用》(学时约8h) - https://coding.imooc.com/class/284.html 欢迎学习和交流。双十一领券更优惠 https://www.imooc.com/act/nov2019
