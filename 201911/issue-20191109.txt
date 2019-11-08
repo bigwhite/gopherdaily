@@ -1,0 +1,11 @@
+Gopher Daily (2019.11.09 Go开源十周年纪念)
+
+1. Go官博：Go开源十周年 by RussCox - https://blog.golang.org/10years
+2. Go语言项目的安全评估技术 - https://tonybai.com/2019/11/08/security-assessment-techniques-for-go-projects/
+3. 从Go到Elixir的软件语言哲学 - https://www.welcometothejungle.com/en/articles/languages-software-go-elixir
+4. 像专业人士一样对Go二进制文件进行反向工程 - https://rednaga.io/2016/09/21/reversing_go_binaries_like_a_pro/
+5. 2019年的六个有用的Go框架 - https://dev.to/x-team/6-useful-go-frameworks-in-2019-2ob5
+6. 建立可持续的微服务，我们的意见和建议 - https://building.echo.co.uk/microservices-opinions-and-advice/
+
+* gopherdaily仓库：https://github.com/bigwhite/gopherdaily
+* 慕课网实战课：《Kubernetes实战 高可用集群搭建,配置,运维与应用》(学时约8h) - https://coding.imooc.com/class/284.html 欢迎学习和交流。双十一领券更优惠 https://www.imooc.com/act/nov2019
