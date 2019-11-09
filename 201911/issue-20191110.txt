@@ -1,0 +1,10 @@
+Gopher Daily (2019.11.10)
+
+1. Go语言开源十周年(中译版) - https://tonybai.com/2019/11/09/go-opensource-10-years/
+2. Go官博：Go module系列第四部分：v2及更高版本 - https://blog.golang.org/v2-go-modules
+3. 使用Go创建一个简单的Load Balancer - https://kasvith.github.io/posts/lets-create-a-simple-lb-go/
+4. pkger介绍：在Go二进制文件中嵌入静态文件 - https://blog.gobuffalo.io/introducing-pkger-static-file-embedding-in-go-1ce76dc79c65
+5. Slide: Write Once, Compile Lots, Run Anywhere - https://speakerdeck.com/jbowes/write-once-compile-lots-run-anywhere
+
+* gopherdaily仓库：https://github.com/bigwhite/gopherdaily
+* 慕课网实战课：《Kubernetes实战 高可用集群搭建,配置,运维与应用》(学时约8h) - https://coding.imooc.com/class/284.html 欢迎学习和交流。双十一领券更优惠 https://www.imooc.com/act/nov2019
