@@ -1,0 +1,11 @@
+Gopher Daily (2019.11.11)
+
+慕课网实战课：《Kubernetes实战 高可用集群搭建,配置,运维与应用》(学时约8h) - https://coding.imooc.com/class/284.html 欢迎学习和交流。双十一最后巅峰48小时，领券更优惠 https://www.imooc.com/act/nov2019
+
+1. 基于go/analysis编写一个实用的linter - https://disaev.me/p/writing-useful-go-analysis-linter/
+2. godoc(golang.org/x/tools/cmd/godoc)可以感知go module了 - https://groups.google.com/forum/#!topic/golang-nuts/adEisyiOlwo/discussion
+3. Go 1.14 runtime将实用新的page allocator - https://go-review.googlesource.com/c/go/+/201765/
+4. cilium 1.6发布: 可100%替换kube-proxy - https://cilium.io/blog/2019/08/20/cilium-16
+5. tendermint: 拜占庭容错（BFT）中间件(Cosmos中使用) - https://github.com/tendermint/tendermint
+
+* gopherdaily仓库：https://github.com/bigwhite/gopherdaily
