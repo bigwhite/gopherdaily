@@ -1,0 +1,10 @@
+Gopher Daily (2019.11.12)
+
+慕课网实战课：《Kubernetes实战 高可用集群搭建,配置,运维与应用》(学时约8h) - https://coding.imooc.com/class/284.html 欢迎学习和交流。双十一最后巅峰48小时，领券更优惠 https://www.imooc.com/act/nov2019
+
+1. 长文! 分析Go可执行文件 - https://www.pnfsoftware.com/blog/analyzing-golang-executables
+2. Kubernetes 1.17中边车容器将成为first class citizen - https://github.com/kubernetes/enhancements/blob/master/keps/sig-apps/sidecarcontainers.md
+3. goreplay: 捕捉和重放http流量 - https://github.com/buger/goreplay
+4. expr: 表达式编译和求值引擎 - https://github.com/antonmedv/expr
+
+* gopherdaily仓库：https://github.com/bigwhite/gopherdaily
