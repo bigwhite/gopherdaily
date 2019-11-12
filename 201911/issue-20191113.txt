@@ -1,0 +1,12 @@
+Gopher Daily (2019.11.13)
+
+慕课网实战课：《Kubernetes实战 高可用集群搭建,配置,运维与应用》(学时约8h) - https://coding.imooc.com/class/284.html 欢迎学习和交流。双十一最后巅峰48小时，领券更优惠 https://www.imooc.com/act/nov2019
+
+1. 厉害了！OpenDiablo2: Go实现的开源暗黑破坏神2游戏引擎 - https://github.com/OpenDiablo2/OpenDiablo2
+2. 使用gvm在一个环境中维护多个Go版本 - https://www.pixelstech.net/article/1573366500-Maintain-multiple-versions-of-Go-in-one-single-environment
+3. sourcegraph的Go编码风格指南 - https://about.sourcegraph.com/handbook/engineering/go_style_guide
+4. 学习Go时遇到的坑系列-第一部分 - https://blog.cuffaro.com/blog/2019/09/10/go-pitfalls
+5. Go简单性的价值 - https://benjamincongdon.me/blog/2019/11/11/The-Value-in-Gos-Simplicity/ 
+6. QUIC协议的走向成熟的历程 - https://www.fastly.com/blog/maturing-of-quic
+
+* gopherdaily仓库：https://github.com/bigwhite/gopherdaily
