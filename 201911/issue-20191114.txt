@@ -1,0 +1,11 @@
+Gopher Daily (2019.11.14)
+
+慕课网实战课：《Kubernetes实战 高可用集群搭建,配置,运维与应用》(学时约8h) - https://coding.imooc.com/class/284.html 欢迎学习和交流。双十一最后巅峰24小时，领券更优惠 https://www.imooc.com/act/nov2019
+
+1. Go官方推出Go.dev站点，旨在帮助开发人员快速找到Go相关的资源 - https://blog.golang.org/go.dev
+2. firebolt: DigitalOcean开源的用于流事件处理和数据管道应用程序的go语言框架 - https://github.com/digitalocean/firebolt
+3. Helm 3.0发布 - https://helm.sh/blog/helm-3-released/
+4. go2ast: 将Go代码转换为抽象语法树(AST) - https://github.com/reflog/go2ast
+5. gothanks: 自动为你go.mod中的github依赖项加注星标，以感谢依赖模块的维护者 - https://github.com/psampaz/gothanks
+
+* gopherdaily仓库：https://github.com/bigwhite/gopherdaily
