@@ -1,0 +1,11 @@
+Gopher Daily (2019.11.15)
+
+慕课网k8s实战课：https://coding.imooc.com/class/284.html 据说依然有优惠价哦！
+
+1. Go官方发布的go.dev给gopher们带来了什么 - https://tonybai.com/2019/11/14/what-the-godev-website-bring-to-gophers/
+2. 使用bazel管理Go单体代码仓库 - https://filipnikolovski.com/managing-go-monorepo-with-bazel/
+3. 谷歌开源官博：Go，十年了！ - https://opensource.googleblog.com/2019/11/hey-ho-ten-years-of-go.html
+4. 我喜欢Go的10个方面 - https://medium.com/@meeusdylan/go-10-reasons-i-enjoy-go-ef3c3352174
+5. 2020年你最应该学习的10门编程语言 - https://dev.to/brainbuzzer/top-trending-programming-languages-for-jobs-in-2020-3d3a
+
+* gopherdaily仓库：https://github.com/bigwhite/gopherdaily
