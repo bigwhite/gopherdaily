@@ -1,5 +1,6 @@
-# gopherdaily
-the archive of gopher daily articles
+# Gopher日报(gopherdaily)
+
+Go语言技术圈每天的那些新鲜事！
 
 ![](http://image.tonybai.com/img/202011/gopher-daily-logo.png)
 <center>Gopher日报</center>
