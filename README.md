@@ -1,6 +1,6 @@
 # Gopher日报(gopherdaily)
 
-Gopher日报 - 每天Go语言技术圈里的那些新鲜事！
+Gopher日报 - 每天Go语言技术生态圈里的那些新鲜事！
 
 ![](http://image.tonybai.com/img/202011/gopher-daily-logo.png)
 
