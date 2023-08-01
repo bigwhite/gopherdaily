@@ -1,3 +1,3 @@
 
 all:
-	go build -o publish github.com/bigwhite/gopherdaily/cmd/publish
+	go build -o gopherdaily-publish github.com/bigwhite/gopherdaily/cmd/publish
