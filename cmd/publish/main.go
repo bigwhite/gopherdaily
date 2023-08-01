@@ -145,12 +145,13 @@ func generateMoreHtml(docsDir string) error {
 	}
 
 	// 生成more.html内容
+	rootURL := `https://bigwhite.github.io/gopherdaily`
 	var content string
 	content += "<html>\n"
 	content += "<body>\n"
 	content += "<h1>GopherDaily归档</h1>\n"
-	content += "<p>此页面列出GopherDaily最近12个月的所有html文件，以月份分类，从新到旧排序，点击超链查看对应日期的GopherDaily内容。</p>\n"
-	content += "<p><a href=\"index.html\">回到首页</a></p>\n"
+	content += "<p>此页面列出GopherDaily最近12个月的所有html文件，以月份分类，从新到旧排序，点击文件超链接查看对应日期的GopherDaily内容。</p>\n"
+	content += fmt.Sprintf("<p><a href=\"%s\">回到首页</a></p>\n", rootURL)
 	for _, month := range months {
 		content += fmt.Sprintf("<h2>%s</h2>\n", month)
 		files := fileMap[month]
@@ -161,9 +162,7 @@ func generateMoreHtml(docsDir string) error {
 
 		for _, file := range files {
 			fileName := filepath.Base(file)
-			//fileLink := fmt.Sprintf("<a href=\"%s\">%s</a>", file, fileName)
-			file = strings.TrimPrefix(file, "docs/")
-			fileLink := fmt.Sprintf("<a href=\"%s\">%s</a>", file, fileName)
+			fileLink := fmt.Sprintf("<a href=\"%s\">%s</a>", rootURL+"/"+month+"/"+fileName, fileName)
 			content += fmt.Sprintf("<p>%s</p>\n", fileLink)
 		}
 	}
