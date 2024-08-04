@@ -4,6 +4,7 @@ Gopher日报 - 每天Go语言技术生态圈里的那些新鲜事！
 
 - [GopherDaily主页](https://gopherdaily.tonybai.com): https://gopherdaily.tonybai.com
 - [邮件订阅](https://gopherdaily.tonybai.com/subscribe)：https://gopherdaily.tonybai.com/subscribe
+- [Feed订阅](https://gopherdaily.tonybai.com/feed)：https://gopherdaily.tonybai.com/feed
 
 ![](http://image.tonybai.com/img/202011/gopher-daily-logo.png)
 
