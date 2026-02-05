@@ -8,8 +8,9 @@ Gopher日报 - 每天Go语言技术生态圈里的那些新鲜事！
 
 ![](http://image.tonybai.com/img/202011/gopher-daily-logo.png)
 
-同时也欢迎大家参与本人主持的Go语言相关专栏与实战课的学习。
+同时也欢迎大家参与本人主持的Go语言和AI相关专栏、微专栏与实战课的学习。
 
-![img{512x368}](http://image.tonybai.com/img/tonybai/go-first-course-banner.png)
-![img{512x368}](http://image.tonybai.com/img/tonybai/imooc-go-column-pgo-with-qr.jpg)
-![img{512x368}](http://image.tonybai.com/img/tonybai/imooc-k8s-practice-with-qr.jpg)
+![](https://tonybai.com/wp-content/uploads/2025/ai-native-dev-workflow-qr.png)
+![](https://tonybai.com/wp-content/uploads/course-card/go-advanced-course-4.png)
+![](http://image.tonybai.com/img/tonybai/go-first-course-banner.png)
+![](https://tonybai.com/wp-content/uploads/2025/paid/go-micro-column-2025-pr.png)
