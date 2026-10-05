@@ -69,13 +69,13 @@ img {
 
 <p><a href="https://go.dev/blog/archsimd">Go 中的特定架构 SIMD</a><br>自 Go 1.26 起，我们支持实验性的 `amd64` SIMD API。现在在 Go 1.27 中，我们支持另外两种架构：`arm64` 和 `wasm`。</p> 
 
-<p><a href="https://tonybai.com/2026/10/05/go-mutex-lockchan-select-bradfitz-demo">尘封十年的 Go 提案迎来转机？bradfitz 亲自操刀 Demo，让加锁也能 select 了</a><br></p> 
+<p><a href="https://tonybai.com/2026/10/05/go-mutex-lockchan-select-bradfitz-demo">尘封十年的 Go 提案迎来转机？bradfitz 亲自操刀 Demo，让加锁也能 select 了</a><br>Go issue #16620 提出于 2016 年，核心诉求是希望能在 `select` 语句中等待一个 `sync.Cond` 被唤醒，从而把条件变量和 channel、`context.Context` 混在一起使用。这个提案十年未决的根本原因，在于条件变量是“边沿触发（edge-triggered）”、而 channel 是“电平触&gt;发（level-triggered）”，两者语义难以直接调和。近期，bradfitz 在该 issue 下提交了一份 Demo CL（`go-review.googlesource.com/c/go/&#43;/828544`），为 `sync.Mutex` 引入了实验性的 `LockChan()` 方法，让“抢锁”这个动作也能作为 `select` 的一个 case，从而原生支持“抢锁与超时 / 取消竞争”的写法。本文将梳理这段十年历史、拆解这份 Demo 的设计与语义，并讨论它对 Go 并发编程可能带来的影响与局限。</p> 
 
-<p><a href="https://tonybai.com/2026/10/04/rust-reference-four-mutability-combinations">Rust 引用的 4 种可变性组合：let mut 与 &amp;mut，到底谁管谁？</a><br></p> 
+<p><a href="https://tonybai.com/2026/10/04/rust-reference-four-mutability-combinations">Rust 引用的 4 种可变性组合：let mut 与 &amp;mut，到底谁管谁？</a><br>本文详解 Rust 引用的 4 种可变性组合：`let mut` 控制指针能否改指，`&amp;mut` 控制数据能否修改。文章逐一剖析四种可变性组合 ，对比 C&#43;&#43; 的 `const` 指针与 Go 的指针语义，并补充内部可变性、`&amp;mut` 重借用、函数参数 `mut` 三个进阶要点。</p> 
 
-<p><a href="https://tonybai.com/2026/10/04/rust-named-arguments-ai-agents-debate">Rust 大佬为 AI 破例：十年来第一次，他说“命名参数”可以有</a><br></p> 
+<p><a href="https://tonybai.com/2026/10/04/rust-named-arguments-ai-agents-debate">Rust 大佬为 AI 破例：十年来第一次，他说“命名参数”可以有</a><br>《Rust 程序设计语言》官方作者 Steve Klabnik 十年来首次改变立场，因 AI Coding Agent 的普及而松口支持“命名参数”；随后&gt;引发 Rust 咨询公司 Corrode 创始人 Matthias Endler 的强势回应：无需修改语言规范，Rust 现有的 Struct、Option、Default 与 Builder 等&gt;类型系统能力早已给出高阶解法。本文深度拆解这场关于函数参数传递与信息隐藏的十年论战，剖析当打字成本被 AI 抹平后，编程语言究竟该向“&gt;调用语法糖”倾斜，还是向“编译期类型约束”深化的核心工程哲学。</p> 
 
-<p><a href="https://tonybai.com/2026/10/02/how-to-keep-enjoying-programming-in-the-llm-era">AI时代，如何保持住那份编写代码的乐趣</a><br></p> 
+<p><a href="https://tonybai.com/2026/10/02/how-to-keep-enjoying-programming-in-the-llm-era">AI时代，如何保持住那份编写代码的乐趣</a><br>AI编程时代，“手搓代码”正在变成一种稀缺技能。Haskell社区最近一篇长文引发共鸣：作者提出，想在LLM铺天盖地的今天继续享受编程，关键不是拒绝AI，而是重新分工——规划和调研可以外包给模型，但代码的“手感”必须留给自己。</p> 
 
 <p><a href="https://importstatic.com/go/go--v2-migration">Go JSON v2 迁移：Go 1.27 中的变化</a><br>使用 Go 1.27.1 进行测试。基准测试与 GOEXPERIMENT=nov2（旧实现）进行比较。
 
