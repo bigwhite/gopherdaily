@@ -45,7 +45,7 @@ img {
 
 <div style="text-align: center; margin-bottom: 10px;">
   <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
-  <a href=https://bigwhite.github.io/gopherdaily/202610/issue-20261010.html style="margin: 0 10px;">Web版</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202610/issue-20261012.html style="margin: 0 10px;">Web版</a> |
   <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
   <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
   <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
@@ -57,9 +57,9 @@ img {
 
 <div>
 <p class="issue" style="text-align:center;">
-  <span style="text-align:center;">20261010</span>
+  <span style="text-align:center;">20261012</span>
 </p>
-<p>每日一谚：Use functional options for clean, extensible constructor configurations. </p>
+<p>每日一谚：Use clear(m) or re-allocate to purge maps cleanly. </p>
 </div>
 
 <hr/>
@@ -67,87 +67,79 @@ img {
 <h2>Go技术生态</h2>
 
 
-<p><a href="https://tonybai.com/2026/mm/dd/go-benchmark-every-release-since-2013">Go 性能 13 年大复盘：26 个版本全部实测，Go 1.27 比 1.23 快 11.5%</a><br>基于 Praneos Labs 的开源 Benchmark，本文复盘 Go 1.2 到 Go 1.27 共 26 个版本的性能演进：Go 1.27 比 1.23 快 11.5%，比 1.2 快约 41%；提升集中在编译器重构期和 runtime 优化期；Go 与 C 的差距，主要来自手写 SIMD，而不是语言本身。</p> 
+<p><a href="https://tonybai.com/2026/10/11/go-benchmark-every-release-since-2013">Go 性能 13 年大复盘：26 个版本全部实测，Go 1.27 比 1.23 快 11.5%</a><br>基于 Praneos Labs 的开源 Benchmark，本文复盘 Go 1.2 到 Go 1.27 共 26 个版本的性能演进：Go 1.27 比 1.23 快 11.5%，比 1.2 快约 41%；提升集中在编译器重构期和 runtime 优化期；Go 与 C 的差距，主要来自手写 SIMD，而不是语言本身。</p> 
 
-<p><a href="https://utcc.utoronto.ca/~cks/space/blog/programming/CompilerBootstrappingVsOSChanges">编译器自举比你想象的更复杂</a><br>与许多语言及其工具链一样，Go编译器工具链是用Go语言编写的。如果你想获得一个Go编译器而不必依赖他人的预构建二进制文件，这会带来一些问题。</p> 
+<p><a href="https://tonybai.com/2026/10/12/turborepo-go-to-rust-agent-era-calculus">Go 很快、很美、好迭代，为什么 Vercel 还是改成了 Rust？CEO 说：计算公式变了</a><br>Vercel CEO Rauch 公开复盘 Turborepo 从 Go 迁移到 Rust 的得失：迁移已经完成，但 ROI 在内部颇具争议。本文结合 Vercel &gt;的两篇工程博客，还原迁移动机、增量移植策略与跨平台踩坑，并讨论在 AI Agent 时代，语言迁移的成本与收益账本为何需要重算。</p> 
 
-<p><a href="https://victoriametrics.com/blog/http-race-condition/">不是Bug的数据竞争（以及那个确实是Bug的）</a><br>探讨了数据竞争问题，区分了真正的bug与非bug情况下的数据竞争现象。</p> 
-
-<p><a href="https://vincent.bernat.ch/en/blog/2026-go-netip-addrto6">修改Go编译器以高效映射IPv4到IPv6</a><br>通过修改Go编译器，利用netip.Addr的Unmap()方法，从IPv4映射的IPv6地址中提取原始IPv4地址。</p> 
-
-<p><a href="https://planetscale.com/blog/designing-neki-for-performance">为性能设计Neki — PlanetScale</a><br>介绍了Neki的设计理念，强调最高效的性能是不做任何不必要的工作。</p> 
-
-<p><a href="https://gonix.dev/">GoNIX — 一个具有Go用户空间的UNIX系统</a><br>一个基于Linux内核的类UNIX操作系统，其用户空间（包括init、coreutils、网络、服务和SSH）主要用Go语言编写。</p> 
-
-<p><a href="https://jrobineau.com/en/blog/2026-09-30-go-127-goroutine-leak-profile.html">Go 1.27能够检测goroutine泄漏。我在我的项目中进行了测试</a><br>介绍了Go 1.27对goroutine泄漏的检测功能，以及服务器发送事件(SSE)在生产环境中可能出现的泄漏问题。</p> 
-
-<p><a href="https://lukasschwab.me/blog/gen/poisoning-go-cache.html">污染Go缓存</a><br>当缓存跨越信任边界传递逻辑时，缓存污染问题变得更加紧迫。这就是为什么GitHub Actions缓存允许非默认分支读取默认分支产生的缓存条目，但阻止默认分支加载非默认分支产生的缓存条目。</p> 
+<p><a href="https://slack.engineering/from-custom-to-open-scalable-network-probing-and-http-3-readiness-with-prometheus/">从自定义到开放：使用 Prometheus 进行可扩展的网络探测和 HTTP/3 就绪性检查</a><br>2026年3月31日，5分钟阅读。Slack 工程团队分享了他们如何从自定义网络探测工具迁移到基于 Prometheus 的开放解决方案，以及如何评估 HTTP/3 的就绪性。</p> 
 
 
 <h2>云原生技术</h2>
 
 
-<p><a href="https://www.cncf.io/blog/2026/10/09/making-the-golden-kubestronaut-a-little-more-golden/">让金色Kubestronaut更加闪耀</a><br>黄金在埃及历史中有着特殊地位，其持久特性与永恒和不变紧密相连，这为Kubestronaut增添了更深层的意义。</p>
+<p><a href="https://www.cncf.io/blog/2026/10/12/from-zero-to-agent-builder-running-kagent-on-your-laptop/">从零开始构建智能体：在笔记本电脑上运行 kagent</a><br>kagent 是一个允许从自然语言描述构建新智能体并部署它们的工具。本文介绍了如何在本地环境中设置和使用 kagent 来创建自定义智能体。</p>
 
-<p><a href="https://seangoedecke.com/softwares-centaur-age-may-last-decades/">软件的半人马时代可能持续数十年</a><br>探讨了AI作为根本性不同技术的可能性，以及即使技术显著改进，其在实际应用中的扩散也可能因组织摩擦而缓慢，导致人类软件公司被淘汰的观点。</p>
+<p><a href="https://seangoedecke.com/software-engineers-dont-get-to-be-luddites-about-ai/">软件工程师不能对 AI 成为卢德派</a><br>软件工程师不能抵制人工智能技术。就像历史上的卢德派工人反对机械化一样，现代工程师需要适应并利用 AI 工具来提高生产力。</p>
 
-<p><a href="https://medium.com/pinterest-engineering/from-activity-to-intent-generating-user-journeys-with-llms-9652b9417626?source=rss----4c5a5f6279b6---4">从活动到意图：使用LLM生成用户旅程</a><br>通过将聚类输出和LLM输出并置在相同用户活动上进行比较，保留了强案例和诚实遗漏的情况，包括过度概括等问题。</p>
+<p><a href="https://motherduck.com/blog/why-duckdb-20-is-faster/">为什么 DuckDB 2.0 更快</a><br>DuckDB 2.0 即将发布，其 alpha 版本已推出。新版本在性能方面有显著改进，特别是在处理大规模数据分析时表现更优。</p>
 
-<p><a href="https://devblogs.microsoft.com/blog/introducing-the-agent-experience-ax-practitioner-playbook/">智能体体验(AX)实践者手册介绍</a><br>该手册适用于构建AI编码智能体使用的技术或扩展的人员。如果您构建SDK、API、服务、CLI、MCP服务器、技能、插件或指令集，或编写其文档，您控制智能体发现和应用的内容。</p>
+<p><a href="https://ghuntley.com/unikernels/">unikernels 曾经很难。关键词：曾经。</a><br>人们正在重新发现 unikernels 技术。曾经被认为难以实现和使用的 unikernels 现在变得更加可行和实用。</p>
 
-<p><a href="https://blog.cloudflare.com/deno-joins-cloudflare/">Deno加入Cloudflare</a><br>宣布Deno项目加入Cloudflare，这将为开发者带来更强大的JavaScript/TypeScript运行时环境。</p>
+<p><a href="https://www.cockroachlabs.com/blog/experiment-running-hospital-code/">五个月将错误视为患者，将编码智能体视为医疗团队</a><br>作者分享了他们如何将医疗系统的概念应用到软件开发中，将错误视为需要治疗的&#34;患者&#34;，编码智能体则像医疗团队一样协作解决问题。</p>
 
-<p><a href="https://www.smashingmagazine.com/2026/10/how-name-things/">命名的实用指南 — Smashing杂志</a><br>提供了关于如何为设计、UX和UI元素命名的实用指南，帮助开发者创建清晰一致的命名系统。</p>
+<p><a href="https://www.atomicmachines.com/blog/atomic-machines-origin-story">Atomic Machines 的起源故事</a><br>Atomic Machines 的创始人 Jeff Holden 分享了他从童年受到《星际迷航》启发到创建这家公司的历程，以及他对未来技术的愿景。</p>
 
-<p><a href="https://linuxstans.com/11-of-23-core-open-source-projects-run-on-1-or-2-people/">23个核心开源项目中11个仅由1-2人维护</a><br>手机上的每个闹钟、登机证和日历邀请都依赖于一个包含政府宣布的所有时钟规则的文本文件，突显了开源项目维护的挑战。</p>
+<p><a href="https://blog.cloudflare.com/next-git-platform-on-cloudflare/">我们希望您在 Cloudflare 上构建下一个 Git 平台</a><br>Cloudflare 邀请开发者利用其全球网络基础设施构建下一代 Git 平台，提供更快速、更安全的代码托管和协作体验。</p>
 
-<p><a href="https://lwn.net/Articles/1055211/">使用Eurydice将Rust编译为可读的C代码 [LWN.net]</a><br>介绍了Eurydice工具，它能够将Rust代码编译为可读的C代码，为理解Rust代码提供了新的途径。</p>
+<p><a href="https://peteris.rocks/blog/htop/">htop 解释</a><br>本文详细解释了 Linux 系统中 htop/top 命令界面的所有元素，包括负载平均值、CPU 使用率、内存占用等关键指标的含义和解读方法。</p>
 
-<p><a href="https://blog.glyph.im/2026/10/programming-isnt-special.html">编程并不特殊</a><br>艺术家理解AI对艺术有害，为什么程序员不理解我们也是艺术家？探讨了编程作为创造性活动的本质。</p>
+<p><a href="https://www.uber.com/in/en/blog/from-static-rate-limiting-to-intelligent-load-management/">Uber 如何征服数据库过载：从静态限流到智能负载管理的旅程</a><br>Uber 工程团队分享了他们如何从简单的静态限流策略发展到基于机器学习的智能负载管理系统，成功解决了数据库过载问题。</p>
 
-<p><a href="https://erwinkok.org/posts/ebpf-testing-tail-calls/">测试eBPF代码：自动尾调用解析</a><br>介绍了eBPF代码测试中的自动尾调用解析技术，扩展了在实际运行环境中测试eBPF代码的框架。</p>
+<p><a href="https://www.datadoghq.com/blog/engineering/distributed-datafusion/">我们如何扩展 Apache DataFusion 以在多台机器上执行单个查询</a><br>Datadog 工程师介绍了他们对 Apache DataFusion 的扩展，使其能够跨多台机器分布式执行查询，提高了大规模数据处理的能力。</p>
+
+<p><a href="https://en.lewoniewski.info/2026/python-3-14-vs-python-3-15-performance-testing/">Python 3.14 与 Python 3.15 性能测试对比</a><br>文章对比了 Python 3.14.8 和 Python 3.15 的性能差异，通过多种基准测试展示了新版本在执行速度和内存使用方面的改进。</p>
+
+<p><a href="https://sigseis.dev/articles/2026/10/06">Rust 中的声明式宏：简单实用的介绍</a><br>本文提供了 Rust 声明式宏的简单实用指南，解释了它们的工作原理、语法以及如何在项目中有效使用宏来减少重复代码。</p>
+
+<p><a href="https://royfish.dev/fingerprints-are-the-new-cookies">指纹是新的 cookies</a><br>浏览器指纹技术正在取代传统的 cookies 成为追踪用户的新方式。即使清除 cookies 或使用 VPN，设备指纹仍然能够持续识别用户。</p>
+
+<p><a href="https://nonfunctional.substack.com/p/passkeys-are-a-trap-do-not-use-them">Passkeys 是一个陷阱。不要使用它们。</a><br>作者警告 passkeys 技术可能存在安全和隐私风险，建议用户谨慎采用这种新兴的身份验证方法，直到其安全性和隐私保护机制得到充分验证。</p>
   
 
 <h2>AI</h2>
 
 
-<p><a href="https://www.ivokund.com/first-look-at-claude-code-mods-spoiler-yes-use-one-now/">Claude Code mods初探（剧透：是的，现在就用一个！）</a><br>起初我对mods持怀疑态度，认为我们已经有了hooks，能有什么特别之处。我不会重复mods的功能，也不建议阅读完整手册。</p>
+<p><a href="https://blog.cloudflare.com/clef-faster-cheaper-multimodal/">推出具有完全多模态能力的 Clef-omni，以及更快的 Clef 和更便宜的 Clef-flash</a><br>Cloudflare 发布了新的 AI 模型 Clef-omni，支持完全多模态处理，同时推出了性能更快的 Clef 和成本更低的 Clef-flash 变体。</p>
 
-<p><a href="https://claude.dev/blog/building-effective-agent-automations/">构建有效的智能体自动化</a><br>探讨了如何构建高效的AI智能体自动化系统，提高工作效率和准确性。</p>
+<p><a href="https://blogs.windows.com/windowsdeveloper/2026/10/07/microsoft-execution-containers-policy-driven-containment-for-ai-agents/">Microsoft 执行容器：面向 AI 智能体的策略驱动 containment</a><br>微软推出了执行容器技术，为 AI 智能体提供基于策略的安全隔离环境，确保 AI 系统在受控环境中运行，提高安全性和可靠性。</p>
 
-<p><a href="https://ghuntley.com/replaced/">如果您的团队忙于做&#39;正常工作&#39;而没有时间实验AI，您正在为他们被取代做准备</a><br>当去年Ralph发布时，我搁置了它。长期阅读此博客的人知道这一点。我去年一月初接触到循环工程的想法，搁置了四个月，然后开始大量写作，恳求人们付费。</p>
+<p><a href="https://breadcrumb-sdd.org/">Breadcrumbs：面向规范驱动开发的可追溯性</a><br>Breadcrumbs 为规范驱动开发提供了可追溯性功能，通过链接和声明将规范与代码关联，帮助开发者识别过时的规范并保持文档与代码的一致性。</p>
 
-<p><a href="https://commandline.microsoft.com/microsoft-decision-1-model-foundry/">Microsoft-Decision-1：我们的快速决策模型</a><br>介绍了Microsoft-Decision-1模型，这是一种旨在加速决策过程的创新方法，帮助组织更快速地做出重要决策。</p>
-
-<p><a href="https://www.primeintellect.ai/blog/prime-agent-rust">用Rust重写Prime Agent</a><br>自八月份发布Prime Agent以来，它已被下载超过30万次，处理了超过8万亿个token。今天，我们很高兴推出一个更快、更简洁、更可靠的Prime Agent，它用Rust从头重写。</p>
-
-<p><a href="https://ljtn.github.io/epiq/blog/the-soft-fabric-of-agentic-code.html">意向性与智能体代码的柔软结构</a><br>智能体代码可以被看作是一种织物，它易于塑形，可以轻松呈现任何形式，但很难用它构建出刚性的结构。</p>
-
-<p><a href="https://www.ignorance.ai/p/agentic-primitives-101">智能体基础101 - by Charlie Guo</a><br>探讨了让AI能够跨越数小时、数天和多次对话完成工作的内部机制，介绍了智能体基础概念。</p>
+<p><a href="https://boristane.com/blog/self-improving-software-is-inevitable/">自我改进的软件是不可避免的</a><br>作者认为软件自我改进是必然趋势，现代系统已经能够自我诊断问题并提供建议，开发者需要适应这种新的软件开发范式。</p>
 
 
 <h2>流行工具与项目</h2>
 
 
-<p><a href="https://github.com/alibaba/open-code-review">alibaba/open-code-review</a><br>Secure, fast, efficient, battle-tested at Alibaba&#39;s scale. Hybrid architecture code review tool: deterministic pipelines &#43; LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE,</p>
+<p><a href="https://github.com/Armur-Ai/Pentest-Swarm-AI">Armur-Ai/Pentest-Swarm-AI</a><br>Autonomous penetration testing using a swarm of AI agents. Orchestrates recon, classification, exploitation, and reporting specialists with ReAct reasoning — supports bug bounty, continuous monitori</p>
+
+<p><a href="https://github.com/lharries/whatsapp-mcp">lharries/whatsapp-mcp</a><br>WhatsApp MCP server</p>
+
+<p><a href="https://github.com/BishopFox/sliver">BishopFox/sliver</a><br>Adversary Emulation Framework</p>
+
+<p><a href="https://github.com/gtsteffaniak/filebrowser">gtsteffaniak/filebrowser</a><br>📂 Web File Browser</p>
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>solar charging ☀️🚘</p>
+
+<p><a href="https://github.com/jaegertracing/jaeger">jaegertracing/jaeger</a><br>CNCF Jaeger, a Distributed Tracing Platform</p>
+
+<p><a href="https://github.com/p1neappleXpress/OpenFlux">p1neappleXpress/OpenFlux</a><br>Network stack research tool. TCP tunnel with pluggable transports.</p>
+
+<p><a href="https://github.com/YouROK/TorrServer">YouROK/TorrServer</a><br>Torrent stream server</p>
+
+<p><a href="https://github.com/0xJacky/nginx-ui">0xJacky/nginx-ui</a><br>Yet another WebUI for Nginx</p>
 
 <p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with Kimi, GLM, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.</p>
-
-<p><a href="https://github.com/Wei-Shaw/sub2api">Wei-Shaw/sub2api</a><br>Sub2API 一站式开源中转服务，让 Claude、Openai 、Gemini、Grok订阅统一接入，支持拼车共享，更高效分摊成本，原生工具无缝使用。</p>
-
-<p><a href="https://github.com/infiniflow/ragflow">infiniflow/ragflow</a><br>RAGFlow is a leading open-source Retrieval-Augmented Generation (RAG) engine that fuses cutting-edge RAG with Agent capabilities to create a superior context layer for LLMs</p>
-
-<p><a href="https://github.com/hashicorp/vault">hashicorp/vault</a><br>A tool for secrets management, encryption as a service, and privileged access management</p>
-
-<p><a href="https://github.com/QuantumNous/new-api">QuantumNous/new-api</a><br>A unified AI model hub for aggregation &amp; distribution. It supports cross-converting various LLMs into OpenAI-compatible, Claude-compatible, or Gemini-compatible formats. A centralized gateway for pers</p>
-
-<p><a href="https://github.com/multica-ai/multica">multica-ai/multica</a><br>Make humans and AI agents work as one team — open-source and self-hostable.</p>
-
-<p><a href="https://github.com/docker/docker-agent">docker/docker-agent</a><br>AI Agent Builder and Runtime by Docker Engineering</p>
-
-<p><a href="https://github.com/TencentCloud/CubeSandbox">TencentCloud/CubeSandbox</a><br>Instant, Concurrent, Secure &amp; Lightweight Sandbox for AI Agents.</p>
-
-<p><a href="https://github.com/Tencent/WeKnora">Tencent/WeKnora</a><br>Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomous reasoning agent, and a self-maintaining Wiki.</p>
 
 
 <hr/>
