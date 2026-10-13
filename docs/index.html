@@ -45,7 +45,7 @@ img {
 
 <div style="text-align: center; margin-bottom: 10px;">
   <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
-  <a href=https://bigwhite.github.io/gopherdaily/202610/issue-20261012.html style="margin: 0 10px;">Web版</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202610/issue-20261013.html style="margin: 0 10px;">Web版</a> |
   <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
   <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
   <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
@@ -57,9 +57,9 @@ img {
 
 <div>
 <p class="issue" style="text-align:center;">
-  <span style="text-align:center;">20261012</span>
+  <span style="text-align:center;">20261013</span>
 </p>
-<p>每日一谚：Use clear(m) or re-allocate to purge maps cleanly. </p>
+<p>每日一谚：Reflection is never clear. </p>
 </div>
 
 <hr/>
@@ -67,55 +67,43 @@ img {
 <h2>Go技术生态</h2>
 
 
-<p><a href="https://tonybai.com/2026/10/11/go-benchmark-every-release-since-2013">Go 性能 13 年大复盘：26 个版本全部实测，Go 1.27 比 1.23 快 11.5%</a><br>基于 Praneos Labs 的开源 Benchmark，本文复盘 Go 1.2 到 Go 1.27 共 26 个版本的性能演进：Go 1.27 比 1.23 快 11.5%，比 1.2 快约 41%；提升集中在编译器重构期和 runtime 优化期；Go 与 C 的差距，主要来自手写 SIMD，而不是语言本身。</p> 
+<p><a href="https://tonybai.com/2026/10/10/why-native-cli-ships-on-npm">Go 写的 CLI，为什么正越来越多地通过 npm 分发？</a><br>原生语言（Go/Rust/C&#43;&#43;）编写的跨平台 CLI，正越来越多地通过 npm 分发。原因在于 npm 同时提供了统一的跨平台入口、`npx` &gt;免安装体验、与开发者环境高度重合的运行时、免费的全球分发网络，以及自动处理 PATH 的能力。技术上主要有三种做法：单包内置全部二进制、 `postinstall` 动态下载、`optionalDependencies` 平台子包。本文以飞书 CLI（Go）为例，拆解其“`postinstall` 下载 &#43; 校验和 &#43; 懒加载兜底 ”的实现，并以 Go HelloWorld 为例，完整演示从注册账号、交叉编译、打包到发布验证的全过程。</p> 
 
-<p><a href="https://tonybai.com/2026/10/12/turborepo-go-to-rust-agent-era-calculus">Go 很快、很美、好迭代，为什么 Vercel 还是改成了 Rust？CEO 说：计算公式变了</a><br>Vercel CEO Rauch 公开复盘 Turborepo 从 Go 迁移到 Rust 的得失：迁移已经完成，但 ROI 在内部颇具争议。本文结合 Vercel &gt;的两篇工程博客，还原迁移动机、增量移植策略与跨平台踩坑，并讨论在 AI Agent 时代，语言迁移的成本与收益账本为何需要重算。</p> 
+<p><a href="https://tonybai.com/2026/10/13/debug-when-you-no-longer-understand-the-code">代码看不懂了，Bug 还怎么修？AI 时代的调试心法</a><br>在 AI 智能体几分钟就能生成数千行代码的时代，工程师对系统的理解正变得越来越浅，而 AI 给出的第一版“根因分析”往往听起来 极度合理却是错的。分布式系统专家 Cindy Sridharan 结合三场惊心动魄的生产故障排查，提炼出一套不读代码也能精准约束 Agent 的调试心法： 把调试视为“约束满足问题”，确立“不可篡改的事实层”与“充满假设的推导层”，通过找对照、抓强信号与全量事实验证的三步闭环，彻底打破代码作 为“不可靠叙述者”的盲区。</p> 
 
-<p><a href="https://slack.engineering/from-custom-to-open-scalable-network-probing-and-http-3-readiness-with-prometheus/">从自定义到开放：使用 Prometheus 进行可扩展的网络探测和 HTTP/3 就绪性检查</a><br>2026年3月31日，5分钟阅读。Slack 工程团队分享了他们如何从自定义网络探测工具迁移到基于 Prometheus 的开放解决方案，以及如何评估 HTTP/3 的就绪性。</p> 
+<p><a href="https://pion.ly/blog/whip-more-quality-less-bitrate/">使用WHIP实现相同视频质量下降低15%的比特率 - Pion</a><br>WHIP技术能够在保持相同视频质量的同时显著降低比特率，为视频流传输带来新的优化方案。</p> 
 
 
 <h2>云原生技术</h2>
 
 
-<p><a href="https://www.cncf.io/blog/2026/10/12/from-zero-to-agent-builder-running-kagent-on-your-laptop/">从零开始构建智能体：在笔记本电脑上运行 kagent</a><br>kagent 是一个允许从自然语言描述构建新智能体并部署它们的工具。本文介绍了如何在本地环境中设置和使用 kagent 来创建自定义智能体。</p>
+<p><a href="https://engineering.fb.com/2026/10/12/video-engineering/shipping-media-over-quic-at-meta-scale-for-instagram-live-ingest/">在Meta规模下通过QUIC传输Instagram直播媒体</a><br>基于QUIC构建，它允许独立流在不出现TCP式跨流头部阻塞的情况下进行进度，并支持更快的连接设置和迁移。</p>
 
-<p><a href="https://seangoedecke.com/software-engineers-dont-get-to-be-luddites-about-ai/">软件工程师不能对 AI 成为卢德派</a><br>软件工程师不能抵制人工智能技术。就像历史上的卢德派工人反对机械化一样，现代工程师需要适应并利用 AI 工具来提高生产力。</p>
+<p><a href="https://blogs.microsoft.com/blog/2026/10/12/microsoft-to-expand-azure-maia-system-to-multi-gigawatt-deployments/">微软将扩展Azure Maia系统至多千兆瓦部署</a><br>多代Azure Maia计划已成为微软AI基础设施战略的基础要素，现在支持Microsoft Copilot等生产工作负载。</p>
 
-<p><a href="https://motherduck.com/blog/why-duckdb-20-is-faster/">为什么 DuckDB 2.0 更快</a><br>DuckDB 2.0 即将发布，其 alpha 版本已推出。新版本在性能方面有显著改进，特别是在处理大规模数据分析时表现更优。</p>
+<p><a href="https://aws.amazon.com/blogs/aws/announcing-aws-lambda-web-functions-for-fast-consistent-web-app-performance-anywhere/">宣布推出AWS Lambda Web Functions</a><br>Lambda Web Functions消除了这种复杂性，每个执行环境可同时处理多个请求，使突发流量可以共享预热环境。</p>
 
-<p><a href="https://ghuntley.com/unikernels/">unikernels 曾经很难。关键词：曾经。</a><br>人们正在重新发现 unikernels 技术。曾经被认为难以实现和使用的 unikernels 现在变得更加可行和实用。</p>
+<p><a href="https://www.reddit.com/r/RedditEng/comments/1x487p5/making_reddit_work_with_liquid_glass_on_ios/">使Reddit在iOS上与Liquid Glass协同工作</a><br>Reddit团队正在努力使应用在iOS上的Liquid Glass功能正常工作，提升用户体验。</p>
 
-<p><a href="https://www.cockroachlabs.com/blog/experiment-running-hospital-code/">五个月将错误视为患者，将编码智能体视为医疗团队</a><br>作者分享了他们如何将医疗系统的概念应用到软件开发中，将错误视为需要治疗的&#34;患者&#34;，编码智能体则像医疗团队一样协作解决问题。</p>
+<p><a href="https://cloud.google.com/blog/products/devops-sre/sre-book-second-edition/">SRE书籍第二版 | Google Cloud博客</a><br>Google宣布发布《网站可靠性工程》第二版，这是该书籍问世10周年纪念版，针对现代系统进行了重写。</p>
 
-<p><a href="https://www.atomicmachines.com/blog/atomic-machines-origin-story">Atomic Machines 的起源故事</a><br>Atomic Machines 的创始人 Jeff Holden 分享了他从童年受到《星际迷航》启发到创建这家公司的历程，以及他对未来技术的愿景。</p>
+<p><a href="https://event-driven.io/en/the-order-of-things-why-you-cant/">事物的顺序：为什么在分布式系统中无法同时获得速度和排序 - Event-Driven.io</a><br>在线零售商进行限时抢购，500件热门产品在几分钟内处理了742个订单，库存显示为-242件，这并非代码问题，而是分布式系统中速度与排序无法兼得的典型例子。</p>
 
-<p><a href="https://blog.cloudflare.com/next-git-platform-on-cloudflare/">我们希望您在 Cloudflare 上构建下一个 Git 平台</a><br>Cloudflare 邀请开发者利用其全球网络基础设施构建下一代 Git 平台，提供更快速、更安全的代码托管和协作体验。</p>
+<p><a href="https://www.spinellis.gr/blog/20261008/?li261008">思考将成为一种爱好</a><br>这篇博客文章探讨了思考在未来可能成为一种爱好的趋势，反映了人工智能时代人类认知方式的变化。</p>
 
-<p><a href="https://peteris.rocks/blog/htop/">htop 解释</a><br>本文详细解释了 Linux 系统中 htop/top 命令界面的所有元素，包括负载平均值、CPU 使用率、内存占用等关键指标的含义和解读方法。</p>
+<p><a href="https://research.google/blog/does-better-work-always-mean-better-workers/">更好的工作是否总是意味着更好的员工？</a><br>研究探讨了工作表现与员工质量之间的关系，分析了不同级别律师的控制组和处理组的红线评分密度。</p>
 
-<p><a href="https://www.uber.com/in/en/blog/from-static-rate-limiting-to-intelligent-load-management/">Uber 如何征服数据库过载：从静态限流到智能负载管理的旅程</a><br>Uber 工程团队分享了他们如何从简单的静态限流策略发展到基于机器学习的智能负载管理系统，成功解决了数据库过载问题。</p>
-
-<p><a href="https://www.datadoghq.com/blog/engineering/distributed-datafusion/">我们如何扩展 Apache DataFusion 以在多台机器上执行单个查询</a><br>Datadog 工程师介绍了他们对 Apache DataFusion 的扩展，使其能够跨多台机器分布式执行查询，提高了大规模数据处理的能力。</p>
-
-<p><a href="https://en.lewoniewski.info/2026/python-3-14-vs-python-3-15-performance-testing/">Python 3.14 与 Python 3.15 性能测试对比</a><br>文章对比了 Python 3.14.8 和 Python 3.15 的性能差异，通过多种基准测试展示了新版本在执行速度和内存使用方面的改进。</p>
-
-<p><a href="https://sigseis.dev/articles/2026/10/06">Rust 中的声明式宏：简单实用的介绍</a><br>本文提供了 Rust 声明式宏的简单实用指南，解释了它们的工作原理、语法以及如何在项目中有效使用宏来减少重复代码。</p>
-
-<p><a href="https://royfish.dev/fingerprints-are-the-new-cookies">指纹是新的 cookies</a><br>浏览器指纹技术正在取代传统的 cookies 成为追踪用户的新方式。即使清除 cookies 或使用 VPN，设备指纹仍然能够持续识别用户。</p>
-
-<p><a href="https://nonfunctional.substack.com/p/passkeys-are-a-trap-do-not-use-them">Passkeys 是一个陷阱。不要使用它们。</a><br>作者警告 passkeys 技术可能存在安全和隐私风险，建议用户谨慎采用这种新兴的身份验证方法，直到其安全性和隐私保护机制得到充分验证。</p>
+<p><a href="https://survey.stackoverflow.co/2026">Stack Overflow开发者调查2026</a><br>来自169个国家超过3万名技术专家分享了他们的想法，现在我们将这些发现与大家分享，深入了解今年的年度开发者调查。</p>
   
 
 <h2>AI</h2>
 
 
-<p><a href="https://blog.cloudflare.com/clef-faster-cheaper-multimodal/">推出具有完全多模态能力的 Clef-omni，以及更快的 Clef 和更便宜的 Clef-flash</a><br>Cloudflare 发布了新的 AI 模型 Clef-omni，支持完全多模态处理，同时推出了性能更快的 Clef 和成本更低的 Clef-flash 变体。</p>
+<p><a href="https://www.zdnet.com/tech/linus-torvalds-ai-coding-programming/">&#39;我用AI做我不擅长的事情&#39;：Linus Torvalds谈为何它对他有效 - ZDNET</a><br>Linus Torvalds认为AI可以帮助新开发者体验编程的乐趣，并展示了他对AI技术的积极态度。</p>
 
-<p><a href="https://blogs.windows.com/windowsdeveloper/2026/10/07/microsoft-execution-containers-policy-driven-containment-for-ai-agents/">Microsoft 执行容器：面向 AI 智能体的策略驱动 containment</a><br>微软推出了执行容器技术，为 AI 智能体提供基于策略的安全隔离环境，确保 AI 系统在受控环境中运行，提高安全性和可靠性。</p>
+<p><a href="https://www.linkedin.com/pulse/ai-tool-rich-hickey-kjl8e">&#39;AI&#39;不是一种工具</a><br>作者质疑&#34;工具&#34;一词在AI语境下的意义，探讨它是否具有真正的区分性和启发性，还是仅仅代表&#34;任何有用的东西&#34;的陈词滥调。</p>
 
-<p><a href="https://breadcrumb-sdd.org/">Breadcrumbs：面向规范驱动开发的可追溯性</a><br>Breadcrumbs 为规范驱动开发提供了可追溯性功能，通过链接和声明将规范与代码关联，帮助开发者识别过时的规范并保持文档与代码的一致性。</p>
-
-<p><a href="https://boristane.com/blog/self-improving-software-is-inevitable/">自我改进的软件是不可避免的</a><br>作者认为软件自我改进是必然趋势，现代系统已经能够自我诊断问题并提供建议，开发者需要适应这种新的软件开发范式。</p>
+<p><a href="https://futurumgroup.com/insights/google-gemini-agent-puts-the-agent-ahead-of-the-model/">Google Gemini Agent将智能体置于模型之前 - Futurum</a><br>Google的Gemini Agent将智能体置于模型之前，代表了AI架构设计的新方向，强调智能体能力的重要性。</p>
 
 
 <h2>流行工具与项目</h2>

@@ -1,0 +1,144 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202610/issue-20261013.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20261013</span>
+</p>
+<p>每日一谚：Reflection is never clear. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/10/10/why-native-cli-ships-on-npm">Go 写的 CLI，为什么正越来越多地通过 npm 分发？</a><br>原生语言（Go/Rust/C&#43;&#43;）编写的跨平台 CLI，正越来越多地通过 npm 分发。原因在于 npm 同时提供了统一的跨平台入口、`npx` &gt;免安装体验、与开发者环境高度重合的运行时、免费的全球分发网络，以及自动处理 PATH 的能力。技术上主要有三种做法：单包内置全部二进制、 `postinstall` 动态下载、`optionalDependencies` 平台子包。本文以飞书 CLI（Go）为例，拆解其“`postinstall` 下载 &#43; 校验和 &#43; 懒加载兜底 ”的实现，并以 Go HelloWorld 为例，完整演示从注册账号、交叉编译、打包到发布验证的全过程。</p> 
+
+<p><a href="https://tonybai.com/2026/10/13/debug-when-you-no-longer-understand-the-code">代码看不懂了，Bug 还怎么修？AI 时代的调试心法</a><br>在 AI 智能体几分钟就能生成数千行代码的时代，工程师对系统的理解正变得越来越浅，而 AI 给出的第一版“根因分析”往往听起来 极度合理却是错的。分布式系统专家 Cindy Sridharan 结合三场惊心动魄的生产故障排查，提炼出一套不读代码也能精准约束 Agent 的调试心法： 把调试视为“约束满足问题”，确立“不可篡改的事实层”与“充满假设的推导层”，通过找对照、抓强信号与全量事实验证的三步闭环，彻底打破代码作 为“不可靠叙述者”的盲区。</p> 
+
+<p><a href="https://pion.ly/blog/whip-more-quality-less-bitrate/">使用WHIP实现相同视频质量下降低15%的比特率 - Pion</a><br>WHIP技术能够在保持相同视频质量的同时显著降低比特率，为视频流传输带来新的优化方案。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://engineering.fb.com/2026/10/12/video-engineering/shipping-media-over-quic-at-meta-scale-for-instagram-live-ingest/">在Meta规模下通过QUIC传输Instagram直播媒体</a><br>基于QUIC构建，它允许独立流在不出现TCP式跨流头部阻塞的情况下进行进度，并支持更快的连接设置和迁移。</p>
+
+<p><a href="https://blogs.microsoft.com/blog/2026/10/12/microsoft-to-expand-azure-maia-system-to-multi-gigawatt-deployments/">微软将扩展Azure Maia系统至多千兆瓦部署</a><br>多代Azure Maia计划已成为微软AI基础设施战略的基础要素，现在支持Microsoft Copilot等生产工作负载。</p>
+
+<p><a href="https://aws.amazon.com/blogs/aws/announcing-aws-lambda-web-functions-for-fast-consistent-web-app-performance-anywhere/">宣布推出AWS Lambda Web Functions</a><br>Lambda Web Functions消除了这种复杂性，每个执行环境可同时处理多个请求，使突发流量可以共享预热环境。</p>
+
+<p><a href="https://www.reddit.com/r/RedditEng/comments/1x487p5/making_reddit_work_with_liquid_glass_on_ios/">使Reddit在iOS上与Liquid Glass协同工作</a><br>Reddit团队正在努力使应用在iOS上的Liquid Glass功能正常工作，提升用户体验。</p>
+
+<p><a href="https://cloud.google.com/blog/products/devops-sre/sre-book-second-edition/">SRE书籍第二版 | Google Cloud博客</a><br>Google宣布发布《网站可靠性工程》第二版，这是该书籍问世10周年纪念版，针对现代系统进行了重写。</p>
+
+<p><a href="https://event-driven.io/en/the-order-of-things-why-you-cant/">事物的顺序：为什么在分布式系统中无法同时获得速度和排序 - Event-Driven.io</a><br>在线零售商进行限时抢购，500件热门产品在几分钟内处理了742个订单，库存显示为-242件，这并非代码问题，而是分布式系统中速度与排序无法兼得的典型例子。</p>
+
+<p><a href="https://www.spinellis.gr/blog/20261008/?li261008">思考将成为一种爱好</a><br>这篇博客文章探讨了思考在未来可能成为一种爱好的趋势，反映了人工智能时代人类认知方式的变化。</p>
+
+<p><a href="https://research.google/blog/does-better-work-always-mean-better-workers/">更好的工作是否总是意味着更好的员工？</a><br>研究探讨了工作表现与员工质量之间的关系，分析了不同级别律师的控制组和处理组的红线评分密度。</p>
+
+<p><a href="https://survey.stackoverflow.co/2026">Stack Overflow开发者调查2026</a><br>来自169个国家超过3万名技术专家分享了他们的想法，现在我们将这些发现与大家分享，深入了解今年的年度开发者调查。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://www.zdnet.com/tech/linus-torvalds-ai-coding-programming/">&#39;我用AI做我不擅长的事情&#39;：Linus Torvalds谈为何它对他有效 - ZDNET</a><br>Linus Torvalds认为AI可以帮助新开发者体验编程的乐趣，并展示了他对AI技术的积极态度。</p>
+
+<p><a href="https://www.linkedin.com/pulse/ai-tool-rich-hickey-kjl8e">&#39;AI&#39;不是一种工具</a><br>作者质疑&#34;工具&#34;一词在AI语境下的意义，探讨它是否具有真正的区分性和启发性，还是仅仅代表&#34;任何有用的东西&#34;的陈词滥调。</p>
+
+<p><a href="https://futurumgroup.com/insights/google-gemini-agent-puts-the-agent-ahead-of-the-model/">Google Gemini Agent将智能体置于模型之前 - Futurum</a><br>Google的Gemini Agent将智能体置于模型之前，代表了AI架构设计的新方向，强调智能体能力的重要性。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/Armur-Ai/Pentest-Swarm-AI">Armur-Ai/Pentest-Swarm-AI</a><br>Autonomous penetration testing using a swarm of AI agents. Orchestrates recon, classification, exploitation, and reporting specialists with ReAct reasoning — supports bug bounty, continuous monitori</p>
+
+<p><a href="https://github.com/lharries/whatsapp-mcp">lharries/whatsapp-mcp</a><br>WhatsApp MCP server</p>
+
+<p><a href="https://github.com/BishopFox/sliver">BishopFox/sliver</a><br>Adversary Emulation Framework</p>
+
+<p><a href="https://github.com/gtsteffaniak/filebrowser">gtsteffaniak/filebrowser</a><br>📂 Web File Browser</p>
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>solar charging ☀️🚘</p>
+
+<p><a href="https://github.com/jaegertracing/jaeger">jaegertracing/jaeger</a><br>CNCF Jaeger, a Distributed Tracing Platform</p>
+
+<p><a href="https://github.com/p1neappleXpress/OpenFlux">p1neappleXpress/OpenFlux</a><br>Network stack research tool. TCP tunnel with pluggable transports.</p>
+
+<p><a href="https://github.com/YouROK/TorrServer">YouROK/TorrServer</a><br>Torrent stream server</p>
+
+<p><a href="https://github.com/0xJacky/nginx-ui">0xJacky/nginx-ui</a><br>Yet another WebUI for Nginx</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with Kimi, GLM, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+
