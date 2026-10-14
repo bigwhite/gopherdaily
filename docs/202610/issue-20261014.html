@@ -1,0 +1,150 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202610/issue-20261014.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20261014</span>
+</p>
+<p>每日一谚：Do not store Contexts inside a struct type; pass them through call chains. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/10/14/post-quantum-cryptographic-right-answers-2026">2029 年大限将至！Go 前密码学掌门人更新“密码学正确答案”：所有非对称算法都得换</a><br>2026 年，后量子密码迁移的截止时间被提前到 2029 年。Go 前密码学负责人 Filippo Valsorda 更新了“密码学正确答案”：对称密 码基本不变，但密钥交换、非对称加密、数字签名、TLS 库和备份工具的推荐方案都发生了变化。本文梳理这份清单的核心结论与背后的逻辑。</p> 
+
+<p><a href="https://tonybai.com/2026/10/14/anthropic-scion-replaces-git-agent-scale-source-control">Anthropic 把 Git 扔了！7 人 5 个月自研 Scion，日合并代码从 2500 暴涨到 3 万次</a><br>Anthropic 官方工程博客披露：随着 Claude 大规模写代码，公司每日代码合并量从 2026 年 5 月的约 2500 次增长到 9 月的 3 &gt;万次以上，Git 成为最大开发瓶颈。为此，7 人团队用 5 个月自研版本控制系统 Scion，并完成 monorepo 迁移。本文拆解 Scion 的设计原则、核心数据结构、缓存架构，以及 Anthropic 总结出的“智能体规模”软件开发经验。</p> 
+
+<p><a href="https://blog.jetbrains.com/go/2026/10/13/python-vs-go/">Python 与 Go：开发者的实用对比</a><br>GoLand 是用于 Go 专业开发的 IDE。它支持开发者通过 Twitter 和 YouTube 关注最新动态。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://tailscale.com/blog/sovereign-ai-patricia-prewitt">主权 AI 从开放基础设施开始</a><br>主权 AI 意味着控制权：选择自己的技术栈、数据和依赖项。</p>
+
+<p><a href="https://p99conf.io/2026/10/14/performance-engineering-from-kernel-analysis-to-ai-adrian-cockcrofts-take/">从内核分析到 AI 的性能工程：Adrian Cockcroft 的观点</a><br>在五年的历史上，P99 会议邀请了多位批评同名指标的演讲者。去年，Adrian Cockcroft 虽未明确表示 P99 指标毫无价值，但暗示了这一点。</p>
+
+<p><a href="https://www.anthropic.com/engineering/redesigning-source-control">重新设计 Anthropic 的源代码控制</a><br>随着每日合并次数增长十倍以上，源代码控制成为我们最大的开发瓶颈。我们分享了如何在五个月内迁移到内部版本控制系统的经验。</p>
+
+<p><a href="https://blog.plover.com/prog/git/history-proposal.html">论述宇宙：也许更好的 Git 仓库发布历史跟踪方式</a><br>作者提出了一个可能更好的方法来跟踪 Git 仓库的发布历史，旨在改进现有的版本控制流程。</p>
+
+<p><a href="https://www.natemeyvis.com/where-is-all-the-new-good-software/">所有新的优秀软件在哪里？</a><br>这是一个常见问题，尤其来自 AI 怀疑论者：如果 AI 编程如此出色，为什么我们现在没有看到更多新的优秀软件？这里提供了一些答案。</p>
+
+<p><a href="https://aws.amazon.com/blogs/aws/announcing-aws-lambda-web-functions-for-fast-consistent-web-app-performance-anywhere/">宣布推出 AWS Lambda Web Functions</a><br>AWS 宣布推出 Lambda Web Functions，这是一种新的服务，可在任何地方实现快速、一致的 Web 应用程序性能。</p>
+
+<p><a href="https://blog.cloudflare.com/d1-control-plane">幕后，远离热路径：D1 如何扩展到数百万个数据库 | Cloudflare 博客</a><br>Cloudflare 的 D1 数据库服务通过创新架构实现了扩展，能够支持数百万个数据库实例，同时保持高性能。</p>
+
+<p><a href="https://devblogs.microsoft.com/oldnewthing/20261012-00/?p=112767/">C&#43;&#43; futures 第一部分：思维模型 - 旧事物</a><br>Raymond Chen 探讨了 C&#43;&#43; futures 的思维模型，帮助开发者更好地理解这一并发编程概念。</p>
+
+<p><a href="https://www.metabase.com/blog/how-we-automate-metabase-releases">更多、更好、更快：我们如何自动化 Metabase 发布</a><br>过去发布 Metabase 需要手动完成长长的检查清单。如今，我们每天发布一个新补丁而无需人工干预。我们分享了实现这一转变的方法。</p>
+
+<p><a href="https://withblue.ink/2026/10/workload-identity-tailscale-tsiam">也给你的工作负载一个身份，使用 Tailscale — 使用 Blue Ink</a><br>作者分享了如何使用 Tailscale 为工作负载提供身份验证，以提高系统安全性，无论是在家庭实验室还是外部环境中。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://deepmind.google/models/gemini/">Gemini — Google DeepMind</a><br>Gemini 4 Argon 是 Google DeepMind 的最新模型，提供在 Gemini 和 Google AI Studio 中试用。</p>
+
+<p><a href="https://developers.googleblog.com/gemini-4-argon-for-robotics/">Gemini 4 Argon for Robotics - Google 开发者博客</a><br>Gemini 4 Argon 在物理理解、代码生成和视觉语义推理方面取得了突破性进展，解锁了机器人技术堆栈中的新工作流程，加速了实现物理 AGI 的进展。</p>
+
+<p><a href="https://linear.app/now/five-principles-working-with-loops">使用 Loops 的五个原则</a><br>Linear 团队提出了使用 Loops 的五个原则，旨在优化工作流程和提高效率。</p>
+
+<p><a href="https://kylekukshtel.com/ai-harness-engineering-game-development-claude-code">你的游戏是一个工具</a><br>作者在卡尔加里的独立牛仔节上发表了题为&#34;你的游戏是一个工具&#34;的 45 分钟演讲，探讨了游戏开发中的工程实践。</p>
+
+<p><a href="https://anythingllm.com/blog/lemonade-llama-cpp">为什么 AnythingLLM 从 Ollama 迁移到 Lemonade 和 llama.cpp | AnythingLLM</a><br>AnythingLLM Desktop 现在有了新的内置引擎，下载并在 AnythingLLM 中运行的模型现在基于 llama.cpp，提供了更好的性能和兼容性。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/Bennettxai/FounderOS">Bennettxai/FounderOS</a><br>An open-source, single-operator business command center: run a one-person operated company as AI-assisted departments (comms, funnel, social, finances, agents, and a knowledge graph) from one live das</p>
+
+<p><a href="https://github.com/vxcontrol/pentagi">vxcontrol/pentagi</a><br>Fully autonomous AI Agents system capable of performing complex penetration testing tasks</p>
+
+<p><a href="https://github.com/Tencent/WeKnora">Tencent/WeKnora</a><br>Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomous reasoning agent, and a self-maintaining Wiki.</p>
+
+<p><a href="https://github.com/multica-ai/multica">multica-ai/multica</a><br>Make humans and AI agents work as one team — open-source and self-hostable.</p>
+
+<p><a href="https://github.com/Armur-Ai/Pentest-Swarm-AI">Armur-Ai/Pentest-Swarm-AI</a><br>Autonomous penetration testing using a swarm of AI agents. Orchestrates recon, classification, exploitation, and reporting specialists with ReAct reasoning — supports bug bounty, continuous monitori</p>
+
+<p><a href="https://github.com/vllm-project/semantic-router">vllm-project/semantic-router</a><br>An open, programmable decision layer for models and compute.</p>
+
+<p><a href="https://github.com/alibaba/open-code-review">alibaba/open-code-review</a><br>Secure, fast, efficient, battle-tested at Alibaba&#39;s scale. Hybrid architecture code review tool: deterministic pipelines &#43; LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE,</p>
+
+<p><a href="https://github.com/gtsteffaniak/filebrowser">gtsteffaniak/filebrowser</a><br>📂 Web File Browser</p>
+
+<p><a href="https://github.com/Project-HAMi/HAMi">Project-HAMi/HAMi</a><br>Heterogeneous GPU Sharing on Kubernetes</p>
+
+<p><a href="https://github.com/kedacore/keda">kedacore/keda</a><br>KEDA is a Kubernetes-based Event Driven Autoscaling component. It provides event driven scale for any container running in Kubernetes</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

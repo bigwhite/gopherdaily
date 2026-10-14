@@ -45,7 +45,7 @@ img {
 
 <div style="text-align: center; margin-bottom: 10px;">
   <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
-  <a href=https://bigwhite.github.io/gopherdaily/202610/issue-20261013.html style="margin: 0 10px;">Web版</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202610/issue-20261014.html style="margin: 0 10px;">Web版</a> |
   <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
   <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
   <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
@@ -57,9 +57,9 @@ img {
 
 <div>
 <p class="issue" style="text-align:center;">
-  <span style="text-align:center;">20261013</span>
+  <span style="text-align:center;">20261014</span>
 </p>
-<p>每日一谚：Reflection is never clear. </p>
+<p>每日一谚：Do not store Contexts inside a struct type; pass them through call chains. </p>
 </div>
 
 <hr/>
@@ -67,67 +67,73 @@ img {
 <h2>Go技术生态</h2>
 
 
-<p><a href="https://tonybai.com/2026/10/10/why-native-cli-ships-on-npm">Go 写的 CLI，为什么正越来越多地通过 npm 分发？</a><br>原生语言（Go/Rust/C&#43;&#43;）编写的跨平台 CLI，正越来越多地通过 npm 分发。原因在于 npm 同时提供了统一的跨平台入口、`npx` &gt;免安装体验、与开发者环境高度重合的运行时、免费的全球分发网络，以及自动处理 PATH 的能力。技术上主要有三种做法：单包内置全部二进制、 `postinstall` 动态下载、`optionalDependencies` 平台子包。本文以飞书 CLI（Go）为例，拆解其“`postinstall` 下载 &#43; 校验和 &#43; 懒加载兜底 ”的实现，并以 Go HelloWorld 为例，完整演示从注册账号、交叉编译、打包到发布验证的全过程。</p> 
+<p><a href="https://tonybai.com/2026/10/14/post-quantum-cryptographic-right-answers-2026">2029 年大限将至！Go 前密码学掌门人更新“密码学正确答案”：所有非对称算法都得换</a><br>2026 年，后量子密码迁移的截止时间被提前到 2029 年。Go 前密码学负责人 Filippo Valsorda 更新了“密码学正确答案”：对称密 码基本不变，但密钥交换、非对称加密、数字签名、TLS 库和备份工具的推荐方案都发生了变化。本文梳理这份清单的核心结论与背后的逻辑。</p> 
 
-<p><a href="https://tonybai.com/2026/10/13/debug-when-you-no-longer-understand-the-code">代码看不懂了，Bug 还怎么修？AI 时代的调试心法</a><br>在 AI 智能体几分钟就能生成数千行代码的时代，工程师对系统的理解正变得越来越浅，而 AI 给出的第一版“根因分析”往往听起来 极度合理却是错的。分布式系统专家 Cindy Sridharan 结合三场惊心动魄的生产故障排查，提炼出一套不读代码也能精准约束 Agent 的调试心法： 把调试视为“约束满足问题”，确立“不可篡改的事实层”与“充满假设的推导层”，通过找对照、抓强信号与全量事实验证的三步闭环，彻底打破代码作 为“不可靠叙述者”的盲区。</p> 
+<p><a href="https://tonybai.com/2026/10/14/anthropic-scion-replaces-git-agent-scale-source-control">Anthropic 把 Git 扔了！7 人 5 个月自研 Scion，日合并代码从 2500 暴涨到 3 万次</a><br>Anthropic 官方工程博客披露：随着 Claude 大规模写代码，公司每日代码合并量从 2026 年 5 月的约 2500 次增长到 9 月的 3 &gt;万次以上，Git 成为最大开发瓶颈。为此，7 人团队用 5 个月自研版本控制系统 Scion，并完成 monorepo 迁移。本文拆解 Scion 的设计原则、核心数据结构、缓存架构，以及 Anthropic 总结出的“智能体规模”软件开发经验。</p> 
 
-<p><a href="https://pion.ly/blog/whip-more-quality-less-bitrate/">使用WHIP实现相同视频质量下降低15%的比特率 - Pion</a><br>WHIP技术能够在保持相同视频质量的同时显著降低比特率，为视频流传输带来新的优化方案。</p> 
+<p><a href="https://blog.jetbrains.com/go/2026/10/13/python-vs-go/">Python 与 Go：开发者的实用对比</a><br>GoLand 是用于 Go 专业开发的 IDE。它支持开发者通过 Twitter 和 YouTube 关注最新动态。</p> 
 
 
 <h2>云原生技术</h2>
 
 
-<p><a href="https://engineering.fb.com/2026/10/12/video-engineering/shipping-media-over-quic-at-meta-scale-for-instagram-live-ingest/">在Meta规模下通过QUIC传输Instagram直播媒体</a><br>基于QUIC构建，它允许独立流在不出现TCP式跨流头部阻塞的情况下进行进度，并支持更快的连接设置和迁移。</p>
+<p><a href="https://tailscale.com/blog/sovereign-ai-patricia-prewitt">主权 AI 从开放基础设施开始</a><br>主权 AI 意味着控制权：选择自己的技术栈、数据和依赖项。</p>
 
-<p><a href="https://blogs.microsoft.com/blog/2026/10/12/microsoft-to-expand-azure-maia-system-to-multi-gigawatt-deployments/">微软将扩展Azure Maia系统至多千兆瓦部署</a><br>多代Azure Maia计划已成为微软AI基础设施战略的基础要素，现在支持Microsoft Copilot等生产工作负载。</p>
+<p><a href="https://p99conf.io/2026/10/14/performance-engineering-from-kernel-analysis-to-ai-adrian-cockcrofts-take/">从内核分析到 AI 的性能工程：Adrian Cockcroft 的观点</a><br>在五年的历史上，P99 会议邀请了多位批评同名指标的演讲者。去年，Adrian Cockcroft 虽未明确表示 P99 指标毫无价值，但暗示了这一点。</p>
 
-<p><a href="https://aws.amazon.com/blogs/aws/announcing-aws-lambda-web-functions-for-fast-consistent-web-app-performance-anywhere/">宣布推出AWS Lambda Web Functions</a><br>Lambda Web Functions消除了这种复杂性，每个执行环境可同时处理多个请求，使突发流量可以共享预热环境。</p>
+<p><a href="https://www.anthropic.com/engineering/redesigning-source-control">重新设计 Anthropic 的源代码控制</a><br>随着每日合并次数增长十倍以上，源代码控制成为我们最大的开发瓶颈。我们分享了如何在五个月内迁移到内部版本控制系统的经验。</p>
 
-<p><a href="https://www.reddit.com/r/RedditEng/comments/1x487p5/making_reddit_work_with_liquid_glass_on_ios/">使Reddit在iOS上与Liquid Glass协同工作</a><br>Reddit团队正在努力使应用在iOS上的Liquid Glass功能正常工作，提升用户体验。</p>
+<p><a href="https://blog.plover.com/prog/git/history-proposal.html">论述宇宙：也许更好的 Git 仓库发布历史跟踪方式</a><br>作者提出了一个可能更好的方法来跟踪 Git 仓库的发布历史，旨在改进现有的版本控制流程。</p>
 
-<p><a href="https://cloud.google.com/blog/products/devops-sre/sre-book-second-edition/">SRE书籍第二版 | Google Cloud博客</a><br>Google宣布发布《网站可靠性工程》第二版，这是该书籍问世10周年纪念版，针对现代系统进行了重写。</p>
+<p><a href="https://www.natemeyvis.com/where-is-all-the-new-good-software/">所有新的优秀软件在哪里？</a><br>这是一个常见问题，尤其来自 AI 怀疑论者：如果 AI 编程如此出色，为什么我们现在没有看到更多新的优秀软件？这里提供了一些答案。</p>
 
-<p><a href="https://event-driven.io/en/the-order-of-things-why-you-cant/">事物的顺序：为什么在分布式系统中无法同时获得速度和排序 - Event-Driven.io</a><br>在线零售商进行限时抢购，500件热门产品在几分钟内处理了742个订单，库存显示为-242件，这并非代码问题，而是分布式系统中速度与排序无法兼得的典型例子。</p>
+<p><a href="https://aws.amazon.com/blogs/aws/announcing-aws-lambda-web-functions-for-fast-consistent-web-app-performance-anywhere/">宣布推出 AWS Lambda Web Functions</a><br>AWS 宣布推出 Lambda Web Functions，这是一种新的服务，可在任何地方实现快速、一致的 Web 应用程序性能。</p>
 
-<p><a href="https://www.spinellis.gr/blog/20261008/?li261008">思考将成为一种爱好</a><br>这篇博客文章探讨了思考在未来可能成为一种爱好的趋势，反映了人工智能时代人类认知方式的变化。</p>
+<p><a href="https://blog.cloudflare.com/d1-control-plane">幕后，远离热路径：D1 如何扩展到数百万个数据库 | Cloudflare 博客</a><br>Cloudflare 的 D1 数据库服务通过创新架构实现了扩展，能够支持数百万个数据库实例，同时保持高性能。</p>
 
-<p><a href="https://research.google/blog/does-better-work-always-mean-better-workers/">更好的工作是否总是意味着更好的员工？</a><br>研究探讨了工作表现与员工质量之间的关系，分析了不同级别律师的控制组和处理组的红线评分密度。</p>
+<p><a href="https://devblogs.microsoft.com/oldnewthing/20261012-00/?p=112767/">C&#43;&#43; futures 第一部分：思维模型 - 旧事物</a><br>Raymond Chen 探讨了 C&#43;&#43; futures 的思维模型，帮助开发者更好地理解这一并发编程概念。</p>
 
-<p><a href="https://survey.stackoverflow.co/2026">Stack Overflow开发者调查2026</a><br>来自169个国家超过3万名技术专家分享了他们的想法，现在我们将这些发现与大家分享，深入了解今年的年度开发者调查。</p>
+<p><a href="https://www.metabase.com/blog/how-we-automate-metabase-releases">更多、更好、更快：我们如何自动化 Metabase 发布</a><br>过去发布 Metabase 需要手动完成长长的检查清单。如今，我们每天发布一个新补丁而无需人工干预。我们分享了实现这一转变的方法。</p>
+
+<p><a href="https://withblue.ink/2026/10/workload-identity-tailscale-tsiam">也给你的工作负载一个身份，使用 Tailscale — 使用 Blue Ink</a><br>作者分享了如何使用 Tailscale 为工作负载提供身份验证，以提高系统安全性，无论是在家庭实验室还是外部环境中。</p>
   
 
 <h2>AI</h2>
 
 
-<p><a href="https://www.zdnet.com/tech/linus-torvalds-ai-coding-programming/">&#39;我用AI做我不擅长的事情&#39;：Linus Torvalds谈为何它对他有效 - ZDNET</a><br>Linus Torvalds认为AI可以帮助新开发者体验编程的乐趣，并展示了他对AI技术的积极态度。</p>
+<p><a href="https://deepmind.google/models/gemini/">Gemini — Google DeepMind</a><br>Gemini 4 Argon 是 Google DeepMind 的最新模型，提供在 Gemini 和 Google AI Studio 中试用。</p>
 
-<p><a href="https://www.linkedin.com/pulse/ai-tool-rich-hickey-kjl8e">&#39;AI&#39;不是一种工具</a><br>作者质疑&#34;工具&#34;一词在AI语境下的意义，探讨它是否具有真正的区分性和启发性，还是仅仅代表&#34;任何有用的东西&#34;的陈词滥调。</p>
+<p><a href="https://developers.googleblog.com/gemini-4-argon-for-robotics/">Gemini 4 Argon for Robotics - Google 开发者博客</a><br>Gemini 4 Argon 在物理理解、代码生成和视觉语义推理方面取得了突破性进展，解锁了机器人技术堆栈中的新工作流程，加速了实现物理 AGI 的进展。</p>
 
-<p><a href="https://futurumgroup.com/insights/google-gemini-agent-puts-the-agent-ahead-of-the-model/">Google Gemini Agent将智能体置于模型之前 - Futurum</a><br>Google的Gemini Agent将智能体置于模型之前，代表了AI架构设计的新方向，强调智能体能力的重要性。</p>
+<p><a href="https://linear.app/now/five-principles-working-with-loops">使用 Loops 的五个原则</a><br>Linear 团队提出了使用 Loops 的五个原则，旨在优化工作流程和提高效率。</p>
+
+<p><a href="https://kylekukshtel.com/ai-harness-engineering-game-development-claude-code">你的游戏是一个工具</a><br>作者在卡尔加里的独立牛仔节上发表了题为&#34;你的游戏是一个工具&#34;的 45 分钟演讲，探讨了游戏开发中的工程实践。</p>
+
+<p><a href="https://anythingllm.com/blog/lemonade-llama-cpp">为什么 AnythingLLM 从 Ollama 迁移到 Lemonade 和 llama.cpp | AnythingLLM</a><br>AnythingLLM Desktop 现在有了新的内置引擎，下载并在 AnythingLLM 中运行的模型现在基于 llama.cpp，提供了更好的性能和兼容性。</p>
 
 
 <h2>流行工具与项目</h2>
 
 
+<p><a href="https://github.com/Bennettxai/FounderOS">Bennettxai/FounderOS</a><br>An open-source, single-operator business command center: run a one-person operated company as AI-assisted departments (comms, funnel, social, finances, agents, and a knowledge graph) from one live das</p>
+
+<p><a href="https://github.com/vxcontrol/pentagi">vxcontrol/pentagi</a><br>Fully autonomous AI Agents system capable of performing complex penetration testing tasks</p>
+
+<p><a href="https://github.com/Tencent/WeKnora">Tencent/WeKnora</a><br>Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomous reasoning agent, and a self-maintaining Wiki.</p>
+
+<p><a href="https://github.com/multica-ai/multica">multica-ai/multica</a><br>Make humans and AI agents work as one team — open-source and self-hostable.</p>
+
 <p><a href="https://github.com/Armur-Ai/Pentest-Swarm-AI">Armur-Ai/Pentest-Swarm-AI</a><br>Autonomous penetration testing using a swarm of AI agents. Orchestrates recon, classification, exploitation, and reporting specialists with ReAct reasoning — supports bug bounty, continuous monitori</p>
 
-<p><a href="https://github.com/lharries/whatsapp-mcp">lharries/whatsapp-mcp</a><br>WhatsApp MCP server</p>
+<p><a href="https://github.com/vllm-project/semantic-router">vllm-project/semantic-router</a><br>An open, programmable decision layer for models and compute.</p>
 
-<p><a href="https://github.com/BishopFox/sliver">BishopFox/sliver</a><br>Adversary Emulation Framework</p>
+<p><a href="https://github.com/alibaba/open-code-review">alibaba/open-code-review</a><br>Secure, fast, efficient, battle-tested at Alibaba&#39;s scale. Hybrid architecture code review tool: deterministic pipelines &#43; LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE,</p>
 
 <p><a href="https://github.com/gtsteffaniak/filebrowser">gtsteffaniak/filebrowser</a><br>📂 Web File Browser</p>
 
-<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>solar charging ☀️🚘</p>
+<p><a href="https://github.com/Project-HAMi/HAMi">Project-HAMi/HAMi</a><br>Heterogeneous GPU Sharing on Kubernetes</p>
 
-<p><a href="https://github.com/jaegertracing/jaeger">jaegertracing/jaeger</a><br>CNCF Jaeger, a Distributed Tracing Platform</p>
-
-<p><a href="https://github.com/p1neappleXpress/OpenFlux">p1neappleXpress/OpenFlux</a><br>Network stack research tool. TCP tunnel with pluggable transports.</p>
-
-<p><a href="https://github.com/YouROK/TorrServer">YouROK/TorrServer</a><br>Torrent stream server</p>
-
-<p><a href="https://github.com/0xJacky/nginx-ui">0xJacky/nginx-ui</a><br>Yet another WebUI for Nginx</p>
-
-<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with Kimi, GLM, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.</p>
+<p><a href="https://github.com/kedacore/keda">kedacore/keda</a><br>KEDA is a Kubernetes-based Event Driven Autoscaling component. It provides event driven scale for any container running in Kubernetes</p>
 
 
 <hr/>
