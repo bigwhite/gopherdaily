@@ -45,7 +45,7 @@ img {
 
 <div style="text-align: center; margin-bottom: 10px;">
   <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
-  <a href=https://bigwhite.github.io/gopherdaily/202610/issue-20261014.html style="margin: 0 10px;">Web版</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202610/issue-20261015.html style="margin: 0 10px;">Web版</a> |
   <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
   <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
   <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
@@ -57,9 +57,9 @@ img {
 
 <div>
 <p class="issue" style="text-align:center;">
-  <span style="text-align:center;">20261014</span>
+  <span style="text-align:center;">20261015</span>
 </p>
-<p>每日一谚：Do not store Contexts inside a struct type; pass them through call chains. </p>
+<p>每日一谚：Talk is cheap. Show me the code. — Linus Torvalds </p>
 </div>
 
 <hr/>
@@ -67,73 +67,73 @@ img {
 <h2>Go技术生态</h2>
 
 
-<p><a href="https://tonybai.com/2026/10/14/post-quantum-cryptographic-right-answers-2026">2029 年大限将至！Go 前密码学掌门人更新“密码学正确答案”：所有非对称算法都得换</a><br>2026 年，后量子密码迁移的截止时间被提前到 2029 年。Go 前密码学负责人 Filippo Valsorda 更新了“密码学正确答案”：对称密 码基本不变，但密钥交换、非对称加密、数字签名、TLS 库和备份工具的推荐方案都发生了变化。本文梳理这份清单的核心结论与背后的逻辑。</p> 
-
-<p><a href="https://tonybai.com/2026/10/14/anthropic-scion-replaces-git-agent-scale-source-control">Anthropic 把 Git 扔了！7 人 5 个月自研 Scion，日合并代码从 2500 暴涨到 3 万次</a><br>Anthropic 官方工程博客披露：随着 Claude 大规模写代码，公司每日代码合并量从 2026 年 5 月的约 2500 次增长到 9 月的 3 &gt;万次以上，Git 成为最大开发瓶颈。为此，7 人团队用 5 个月自研版本控制系统 Scion，并完成 monorepo 迁移。本文拆解 Scion 的设计原则、核心数据结构、缓存架构，以及 Anthropic 总结出的“智能体规模”软件开发经验。</p> 
-
-<p><a href="https://blog.jetbrains.com/go/2026/10/13/python-vs-go/">Python 与 Go：开发者的实用对比</a><br>GoLand 是用于 Go 专业开发的 IDE。它支持开发者通过 Twitter 和 YouTube 关注最新动态。</p> 
+<p><a href="https://tonybai.com/2026/10/15/go-accepted-proposals-progress-2026-q3">Go 正在加速清理十年技术欠账？这批 Accepted Proposal 最近三个月动起来了</a><br>三个月前，Go 官方仓库中多达 171 个“已批准却未实现（Accepted）”的十年技术欠账清单引发广泛关注。如今一个季度过去，这批 历史遗留提案到底动起来了吗？本文基于最近 90 天的真实动态进行复盘，建立起从 L1 讨论到 L4 交付的四级进展评估标尺，深度剖析了等待十年 的复合字面量类型推断进入 Go 1.28、弃用 h2c 包顺利闭环等典型案例，揭示开源治理中“被接受只代表方向，工程落地才是硬仗”的深层规律。</p> 
 
 
 <h2>云原生技术</h2>
 
 
-<p><a href="https://tailscale.com/blog/sovereign-ai-patricia-prewitt">主权 AI 从开放基础设施开始</a><br>主权 AI 意味着控制权：选择自己的技术栈、数据和依赖项。</p>
+<p><a href="https://kubernetes.io/blog/2026/10/14/tracing-kueue-admission-with-headlamp/">为什么我的Kubernetes作业仍然挂起？使用Headlamp追踪Kueue准入</a><br>本文介绍了如何使用Headlamp工具追踪Kubernetes作业的Kueue准入状态。通过检查工作负载的Admitted和QuotaReserved条件，并读取相关消息和事件，可以诊断作业挂起的原因。</p>
 
-<p><a href="https://p99conf.io/2026/10/14/performance-engineering-from-kernel-analysis-to-ai-adrian-cockcrofts-take/">从内核分析到 AI 的性能工程：Adrian Cockcroft 的观点</a><br>在五年的历史上，P99 会议邀请了多位批评同名指标的演讲者。去年，Adrian Cockcroft 虽未明确表示 P99 指标毫无价值，但暗示了这一点。</p>
+<p><a href="https://www.docker.com/blog/ai-agent-security-risks/">AI智能体安全风险：智能体自主行动时可能出现的问题</a><br>主要风险包括提示注入、工具误用和工具投毒、过度自主、凭据和秘密暴露以及数据泄露。这些风险都源于智能体自主使用工具和凭据，而非遵循固定的可审查路径。</p>
 
-<p><a href="https://www.anthropic.com/engineering/redesigning-source-control">重新设计 Anthropic 的源代码控制</a><br>随着每日合并次数增长十倍以上，源代码控制成为我们最大的开发瓶颈。我们分享了如何在五个月内迁移到内部版本控制系统的经验。</p>
+<p><a href="https://www.docker.com/blog/harbor-docker-sandboxes-run-safe-reproducible-agent-evals/">Harbor &#43; Docker沙箱：运行安全、可复现的智能体评估</a><br>Harbor现在可以在Docker沙箱中运行每个评估任务。这些沙箱是基于MicroVM的环境，可安全运行Claude Code、Codex、Cursor等智能体，并允许定义自定义网络策略以实现公平、可复现的评估。</p>
 
-<p><a href="https://blog.plover.com/prog/git/history-proposal.html">论述宇宙：也许更好的 Git 仓库发布历史跟踪方式</a><br>作者提出了一个可能更好的方法来跟踪 Git 仓库的发布历史，旨在改进现有的版本控制流程。</p>
+<p><a href="https://netflixtechblog.com/integrating-netflixs-foundation-model-into-personalization-applications-cf176b5860eb?source=rss----2615bd06b42e---4">将Netflix的基础模型集成到个性化应用中</a><br>这种方法类似于使用特定领域数据微调LLM。在之前的博客中，我们描述了基础模型如何基于下一个token预测目标进行训练，其中token代表不同的用户交互。</p>
 
-<p><a href="https://www.natemeyvis.com/where-is-all-the-new-good-software/">所有新的优秀软件在哪里？</a><br>这是一个常见问题，尤其来自 AI 怀疑论者：如果 AI 编程如此出色，为什么我们现在没有看到更多新的优秀软件？这里提供了一些答案。</p>
+<p><a href="https://netflixtechblog.com/timeseries-tiered-storage-journey-kafka-flink-streams-to-native-cassandra-cold-reads-e59d597c9d60?source=rss----2615bd06b42e---4">时间序列分层存储之旅：从Kafka/Flink流到原生Cassandra冷读取</a><br>本文介绍了Netflix如何从Kafka/Flink流处理迁移到原生Cassandra的冷读取存储模式。这种分层存储架构优化了时间序列数据的存储和访问效率。</p>
 
-<p><a href="https://aws.amazon.com/blogs/aws/announcing-aws-lambda-web-functions-for-fast-consistent-web-app-performance-anywhere/">宣布推出 AWS Lambda Web Functions</a><br>AWS 宣布推出 Lambda Web Functions，这是一种新的服务，可在任何地方实现快速、一致的 Web 应用程序性能。</p>
+<p><a href="https://netflixtechblog.com/netflix-conductor-the-next-chapter-41ad21067649?source=rss----2615bd06b42e---4">Netflix Conductor：新篇章</a><br>Netflix Ads使用Conductor和Workflow SDK运行复杂的多步骤流程。创意摄取是一个高度分支的管道，SDK将庞大的JSON数据转换为类型安全、可测试的代码，顺序运行策略消除了某些问题。</p>
 
-<p><a href="https://blog.cloudflare.com/d1-control-plane">幕后，远离热路径：D1 如何扩展到数百万个数据库 | Cloudflare 博客</a><br>Cloudflare 的 D1 数据库服务通过创新架构实现了扩展，能够支持数百万个数据库实例，同时保持高性能。</p>
+<p><a href="https://netflixtechblog.com/running-apache-spark-experiments-in-my-sleep-and-on-a-plane-588816b6b5f8?source=rss----2615bd06b42e---4">在睡眠中运行Apache Spark实验（以及在飞机上）</a><br>如果错误仅在规模上出现，应停止尝试采样，而是构建并行运行多个全规模实验的方法。如果调度器可以使用分支名称，则每个分支就是一个独立的实验，同时运行多个实验变得容易。</p>
 
-<p><a href="https://devblogs.microsoft.com/oldnewthing/20261012-00/?p=112767/">C&#43;&#43; futures 第一部分：思维模型 - 旧事物</a><br>Raymond Chen 探讨了 C&#43;&#43; futures 的思维模型，帮助开发者更好地理解这一并发编程概念。</p>
+<p><a href="https://netflixtechblog.com/the-lifecycle-of-llm-as-a-judge-building-aligning-and-monitoring-at-scale-c95bd8283508?source=rss----2615bd06b42e---4">LLM即评判器的生命周期：大规模构建、对齐和监控</a><br>首先应在评判器之前投资基准测试。带有推理注释的适度基准测试优于仅带标签的大型基准测试。这些书面推理正是实现推理对齐微调的关键，因为如果不记录人类的推理，就无法纠正评判器的推理。</p>
 
-<p><a href="https://www.metabase.com/blog/how-we-automate-metabase-releases">更多、更好、更快：我们如何自动化 Metabase 发布</a><br>过去发布 Metabase 需要手动完成长长的检查清单。如今，我们每天发布一个新补丁而无需人工干预。我们分享了实现这一转变的方法。</p>
+<p><a href="https://github.blog/engineering/architecture-optimization/from-2500-requests-to-24-rebuilding-star-history-without-the-stargazers/">从2,500次请求到24次：在没有stargazers的情况下重建星标历史</a><br>本文介绍了如何优化GitHub仓库星标历史的获取过程，将请求数量从2,500次减少到24次。通过改进API调用方式，显著提高了性能并减少了资源消耗。</p>
 
-<p><a href="https://withblue.ink/2026/10/workload-identity-tailscale-tsiam">也给你的工作负载一个身份，使用 Tailscale — 使用 Blue Ink</a><br>作者分享了如何使用 Tailscale 为工作负载提供身份验证，以提高系统安全性，无论是在家庭实验室还是外部环境中。</p>
+<p><a href="https://enroute.sh/blog/everyone-is-doing-git-on-s3-wrong">每个人都在S3上错误地使用Git</a><br>尽管数据库技术近年来经历了大量云创新，但Git托管变化不大。目前典型的生产级Git托管方式存在效率问题，作者提出了更优的S3上Git托管方案。</p>
+
+<p><a href="https://sunshowers.io/posts/anthropic-mononoke/">Anthropic的Scion深受Mononoke启发 · sunshowers</a><br>Anthropic的Scion项目深受Mononoke启发，这是对源代码控制系统的重新设计。该系统旨在解决传统版本控制系统的局限性，提供更高效、更安全的代码管理方式。</p>
+
+<p><a href="https://tanstack.com/blog/tanstack-start-1-0">TanStack Start 1.0已稳定 | TanStack博客</a><br>TanStack Start 1.0版本已达到稳定状态，提供了全面的支持选项，包括支持概览、合作伙伴、开源赞助商和企业支持。这标志着该框架已准备好用于生产环境。</p>
+
+<p><a href="https://blog.demofox.org/2026/10/03/the-double-headed-stack-allocator/">双头堆栈分配器</a><br>在编写高性能应用程序时，需要学习利用有限资源的快速代码编写技巧。内存分配对于需要可变内存量的性能关键代码是一个重要话题。</p>
   
 
 <h2>AI</h2>
 
 
-<p><a href="https://deepmind.google/models/gemini/">Gemini — Google DeepMind</a><br>Gemini 4 Argon 是 Google DeepMind 的最新模型，提供在 Gemini 和 Google AI Studio 中试用。</p>
+<p><a href="https://simonwillison.net/2026/Oct/14/ai-is-mass-decompiling-games/">AI正在大规模反编译游戏。这既令人惊叹又令人担忧。</a><br>大多数人已经意识到其中的可怕之处。如果AI可以反编译游戏和软件，整个科技行业将面临巨大变革。任何人都可以反编译他人软件并以任何方式使用，而无法阻止，公司也可能从竞争对手那里窃取代码。</p>
 
-<p><a href="https://developers.googleblog.com/gemini-4-argon-for-robotics/">Gemini 4 Argon for Robotics - Google 开发者博客</a><br>Gemini 4 Argon 在物理理解、代码生成和视觉语义推理方面取得了突破性进展，解锁了机器人技术堆栈中的新工作流程，加速了实现物理 AGI 的进展。</p>
+<p><a href="https://developers.googleblog.com/gemini-4-argon-for-robotics/">Gemini 4 Argon for Robotics - Google开发者博客</a><br>Gemini 4 Argon在物理理解、代码生成和视觉语义推理方面标志着重大转变，解锁了机器人技术栈中的新工作流程，加速了物理AGI的进展。</p>
 
-<p><a href="https://linear.app/now/five-principles-working-with-loops">使用 Loops 的五个原则</a><br>Linear 团队提出了使用 Loops 的五个原则，旨在优化工作流程和提高效率。</p>
+<p><a href="https://www.a16z.news/p/winning-the-relay-race-long-running">赢得接力赛：高价值客户旅程中的长期运行智能体</a><br>文章探讨了在高价值客户旅程中使用长期运行智能体的接力赛模式。这种AI原生的方法可以显著提升客户体验和业务价值，特别是在复杂的客户互动场景中。</p>
 
-<p><a href="https://kylekukshtel.com/ai-harness-engineering-game-development-claude-code">你的游戏是一个工具</a><br>作者在卡尔加里的独立牛仔节上发表了题为&#34;你的游戏是一个工具&#34;的 45 分钟演讲，探讨了游戏开发中的工程实践。</p>
-
-<p><a href="https://anythingllm.com/blog/lemonade-llama-cpp">为什么 AnythingLLM 从 Ollama 迁移到 Lemonade 和 llama.cpp | AnythingLLM</a><br>AnythingLLM Desktop 现在有了新的内置引擎，下载并在 AnythingLLM 中运行的模型现在基于 llama.cpp，提供了更好的性能和兼容性。</p>
+<p><a href="https://arstechnica.com/ai/2026/10/ai-coding-agents-generate-more-code-but-not-more-software/">AI编码智能体生成更多代码，但不生成更多软件 - Ars Technica</a><br>研究表明，AI编码智能体虽然能生成更多代码，但并不一定产生更多软件。现代AI编码助手可以高效生成大量功能代码，但完整软件的开发还需要更多考虑因素。</p>
 
 
 <h2>流行工具与项目</h2>
 
 
-<p><a href="https://github.com/Bennettxai/FounderOS">Bennettxai/FounderOS</a><br>An open-source, single-operator business command center: run a one-person operated company as AI-assisted departments (comms, funnel, social, finances, agents, and a knowledge graph) from one live das</p>
-
 <p><a href="https://github.com/vxcontrol/pentagi">vxcontrol/pentagi</a><br>Fully autonomous AI Agents system capable of performing complex penetration testing tasks</p>
 
-<p><a href="https://github.com/Tencent/WeKnora">Tencent/WeKnora</a><br>Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomous reasoning agent, and a self-maintaining Wiki.</p>
+<p><a href="https://github.com/docker/compose">docker/compose</a><br>Define and run multi-container applications with Docker</p>
 
-<p><a href="https://github.com/multica-ai/multica">multica-ai/multica</a><br>Make humans and AI agents work as one team — open-source and self-hostable.</p>
+<p><a href="https://github.com/JuliusBrussee/caveman">JuliusBrussee/caveman</a><br>🪨 why use many token when few token do trick. Viral skill &#43; proxy for coding agents that cuts 65% of tokens by talking like a caveman.</p>
+
+<p><a href="https://github.com/razorpay/slashdocs">razorpay/slashdocs</a><br>Give your agents the power to publish reviewable HTML documents. Self-hosted server &#43; CLI &#43; remote MCP; agents push, humans review with comments and versions.</p>
+
+<p><a href="https://github.com/TecharoHQ/anubis">TecharoHQ/anubis</a><br>Weighs the soul of incoming HTTP requests to stop AI crawlers</p>
+
+<p><a href="https://github.com/golang/go">golang/go</a><br>The Go programming language</p>
+
+<p><a href="https://github.com/google/agentmesh">google/agentmesh</a><br>Agent Mesh</p>
 
 <p><a href="https://github.com/Armur-Ai/Pentest-Swarm-AI">Armur-Ai/Pentest-Swarm-AI</a><br>Autonomous penetration testing using a swarm of AI agents. Orchestrates recon, classification, exploitation, and reporting specialists with ReAct reasoning — supports bug bounty, continuous monitori</p>
 
+<p><a href="https://github.com/kubernetes/kubernetes">kubernetes/kubernetes</a><br>Production-Grade Container Scheduling and Management</p>
+
 <p><a href="https://github.com/vllm-project/semantic-router">vllm-project/semantic-router</a><br>An open, programmable decision layer for models and compute.</p>
-
-<p><a href="https://github.com/alibaba/open-code-review">alibaba/open-code-review</a><br>Secure, fast, efficient, battle-tested at Alibaba&#39;s scale. Hybrid architecture code review tool: deterministic pipelines &#43; LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE,</p>
-
-<p><a href="https://github.com/gtsteffaniak/filebrowser">gtsteffaniak/filebrowser</a><br>📂 Web File Browser</p>
-
-<p><a href="https://github.com/Project-HAMi/HAMi">Project-HAMi/HAMi</a><br>Heterogeneous GPU Sharing on Kubernetes</p>
-
-<p><a href="https://github.com/kedacore/keda">kedacore/keda</a><br>KEDA is a Kubernetes-based Event Driven Autoscaling component. It provides event driven scale for any container running in Kubernetes</p>
 
 
 <hr/>
