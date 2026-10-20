@@ -1,0 +1,156 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202610/issue-20261020.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20261020</span>
+</p>
+<p>每日一谚：Keep channel ownership local to the goroutine that writes to it </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/10/20/go-net-http-server-handlerequest-accepted">Go 标准库要给 http.Server 开一个“后门”了：Server.HandleRequest 提案通过，HTTP/3 时代的关键拼图</a><br>Go 提案 #77441 已被接受，为 net/http.Server 新增方法 HandleRequest。它让任何已经拿到 http.Request 的代码，都能按“该&gt;请求是由这个 Server 收到的”来处理，复用 OPTIONS 响应、`DefaultServeMux` 回退和 panic 恢复。该设计主要服务于 HTTP/3 等第三方协议实&gt;现，以及需要端到端验证 Server 行为的测试。本文梳理其背景、设计演进、争议点与使用示意。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/eGEnCfx34Uf_uxCrkM-_cQ">从 Rust 到 Go：数据库生态正在悄然生长</a><br>如果说 Rust 正在成为新一代数据库引擎的重要技术选择，那么 Go 展现的，则是另一种力量。</p> 
+
+<p><a href="https://internals-for-interns.com/posts/go-simd/">SIMD 和 Go</a><br>考虑一个非常简单的循环：遍历两个 `[]float32` 切片并将它们逐个元素相加。用 Go 的常规方式编写时，CPU 每次只处理一对元素。</p> 
+
+<p><a href="https://nikhilism.com/post/2026/golang-racket-concurrency/">ConcurrentML：改进 Go 的并发模型</a><br>ConcurrentML 是一种改进 Go 并发模型的方法，它将事件作为通信操作的值，并提供了包装事件和组合选择等特性。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://engineering.fb.com/2026/10/19/ml-applications/thin-orchestrator-ai-agent-architecture/">精简编排器：通过减少路由器工作提高 AI 智能体的可靠性</a><br>将路由与推理分离，路由应该是确定性的，如关键词匹配、意图分类和字段收集，将所有领域推理推送到隔离的子智能体中。</p>
+
+<p><a href="https://tailscale.com/blog/magicroute-beta">MagicRoute：无需物理路由器的路由</a><br>为子网路由器、应用连接器、出口节点和服务提供更智能的路由功能。</p>
+
+<p><a href="https://seangoedecke.com/laypeople-support-technical-fields-for-technology-not-art/">外行支持技术领域而非艺术</a><br>当作者试图避免曲解自己不持有的观点时，如果读者同意引用段落并认为其公平地代表了他们的立场，请通过电子邮件告知作者。</p>
+
+<p><a href="https://blogs.microsoft.com/blog/2026/10/20/advancing-digital-sovereignty-with-greater-control-and-choice/">通过更大的控制和选择推进数字主权</a><br>主权合作伙伴生态系统扩展了客户满足这些需求的方式，包括法国的 Bleu 在内的国家合作伙伴云，为需要不同所有权和运营模式的客户提供独立运行的环境。</p>
+
+<p><a href="https://medium.com/pinterest-engineering/introducing-modulelens-zooming-into-pytorch-modules-for-human-and-agentic-engineering-b7e9be9d29f8?source=rss----4c5a5f6279b6---4">介绍 ModuleLens：深入 PyTorch 模块进行人类和智能体工程</a><br>非侵入式 PyTorch 前向钩子直接附加到 PyTorch 模块，以无缝记录参数权重、输入输出张量和执行元数据。</p>
+
+<p><a href="https://circleci.com/blog/stacked-prs-and-ci/">堆叠 PR：它们是什么以及如何在堆叠上运行 CI</a><br>堆叠 PR 是一种代码审查方法，允许开发者在单个 PR 中包含多个相关更改，并在整个堆叠上运行持续集成。</p>
+
+<p><a href="https://yoyo-code.com/2026-is-exciting-year-for-rust-compiler-and-me/">2026 年是 Rust 编译器（和我）令人兴奋的一年</a><br>2026 年似乎是 Rust 编译器特别的一年，有很多事情正在发生。自从我开始写作以来，已经宣布了一些事情，但还有更多不太明显的事情。</p>
+
+<p><a href="https://blog.gaborkoos.com/posts/2026-10-19-How-to-Implement-a-Distributed-Recovery-Ramp/">如何实现分布式恢复斜坡</a><br>本文介绍了如何实现分布式恢复斜坡，这是断路器、舱壁和速率限制器系列文章的一部分，从进程内基础到跨舰队协调的实现。</p>
+
+<p><a href="http://kolemannix.com/blog/software-is-art">创建软件是一种艺术活动 | Koleman Nix</a><br>创建软件是一种艺术活动，是人类技能对事物的处置或修改，以实现预期的目的。在这个意义上，艺术与自然相对立。</p>
+
+<p><a href="https://javarevisited.substack.com/p/processes-vs-threads-vs-cores-what">进程、线程与核心 — 真正重要的区别</a><br>本文解构了多任务处理的错觉，探讨了进程、线程和核心之间的实际区别，以及它们如何影响应用程序性能。</p>
+
+<p><a href="https://vivianvoss.net/blog/jails-vs-containers">jails 与容器</a><br>本文比较了 jails 和容器两种虚拟化技术的特点和适用场景。</p>
+
+<p><a href="https://documentdb.io/blogs/posts/documentdb-1-0/">DocumentDB 1.0 已发布</a><br>DocumentDB 1.0 今日可用，这是首个正式发布的版本：一个采用 MIT 许可证的文档数据库，使用 MongoDB 协议并将原生 BSON 存储在 PostgreSQL 中。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Oct/19/my-obituary-for-programming/">我为编程撰写的讣告</a><br>编程已成为你能想象的最伟大的工作之一，你通过解决棘手的逻辑谜题来获得报酬。谜题越难，报酬越高，即使是简单的谜题也值很多钱，因为普通人无法解决它们。</p>
+
+<p><a href="https://www.peterp.me/articles/personal-software-factories-are-a-waste-of-time/">个人软件工厂是浪费时间</a><br>软件工程师想要构建自己的软件工厂是很自然的，但我恳请您立即放弃这个想法。</p>
+
+<p><a href="https://www.minimax.io/blog/minimax-m31f">MiniMax M3.1 Flash：重新定义智能体性能和成本 - MiniMax 研究 | MiniMax</a><br>今天，我们正式推出 **MiniMax M3.1 Flash**，它处理了超过 200 万亿个令牌，是下一代 Flash 模型，重新定义了智能体性能和成本。</p>
+
+<p><a href="https://cretezy.com/2026/ad-free-android-tv">无广告的 Android TV</a><br>作者喜欢 Android TV，它运行所有关心的应用，在 Chromecast 上便宜，并且内置在许多电视中，但不喜欢广告。</p>
+
+<p><a href="https://www.anthropic.com/research/launching-opt-in-vuln-finding-service-for-open-source">开源软件的自愿参与漏洞发现服务</a><br>Anthropic 推出了 OSS Scanner，这是一项为开源软件提供自愿参与的漏洞发现服务，帮助开发者发现和修复安全漏洞。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/kubernetes/kubernetes">kubernetes/kubernetes</a><br>Production-Grade Container Scheduling and Management</p>
+
+<p><a href="https://github.com/helm/helm">helm/helm</a><br>The Kubernetes Package Manager</p>
+
+<p><a href="https://github.com/gosom/google-maps-scraper">gosom/google-maps-scraper</a><br>scrape data from Google Maps. Extracts data such as the name, address, phone number, website URL, rating, reviews number, latitude and longitude, reviews,email and more for each place</p>
+
+<p><a href="https://github.com/mudler/LocalAI">mudler/LocalAI</a><br>LocalAI is the open-source AI engine. Run any model - LLMs, vision, voice, image, video - on any hardware. No GPU required.</p>
+
+<p><a href="https://github.com/QuantumNous/new-api">QuantumNous/new-api</a><br>A unified AI model hub for aggregation &amp; distribution. It supports cross-converting various LLMs into OpenAI-compatible, Claude-compatible, or Gemini-compatible formats. A centralized gateway for pers</p>
+
+<p><a href="https://github.com/go-gitea/gitea">go-gitea/gitea</a><br>Git with a cup of tea! Painless self-hosted all-in-one software development service, including Git hosting, code review, team collaboration, package registry and CI/CD</p>
+
+<p><a href="https://github.com/strelov1/freehire">strelov1/freehire</a><br>freehire — the open-source search engine for job seekers</p>
+
+<p><a href="https://github.com/DataDog/datadog-agent">DataDog/datadog-agent</a><br>Main repository for Datadog Agent</p>
+
+<p><a href="https://github.com/samber/cc-skills-golang">samber/cc-skills-golang</a><br>🧑‍🎨 A collection of Golang agentic skills that works</p>
+
+<p><a href="https://github.com/hashicorp/vault">hashicorp/vault</a><br>A tool for secrets management, encryption as a service, and privileged access management</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+

@@ -45,7 +45,7 @@ img {
 
 <div style="text-align: center; margin-bottom: 10px;">
   <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
-  <a href=https://bigwhite.github.io/gopherdaily/202610/issue-20261019.html style="margin: 0 10px;">Web版</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202610/issue-20261020.html style="margin: 0 10px;">Web版</a> |
   <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
   <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
   <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
@@ -57,9 +57,9 @@ img {
 
 <div>
 <p class="issue" style="text-align:center;">
-  <span style="text-align:center;">20261019</span>
+  <span style="text-align:center;">20261020</span>
 </p>
-<p>每日一谚：Beware of goroutine leaks in HTTP handlers and long-running background workers </p>
+<p>每日一谚：Keep channel ownership local to the goroutine that writes to it </p>
 </div>
 
 <hr/>
@@ -67,115 +67,79 @@ img {
 <h2>Go技术生态</h2>
 
 
-<p><a href="https://tonybai.com/2026/10/19/gophercon-eu-2026-go-team-panel">漏洞报告暴增十倍，Go 团队：我们睡不好了</a><br>GopherCon EU 2026 上，Go 团队的 Roland Shoemaker 与 Jonathan Amsterdam 参加了一场圆桌问答。本文结合会议文字稿与公开&gt;资料（Go 1.26／1.27 发布说明、curl 项目公告、Epoch AI 与 Google GTIG 数据等），梳理了五条主线：AI 引发的漏洞报告洪水与团队的应对策 略、Go 团队自己使用 AI 的边界、Go 的路线图（后量子、SIMD、LLM 友好）、小团队的取舍哲学，以及语言设计上的“克制”。</p> 
+<p><a href="https://tonybai.com/2026/10/20/go-net-http-server-handlerequest-accepted">Go 标准库要给 http.Server 开一个“后门”了：Server.HandleRequest 提案通过，HTTP/3 时代的关键拼图</a><br>Go 提案 #77441 已被接受，为 net/http.Server 新增方法 HandleRequest。它让任何已经拿到 http.Request 的代码，都能按“该&gt;请求是由这个 Server 收到的”来处理，复用 OPTIONS 响应、`DefaultServeMux` 回退和 panic 恢复。该设计主要服务于 HTTP/3 等第三方协议实&gt;现，以及需要端到端验证 Server 行为的测试。本文梳理其背景、设计演进、争议点与使用示意。</p> 
 
-<p><a href="https://tonybai.com/2026/10/18/verus-rust-formal-verification-amazon-nitro">给Rust代码办一张“数学身份证”：亚马逊揭秘Nitro背后的形式化验证武器Verus</a><br>Rust 的类型系统能防内存越界和数据竞争，却证明不了“代码算出来的业务逻辑是对的”。本文深度揭秘亚马逊在 AWS Nitro 隔离引 擎等核心基础设施中引入的形式化验证利器——Verus。Verus 允许开发者直接在 Rust 源码中嵌入数学规约，依托自动求解器实现秒级证明反馈，甚&gt;至能为脱离编译器保护的 unsafe 代码与自定义并发锁建立不可动摇的数学级正确性保证。文章详细拆解了 Verus 的工作流程、“幽灵代码擦除”机&gt;制及开源生态的落地现状。</p> 
+<p><a href="https://mp.weixin.qq.com/s/eGEnCfx34Uf_uxCrkM-_cQ">从 Rust 到 Go：数据库生态正在悄然生长</a><br>如果说 Rust 正在成为新一代数据库引擎的重要技术选择，那么 Go 展现的，则是另一种力量。</p> 
 
-<p><a href="https://tonybai.com/2026/10/18/rust-in-the-agentic-era-guardrails-proofs-and-design-languages">Rust 核心开发者发出“存在主义焦虑”：Agent 写代码的时代，语言设计者还有饭碗吗？</a><br>Rust 近期热度飙升，Meta 今年的 Rust 代码量已超过此前 9 年总和。Rust 核心开发者 Niko Matsakis 认为，原因在于 Rust 的“默认高性能”与“类型系统护栏”恰好契合 Agent 编程。本文结合他的文章，以及 Lean 社区的 lean-zip 实验和 AWS 工程师 Marc Brooker 的“反馈 回路假说”，梳理 Rust 的优势、局限，以及“证明系统 &#43; 设计语言”这条可能的演进路线。</p> 
+<p><a href="https://internals-for-interns.com/posts/go-simd/">SIMD 和 Go</a><br>考虑一个非常简单的循环：遍历两个 `[]float32` 切片并将它们逐个元素相加。用 Go 的常规方式编写时，CPU 每次只处理一对元素。</p> 
 
-<p><a href="https://tonybai.com/2026/10/17/evolving-programming-languages-in-ai-era">当90%代码由AI写完，程序员社区、编程语言、开发工具将何去何从？</a><br>Elixir之父José Valim近日在X发长文《Evolving programming languages in the AI era》，引发大量转发讨论。他认为当AI Agent写掉大部分代码后，编程语言的“人体工学”优化会失去意义，但编译器不会消失；真正该被重新设计的，是IDE、LSP、调试器这些“为人类交互而生 ”的工具——他提出用可查询的“程序数据库”取代LSP、用运行时可观测性取代传统调试器。本文完整梳理其核心观点及评论区激辩。</p> 
-
-<p><a href="https://go.dev/blog/interactive-refactoring">gopls中的交互式重构</a><br>在现代IDE或编辑器中编辑代码时，开发者依赖其重构功能来自动执行常见的代码转换。</p> 
-
-<p><a href="https://tomasvotruba.com/blog/rust-go-leverage-in-php">PHP中的Rust/Go应用</a><br>在上一篇文章中，我们探讨了Rust静态分析的速度如何为非PHP语言分析PHP代码库打开了大门。它给PHP世界带来了什么影响？我们PHP开发者如何利用它来获得自己的利益？</p> 
+<p><a href="https://nikhilism.com/post/2026/golang-racket-concurrency/">ConcurrentML：改进 Go 的并发模型</a><br>ConcurrentML 是一种改进 Go 并发模型的方法，它将事件作为通信操作的值，并提供了包装事件和组合选择等特性。</p> 
 
 
 <h2>云原生技术</h2>
 
 
-<p><a href="https://seangoedecke.com/what-requirements-dont-you-have/">你没有哪些需求？</a><br>问题在于：如果有人通过慢速互联网发送的HTTP请求每秒只到达一个数据包，这是否必须占用服务器进程的整个时间？Unicorn的回答是&#34;是的，所以在它前面放置nginx或HAProxy&#34;。</p>
+<p><a href="https://engineering.fb.com/2026/10/19/ml-applications/thin-orchestrator-ai-agent-architecture/">精简编排器：通过减少路由器工作提高 AI 智能体的可靠性</a><br>将路由与推理分离，路由应该是确定性的，如关键词匹配、意图分类和字段收集，将所有领域推理推送到隔离的子智能体中。</p>
 
-<p><a href="https://danieltemkin.com/esolangs/folders">Daniel Temkin | Folders语言</a><br>_Folders_语言创建于2015年，最近更新于2026年，是Rivulet和Velato的作者创建的四十四种非常规编程语言之一。</p>
+<p><a href="https://tailscale.com/blog/magicroute-beta">MagicRoute：无需物理路由器的路由</a><br>为子网路由器、应用连接器、出口节点和服务提供更智能的路由功能。</p>
 
-<p><a href="https://packagemain.tech/p/kubernetes-events-and-controller-design">Kubernetes事件和控制器设计</a><br>Kubernetes事件和控制器设计探讨了如何有效处理Kubernetes系统中的事件流以及如何设计高效的控制器来响应这些事件。</p>
+<p><a href="https://seangoedecke.com/laypeople-support-technical-fields-for-technology-not-art/">外行支持技术领域而非艺术</a><br>当作者试图避免曲解自己不持有的观点时，如果读者同意引用段落并认为其公平地代表了他们的立场，请通过电子邮件告知作者。</p>
 
-<p><a href="https://alordash.github.io/alordash/blog/hotreload-in-rust/">Rust中的热重载</a><br>热重载功能允许您更改正在运行的应用程序代码，而无需在每次更改后重新启动它。</p>
+<p><a href="https://blogs.microsoft.com/blog/2026/10/20/advancing-digital-sovereignty-with-greater-control-and-choice/">通过更大的控制和选择推进数字主权</a><br>主权合作伙伴生态系统扩展了客户满足这些需求的方式，包括法国的 Bleu 在内的国家合作伙伴云，为需要不同所有权和运营模式的客户提供独立运行的环境。</p>
 
-<p><a href="https://thunk.blog/posts/types-of-types-haskell-kind-system/">类型的类型：Haskell的Kind系统</a><br>在为我的Haskell Redis服务器克隆添加类型化配置的过程中，我发现自己学习了一些新技巧，这些技巧都源于Haskell的Kind系统。</p>
+<p><a href="https://medium.com/pinterest-engineering/introducing-modulelens-zooming-into-pytorch-modules-for-human-and-agentic-engineering-b7e9be9d29f8?source=rss----4c5a5f6279b6---4">介绍 ModuleLens：深入 PyTorch 模块进行人类和智能体工程</a><br>非侵入式 PyTorch 前向钩子直接附加到 PyTorch 模块，以无缝记录参数权重、输入输出张量和执行元数据。</p>
 
-<p><a href="https://openjdk.org/projects/jdk/28/">JDK 28参考实现</a><br>此版本将是Java SE平台第28版的参考实现，由Java社区流程中的JSR 403指定。目前处于开发状态。</p>
+<p><a href="https://circleci.com/blog/stacked-prs-and-ci/">堆叠 PR：它们是什么以及如何在堆叠上运行 CI</a><br>堆叠 PR 是一种代码审查方法，允许开发者在单个 PR 中包含多个相关更改，并在整个堆叠上运行持续集成。</p>
 
-<p><a href="https://blog.raed.dev/posts/microsoft-teams-red-flag/">Microsoft Teams是一个危险信号</a><br>当一家公司使用Microsoft Teams和Outlook运行时，我可以对其决策方式做出一种假设：员工整天使用的工具是由几乎不使用它们的人选择的，而决定因素是许可协议中的一行内容。</p>
+<p><a href="https://yoyo-code.com/2026-is-exciting-year-for-rust-compiler-and-me/">2026 年是 Rust 编译器（和我）令人兴奋的一年</a><br>2026 年似乎是 Rust 编译器特别的一年，有很多事情正在发生。自从我开始写作以来，已经宣布了一些事情，但还有更多不太明显的事情。</p>
 
-<p><a href="https://rushter.com/blog/python-binary-wheels/">Python的二进制wheel和供应链攻击</a><br>尽管Python是一种慢速语言，但以其快速包管理而闻名。最快的Python包是用C、C&#43;&#43;或Rust等编译语言编写的，而Python仅起到粘合作用。</p>
+<p><a href="https://blog.gaborkoos.com/posts/2026-10-19-How-to-Implement-a-Distributed-Recovery-Ramp/">如何实现分布式恢复斜坡</a><br>本文介绍了如何实现分布式恢复斜坡，这是断路器、舱壁和速率限制器系列文章的一部分，从进程内基础到跨舰队协调的实现。</p>
 
-<p><a href="https://substack.com/home/post/p-219459526">DuckDB 2.0和S3文件读取性能</a><br>DuckDB 2.0版本显著提升了与S3存储系统的文件读取性能，为大规模数据分析提供了更高效的解决方案。</p>
+<p><a href="http://kolemannix.com/blog/software-is-art">创建软件是一种艺术活动 | Koleman Nix</a><br>创建软件是一种艺术活动，是人类技能对事物的处置或修改，以实现预期的目的。在这个意义上，艺术与自然相对立。</p>
 
-<p><a href="https://serce.me/posts/2026-10-16-faster-better-stronger-is-not-a-strategy">更快、更好、更强不是一种策略</a><br>领导一个工程领域通常意味着你需要时不时地定义工程策略，而不仅仅是追求表面的改进。</p>
+<p><a href="https://javarevisited.substack.com/p/processes-vs-threads-vs-cores-what">进程、线程与核心 — 真正重要的区别</a><br>本文解构了多任务处理的错觉，探讨了进程、线程和核心之间的实际区别，以及它们如何影响应用程序性能。</p>
 
-<p><a href="https://ngrok.com/blog/compression-is-prediction">压缩就是预测 | ngrok博客</a><br>最近我在阅读关于压缩的内容时偶然发现了一个惊人的事实：压缩器和大型语言模型在本质上试图解决的是完全相同的问题。</p>
+<p><a href="https://vivianvoss.net/blog/jails-vs-containers">jails 与容器</a><br>本文比较了 jails 和容器两种虚拟化技术的特点和适用场景。</p>
 
-<p><a href="https://code.visualstudio.com/blogs/2026/10/15/modern-ui">现代化VS Code用户界面</a><br>VS Code自2015年首次预览以来已经发生了很大变化，最新的UI更新旨在提升用户体验和开发效率。</p>
-
-<p><a href="https://www.iroh.computer/blog/the-road-to-iroh-1-0">iroh 1.0的发布之路 - Iroh</a><br>经过四年的工作和多次转型，我们终于发布了iroh 1.0。我们的网站不断扩展，描述了iroh的内部工作原理，但我们认为理解为什么创建它同样重要。</p>
-
-<p><a href="https://lwn.net/Articles/1101143/">Linux 7.3内核已发布 [LWN.net]</a><br>Linus Torvalds如期发布了7.3内核。这次发布没有随机延迟，表明开发过程按计划进行。</p>
-
-<p><a href="https://verdagon.dev/blog/reverse-borrow-checking">关于借用检查的新思考方式（逆向）</a><br>本文介绍了一种关于借用检查的新方法，从逆向角度思考Rust语言中的借用检查机制，为理解内存安全提供了新视角。</p>
-
-<p><a href="https://chriskiehl.com/article/it-is-still-ok-to-enjoy-programming">享受编程仍然是OK的</a><br>阅读Hacker News让我觉得有必要写下这篇文章：享受编程仍然是OK的。在技术社区中，保持对编程的热情和乐趣非常重要。</p>
-
-<p><a href="https://telflo.com/blog/monitoring-supabase-with-the-opentelemetry-collector">使用OpenTelemetry Collector监控Supabase </a><br>Supabase为项目遥测提供了两种选择。Metrics API是一个Prometheus端点，涵盖Postgres、底层主机和堆栈的其余部分。</p>
-
-<p><a href="https://packagemain.tech/p/the-filesystem-is-the-api-with-tigerfs">文件系统就是API（使用TigerFS）</a><br>如果文件系统由真实数据库支持会怎样？TigerFS探索了将文件系统与数据库结合的新方法，为数据存储提供了创新解决方案。</p>
-
-<p><a href="https://www.infoq.com/news/2026/10/uber-automated-dependency/">Uber在其服务网格中自动化依赖分析</a><br>Uber在其服务网格中实现了依赖分析的自动化，通过智能工具监控和分析系统间的依赖关系，提高了架构的可靠性和可维护性。</p>
-
-<p><a href="https://rustdesk.com/blog/rustdesk-1-5-0-webrtc-qos">RustDesk 1.5.0：WebRTC直连和质量改进</a><br>我们最近分享了一个实际体验：升级到1.5.0后，从另一个大陆访问家里的Mac感觉比以前更流畅。原始文章描述了这一体验。</p>
-
-<p><a href="https://www.paradedb.com/blog/opening-a-closed-tin-part-2">使COUNT和其余搜索真正快速（第二部分）</a><br>本文是系列文章的第二部分，重点介绍如何优化COUNT查询和其他搜索操作，显著提升数据库查询性能。</p>
-
-<p><a href="https://blog.codingconfessions.com/p/virtual-memory">虚拟内存：页表、TLB和Linux内部机制</a><br>本文从基础原理出发，提供了关于页面错误、页表、TLB、NUMA拓扑、Linux内部机制以及在数据密集型系统中性能优化的实用指南。</p>
+<p><a href="https://documentdb.io/blogs/posts/documentdb-1-0/">DocumentDB 1.0 已发布</a><br>DocumentDB 1.0 今日可用，这是首个正式发布的版本：一个采用 MIT 许可证的文档数据库，使用 MongoDB 协议并将原生 BSON 存储在 PostgreSQL 中。</p>
   
 
 <h2>AI</h2>
 
 
-<p><a href="https://tonybai.com/2026/10/17/solving-code-review-at-anthropic">Claude Code 团队是如何进行代码审查的</a><br>在已有 90% 代码由 Claude 自主编写的背景下，Claude Code 团队首次公开了如何解决海量代码审查瓶颈的实战工程体系。面对日&gt;均数万次合并的吞吐压力，团队摒弃传统逐行看代码的“人肉把关”，建立起涵盖提 PR 前自验、多 Agent 投票审查、阻断性安全校验、三档动态风&gt;险审批以及合并队列的分级防御网。同时，通过引入事故转评测集与轮数硬封顶等收敛机制，团队在 PR 合并量翻倍的同时将回滚率压降超 40%，将人类极其有限的注意力精准锚定在架构决策与业务意图上。</p>
+<p><a href="https://simonwillison.net/2026/Oct/19/my-obituary-for-programming/">我为编程撰写的讣告</a><br>编程已成为你能想象的最伟大的工作之一，你通过解决棘手的逻辑谜题来获得报酬。谜题越难，报酬越高，即使是简单的谜题也值很多钱，因为普通人无法解决它们。</p>
 
-<p><a href="https://tonybai.com/2026/10/19/harness2-recursive-agent-harnessing-google-research">谷歌开源Harness²：不碰权重，让Agent学会了“自我进化”</a><br>LLM Agent 的能力取决于模型，也取决于包裹模型的执行Harness（harness）。谷歌 Cloud AI Research 提出 Harness²，一个即插 即用的“递归式 Agent Harness优化”框架：任务级递归通过“提出—探测—合成”的对照步骤，在没有真值验证器的情况下改进当前任务的Harness；Harness级递归则把改进过程沉淀为经验库，指导后续任务。在 3 个专业基准、4 种“模型—Harness”配置上，单步改进即可稳定提升表现，最高分别达&gt;到 WorkBuddy-Bench &#43;11.5、JobBench &#43;4.5、LAB &#43;11.8 个百分点，并随递归预算增加持续上升。</p>
+<p><a href="https://www.peterp.me/articles/personal-software-factories-are-a-waste-of-time/">个人软件工厂是浪费时间</a><br>软件工程师想要构建自己的软件工厂是很自然的，但我恳请您立即放弃这个想法。</p>
 
-<p><a href="https://claude.dev/blog/solving-code-review-at-anthropic/">Claude Code团队如何进行代码审查 / claude.dev博客</a><br>Claude Code团队分享了他们的代码审查流程和方法，展示了如何利用AI辅助工具提高代码质量和开发效率。</p>
+<p><a href="https://www.minimax.io/blog/minimax-m31f">MiniMax M3.1 Flash：重新定义智能体性能和成本 - MiniMax 研究 | MiniMax</a><br>今天，我们正式推出 **MiniMax M3.1 Flash**，它处理了超过 200 万亿个令牌，是下一代 Flash 模型，重新定义了智能体性能和成本。</p>
 
-<p><a href="https://neuralwatt.com/news/why-harnesses-matter-for-energy-efficiency">为什么Harness对能源效率很重要</a><br>研究表明，一次深度缓存缺失的能耗相当于600次正常操作的预填充，这凸显了优化线束设计对提高能源效率的重要性。</p>
+<p><a href="https://cretezy.com/2026/ad-free-android-tv">无广告的 Android TV</a><br>作者喜欢 Android TV，它运行所有关心的应用，在 Chromecast 上便宜，并且内置在许多电视中，但不喜欢广告。</p>
 
-<p><a href="https://smallcultfollowing.com/babysteps/blog/2026/10/14/agentic-dev-and-rust/">智能体对Rust的意义（反之亦然）</a><br>本文探讨了大型语言模型(LLM)对编程语言设计的影响，特别是对Rust语言生态系统可能带来的变革和机遇。</p>
-
-<p><a href="https://www.infoq.com/news/2026/09/modal-scaling-sandboxes/">超越Kubernetes：Modal如何在几秒内扩展100万个并发沙箱</a><br>Modal介绍了一种超越传统Kubernetes的解决方案，能够在几秒内扩展到100万个并发沙箱，为AI和机器学习工作负载提供了前所未有的可扩展性。</p>
-
-<p><a href="https://blog.cloudflare.com/cloudflare-openai-discovery-agentic-web/">Cloudflare和OpenAI：为每个人改善AI发现体验</a><br>Cloudflare与OpenAI合作，通过整合AI技术，为用户提供更智能、更高效的发现体验，同时保持网络性能和安全性的平衡。</p>
-
-<p><a href="https://askloft.ai/insights/articles/how-good-are-openspec-specs">OpenSpec规范质量如何？一项对87个公共项目的研究</a><br>研究表明，OpenSpec的写作指南已经设定了正确的规则：每个需求一个SHALL，不包含实现细节，包含错误情况场景，每个规范都有明确目的。其验证器只检查语法，不检查这些规则。</p>
-
-<p><a href="https://www.sense-lab.ai/post/how-to-build-a-self-improving-voice-agent">自我改进的语音智能体</a><br>每次部署都会获得一个新的智能体，下一个版本应该已经从前一个版本中学习。这种持续学习机制使语音智能体能够不断改进其性能和用户体验。</p>
-
-<p><a href="https://www.anthropic.com/research/employment-at-anthropic">Anthropic的招聘方式如何变化</a><br>Anthropic发布了一份关于其就业模式变化的报告，详细介绍了公司在人工智能安全领域的招聘策略、员工发展计划和未来工作趋势。</p>
-
-<p><a href="https://aiengg.dev/blog/how-uber-connects-its-ai-agents-to-models-and-tools">Uber如何将其AI智能体连接到模型和工具</a><br>Uber在2025年初为工程师构建了一个智能体平台，现在有数千个智能体在其数千个服务中工作。工程师面临两个主要问题：如何有效连接智能体与底层模型，以及如何管理复杂的工具生态系统。</p>
+<p><a href="https://www.anthropic.com/research/launching-opt-in-vuln-finding-service-for-open-source">开源软件的自愿参与漏洞发现服务</a><br>Anthropic 推出了 OSS Scanner，这是一项为开源软件提供自愿参与的漏洞发现服务，帮助开发者发现和修复安全漏洞。</p>
 
 
 <h2>流行工具与项目</h2>
 
 
-<p><a href="https://github.com/alvinunreal/lazyskills">alvinunreal/lazyskills</a><br>mission control for agent skills</p>
+<p><a href="https://github.com/kubernetes/kubernetes">kubernetes/kubernetes</a><br>Production-Grade Container Scheduling and Management</p>
 
-<p><a href="https://github.com/google/ax">google/ax</a><br>Agent Executor (AX) is Google&#39;s open agentic orchestration runtime</p>
+<p><a href="https://github.com/helm/helm">helm/helm</a><br>The Kubernetes Package Manager</p>
 
-<p><a href="https://github.com/jasonxu114514/opencode2api">jasonxu114514/opencode2api</a><br>A Go-based OpenCode Zen / Zen Go API proxy with OpenAI &amp; Anthropic API compatibility, key/proxy pooling, automatic routing, and WebUI.</p>
-
-<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with Kimi, GLM, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.</p>
-
-<p><a href="https://github.com/gitleaks/gitleaks">gitleaks/gitleaks</a><br>Find secrets with Gitleaks 🔑</p>
-
-<p><a href="https://github.com/github/github-mcp-server">github/github-mcp-server</a><br>GitHub&#39;s official MCP Server</p>
-
-<p><a href="https://github.com/gastownhall/beads">gastownhall/beads</a><br>Beads - A memory upgrade for your coding agent</p>
-
-<p><a href="https://github.com/agent-substrate/substrate">agent-substrate/substrate</a><br>Agent Substrate: the core system</p>
-
-<p><a href="https://github.com/VersusControl/versus-incident">VersusControl/versus-incident</a><br>The self-hosted AI SRE agent. You don&#39;t have to monitor your systems alone. Versus Incident will keep track of your services, applications, and systems, detect new or unexpected problems, and provide </p>
+<p><a href="https://github.com/gosom/google-maps-scraper">gosom/google-maps-scraper</a><br>scrape data from Google Maps. Extracts data such as the name, address, phone number, website URL, rating, reviews number, latitude and longitude, reviews,email and more for each place</p>
 
 <p><a href="https://github.com/mudler/LocalAI">mudler/LocalAI</a><br>LocalAI is the open-source AI engine. Run any model - LLMs, vision, voice, image, video - on any hardware. No GPU required.</p>
+
+<p><a href="https://github.com/QuantumNous/new-api">QuantumNous/new-api</a><br>A unified AI model hub for aggregation &amp; distribution. It supports cross-converting various LLMs into OpenAI-compatible, Claude-compatible, or Gemini-compatible formats. A centralized gateway for pers</p>
+
+<p><a href="https://github.com/go-gitea/gitea">go-gitea/gitea</a><br>Git with a cup of tea! Painless self-hosted all-in-one software development service, including Git hosting, code review, team collaboration, package registry and CI/CD</p>
+
+<p><a href="https://github.com/strelov1/freehire">strelov1/freehire</a><br>freehire — the open-source search engine for job seekers</p>
+
+<p><a href="https://github.com/DataDog/datadog-agent">DataDog/datadog-agent</a><br>Main repository for Datadog Agent</p>
+
+<p><a href="https://github.com/samber/cc-skills-golang">samber/cc-skills-golang</a><br>🧑‍🎨 A collection of Golang agentic skills that works</p>
+
+<p><a href="https://github.com/hashicorp/vault">hashicorp/vault</a><br>A tool for secrets management, encryption as a service, and privileged access management</p>
 
 
 <hr/>
