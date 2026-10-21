@@ -45,7 +45,7 @@ img {
 
 <div style="text-align: center; margin-bottom: 10px;">
   <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
-  <a href=https://bigwhite.github.io/gopherdaily/202610/issue-20261020.html style="margin: 0 10px;">Web版</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202610/issue-20261021.html style="margin: 0 10px;">Web版</a> |
   <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
   <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
   <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
@@ -57,9 +57,9 @@ img {
 
 <div>
 <p class="issue" style="text-align:center;">
-  <span style="text-align:center;">20261020</span>
+  <span style="text-align:center;">20261021</span>
 </p>
-<p>每日一谚：Keep channel ownership local to the goroutine that writes to it </p>
+<p>每日一谚：Use sync.Once for thread-safe lazy initialization. </p>
 </div>
 
 <hr/>
@@ -67,55 +67,35 @@ img {
 <h2>Go技术生态</h2>
 
 
-<p><a href="https://tonybai.com/2026/10/20/go-net-http-server-handlerequest-accepted">Go 标准库要给 http.Server 开一个“后门”了：Server.HandleRequest 提案通过，HTTP/3 时代的关键拼图</a><br>Go 提案 #77441 已被接受，为 net/http.Server 新增方法 HandleRequest。它让任何已经拿到 http.Request 的代码，都能按“该&gt;请求是由这个 Server 收到的”来处理，复用 OPTIONS 响应、`DefaultServeMux` 回退和 panic 恢复。该设计主要服务于 HTTP/3 等第三方协议实&gt;现，以及需要端到端验证 Server 行为的测试。本文梳理其背景、设计演进、争议点与使用示意。</p> 
+<p><a href="https://tonybai.com/2026/10/21/go-htmx-templ-sqlc-fullstack-gophercon-uk-2026">React 太重、Svelte 太绕？Go &#43; HTMX 全栈方案，连 LLM 都更容易看懂</a><br>本文基于 GopherCon UK 2026 演讲，梳理 Go &#43; HTMX &#43; templ &#43; sqlc 的全栈开发方案：用 HTML 属性替代手写 JavaScript，把状 态收敛到后端，用 templ 获得类型安全的模板，用 sqlc 生成类型安全的数据层，并给出 HTMX 的适用边界与开发体验工具链。</p> 
 
-<p><a href="https://mp.weixin.qq.com/s/eGEnCfx34Uf_uxCrkM-_cQ">从 Rust 到 Go：数据库生态正在悄然生长</a><br>如果说 Rust 正在成为新一代数据库引擎的重要技术选择，那么 Go 展现的，则是另一种力量。</p> 
-
-<p><a href="https://internals-for-interns.com/posts/go-simd/">SIMD 和 Go</a><br>考虑一个非常简单的循环：遍历两个 `[]float32` 切片并将它们逐个元素相加。用 Go 的常规方式编写时，CPU 每次只处理一对元素。</p> 
-
-<p><a href="https://nikhilism.com/post/2026/golang-racket-concurrency/">ConcurrentML：改进 Go 的并发模型</a><br>ConcurrentML 是一种改进 Go 并发模型的方法，它将事件作为通信操作的值，并提供了包装事件和组合选择等特性。</p> 
+<p><a href="https://devblogs.microsoft.com/typescript/announcing-typescript-7-1-beta">宣布TypeScript 7.1测试版</a><br>TypeScript团队宣布推出7.1测试版，由Daniel Rosenwasser领导开发，带来了多项新功能和改进。</p> 
 
 
 <h2>云原生技术</h2>
 
 
-<p><a href="https://engineering.fb.com/2026/10/19/ml-applications/thin-orchestrator-ai-agent-architecture/">精简编排器：通过减少路由器工作提高 AI 智能体的可靠性</a><br>将路由与推理分离，路由应该是确定性的，如关键词匹配、意图分类和字段收集，将所有领域推理推送到隔离的子智能体中。</p>
+<p><a href="https://aws.amazon.com/blogs/aws/introducing-amazon-ecs-gateway-a-fully-managed-ingress-solution-for-ecs-services/">介绍Amazon ECS Gateway：面向ECS服务的完全托管入口解决方案</a><br>ECS Gateway适用于使用`awsvpc`网络模式的ECS服务，支持所有启动类型（Amazon ECS EC2、AWS Fargate和ECS托管实例）。您的服务可用区(AZ)必须是集群上每个网关可用区的子集。</p>
 
-<p><a href="https://tailscale.com/blog/magicroute-beta">MagicRoute：无需物理路由器的路由</a><br>为子网路由器、应用连接器、出口节点和服务提供更智能的路由功能。</p>
+<p><a href="https://devblogs.microsoft.com/blog/can-a-local-git-remote-replace-github-in-your-agent-eval/">本地git远程仓库能否替代GitHub进行智能体评估？</a><br>当智能体评估涉及推送、拉取或保持git分支同步时，测试装置需要一个远程仓库。最容易设置的是在测试装置旁边的裸仓库，只需一个`git init --bare`命令，它可以在离线工作。</p>
 
-<p><a href="https://seangoedecke.com/laypeople-support-technical-fields-for-technology-not-art/">外行支持技术领域而非艺术</a><br>当作者试图避免曲解自己不持有的观点时，如果读者同意引用段落并认为其公平地代表了他们的立场，请通过电子邮件告知作者。</p>
+<p><a href="https://blog.cloudflare.com/typescript-rust-port/">介绍tsrs：TypeScript到Rust的移植版 | Cloudflare博客</a><br>Cloudflare推出了tsrs项目，这是TypeScript语言到Rust的移植版本，旨在提供更高效的类型安全编程体验。</p>
 
-<p><a href="https://blogs.microsoft.com/blog/2026/10/20/advancing-digital-sovereignty-with-greater-control-and-choice/">通过更大的控制和选择推进数字主权</a><br>主权合作伙伴生态系统扩展了客户满足这些需求的方式，包括法国的 Bleu 在内的国家合作伙伴云，为需要不同所有权和运营模式的客户提供独立运行的环境。</p>
+<p><a href="https://astral.sh/blog/uv-ty-integration">将uv和ty结合在一起</a><br>作者Sara Sklenka介绍了uv和ty两个工具的集成，这将为Python开发带来更高效的依赖管理和类型检查体验。</p>
 
-<p><a href="https://medium.com/pinterest-engineering/introducing-modulelens-zooming-into-pytorch-modules-for-human-and-agentic-engineering-b7e9be9d29f8?source=rss----4c5a5f6279b6---4">介绍 ModuleLens：深入 PyTorch 模块进行人类和智能体工程</a><br>非侵入式 PyTorch 前向钩子直接附加到 PyTorch 模块，以无缝记录参数权重、输入输出张量和执行元数据。</p>
+<p><a href="https://fulcrumsec.vg/pingcap/">PingCAP TiDB Cloud泄露事件</a><br>PingCAP TiDB Cloud发生数据泄露事件，总共泄露了10.6TB数据，第一阶段释放了200GB。这是一个涉及分布式数据库的重大安全事件。</p>
 
-<p><a href="https://circleci.com/blog/stacked-prs-and-ci/">堆叠 PR：它们是什么以及如何在堆叠上运行 CI</a><br>堆叠 PR 是一种代码审查方法，允许开发者在单个 PR 中包含多个相关更改，并在整个堆叠上运行持续集成。</p>
-
-<p><a href="https://yoyo-code.com/2026-is-exciting-year-for-rust-compiler-and-me/">2026 年是 Rust 编译器（和我）令人兴奋的一年</a><br>2026 年似乎是 Rust 编译器特别的一年，有很多事情正在发生。自从我开始写作以来，已经宣布了一些事情，但还有更多不太明显的事情。</p>
-
-<p><a href="https://blog.gaborkoos.com/posts/2026-10-19-How-to-Implement-a-Distributed-Recovery-Ramp/">如何实现分布式恢复斜坡</a><br>本文介绍了如何实现分布式恢复斜坡，这是断路器、舱壁和速率限制器系列文章的一部分，从进程内基础到跨舰队协调的实现。</p>
-
-<p><a href="http://kolemannix.com/blog/software-is-art">创建软件是一种艺术活动 | Koleman Nix</a><br>创建软件是一种艺术活动，是人类技能对事物的处置或修改，以实现预期的目的。在这个意义上，艺术与自然相对立。</p>
-
-<p><a href="https://javarevisited.substack.com/p/processes-vs-threads-vs-cores-what">进程、线程与核心 — 真正重要的区别</a><br>本文解构了多任务处理的错觉，探讨了进程、线程和核心之间的实际区别，以及它们如何影响应用程序性能。</p>
-
-<p><a href="https://vivianvoss.net/blog/jails-vs-containers">jails 与容器</a><br>本文比较了 jails 和容器两种虚拟化技术的特点和适用场景。</p>
-
-<p><a href="https://documentdb.io/blogs/posts/documentdb-1-0/">DocumentDB 1.0 已发布</a><br>DocumentDB 1.0 今日可用，这是首个正式发布的版本：一个采用 MIT 许可证的文档数据库，使用 MongoDB 协议并将原生 BSON 存储在 PostgreSQL 中。</p>
+<p><a href="https://emudhra.we-have-a-problem.com/">eMudhra中间CA证书遭入侵</a><br>2026年10月20日，八个eMudhra中间CA证书的私钥已被泄露。这些证书链接到被Mozilla、Microsoft、Apple和Chrome根计划以及许多下游信任存储所信任的根证书。</p>
   
 
 <h2>AI</h2>
 
 
-<p><a href="https://simonwillison.net/2026/Oct/19/my-obituary-for-programming/">我为编程撰写的讣告</a><br>编程已成为你能想象的最伟大的工作之一，你通过解决棘手的逻辑谜题来获得报酬。谜题越难，报酬越高，即使是简单的谜题也值很多钱，因为普通人无法解决它们。</p>
+<p><a href="https://stevekrouse.com/ends">我应该教给儿子什么？</a><br>在AGI时代，教育的目的是什么？作者从Neil Postman的《教育的终结》一书中找到了启示，思考了在人工智能时代如何重新定义教育的意义。</p>
 
-<p><a href="https://www.peterp.me/articles/personal-software-factories-are-a-waste-of-time/">个人软件工厂是浪费时间</a><br>软件工程师想要构建自己的软件工厂是很自然的，但我恳请您立即放弃这个想法。</p>
+<p><a href="https://github.com/deepseek-ai/DeepInfer">GitHub - deepseek-ai/DeepInfer：DeepSeek模型的高性能大规模推理框架 · GitHub</a><br>DeepInfer是一个专为DeepSeek模型设计的高性能大规模推理框架，支持多种分支和标签，提供完整的版本历史记录。</p>
 
-<p><a href="https://www.minimax.io/blog/minimax-m31f">MiniMax M3.1 Flash：重新定义智能体性能和成本 - MiniMax 研究 | MiniMax</a><br>今天，我们正式推出 **MiniMax M3.1 Flash**，它处理了超过 200 万亿个令牌，是下一代 Flash 模型，重新定义了智能体性能和成本。</p>
-
-<p><a href="https://cretezy.com/2026/ad-free-android-tv">无广告的 Android TV</a><br>作者喜欢 Android TV，它运行所有关心的应用，在 Chromecast 上便宜，并且内置在许多电视中，但不喜欢广告。</p>
-
-<p><a href="https://www.anthropic.com/research/launching-opt-in-vuln-finding-service-for-open-source">开源软件的自愿参与漏洞发现服务</a><br>Anthropic 推出了 OSS Scanner，这是一项为开源软件提供自愿参与的漏洞发现服务，帮助开发者发现和修复安全漏洞。</p>
+<p><a href="https://research.poh.org/bot-benchmarking-2026/">2026年针对现代AI智能体的机器人检测系统基准测试</a><br>一年前，我们评估了五种领先的机器人检测系统（Proof of Human、Google reCAPTCHA v3、hCaptcha、Fingerprint Pro和Cloudflare Turnstile）对抗自动化浏览器的效果。</p>
 
 
 <h2>流行工具与项目</h2>
