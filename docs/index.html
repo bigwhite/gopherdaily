@@ -45,7 +45,7 @@ img {
 
 <div style="text-align: center; margin-bottom: 10px;">
   <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
-  <a href=https://bigwhite.github.io/gopherdaily/202610/issue-20261022.html style="margin: 0 10px;">Web版</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202610/issue-20261023.html style="margin: 0 10px;">Web版</a> |
   <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
   <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
   <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
@@ -57,9 +57,9 @@ img {
 
 <div>
 <p class="issue" style="text-align:center;">
-  <span style="text-align:center;">20261022</span>
+  <span style="text-align:center;">20261023</span>
 </p>
-<p>每日一谚：Prefer unbuffered channels for strict synchronization </p>
+<p>每日一谚：Don&#39;t swallow errors; either log them or return them, but never both </p>
 </div>
 
 <hr/>
@@ -67,73 +67,67 @@ img {
 <h2>Go技术生态</h2>
 
 
-<p><a href="https://tonybai.com/2026/10/22/go-concurrency-concurrent-ml-events">Go 并发的天花板，被一个 30 年前的老模型捅破了？CML 把 channel 玩出了新花样</a><br>Go 的 select 只能在语句里描述通信，无法封装复用。Concurrent ML (CML)把通信操作做成可传递、可组合的“事件值”，让选择、 超时、取消统一在同一套抽象里，并让阻塞线程可被垃圾回收。本文结合 Racket 与 Go 代码，梳理 CML 相对 Go 的三大优势，并给出 Go 开发者可以立即采用的思路。</p> 
+<p><a href="https://tonybai.com/2026/10/23/go-and-simd-2026">深入理解 Go 与 SIMD：从底层硬件指令到编译器实现原理</a><br>长期以来在 Go 中使用 SIMD 只能依赖繁琐的手写汇编，而 Go 1.26/1.27 引入的实验性 simd 与 simd/archsimd 包彻底打破了这&gt;一壁垒。本文深入剖析现代 CPU 向量寄存器与通道（Lanes）的物理机理，详解底层架构包与可移植包的设计权衡，揭秘编译器内建函数（Intrinsics）与 midway 多重编译的底层黑魔法，并通过广播、融合乘加（FMA）、掩码混合与尾部处理等核心操作，手把手构建跑出 9 倍性能飞跃的点积计 算实战，为 Go 开发者提供了一套完整的硬件向量化加速指南。</p> 
 
-<p><a href="https://dushed.com/blog/inband-tls-certificates">运行时获取TLS证书</a><br>本文于2026年10月16日发布。讨论了在运行时获取TLS证书的方法，通常这类采购是通过Certbot或其他ACME工具在带外完成的。</p> 
+<p><a href="https://tonybai.com/2026/10/23/go-urgent-security-release-ca-certificate-trust-crisis">Go 紧急发布两个安全版本！一次 CA 证书信任危机，暴露 HTTPS 安全体系的薄弱环节</a><br>Go 因为一批中间 CA 证书的安全问题，紧急发布 Go 1.26.10 和 Go 1.27.3。本文深入解释这次安全修复的技术原理、证书链信任&gt;机制与工程影响，并通过可运行的 Go 示例说明如何验证证书链、排查生产环境中的旧二进制，以及建立更可靠的 Go 安全更新流程。</p> 
 
-<p><a href="https://go.dev/blog/survey2026-announce">Go用户调查：帮助设定Go明年的优先事项</a><br>Go团队代表Cameron Balahan于2026年10月21日发布。Gophers们请注意：2026年Go开发者调查现已开放，请参与以帮助设定Go语言的未来发展方向。</p> 
-
-<p><a href="https://prateeksurana.me/blog/evolution-of-http/">HTTP的演变：交互式指南</a><br>超文本传输协议是我们日常使用的网络的基础技术。它始于90年代初作为通过网络交换超文本文档的方式，使用现有的TCP/IP协议，但在过去几十年中已显著演变。</p> 
+<p><a href="https://dolthub.com/blog/2026-10-23-beads-birthday/">(迟来的)生日快乐，Beads！</a><br>Beads是一个命令行工具`bd`，编码智能体用它来管理任务。Beads将任务作为问题存储在项目文件夹中的`.beads`目录中。你告诉你的编码智能体使用Beads来管理它的任务，瞧，你的编码智能体将开始能够完成更长的任务。</p> 
 
 
 <h2>云原生技术</h2>
 
 
-<p><a href="https://www.cncf.io/blog/2026/10/21/before-you-evaluate-an-ai-sre-give-your-existing-agent-context/">在评估AI SRE之前，为您的现有智能体提供上下文</a><br>Shell记录显示治理问题的重要性。智能体在13个故障中启动了自己的pod，并在21个故障上执行了exec、cp、port-forward或debug操作。在4个案例中，智能体将Secret数据拉入其上下文，并在3个案例中解码了这些数据。</p>
+<p><a href="https://www.cncf.io/blog/2026/10/22/filtering-and-reducing-ai-agent-telemetry-with-the-opentelemetry-collector/">使用OpenTelemetry Collector过滤和减少AI智能体遥测数据</a><br>OpenTelemetry Collector可以帮助过滤和减少AI智能体的遥测数据，优化资源命名和服务属性配置，提高系统性能和监控效率。</p>
 
-<p><a href="https://www.docker.com/blog/band-ai-agents-docker-sandboxes/">您的智能体在Docker沙箱中运行。现在它可以加入团队。</a><br>Docker沙箱工具包包含了智能体在Docker沙箱中运行所需的一切，单个`sbx create`命令即可提供即用型智能体环境。但孤立的智能体只是故事的一半：真正的工作意味着与人交流与其他智能体协作。</p>
+<p><a href="https://seangoedecke.com/software-is-slow-because-of-bad-design-not-slow-languages/">软件运行缓慢是因为糟糕的设计，而不是慢速语言</a><br>对于经常使用慢速语言或CPU密集型工作负载的开发者来说，这个数字可能高得离谱；而对于不使用这些的开发者来说，可能又显得过低。根据我的经验，这个数字至少对于解释型语言来说是在合理范围内的。</p>
 
-<p><a href="https://www.docker.com/blog/from-baseline-to-secure-software-factory-securing-the-systems-that-build-your-software/">从基线到安全软件工厂：保护构建您软件的系统</a><br>我们花了数年时间学习不给软件超过其需求的访问权限。现在软件可以回应，我们似乎已经忘记了这一点。智能体需要访问真实系统，有时甚至是生产系统。</p>
+<p><a href="https://www.docker.com/blog/security-update-on-php2shell-impact-for-docker-customers/">PHP2Shell安全更新：对Docker客户的影响</a><br>简而言之，这些漏洞可能允许恶意行为者在PHP核心中执行远程代码。这些漏洞都与PHP管理请求内存的方式有关。当PHP在请求过程中内存不足并中止时，某些代码路径会保留未初始化的内存，导致潜在的安全风险。</p>
 
-<p><a href="https://nesbitt.io/2026/10/21/trust-stores-are-dependencies-too.html">信任存储也是依赖项</a><br>Excon、pip和redshift-connector将其捆绑包与系统根一起加载。从OS存储中移除的根保持受信任状态，因为捆绑包会将其重新添加。</p>
+<p><a href="https://netflixtechblog.com/single-tenant-titus-vm-level-isolation-on-a-multi-tenant-container-platform-6d8b1909d163?source=rss----2615bd06b42e---4">单租户Titus：在多租户容器平台上的VM级隔离</a><br>持续改进共享内核隔离有助于平台上的每个工作负载，无需选择加入，我们仍在投资于此。其限制是结构性的，需要进一步优化。</p>
 
-<p><a href="https://github.blog/engineering/architecture-optimization/the-bridge-to-agent-scale-git-infrastructure/">通往智能体规模Git基础设施的桥梁</a><br>在我们当前的架构中，托管在多个区域的存储库具有较低的写入吞吐量上限。Spoke的仲裁只需要多数即可提交写入，但它会等待每个健康的副本响应（直到超时）才继续，因此慢速副本会延迟每次写入而非...</p>
+<p><a href="https://www.netlify.com/blog/how-we-built-git-storage-for-millions/">我们如何为数百万个Netlify项目构建Git存储</a><br>在过去的十年里，Netlify已经从持续部署和托管发展成为一个更广泛的运行时平台。但开发本身仍然存在于用户自己的Git主机上，需要更好的集成方案。</p>
 
-<p><a href="https://devblogs.microsoft.com/python/announcing-tsp/">Pylance &#43; Pyrefly：将您首选的类型检查器带入Visual Studio Code</a><br>Pylance提供了与GitHub Copilot体验的紧密集成，这是独立类型检查器扩展无法复制的——为AI补全提供上下文，智能代码理解支持GitHub Copilot聊天，Python代码库的MCP工具，以及完整的Python工具套件。</p>
-
-<p><a href="https://www.albertodenia.com/writing/code-is-clay-now">代码现在是粘土</a><br>Alberto Denia ∙ 2026年9月25日。在编程的中世纪（即2025年11月之前），我们这些编码石匠整天精心地将代码石雕琢成成品。</p>
-
-<p><a href="https://thephp.foundation/blog/2026/10/21/todays-php-security-release-and-how-were-strengthening-php-security/">今天的PHP安全发布，以及我们如何加强PHP安全</a><br>PHP基金会发布了最新的安全更新，并介绍了加强PHP安全性的新措施。</p>
-
-<p><a href="https://blog.rust-lang.org/2026/10/20/Rustup-1.29.2/">宣布rustup 1.29.2发布 | Rust博客</a><br>Rustup团队很高兴宣布rustup版本1.29.2的发布。Rustup是安装Rust编程语言的推荐工具，该语言使每个人都能构建可靠高效的软件。</p>
-
-<p><a href="https://grafana.com/blog/grafana-ai-next-gen-visualization">Grafana Pages：通过Grafana的下一演变将数据转化为交互式体验</a><br>Grafana Pages是Grafana的下一演变，它将数据转化为交互式体验，为用户提供更丰富的数据可视化和分析能力。</p>
+<p><a href="https://codeandcake.dev/posts/2026-10-22-docker-is-weird">代码与蛋糕 - Docker很奇怪</a><br>我决定为了好玩制作自己的容器运行时，即使我还在早期阶段，我已经了解到Docker很奇怪。以下是我了解到的一些关于Docker的奇怪之处。</p>
   
 
 <h2>AI</h2>
 
 
-<p><a href="https://www.boristhebrave.com/2026/10/18/chain-of-thought-for-humans/">人类思维链</a><br>过去几周，我一直在进行面试，我经常以&#34;请确保大声表达你的想法，这样我才能跟上你的思路&#34;开场。这主要是因为我不是读心者，但它确实有助于确保候选人不会紧张僵住。</p>
+<p><a href="https://redmonk.com/kholterhoff/2026/10/19/mcp-a2a-registries-agents/">软件如何信任软件：MCP、A2A及智能体使用的注册表</a><br>安全专业人士日益担忧，开发者正在将连接AI智能体的协议（如模型上下文协议(MCP)和智能体到智能体(A2A)）当作安全标准使用，这可能带来风险。</p>
 
-<p><a href="https://www.graphsaboutreligion.com/p/when-do-we-become-the-person-we-ought">我们何时成为应该成为的人？</a><br>一项新的调查探讨了美国人如何评判自己的道德品格，以及这种评判如何随着年龄变化。这项调查揭示了人们对自我道德认知的有趣趋势。</p>
+<p><a href="https://yusufaytas.com/nobody-is-thinking-anymore">没有人再思考了</a><br>每个人都在AI领域工作。有至少一半是由AI编写的规范，有80%是由AI编写的代码，有60%是由AI编写的战略文件。如果所有东西都是由AI编写的，那么其背后的思考就非常少了。</p>
 
-<p><a href="https://claude.com/product/claude-duet">Claude Duet | 您的个人AI助手</a><br>Claude Duet是一个主动的智能体，理解什么需要您的关注。它承担各种大小的任务，在您离开时继续工作，并在关键时刻等待您的确认。</p>
+<p><a href="https://blog.gascity.com/posts/rush-hour-in-gas-city/">Gas City的高峰时段：优化智能体的工厂CI</a><br>在转向智能体工程之前，我是一名传统企业软件工程师。刚从大学毕业，我就从构建虚拟机监控程序开始，然后作为技术负责人和人员经理，在初创公司和大型公司开始了冒险之旅。</p>
 
-<p><a href="https://ampcode.com/news/self-hosted-orbs">自托管Orbs - Amp</a><br>您现在可以自托管orbs。您提供计算资源，Amp将其转化为orbs。如果您拥有能够快速启动新机器、同等快速地使其休眠和恢复、长时间保持运行以及将其扩展到零的计算资源，那么您就可以开始自托管orbs。</p>
+<p><a href="https://www.anthropic.com/research/formal-verification">LLMs使大规模形式化软件验证变得可行 by Anthropic</a><br>大多数软件都充满了错误，而AI现在可以轻松地发现这些错误。大型语言模型(LLMs)正在使形式化软件验证在更大规模上变得可行。</p>
+
+<p><a href="https://blog.exe.dev/internet-disconnect">给你的智能体更少的互联网 - exe.dev博客</a><br>为你的智能体提供更少的互联网访问，可以增强安全性和性能，同时仍然保持必要的连接和集成能力。</p>
+
+<p><a href="https://developers.googleblog.com/powering-the-agent-development-lifecycle-with-any-framework-from-adk-to-langchain-and-beyond/">使用任何框架支持智能体开发生命周期，从ADK到LangChain及更多 - Google开发者博客</a><br>新的智能体CLI扩展系统的端到端演示，包含一个LangChain示例和自定义部署策略，为开发者提供更灵活的智能体开发选择。</p>
 
 
 <h2>流行工具与项目</h2>
 
 
-<p><a href="https://github.com/strelov1/freehire">strelov1/freehire</a><br>freehire — the open-source search engine for job seekers</p>
+<p><a href="https://github.com/CarterPerez-dev/Cybersecurity-Projects">CarterPerez-dev/Cybersecurity-Projects</a><br>Building 70 Projects ranging from beginner to advanced so anyone can — learn from, build upon, use as a reference, or even copy directly. Gamified Cybersecurity learning 👇</p>
 
-<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with Kimi, GLM, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.</p>
+<p><a href="https://github.com/alibaba/open-code-review">alibaba/open-code-review</a><br>Secure, fast, efficient, battle-tested at Alibaba&#39;s scale. Hybrid architecture code review tool: deterministic pipelines &#43; LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE,</p>
+
+<p><a href="https://github.com/microsoft/TypeScript">microsoft/TypeScript</a><br>TypeScript is a superset of JavaScript that compiles to clean JavaScript output.</p>
+
+<p><a href="https://github.com/helm/helm">helm/helm</a><br>The Kubernetes Package Manager</p>
 
 <p><a href="https://github.com/Asymptote-Labs/agent-beacon">Asymptote-Labs/agent-beacon</a><br>The cross-harness, self-improving memory layer for AI agents. Join our community: https://discord.com/invite/zdNChS2fBu</p>
 
-<p><a href="https://github.com/hashicorp/vault">hashicorp/vault</a><br>A tool for secrets management, encryption as a service, and privileged access management</p>
+<p><a href="https://github.com/tailscale/tailscale">tailscale/tailscale</a><br>The easiest, most secure way to use WireGuard and 2FA.</p>
 
-<p><a href="https://github.com/mudler/LocalAI">mudler/LocalAI</a><br>LocalAI is the open-source AI engine. Run any model - LLMs, vision, voice, image, video - on any hardware. No GPU required.</p>
+<p><a href="https://github.com/zitadel/zitadel">zitadel/zitadel</a><br>ZITADEL - Identity infrastructure, simplified for you.</p>
 
-<p><a href="https://github.com/larksuite/cli">larksuite/cli</a><br>The official Lark/飞书 CLI tool, maintained by the larksuite team — built for humans and AI Agents. Covers core business domains including Messenger, Docs, Base, Sheets, Calendar, Mail, Tasks, Mee</p>
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector-contrib">open-telemetry/opentelemetry-collector-contrib</a><br>Contrib repository for the OpenTelemetry Collector</p>
 
-<p><a href="https://github.com/google/gvisor">google/gvisor</a><br>Application Kernel for Containers</p>
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
 
-<p><a href="https://github.com/gin-gonic/gin">gin-gonic/gin</a><br>Gin is a high-performance HTTP web framework written in Go. It provides a Martini-like API but with significantly better performance—up to 40 times faster—thanks to httprouter. Gin is designed for</p>
-
-<p><a href="https://github.com/openbao/openbao">openbao/openbao</a><br>OpenBao is a software solution to manage, store, and distribute sensitive data including secrets, certificates, and keys.</p>
-
-<p><a href="https://github.com/cloudwego/eino">cloudwego/eino</a><br>The ultimate LLM/AI application development framework in Go.</p>
+<p><a href="https://github.com/samber/cc-skills-golang">samber/cc-skills-golang</a><br>🧑‍🎨 A collection of Golang agentic skills that works</p>
 
 
 <hr/>
