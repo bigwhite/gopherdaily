@@ -45,7 +45,7 @@ img {
 
 <div style="text-align: center; margin-bottom: 10px;">
   <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
-  <a href=https://bigwhite.github.io/gopherdaily/202610/issue-20261023.html style="margin: 0 10px;">Web版</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202610/issue-20261026.html style="margin: 0 10px;">Web版</a> |
   <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
   <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
   <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
@@ -57,9 +57,9 @@ img {
 
 <div>
 <p class="issue" style="text-align:center;">
-  <span style="text-align:center;">20261023</span>
+  <span style="text-align:center;">20261026</span>
 </p>
-<p>每日一谚：Don&#39;t swallow errors; either log them or return them, but never both </p>
+<p>每日一谚：Prefer atomic operations over mutexes for simple counter variables </p>
 </div>
 
 <hr/>
@@ -67,67 +67,89 @@ img {
 <h2>Go技术生态</h2>
 
 
-<p><a href="https://tonybai.com/2026/10/23/go-and-simd-2026">深入理解 Go 与 SIMD：从底层硬件指令到编译器实现原理</a><br>长期以来在 Go 中使用 SIMD 只能依赖繁琐的手写汇编，而 Go 1.26/1.27 引入的实验性 simd 与 simd/archsimd 包彻底打破了这&gt;一壁垒。本文深入剖析现代 CPU 向量寄存器与通道（Lanes）的物理机理，详解底层架构包与可移植包的设计权衡，揭秘编译器内建函数（Intrinsics）与 midway 多重编译的底层黑魔法，并通过广播、融合乘加（FMA）、掩码混合与尾部处理等核心操作，手把手构建跑出 9 倍性能飞跃的点积计 算实战，为 Go 开发者提供了一套完整的硬件向量化加速指南。</p> 
+<p><a href="https://tonybai.com/2026/10/26/victorialogs-high-performance-go-logging-engine">VictoriaLogs 为什么这么快？一场关于 Go 性能边界的工程实践</a><br>VictoriaLogs 是 VictoriaMetrics 团队开发的开源日志数据库。它的性能工程实践展示了一个重要事实：高性能 Go 系统的秘密， 并不在于某几个神奇的语言技巧，而在于从数据布局到查询执行的整体设计。本文以 VictoriaLogs 为案例，深入解析 LSM-tree、时间分区、日志&gt;流局部性、Bloom Filter、列式存储、专用编码与压缩如何协同减少工作量，并进一步讨论 Go 的内存分配、垃圾回收和性能剖析。最后，通过一个 可直接运行的 Go 基准测试，展示如何把这些思想转化为工程实践</p> 
 
-<p><a href="https://tonybai.com/2026/10/23/go-urgent-security-release-ca-certificate-trust-crisis">Go 紧急发布两个安全版本！一次 CA 证书信任危机，暴露 HTTPS 安全体系的薄弱环节</a><br>Go 因为一批中间 CA 证书的安全问题，紧急发布 Go 1.26.10 和 Go 1.27.3。本文深入解释这次安全修复的技术原理、证书链信任&gt;机制与工程影响，并通过可运行的 Go 示例说明如何验证证书链、排查生产环境中的旧二进制，以及建立更可靠的 Go 安全更新流程。</p> 
+<p><a href="https://tonybai.com/2026/10/25/go-formal-verification-gobra-viper-ai">Go 代码也能像数学定理一样被证明？AI 编程时代，形式化验证正在补上最后一块拼图</a><br>当 AI 可以在几分钟内生成大量代码，软件工程真正稀缺的能力可能不再是实现功能，而是证明实现满足要求。本文从 AI 生成代码 的验证难题出发，介绍 Gobra 与 Viper 的技术架构，通过完整的 Go 示例拆解契约式验证、循环不变量和并发权限推理，并简要比较 VeGo、Rust 的 Verus 等相关探索，讨论形式化验证如何进入 AI 软件工程流水线，以及它距离大规模生产落地还有多远。</p> 
 
-<p><a href="https://dolthub.com/blog/2026-10-23-beads-birthday/">(迟来的)生日快乐，Beads！</a><br>Beads是一个命令行工具`bd`，编码智能体用它来管理任务。Beads将任务作为问题存储在项目文件夹中的`.beads`目录中。你告诉你的编码智能体使用Beads来管理它的任务，瞧，你的编码智能体将开始能够完成更长的任务。</p> 
+<p><a href="https://bitfieldconsulting.com/posts/dancing-backwards">倒着跳Go舞：为什么TDD很奇怪</a><br>本文探讨了在Go语言中采用测试驱动开发(TDD)时遇到的独特挑战，作者通过舞蹈的比喻解释了为什么在Go中实践TDD会感觉有些奇怪。</p> 
+
+<p><a href="https://learnkube.com/go-kubernetes-requests-limits">Go在Kubernetes中的CPU和内存请求与限制</a><br>本文介绍了在Kubernetes环境中配置Go应用程序的CPU和内存请求与限制的最佳实践，并解释了为什么小的Go堆不一定意味着低的容器内存使用量。</p> 
+
+<p><a href="https://alexrios.me/blog/go-spinlocks-bounded-bet/">自旋锁是一种有界的赌注</a><br>这是基于作者在GopherCon Africa 2026演讲的系列文章第一部分，探讨了Go语言中自旋锁的实现原理，以及它们如何与sync.Mutex和运行时锁相关联。</p> 
+
+<p><a href="https://gohawk.dev/">gohawk | 专注于资源的Go静态分析工具</a><br>Gohawk是一款工业级的静态分析工具，专门用于发现Go代码中的资源管理和并发问题。它已被用于发现和修复包括Docker在内的多个项目中的bug。</p> 
+
+<p><a href="https://packagemain.tech/p/golang-optimizations-for-highvolume">高容量服务的Golang优化</a><br>本文分享了从Postgres到Elasticsearch的数据管道中获得的宝贵经验，介绍了如何优化高容量服务的Go应用程序性能。</p> 
 
 
 <h2>云原生技术</h2>
 
 
-<p><a href="https://www.cncf.io/blog/2026/10/22/filtering-and-reducing-ai-agent-telemetry-with-the-opentelemetry-collector/">使用OpenTelemetry Collector过滤和减少AI智能体遥测数据</a><br>OpenTelemetry Collector可以帮助过滤和减少AI智能体的遥测数据，优化资源命名和服务属性配置，提高系统性能和监控效率。</p>
+<p><a href="https://alexsci.com/blog/uuidv7-is-weird/">UUIDv7并不具备你认为的那些属性</a><br>本文是UUID系列文章的一部分，作者指出UUIDv7的实现方式可能与你预期的不同，它具有一些独特的特性。</p>
 
-<p><a href="https://seangoedecke.com/software-is-slow-because-of-bad-design-not-slow-languages/">软件运行缓慢是因为糟糕的设计，而不是慢速语言</a><br>对于经常使用慢速语言或CPU密集型工作负载的开发者来说，这个数字可能高得离谱；而对于不使用这些的开发者来说，可能又显得过低。根据我的经验，这个数字至少对于解释型语言来说是在合理范围内的。</p>
+<p><a href="https://blog.ipfs.tech/2026-10-new-stewards-public-network-services/">公共IPFS网络服务的新管理者</a><br>2026年10月14日，IPFS网络宣布了新的公共服务管理者，这将有助于改善IPFS基础设施的管理和维护。</p>
 
-<p><a href="https://www.docker.com/blog/security-update-on-php2shell-impact-for-docker-customers/">PHP2Shell安全更新：对Docker客户的影响</a><br>简而言之，这些漏洞可能允许恶意行为者在PHP核心中执行远程代码。这些漏洞都与PHP管理请求内存的方式有关。当PHP在请求过程中内存不足并中止时，某些代码路径会保留未初始化的内存，导致潜在的安全风险。</p>
+<p><a href="https://blog.shubhamtatvamasi.com/kai-scheduler-deep-dive-how-nvidia-schedules-gpus-on-kubernetes">KAI调度器深度解析：NVIDIA如何在Kubernetes上调度GPU</a><br>本文深入探讨了NVIDIA的KAI调度器如何在Kubernetes环境中高效管理和调度GPU资源，以满足不同工作负载的需求。</p>
 
-<p><a href="https://netflixtechblog.com/single-tenant-titus-vm-level-isolation-on-a-multi-tenant-container-platform-6d8b1909d163?source=rss----2615bd06b42e---4">单租户Titus：在多租户容器平台上的VM级隔离</a><br>持续改进共享内核隔离有助于平台上的每个工作负载，无需选择加入，我们仍在投资于此。其限制是结构性的，需要进一步优化。</p>
+<p><a href="https://lwn.net/SubscriberLink/1099606/20707a62817cdd16/">未来的Rust特性</a><br>作者介绍了Linux内核开发者希望稳定化的几个Rust特性，以及Rust项目正在开发的其他一些值得关注的新功能。</p>
 
-<p><a href="https://www.netlify.com/blog/how-we-built-git-storage-for-millions/">我们如何为数百万个Netlify项目构建Git存储</a><br>在过去的十年里，Netlify已经从持续部署和托管发展成为一个更广泛的运行时平台。但开发本身仍然存在于用户自己的Git主机上，需要更好的集成方案。</p>
+<p><a href="https://philipotoole.com/twelve-years-of-distributed-sqlite/">分布式SQLite的十二年 – Philip O&#39;Toole</a><br>作者回顾了自2014年9月发布rqlite以来的十二年发展历程，这是一个基于Raft共识算法的分布式SQLite实现。</p>
 
-<p><a href="https://codeandcake.dev/posts/2026-10-22-docker-is-weird">代码与蛋糕 - Docker很奇怪</a><br>我决定为了好玩制作自己的容器运行时，即使我还在早期阶段，我已经了解到Docker很奇怪。以下是我了解到的一些关于Docker的奇怪之处。</p>
+<p><a href="https://www.alfie.wtf/programming/why-i-am-a-programmer.html">为什么我是一名程序员</a><br>作者分享了自己成为程序员的个人历程和动机，探讨了编程如何塑造了他的职业生涯和思维方式。</p>
+
+<p><a href="https://blog.cloudflare.com/post-quantum-geo-key-manager/">将后量子密码学引入地理围栏密钥管理 | Cloudflare博客</a><br>Cloudflare介绍了如何将后量子密码学技术应用于地理围栏密钥管理系统，以提高安全性并抵御未来的量子计算威胁。</p>
+
+<p><a href="https://www.phoronix.com/news/Wayland-ext-transient-output">为VNC/远程软件提出新的Wayland协议 - Phoronix</a><br>作者报道了一项为VNC和远程软件设计的新Wayland协议提案，这可能会改善Linux系统中的远程桌面体验。</p>
+
+<p><a href="https://inside.java/2026/10/23/confined-pools/">分配堆外内存：在JDK 28中通常快6-18倍 - Inside.java</a><br>JDK 28引入了对外部函数和内存(FFM)API的重大改进，使得堆外内存分配的成本显著降低，性能提升可达6-18倍。</p>
+
+<p><a href="https://bbtree.xiangpeng.systems/post/">bbtree：最快的有序映射</a><br>bbtree是一种高性能的有序映射实现，提供了业界领先的性能和效率。</p>
+
+<p><a href="https://datafusion.apache.org/blog/2026/10/24/point-queries/">单行查找(点查询)的最佳实践 - Apache DataFusion博客</a><br>本文介绍了在DataFusion中优化点查询性能的各种技术，基于作者在相关演讲中的分享，提供了实用的最佳实践建议。</p>
   
 
 <h2>AI</h2>
 
 
-<p><a href="https://redmonk.com/kholterhoff/2026/10/19/mcp-a2a-registries-agents/">软件如何信任软件：MCP、A2A及智能体使用的注册表</a><br>安全专业人士日益担忧，开发者正在将连接AI智能体的协议（如模型上下文协议(MCP)和智能体到智能体(A2A)）当作安全标准使用，这可能带来风险。</p>
+<p><a href="https://tonybai.com/2026/10/24/what-is-a-harness">大厨、厨房与餐馆：一文彻底搞懂 AI Agent 背后的“Harness”到底是什么</a><br>在 AI 智能体（Agent）概念大火的今天，大家频繁提及的“Harness”到底是什么？知名开发者、T3 创始人 Theo 撰文，用极其生动&gt;的大厨、厨房与餐馆比喻，彻底理清了人类界面（Interface）、大语言模型（LLM）、运行框架（Harness）、外部协议（MCP）与智能体（Agent）&gt;之间的边界与分工。本文清晰揭示了为什么“大模型只是生成文本的大厨，而真正让它干成重活的是作为厨房的 Harness”，为理解现代 Agent 架构&gt;提供了通俗且透彻的认知基准。</p>
 
-<p><a href="https://yusufaytas.com/nobody-is-thinking-anymore">没有人再思考了</a><br>每个人都在AI领域工作。有至少一半是由AI编写的规范，有80%是由AI编写的代码，有60%是由AI编写的战略文件。如果所有东西都是由AI编写的，那么其背后的思考就非常少了。</p>
+<p><a href="https://block.xyz/dessa">Dessa - 仅通过语音训练的对话模型</a><br>Dessa是一个仅通过语音训练的全双工对话模型，它能够模拟人类的情感、细微差别、停顿和自然节奏，提供最自然的人机交互体验。</p>
 
-<p><a href="https://blog.gascity.com/posts/rush-hour-in-gas-city/">Gas City的高峰时段：优化智能体的工厂CI</a><br>在转向智能体工程之前，我是一名传统企业软件工程师。刚从大学毕业，我就从构建虚拟机监控程序开始，然后作为技术负责人和人员经理，在初创公司和大型公司开始了冒险之旅。</p>
+<p><a href="https://www.dbos.dev/webcast/cortex-software-factory">在Cortex使用DBOS构建持久的软件工厂</a><br>本文介绍了如何在Cortex平台使用DBOS构建持久的软件工厂，以提高软件开发的效率和质量。</p>
 
-<p><a href="https://www.anthropic.com/research/formal-verification">LLMs使大规模形式化软件验证变得可行 by Anthropic</a><br>大多数软件都充满了错误，而AI现在可以轻松地发现这些错误。大型语言模型(LLMs)正在使形式化软件验证在更大规模上变得可行。</p>
+<p><a href="https://www.blackscarab.ai/insights/how-to-build-a-robot-with-nvidia">如何使用NVIDIA构建机器人：从仿真到部署 | Black Scarab</a><br>本文提供了从虚拟仓库到板载推理的完整指南，详细介绍了构建人形机器人所需的关键工具、数据和工程决策。</p>
 
-<p><a href="https://blog.exe.dev/internet-disconnect">给你的智能体更少的互联网 - exe.dev博客</a><br>为你的智能体提供更少的互联网访问，可以增强安全性和性能，同时仍然保持必要的连接和集成能力。</p>
+<p><a href="https://danielball.com/notes/ai_image_generation.html">AI图像生成综合指南</a><br>这是一份关于AI图像生成的综合指南，涵盖了各种工具、技术和最佳实践，帮助读者创建高质量的AI生成图像。</p>
 
-<p><a href="https://developers.googleblog.com/powering-the-agent-development-lifecycle-with-any-framework-from-adk-to-langchain-and-beyond/">使用任何框架支持智能体开发生命周期，从ADK到LangChain及更多 - Google开发者博客</a><br>新的智能体CLI扩展系统的端到端演示，包含一个LangChain示例和自定义部署策略，为开发者提供更灵活的智能体开发选择。</p>
+<p><a href="https://utkusen.substack.com/p/how-llm-based-penetration-testing">基于LLM的渗透测试工具如何工作</a><br>本文分析了三种开源的基于大语言模型(LLM)的渗透测试工具，解释了黑客如何利用这些工具来攻击Web应用程序。</p>
+
+<p><a href="https://www.dbreunig.com/2026/10/24/the-state-of-context-engineering.html">上下文工程的状态</a><br>作者在AGNTCon会议上分享了关于上下文工程的见解，探讨了如何在确定性和概率性方法之间做出明智选择的重要性。</p>
 
 
 <h2>流行工具与项目</h2>
 
 
-<p><a href="https://github.com/CarterPerez-dev/Cybersecurity-Projects">CarterPerez-dev/Cybersecurity-Projects</a><br>Building 70 Projects ranging from beginner to advanced so anyone can — learn from, build upon, use as a reference, or even copy directly. Gamified Cybersecurity learning 👇</p>
+<p><a href="https://github.com/vshulcz/deja-vu">vshulcz/deja-vu</a><br>让 Claude Code、Codex 等 43 种编程智能体查到本机已有的会话记录</p>
 
-<p><a href="https://github.com/alibaba/open-code-review">alibaba/open-code-review</a><br>Secure, fast, efficient, battle-tested at Alibaba&#39;s scale. Hybrid architecture code review tool: deterministic pipelines &#43; LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE,</p>
+<p><a href="https://github.com/Gaurav-Gosain/tuios">Gaurav-Gosain/tuios</a><br>A terminal window manager that knows what your agents are doing. Tiling panes, workspaces, sessions that survive restarts, and one Inbox for every coding agent. Official only at tuios.dev and this rep</p>
 
-<p><a href="https://github.com/microsoft/TypeScript">microsoft/TypeScript</a><br>TypeScript is a superset of JavaScript that compiles to clean JavaScript output.</p>
+<p><a href="https://github.com/kunchenguid/no-mistakes">kunchenguid/no-mistakes</a><br>git push no-mistakes</p>
 
-<p><a href="https://github.com/helm/helm">helm/helm</a><br>The Kubernetes Package Manager</p>
+<p><a href="https://github.com/charmbracelet/crush">charmbracelet/crush</a><br>Glamourous agentic coding for all 💘</p>
 
-<p><a href="https://github.com/Asymptote-Labs/agent-beacon">Asymptote-Labs/agent-beacon</a><br>The cross-harness, self-improving memory layer for AI agents. Join our community: https://discord.com/invite/zdNChS2fBu</p>
+<p><a href="https://github.com/MHSanaei/3x-ui">MHSanaei/3x-ui</a><br>Supporting multi-protocol multi-user(Vmess, Vless, Trojan, ShadowSocks, Wireguard, Hysteria, Tunnel, Mixed, HTTP, Tun, MTProto، AmneziaWG)</p>
 
-<p><a href="https://github.com/tailscale/tailscale">tailscale/tailscale</a><br>The easiest, most secure way to use WireGuard and 2FA.</p>
+<p><a href="https://github.com/Gentleman-Programming/gentle-ai">Gentleman-Programming/gentle-ai</a><br>Gentle-AI configures the AI coding agents you already use: Claude Code, Cursor, OpenCode, Codex, Pi, and more. Choose persistent memory, Organic-Driven Development, curated skills, MCP servers, person</p>
 
-<p><a href="https://github.com/zitadel/zitadel">zitadel/zitadel</a><br>ZITADEL - Identity infrastructure, simplified for you.</p>
+<p><a href="https://github.com/slavakurilyak/awesome-ai-agents">slavakurilyak/awesome-ai-agents</a><br>Awesome list of 300&#43; agentic AI resources</p>
 
-<p><a href="https://github.com/open-telemetry/opentelemetry-collector-contrib">open-telemetry/opentelemetry-collector-contrib</a><br>Contrib repository for the OpenTelemetry Collector</p>
+<p><a href="https://github.com/kdlbs/kandev">kdlbs/kandev</a><br>AI Kanban &amp; Development Environment. Orchestrate multiple agents, review changes, open PRs. Multi-provider, self-hostable, no telemetry.</p>
 
-<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+<p><a href="https://github.com/mostlygeek/llama-swap">mostlygeek/llama-swap</a><br>Reliable model swapping for any local OpenAI/Anthropic compatible server - llama.cpp, vllm, etc</p>
 
-<p><a href="https://github.com/samber/cc-skills-golang">samber/cc-skills-golang</a><br>🧑‍🎨 A collection of Golang agentic skills that works</p>
+<p><a href="https://github.com/JuliusBrussee/caveman">JuliusBrussee/caveman</a><br>🪨 why use many token when few token do trick. Viral skill &#43; proxy for coding agents that cuts 65% of tokens by talking like a caveman.</p>
+
+<p><a href="https://github.com/github/gh-aw">github/gh-aw</a><br>GitHub Agentic Workflows</p>
 
 
 <hr/>
