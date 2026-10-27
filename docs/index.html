@@ -45,7 +45,7 @@ img {
 
 <div style="text-align: center; margin-bottom: 10px;">
   <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
-  <a href=https://bigwhite.github.io/gopherdaily/202610/issue-20261026.html style="margin: 0 10px;">Web版</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202610/issue-20261027.html style="margin: 0 10px;">Web版</a> |
   <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
   <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
   <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
@@ -57,9 +57,9 @@ img {
 
 <div>
 <p class="issue" style="text-align:center;">
-  <span style="text-align:center;">20261026</span>
+  <span style="text-align:center;">20261027</span>
 </p>
-<p>每日一谚：Prefer atomic operations over mutexes for simple counter variables </p>
+<p>每日一谚：Never ignore returned errors with `_` unless explicitly intended and documented. </p>
 </div>
 
 <hr/>
@@ -67,89 +67,77 @@ img {
 <h2>Go技术生态</h2>
 
 
-<p><a href="https://tonybai.com/2026/10/26/victorialogs-high-performance-go-logging-engine">VictoriaLogs 为什么这么快？一场关于 Go 性能边界的工程实践</a><br>VictoriaLogs 是 VictoriaMetrics 团队开发的开源日志数据库。它的性能工程实践展示了一个重要事实：高性能 Go 系统的秘密， 并不在于某几个神奇的语言技巧，而在于从数据布局到查询执行的整体设计。本文以 VictoriaLogs 为案例，深入解析 LSM-tree、时间分区、日志&gt;流局部性、Bloom Filter、列式存储、专用编码与压缩如何协同减少工作量，并进一步讨论 Go 的内存分配、垃圾回收和性能剖析。最后，通过一个 可直接运行的 Go 基准测试，展示如何把这些思想转化为工程实践</p> 
+<p><a href="https://mp.weixin.qq.com/s/SJvJROp0qKrKN02LddAYbw">Go首启紧急安全发布，封堵eMudhra证书危机</a><br>2026 年 10 月，一场涉及公共密钥基础设施（PKI）的安全事件，让 Go 团队启动了历史上首次 URGENT 紧急安全发布通道。</p> 
 
-<p><a href="https://tonybai.com/2026/10/25/go-formal-verification-gobra-viper-ai">Go 代码也能像数学定理一样被证明？AI 编程时代，形式化验证正在补上最后一块拼图</a><br>当 AI 可以在几分钟内生成大量代码，软件工程真正稀缺的能力可能不再是实现功能，而是证明实现满足要求。本文从 AI 生成代码 的验证难题出发，介绍 Gobra 与 Viper 的技术架构，通过完整的 Go 示例拆解契约式验证、循环不变量和并发权限推理，并简要比较 VeGo、Rust 的 Verus 等相关探索，讨论形式化验证如何进入 AI 软件工程流水线，以及它距离大规模生产落地还有多远。</p> 
+<p><a href="https://tonybai.com/2026/10/27/openai-forward-deployed-engineering-ai-production">OpenAI 揭秘 FDE：AI 时代，最难的不是写代码，而是解决真实问题</a><br>AI 让软件开发越来越快，却没有自动消除业务理解、系统集成、质量评估和生产部署的难题。OpenAI 的 FDE 团队试图弥合模型能&gt;力与真实业务之间的“部署鸿沟”：从客户现场发现问题，以生产结果验证方案，再将经验沉淀为产品、通用工具和模型能力。FDE 最终追求的，不是 让自己不可替代，而是让下一次交付更简单、更可靠。</p> 
 
-<p><a href="https://bitfieldconsulting.com/posts/dancing-backwards">倒着跳Go舞：为什么TDD很奇怪</a><br>本文探讨了在Go语言中采用测试驱动开发(TDD)时遇到的独特挑战，作者通过舞蹈的比喻解释了为什么在Go中实践TDD会感觉有些奇怪。</p> 
-
-<p><a href="https://learnkube.com/go-kubernetes-requests-limits">Go在Kubernetes中的CPU和内存请求与限制</a><br>本文介绍了在Kubernetes环境中配置Go应用程序的CPU和内存请求与限制的最佳实践，并解释了为什么小的Go堆不一定意味着低的容器内存使用量。</p> 
-
-<p><a href="https://alexrios.me/blog/go-spinlocks-bounded-bet/">自旋锁是一种有界的赌注</a><br>这是基于作者在GopherCon Africa 2026演讲的系列文章第一部分，探讨了Go语言中自旋锁的实现原理，以及它们如何与sync.Mutex和运行时锁相关联。</p> 
-
-<p><a href="https://gohawk.dev/">gohawk | 专注于资源的Go静态分析工具</a><br>Gohawk是一款工业级的静态分析工具，专门用于发现Go代码中的资源管理和并发问题。它已被用于发现和修复包括Docker在内的多个项目中的bug。</p> 
-
-<p><a href="https://packagemain.tech/p/golang-optimizations-for-highvolume">高容量服务的Golang优化</a><br>本文分享了从Postgres到Elasticsearch的数据管道中获得的宝贵经验，介绍了如何优化高容量服务的Go应用程序性能。</p> 
+<p><a href="https://therealshek.medium.com/go-rust-and-python-the-stack-id-bet-on-4a2c8ab9dbeb">Go、Rust 和 Python：我押注的 Stack</a><br>这是我的技术栈。Go 负责 API 层和围绕它的服务。Rust 负责安全或低层控制的关键部分，这才是系统的核心。Python 负责 SDK 和脚本编写。</p> 
 
 
 <h2>云原生技术</h2>
 
 
-<p><a href="https://alexsci.com/blog/uuidv7-is-weird/">UUIDv7并不具备你认为的那些属性</a><br>本文是UUID系列文章的一部分，作者指出UUIDv7的实现方式可能与你预期的不同，它具有一些独特的特性。</p>
+<p><a href="https://www.cncf.io/blog/2026/10/27/over-500-golden-kubestronauts-the-evolving-standard-for-cloud-native-mastery/">超过500名黄金Kubestronauts：云原生专业能力的不断演进标准</a><br>黄金定制装备（背包和针织帽）专为该群体创建。黄金Credly徽章是验证全CNCF认证的数字凭证。</p>
 
-<p><a href="https://blog.ipfs.tech/2026-10-new-stewards-public-network-services/">公共IPFS网络服务的新管理者</a><br>2026年10月14日，IPFS网络宣布了新的公共服务管理者，这将有助于改善IPFS基础设施的管理和维护。</p>
+<p><a href="https://engineering.fb.com/2026/10/26/open-source/ocp-summit-2026-meta-networking-talks/">Meta在2026年OCP全球峰会上的网络技术：面向AI网络扩展、扩展和跨域扩展的开放创新</a><br>IcePack和IceCube是Meta的首个液冷网络机架，配备102.4T交换刀片（128×800G，Broadcom Tomahawk 6C和NVIDIA Spectrum-6变体），运行FBOSS系统。</p>
 
-<p><a href="https://blog.shubhamtatvamasi.com/kai-scheduler-deep-dive-how-nvidia-schedules-gpus-on-kubernetes">KAI调度器深度解析：NVIDIA如何在Kubernetes上调度GPU</a><br>本文深入探讨了NVIDIA的KAI调度器如何在Kubernetes环境中高效管理和调度GPU资源，以满足不同工作负载的需求。</p>
+<p><a href="https://tailscale.com/blog/what-is-tailscale-pam">Tailscale VPN的终点与Tailscale PAM的起点</a><br>Tailscale VPN锁定门禁，PAM记录通过的人员。</p>
 
-<p><a href="https://lwn.net/SubscriberLink/1099606/20707a62817cdd16/">未来的Rust特性</a><br>作者介绍了Linux内核开发者希望稳定化的几个Rust特性，以及Rust项目正在开发的其他一些值得关注的新功能。</p>
+<p><a href="https://netflixtechblog.com/making-failure-diagnosis-reliable-with-pensive-ai-6b0811a1c015?source=rss----2615bd06b42e---4">使用Pensive AI使故障诊断更可靠</a><br>我们还计划投资于&#34;Pensive AI错误分类&#34;。难以维护的旧规则也根据可重启性和故障原因（平台或用户）对故障进行分类。</p>
 
-<p><a href="https://philipotoole.com/twelve-years-of-distributed-sqlite/">分布式SQLite的十二年 – Philip O&#39;Toole</a><br>作者回顾了自2014年9月发布rqlite以来的十二年发展历程，这是一个基于Raft共识算法的分布式SQLite实现。</p>
+<p><a href="https://www.reddit.com/r/RedditEng/comments/1xg3nxr/a_day_in_the_life_from_intern_to_fte_a_dystopian/">一天的生活：从实习生到全职员工（一种反乌托邦式工作流程）</a><br>这是一张描述从实习生到全职员工工作流程的图片。</p>
 
-<p><a href="https://www.alfie.wtf/programming/why-i-am-a-programmer.html">为什么我是一名程序员</a><br>作者分享了自己成为程序员的个人历程和动机，探讨了编程如何塑造了他的职业生涯和思维方式。</p>
+<p><a href="https://devblogs.microsoft.com/blog/postgresql-like-a-pro-vscode/">专业级PostgreSQL：在VS Code中构建、查询和故障排除</a><br>请注意：相关视频介绍了数据库代理作为即将推出的体验，需要手动应用操作。</p>
 
-<p><a href="https://blog.cloudflare.com/post-quantum-geo-key-manager/">将后量子密码学引入地理围栏密钥管理 | Cloudflare博客</a><br>Cloudflare介绍了如何将后量子密码学技术应用于地理围栏密钥管理系统，以提高安全性并抵御未来的量子计算威胁。</p>
+<p><a href="https://kim-em.github.io/blog/2026-7-24-why-lean-is-faster-than-rust/">为什么Lean比Rust更快</a><br>作者声称Lean比Rust更快，并展示了在标准语料库上的性能比较结果。</p>
 
-<p><a href="https://www.phoronix.com/news/Wayland-ext-transient-output">为VNC/远程软件提出新的Wayland协议 - Phoronix</a><br>作者报道了一项为VNC和远程软件设计的新Wayland协议提案，这可能会改善Linux系统中的远程桌面体验。</p>
+<p><a href="https://tailscale.com/ssh-investigation-update">Tailscale SSH：调查和修复更新</a><br>我们正在调查影响Tailscale SSH的安全漏洞，并希望分享我们的发现、采取的措施以及最新进展。</p>
 
-<p><a href="https://inside.java/2026/10/23/confined-pools/">分配堆外内存：在JDK 28中通常快6-18倍 - Inside.java</a><br>JDK 28引入了对外部函数和内存(FFM)API的重大改进，使得堆外内存分配的成本显著降低，性能提升可达6-18倍。</p>
+<p><a href="https://blog.rust-lang.org/2026/10/26/how-to-fund-rust-contributors/">如何资助Rust贡献者</a><br>要点：为资助一般维护，可向Rust Foundation维护者基金捐款或赞助RustNL维护团队。</p>
 
-<p><a href="https://bbtree.xiangpeng.systems/post/">bbtree：最快的有序映射</a><br>bbtree是一种高性能的有序映射实现，提供了业界领先的性能和效率。</p>
+<p><a href="https://evancz.dev/why-is-it-so-expensive-to-send-an-email">为什么发送电子邮件如此昂贵？</a><br>发送电子邮件本质上与进行HTTPS请求相同。您需要打开到端口25的TCP连接，进行SSL握手，然后发送数据。</p>
 
-<p><a href="https://datafusion.apache.org/blog/2026/10/24/point-queries/">单行查找(点查询)的最佳实践 - Apache DataFusion博客</a><br>本文介绍了在DataFusion中优化点查询性能的各种技术，基于作者在相关演讲中的分享，提供了实用的最佳实践建议。</p>
+<p><a href="https://www.phoronix.com/news/Linux-7.4-Char-Misc">Google的C Binder驱动程序已移除，Rust Binder准备用于数十亿设备</a><br>作者Michael Larabel于2026年10月25日撰写，Google已移除C Binder驱动程序，Rust Binder已准备好用于数十亿设备。</p>
+
+<p><a href="https://rtfeldman.com/fp-vs-c">纯函数式编程能多接近C语言？</a><br>在《为什么Lean比Rust更快》一文中，作者分享了令人印象深刻的结果：在标准语料库上实现了比C语言更快的DEFLATE压缩。</p>
+
+<p><a href="https://internals-for-interns.com/posts/linux-kernel-cgroups/">深入理解Cgroups</a><br>这是Linux内核理解系列的第11部分，介绍Cgroups概念。</p>
   
 
 <h2>AI</h2>
 
 
-<p><a href="https://tonybai.com/2026/10/24/what-is-a-harness">大厨、厨房与餐馆：一文彻底搞懂 AI Agent 背后的“Harness”到底是什么</a><br>在 AI 智能体（Agent）概念大火的今天，大家频繁提及的“Harness”到底是什么？知名开发者、T3 创始人 Theo 撰文，用极其生动&gt;的大厨、厨房与餐馆比喻，彻底理清了人类界面（Interface）、大语言模型（LLM）、运行框架（Harness）、外部协议（MCP）与智能体（Agent）&gt;之间的边界与分工。本文清晰揭示了为什么“大模型只是生成文本的大厨，而真正让它干成重活的是作为厨房的 Harness”，为理解现代 Agent 架构&gt;提供了通俗且透彻的认知基准。</p>
+<p><a href="https://replit.com/blog/rise-of-self-driving-company">自动驱动公司的崛起 | Replit</a><br>介绍Replit for Business：帮助每家公司围绕AI转型的蓝图。</p>
 
-<p><a href="https://block.xyz/dessa">Dessa - 仅通过语音训练的对话模型</a><br>Dessa是一个仅通过语音训练的全双工对话模型，它能够模拟人类的情感、细微差别、停顿和自然节奏，提供最自然的人机交互体验。</p>
+<p><a href="https://commandline.microsoft.com/agentic-software-engineering-large-scale-code-migration-language-modernization-spec-driven-development/">廉价代码，珍贵信任：大规模代码现代化 - 命令行</a><br>这是一篇关于大规模代码现代化的文章，探讨了如何在保持信任的同时实现代码现代化。</p>
 
-<p><a href="https://www.dbos.dev/webcast/cortex-software-factory">在Cortex使用DBOS构建持久的软件工厂</a><br>本文介绍了如何在Cortex平台使用DBOS构建持久的软件工厂，以提高软件开发的效率和质量。</p>
+<p><a href="https://blog.cloudflare.com/kv-cache-exposure-remediation/">GLM-5.3 Workers AI模型中的跨请求KV缓存泄露及我们使用SGLang的修复方案 | Cloudflare博客</a><br>文章介绍了GLM-5.3 Workers AI模型中的跨请求KV缓存泄露问题以及使用SGLang的修复方案。</p>
 
-<p><a href="https://www.blackscarab.ai/insights/how-to-build-a-robot-with-nvidia">如何使用NVIDIA构建机器人：从仿真到部署 | Black Scarab</a><br>本文提供了从虚拟仓库到板载推理的完整指南，详细介绍了构建人形机器人所需的关键工具、数据和工程决策。</p>
-
-<p><a href="https://danielball.com/notes/ai_image_generation.html">AI图像生成综合指南</a><br>这是一份关于AI图像生成的综合指南，涵盖了各种工具、技术和最佳实践，帮助读者创建高质量的AI生成图像。</p>
-
-<p><a href="https://utkusen.substack.com/p/how-llm-based-penetration-testing">基于LLM的渗透测试工具如何工作</a><br>本文分析了三种开源的基于大语言模型(LLM)的渗透测试工具，解释了黑客如何利用这些工具来攻击Web应用程序。</p>
-
-<p><a href="https://www.dbreunig.com/2026/10/24/the-state-of-context-engineering.html">上下文工程的状态</a><br>作者在AGNTCon会议上分享了关于上下文工程的见解，探讨了如何在确定性和概率性方法之间做出明智选择的重要性。</p>
+<p><a href="https://www.thoughtworks.com/en-us/insights/blog/generative-ai/dont-ask-ai-to-write-the-user-story-yet">不要让AI编写用户故事</a><br>文章建议目前不要让AI编写用户故事，探讨了当前AI在用户故事编写方面的局限性。</p>
 
 
 <h2>流行工具与项目</h2>
 
 
-<p><a href="https://github.com/vshulcz/deja-vu">vshulcz/deja-vu</a><br>让 Claude Code、Codex 等 43 种编程智能体查到本机已有的会话记录</p>
-
-<p><a href="https://github.com/Gaurav-Gosain/tuios">Gaurav-Gosain/tuios</a><br>A terminal window manager that knows what your agents are doing. Tiling panes, workspaces, sessions that survive restarts, and one Inbox for every coding agent. Official only at tuios.dev and this rep</p>
-
-<p><a href="https://github.com/kunchenguid/no-mistakes">kunchenguid/no-mistakes</a><br>git push no-mistakes</p>
-
-<p><a href="https://github.com/charmbracelet/crush">charmbracelet/crush</a><br>Glamourous agentic coding for all 💘</p>
-
-<p><a href="https://github.com/MHSanaei/3x-ui">MHSanaei/3x-ui</a><br>Supporting multi-protocol multi-user(Vmess, Vless, Trojan, ShadowSocks, Wireguard, Hysteria, Tunnel, Mixed, HTTP, Tun, MTProto، AmneziaWG)</p>
-
-<p><a href="https://github.com/Gentleman-Programming/gentle-ai">Gentleman-Programming/gentle-ai</a><br>Gentle-AI configures the AI coding agents you already use: Claude Code, Cursor, OpenCode, Codex, Pi, and more. Choose persistent memory, Organic-Driven Development, curated skills, MCP servers, person</p>
-
-<p><a href="https://github.com/slavakurilyak/awesome-ai-agents">slavakurilyak/awesome-ai-agents</a><br>Awesome list of 300&#43; agentic AI resources</p>
-
-<p><a href="https://github.com/kdlbs/kandev">kdlbs/kandev</a><br>AI Kanban &amp; Development Environment. Orchestrate multiple agents, review changes, open PRs. Multi-provider, self-hostable, no telemetry.</p>
-
-<p><a href="https://github.com/mostlygeek/llama-swap">mostlygeek/llama-swap</a><br>Reliable model swapping for any local OpenAI/Anthropic compatible server - llama.cpp, vllm, etc</p>
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry Collector</p>
 
 <p><a href="https://github.com/JuliusBrussee/caveman">JuliusBrussee/caveman</a><br>🪨 why use many token when few token do trick. Viral skill &#43; proxy for coding agents that cuts 65% of tokens by talking like a caveman.</p>
 
-<p><a href="https://github.com/github/gh-aw">github/gh-aw</a><br>GitHub Agentic Workflows</p>
+<p><a href="https://github.com/Gaurav-Gosain/tuios">Gaurav-Gosain/tuios</a><br>A terminal window manager that knows what your agents are doing. Tiling panes, workspaces, sessions that survive restarts, and one Inbox for every coding agent. Official only at tuios.dev and this rep</p>
+
+<p><a href="https://github.com/router-for-me/CLIProxyAPI">router-for-me/CLIProxyAPI</a><br>Wrap Antigravity, ChatGPT Codex, Claude Code, Grok Build, Muse Code, Devin as an OpenAI/Gemini/Claude/Codex compatible API service, allowing you to enjoy the free Gemini Series, GPT Series, Grok Serie</p>
+
+<p><a href="https://github.com/VictoriaMetrics/VictoriaMetrics">VictoriaMetrics/VictoriaMetrics</a><br>VictoriaMetrics: fast, cost-effective monitoring solution and time series database</p>
+
+<p><a href="https://github.com/multica-ai/multica">multica-ai/multica</a><br>Make humans and AI agents work as one team — open-source and self-hostable.</p>
+
+<p><a href="https://github.com/kopia/kopia">kopia/kopia</a><br>Cross-platform backup tool for Windows, macOS &amp; Linux with fast, incremental backups, client-side end-to-end encryption, compression and data deduplication. CLI and GUI included.</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems</p>
+
+<p><a href="https://github.com/nats-io/nats-server">nats-io/nats-server</a><br>High-Performance server for NATS.io, the cloud and edge native messaging system.</p>
+
+<p><a href="https://github.com/wailsapp/wails">wailsapp/wails</a><br>Create beautiful applications using Go</p>
 
 
 <hr/>
