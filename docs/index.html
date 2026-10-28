@@ -45,7 +45,7 @@ img {
 
 <div style="text-align: center; margin-bottom: 10px;">
   <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
-  <a href=https://bigwhite.github.io/gopherdaily/202610/issue-20261027.html style="margin: 0 10px;">Web版</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202610/issue-20261028.html style="margin: 0 10px;">Web版</a> |
   <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
   <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
   <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
@@ -57,9 +57,9 @@ img {
 
 <div>
 <p class="issue" style="text-align:center;">
-  <span style="text-align:center;">20261027</span>
+  <span style="text-align:center;">20261028</span>
 </p>
-<p>每日一谚：Never ignore returned errors with `_` unless explicitly intended and documented. </p>
+<p>每日一谚：Be consistent: don&#39;t mix pointer and value receivers on the same struct. </p>
 </div>
 
 <hr/>
@@ -67,53 +67,45 @@ img {
 <h2>Go技术生态</h2>
 
 
-<p><a href="https://mp.weixin.qq.com/s/SJvJROp0qKrKN02LddAYbw">Go首启紧急安全发布，封堵eMudhra证书危机</a><br>2026 年 10 月，一场涉及公共密钥基础设施（PKI）的安全事件，让 Go 团队启动了历史上首次 URGENT 紧急安全发布通道。</p> 
+<p><a href="https://tonybai.com/2026/10/28/google-rust-style-guide-large-scale-engineering">Google 的 Rust Style Guide，藏着哪些不一样的工程思考？</a><br>Google 正式公开 Rust Style Guide。它不仅规定如何格式化代码，更试图回答超大规模工程中的一系列问题：为什么要拆分小 Crate？为什么要少用 Arc、Clone 和宏？为什么公共 API 需要为未来的变化预留空间？结合 Hacker News 热议，深入理解 Google Rust 风格背后的工程哲学。</p> 
 
-<p><a href="https://tonybai.com/2026/10/27/openai-forward-deployed-engineering-ai-production">OpenAI 揭秘 FDE：AI 时代，最难的不是写代码，而是解决真实问题</a><br>AI 让软件开发越来越快，却没有自动消除业务理解、系统集成、质量评估和生产部署的难题。OpenAI 的 FDE 团队试图弥合模型能&gt;力与真实业务之间的“部署鸿沟”：从客户现场发现问题，以生产结果验证方案，再将经验沉淀为产品、通用工具和模型能力。FDE 最终追求的，不是 让自己不可替代，而是让下一次交付更简单、更可靠。</p> 
-
-<p><a href="https://therealshek.medium.com/go-rust-and-python-the-stack-id-bet-on-4a2c8ab9dbeb">Go、Rust 和 Python：我押注的 Stack</a><br>这是我的技术栈。Go 负责 API 层和围绕它的服务。Rust 负责安全或低层控制的关键部分，这才是系统的核心。Python 负责 SDK 和脚本编写。</p> 
+<p><a href="https://wyvern.at/en/2026/10/25/why-i-made-wyvern-and-why-i-chose-c-over-rust-zig-or-golang/">我为什么构建了Wyvern，以及为什么我选择C&#43;&#43;而不是Rust、Zig或Golang – Wyvern</a><br>这不是另一场语言战争的文章，也不是&#34;我能做得比别人更好&#34;的宣传！免责声明：Wyvern仍然是个孩子！</p> 
 
 
 <h2>云原生技术</h2>
 
 
-<p><a href="https://www.cncf.io/blog/2026/10/27/over-500-golden-kubestronauts-the-evolving-standard-for-cloud-native-mastery/">超过500名黄金Kubestronauts：云原生专业能力的不断演进标准</a><br>黄金定制装备（背包和针织帽）专为该群体创建。黄金Credly徽章是验证全CNCF认证的数字凭证。</p>
+<p><a href="https://www.cncf.io/blog/2026/10/27/over-500-golden-kubestronauts-the-evolving-standard-for-cloud-native-mastery/">超过500名黄金Kubestronauts：云原生专业能力的不断发展的标准</a><br>黄金周边：专门为这个群体定制的装备（背包和帽饰）。黄金Credly徽章：验证全CNCF认证的数字凭证。</p>
 
-<p><a href="https://engineering.fb.com/2026/10/26/open-source/ocp-summit-2026-meta-networking-talks/">Meta在2026年OCP全球峰会上的网络技术：面向AI网络扩展、扩展和跨域扩展的开放创新</a><br>IcePack和IceCube是Meta的首个液冷网络机架，配备102.4T交换刀片（128×800G，Broadcom Tomahawk 6C和NVIDIA Spectrum-6变体），运行FBOSS系统。</p>
+<p><a href="https://engineering.fb.com/2026/10/27/security/privacylib/">PrivacyLib：数据访问边界的隐私控制</a><br>挑战、方法和覆盖范围：系统可以有多个客户端库和传统集成，接受直接网络调用，并提供对后端存储的直接数据库访问。所有这些都需要被处理，以确保无论访问路径如何，要求都能得到满足。</p>
 
-<p><a href="https://tailscale.com/blog/what-is-tailscale-pam">Tailscale VPN的终点与Tailscale PAM的起点</a><br>Tailscale VPN锁定门禁，PAM记录通过的人员。</p>
+<p><a href="https://engineering.fb.com/2026/10/27/developer-tools/python-typing-survey-2026-ai-tools-checker-landscape/">Python类型检查调查2026：AI工具和不断变化的检查器格局</a><br>由于团队成员使用不同的IDE，我们在开发中使用多种类型检查器，但依赖Mypy进行代码检查（本地和CI）。我们主要使用Pyright，因为它是我们尝试过的唯一能完全理解所有更专业的类型检查模式的选项。</p>
 
-<p><a href="https://netflixtechblog.com/making-failure-diagnosis-reliable-with-pensive-ai-6b0811a1c015?source=rss----2615bd06b42e---4">使用Pensive AI使故障诊断更可靠</a><br>我们还计划投资于&#34;Pensive AI错误分类&#34;。难以维护的旧规则也根据可重启性和故障原因（平台或用户）对故障进行分类。</p>
+<p><a href="https://tailscale.com/blog/tailscale-ssh-findings-fixes">Tailscale SSH：发现和修复</a><br>Tailscale版本1.104.4在Tailscale SSH中修复的问题。</p>
 
-<p><a href="https://www.reddit.com/r/RedditEng/comments/1xg3nxr/a_day_in_the_life_from_intern_to_fte_a_dystopian/">一天的生活：从实习生到全职员工（一种反乌托邦式工作流程）</a><br>这是一张描述从实习生到全职员工工作流程的图片。</p>
+<p><a href="https://p99conf.io/2026/10/27/p99-conf-2026-recap/">P99 CONF 2026回顾：两天的故事</a><br>我们的澳大利亚主持人对P99 CONF全天候以及（现在）按需P99 CONF的看法...你必须喜欢这个刚刚完成第六届的会议。我很幸运地帮助主持了最近四届，我认为这个格式非常完美。</p>
 
-<p><a href="https://devblogs.microsoft.com/blog/postgresql-like-a-pro-vscode/">专业级PostgreSQL：在VS Code中构建、查询和故障排除</a><br>请注意：相关视频介绍了数据库代理作为即将推出的体验，需要手动应用操作。</p>
+<p><a href="https://blogs.microsoft.com/blog/2026/10/27/the-platform-approach-to-becoming-frontier/">成为前沿的平台方法</a><br>为了推进其向AI驱动组织的转型，Manulife正在采用Microsoft 365 E7：前沿套件，扩展Microsoft...</p>
 
-<p><a href="https://kim-em.github.io/blog/2026-7-24-why-lean-is-faster-than-rust/">为什么Lean比Rust更快</a><br>作者声称Lean比Rust更快，并展示了在标准语料库上的性能比较结果。</p>
+<p><a href="https://gracefulliberty.com/articles/four-months-of-zig/">Zig的四个月 - Anna Liberty</a><br>在我离开几年后，我回到Zig已经大约四个月了。</p>
 
-<p><a href="https://tailscale.com/ssh-investigation-update">Tailscale SSH：调查和修复更新</a><br>我们正在调查影响Tailscale SSH的安全漏洞，并希望分享我们的发现、采取的措施以及最新进展。</p>
+<p><a href="https://atgreen.github.io/repl-yell/posts/openldk-java-in-common-lisp/">OpenLDK：将Java世界带入Common Lisp | REPL Yell!</a><br>许多年前，我开发了一个名为gcj的替代Java编译器和运行时，即Java编程语言的GNU编译器。如今，我最喜欢的编程语言是Common Lisp，但我仍然对Java运行时感兴趣。</p>
 
-<p><a href="https://blog.rust-lang.org/2026/10/26/how-to-fund-rust-contributors/">如何资助Rust贡献者</a><br>要点：为资助一般维护，可向Rust Foundation维护者基金捐款或赞助RustNL维护团队。</p>
+<p><a href="https://lwn.net/SubscriberLink/1102102/0c00e4d550f25f8c/">Python的实验性JIT将被移除 [LWN.net]</a><br>欢迎来到LWN.net。以下订阅内容已由LWN订阅者为您提供。数千名订阅者依赖LWN获取Linux和自由软件社区的最佳新闻。</p>
 
-<p><a href="https://evancz.dev/why-is-it-so-expensive-to-send-an-email">为什么发送电子邮件如此昂贵？</a><br>发送电子邮件本质上与进行HTTPS请求相同。您需要打开到端口25的TCP连接，进行SSL握手，然后发送数据。</p>
+<p><a href="https://github.blog/engineering/architecture-optimization/the-bridge-to-agent-scale-git-infrastructure/">代理规模Git基础设施的桥梁</a><br>Eleanor White和Victoria Dye。2026年10月21日。8分钟。分享：在X上分享。</p>
 
-<p><a href="https://www.phoronix.com/news/Linux-7.4-Char-Misc">Google的C Binder驱动程序已移除，Rust Binder准备用于数十亿设备</a><br>作者Michael Larabel于2026年10月25日撰写，Google已移除C Binder驱动程序，Rust Binder已准备好用于数十亿设备。</p>
-
-<p><a href="https://rtfeldman.com/fp-vs-c">纯函数式编程能多接近C语言？</a><br>在《为什么Lean比Rust更快》一文中，作者分享了令人印象深刻的结果：在标准语料库上实现了比C语言更快的DEFLATE压缩。</p>
-
-<p><a href="https://internals-for-interns.com/posts/linux-kernel-cgroups/">深入理解Cgroups</a><br>这是Linux内核理解系列的第11部分，介绍Cgroups概念。</p>
+<p><a href="https://arstechnica.com/security/2026/10/code-execution-flaw-in-uefi-firmware-threatens-most-servers-on-planet-earth/">UEFI固件中的代码执行缺陷影响地球上大多数服务器</a><br>世界各地的防御者面临着应对又一个失败的代码执行漏洞的负担，这次是大多数世界服务器厂商和数据中心使用的启动时固件中的漏洞。</p>
   
 
 <h2>AI</h2>
 
 
-<p><a href="https://replit.com/blog/rise-of-self-driving-company">自动驱动公司的崛起 | Replit</a><br>介绍Replit for Business：帮助每家公司围绕AI转型的蓝图。</p>
+<p><a href="https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/">Genie 4：新一代世界模拟 — Google DeepMind</a><br>2026年10月27日模型。Genie 4：新一代世界模拟。Raia Hadsell、Diego Rivas和Hang Qi。加入Genie 4等待名单。分享。</p>
 
-<p><a href="https://commandline.microsoft.com/agentic-software-engineering-large-scale-code-migration-language-modernization-spec-driven-development/">廉价代码，珍贵信任：大规模代码现代化 - 命令行</a><br>这是一篇关于大规模代码现代化的文章，探讨了如何在保持信任的同时实现代码现代化。</p>
+<p><a href="https://www.anthropic.com/research/early-progress-drug-development">使用Claude加速药物开发的早期进展</a><br>Anthropic的生命科学团队正在努力加速治愈疾病。在过去的几个月里，我们的科学家与六个开发新药的组织进行了深入的研究合作：BigHat Biosciences。</p>
 
-<p><a href="https://blog.cloudflare.com/kv-cache-exposure-remediation/">GLM-5.3 Workers AI模型中的跨请求KV缓存泄露及我们使用SGLang的修复方案 | Cloudflare博客</a><br>文章介绍了GLM-5.3 Workers AI模型中的跨请求KV缓存泄露问题以及使用SGLang的修复方案。</p>
-
-<p><a href="https://www.thoughtworks.com/en-us/insights/blog/generative-ai/dont-ask-ai-to-write-the-user-story-yet">不要让AI编写用户故事</a><br>文章建议目前不要让AI编写用户故事，探讨了当前AI在用户故事编写方面的局限性。</p>
+<p><a href="https://felixrieseberg.com/hunger-beats-tenure-advice-for-junior-engineers/">饥饿胜过终身职位：给初级工程师的建议</a><br>饥饿胜过终身职位：给初级工程师的建议。</p>
 
 
 <h2>流行工具与项目</h2>

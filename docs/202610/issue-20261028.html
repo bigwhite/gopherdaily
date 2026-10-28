@@ -1,0 +1,146 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202610/issue-20261028.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20261028</span>
+</p>
+<p>每日一谚：Be consistent: don&#39;t mix pointer and value receivers on the same struct. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/10/28/google-rust-style-guide-large-scale-engineering">Google 的 Rust Style Guide，藏着哪些不一样的工程思考？</a><br>Google 正式公开 Rust Style Guide。它不仅规定如何格式化代码，更试图回答超大规模工程中的一系列问题：为什么要拆分小 Crate？为什么要少用 Arc、Clone 和宏？为什么公共 API 需要为未来的变化预留空间？结合 Hacker News 热议，深入理解 Google Rust 风格背后的工程哲学。</p> 
+
+<p><a href="https://wyvern.at/en/2026/10/25/why-i-made-wyvern-and-why-i-chose-c-over-rust-zig-or-golang/">我为什么构建了Wyvern，以及为什么我选择C&#43;&#43;而不是Rust、Zig或Golang – Wyvern</a><br>这不是另一场语言战争的文章，也不是&#34;我能做得比别人更好&#34;的宣传！免责声明：Wyvern仍然是个孩子！</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/10/27/over-500-golden-kubestronauts-the-evolving-standard-for-cloud-native-mastery/">超过500名黄金Kubestronauts：云原生专业能力的不断发展的标准</a><br>黄金周边：专门为这个群体定制的装备（背包和帽饰）。黄金Credly徽章：验证全CNCF认证的数字凭证。</p>
+
+<p><a href="https://engineering.fb.com/2026/10/27/security/privacylib/">PrivacyLib：数据访问边界的隐私控制</a><br>挑战、方法和覆盖范围：系统可以有多个客户端库和传统集成，接受直接网络调用，并提供对后端存储的直接数据库访问。所有这些都需要被处理，以确保无论访问路径如何，要求都能得到满足。</p>
+
+<p><a href="https://engineering.fb.com/2026/10/27/developer-tools/python-typing-survey-2026-ai-tools-checker-landscape/">Python类型检查调查2026：AI工具和不断变化的检查器格局</a><br>由于团队成员使用不同的IDE，我们在开发中使用多种类型检查器，但依赖Mypy进行代码检查（本地和CI）。我们主要使用Pyright，因为它是我们尝试过的唯一能完全理解所有更专业的类型检查模式的选项。</p>
+
+<p><a href="https://tailscale.com/blog/tailscale-ssh-findings-fixes">Tailscale SSH：发现和修复</a><br>Tailscale版本1.104.4在Tailscale SSH中修复的问题。</p>
+
+<p><a href="https://p99conf.io/2026/10/27/p99-conf-2026-recap/">P99 CONF 2026回顾：两天的故事</a><br>我们的澳大利亚主持人对P99 CONF全天候以及（现在）按需P99 CONF的看法...你必须喜欢这个刚刚完成第六届的会议。我很幸运地帮助主持了最近四届，我认为这个格式非常完美。</p>
+
+<p><a href="https://blogs.microsoft.com/blog/2026/10/27/the-platform-approach-to-becoming-frontier/">成为前沿的平台方法</a><br>为了推进其向AI驱动组织的转型，Manulife正在采用Microsoft 365 E7：前沿套件，扩展Microsoft...</p>
+
+<p><a href="https://gracefulliberty.com/articles/four-months-of-zig/">Zig的四个月 - Anna Liberty</a><br>在我离开几年后，我回到Zig已经大约四个月了。</p>
+
+<p><a href="https://atgreen.github.io/repl-yell/posts/openldk-java-in-common-lisp/">OpenLDK：将Java世界带入Common Lisp | REPL Yell!</a><br>许多年前，我开发了一个名为gcj的替代Java编译器和运行时，即Java编程语言的GNU编译器。如今，我最喜欢的编程语言是Common Lisp，但我仍然对Java运行时感兴趣。</p>
+
+<p><a href="https://lwn.net/SubscriberLink/1102102/0c00e4d550f25f8c/">Python的实验性JIT将被移除 [LWN.net]</a><br>欢迎来到LWN.net。以下订阅内容已由LWN订阅者为您提供。数千名订阅者依赖LWN获取Linux和自由软件社区的最佳新闻。</p>
+
+<p><a href="https://github.blog/engineering/architecture-optimization/the-bridge-to-agent-scale-git-infrastructure/">代理规模Git基础设施的桥梁</a><br>Eleanor White和Victoria Dye。2026年10月21日。8分钟。分享：在X上分享。</p>
+
+<p><a href="https://arstechnica.com/security/2026/10/code-execution-flaw-in-uefi-firmware-threatens-most-servers-on-planet-earth/">UEFI固件中的代码执行缺陷影响地球上大多数服务器</a><br>世界各地的防御者面临着应对又一个失败的代码执行漏洞的负担，这次是大多数世界服务器厂商和数据中心使用的启动时固件中的漏洞。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/">Genie 4：新一代世界模拟 — Google DeepMind</a><br>2026年10月27日模型。Genie 4：新一代世界模拟。Raia Hadsell、Diego Rivas和Hang Qi。加入Genie 4等待名单。分享。</p>
+
+<p><a href="https://www.anthropic.com/research/early-progress-drug-development">使用Claude加速药物开发的早期进展</a><br>Anthropic的生命科学团队正在努力加速治愈疾病。在过去的几个月里，我们的科学家与六个开发新药的组织进行了深入的研究合作：BigHat Biosciences。</p>
+
+<p><a href="https://felixrieseberg.com/hunger-beats-tenure-advice-for-junior-engineers/">饥饿胜过终身职位：给初级工程师的建议</a><br>饥饿胜过终身职位：给初级工程师的建议。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry Collector</p>
+
+<p><a href="https://github.com/JuliusBrussee/caveman">JuliusBrussee/caveman</a><br>🪨 why use many token when few token do trick. Viral skill &#43; proxy for coding agents that cuts 65% of tokens by talking like a caveman.</p>
+
+<p><a href="https://github.com/Gaurav-Gosain/tuios">Gaurav-Gosain/tuios</a><br>A terminal window manager that knows what your agents are doing. Tiling panes, workspaces, sessions that survive restarts, and one Inbox for every coding agent. Official only at tuios.dev and this rep</p>
+
+<p><a href="https://github.com/router-for-me/CLIProxyAPI">router-for-me/CLIProxyAPI</a><br>Wrap Antigravity, ChatGPT Codex, Claude Code, Grok Build, Muse Code, Devin as an OpenAI/Gemini/Claude/Codex compatible API service, allowing you to enjoy the free Gemini Series, GPT Series, Grok Serie</p>
+
+<p><a href="https://github.com/VictoriaMetrics/VictoriaMetrics">VictoriaMetrics/VictoriaMetrics</a><br>VictoriaMetrics: fast, cost-effective monitoring solution and time series database</p>
+
+<p><a href="https://github.com/multica-ai/multica">multica-ai/multica</a><br>Make humans and AI agents work as one team — open-source and self-hostable.</p>
+
+<p><a href="https://github.com/kopia/kopia">kopia/kopia</a><br>Cross-platform backup tool for Windows, macOS &amp; Linux with fast, incremental backups, client-side end-to-end encryption, compression and data deduplication. CLI and GUI included.</p>
+
+<p><a href="https://github.com/moby/moby">moby/moby</a><br>The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems</p>
+
+<p><a href="https://github.com/nats-io/nats-server">nats-io/nats-server</a><br>High-Performance server for NATS.io, the cloud and edge native messaging system.</p>
+
+<p><a href="https://github.com/wailsapp/wails">wailsapp/wails</a><br>Create beautiful applications using Go</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+
