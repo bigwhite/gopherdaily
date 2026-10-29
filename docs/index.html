@@ -45,7 +45,7 @@ img {
 
 <div style="text-align: center; margin-bottom: 10px;">
   <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
-  <a href=https://bigwhite.github.io/gopherdaily/202610/issue-20261028.html style="margin: 0 10px;">Web版</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202610/issue-20261029.html style="margin: 0 10px;">Web版</a> |
   <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
   <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
   <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
@@ -57,9 +57,9 @@ img {
 
 <div>
 <p class="issue" style="text-align:center;">
-  <span style="text-align:center;">20261028</span>
+  <span style="text-align:center;">20261029</span>
 </p>
-<p>每日一谚：Be consistent: don&#39;t mix pointer and value receivers on the same struct. </p>
+<p>每日一谚：Accept interfaces, return structs. </p>
 </div>
 
 <hr/>
@@ -67,69 +67,125 @@ img {
 <h2>Go技术生态</h2>
 
 
-<p><a href="https://tonybai.com/2026/10/28/google-rust-style-guide-large-scale-engineering">Google 的 Rust Style Guide，藏着哪些不一样的工程思考？</a><br>Google 正式公开 Rust Style Guide。它不仅规定如何格式化代码，更试图回答超大规模工程中的一系列问题：为什么要拆分小 Crate？为什么要少用 Arc、Clone 和宏？为什么公共 API 需要为未来的变化预留空间？结合 Hacker News 热议，深入理解 Google Rust 风格背后的工程哲学。</p> 
+<p><a href="https://tonybai.com/2026/10/29/dagger-1-0-beta-third-generation-ci-cd-for-ai-agents">Dagger 1.0 Beta 发布：Docker 之父要为 AI Agent 重做 CI/CD</a><br>AI 编程工具正在改变软件生产的速度，但传统 CI/CD 仍然大量依赖 Shell 脚本、任务级调度和文本日志。Dagger 1.0 Beta 试图通过统一的执行模型、增量计算、缓存复用、测试级反馈和远程执行，成为继 Jenkins、GitHub Actions 之后的新一代 CI 平台。它的真正目标，是缩短 Agent 从修改代码到获得可靠反馈的闭环。</p> 
 
-<p><a href="https://wyvern.at/en/2026/10/25/why-i-made-wyvern-and-why-i-chose-c-over-rust-zig-or-golang/">我为什么构建了Wyvern，以及为什么我选择C&#43;&#43;而不是Rust、Zig或Golang – Wyvern</a><br>这不是另一场语言战争的文章，也不是&#34;我能做得比别人更好&#34;的宣传！免责声明：Wyvern仍然是个孩子！</p> 
+<p><a href="https://mp.weixin.qq.com/s/f8HxVEVv_JkqrJ3IIXYpyg">PostgreSQL凭什么成为数据库首选？</a><br>一个诞生于上世纪80年代的数据库，如何逆袭成为今天开发者和AI智能体的默认选择？PlanetScale近期回顾了PostgreSQL近40年的发展史，发现它的成功并非源于某个单一的技术突破，而是长期积累、关键决策与时代机遇共同作用的结果。</p> 
 
 
 <h2>云原生技术</h2>
 
 
-<p><a href="https://www.cncf.io/blog/2026/10/27/over-500-golden-kubestronauts-the-evolving-standard-for-cloud-native-mastery/">超过500名黄金Kubestronauts：云原生专业能力的不断发展的标准</a><br>黄金周边：专门为这个群体定制的装备（背包和帽饰）。黄金Credly徽章：验证全CNCF认证的数字凭证。</p>
+<p><a href="https://seangoedecke.com/you-can-just-ask-ai-to-do-things/">你可以直接让 AI 做事</a><br>正如我之前所说，我认为即使模型进展今天停滞，我们至少在未来一年内仍会看到巨大改进，因为我们正在学习如何更有效地使用现有的模型。</p>
 
-<p><a href="https://engineering.fb.com/2026/10/27/security/privacylib/">PrivacyLib：数据访问边界的隐私控制</a><br>挑战、方法和覆盖范围：系统可以有多个客户端库和传统集成，接受直接网络调用，并提供对后端存储的直接数据库访问。所有这些都需要被处理，以确保无论访问路径如何，要求都能得到满足。</p>
+<p><a href="https://devblogs.microsoft.com/blog/trusted-publishing-visual-studio-marketplace/">使用可信发布安全发布 Visual Studio Marketplace 扩展</a><br>1. 登录 Visual Studio Marketplace。
+2. 打开拥有您的扩展的发布者。
+3. 选择可信发布。
+4. 展开 创建，然后填写下面描述的字段。</p>
 
-<p><a href="https://engineering.fb.com/2026/10/27/developer-tools/python-typing-survey-2026-ai-tools-checker-landscape/">Python类型检查调查2026：AI工具和不断变化的检查器格局</a><br>由于团队成员使用不同的IDE，我们在开发中使用多种类型检查器，但依赖Mypy进行代码检查（本地和CI）。我们主要使用Pyright，因为它是我们尝试过的唯一能完全理解所有更专业的类型检查模式的选项。</p>
+<p><a href="https://github.blog/news-insights/company-news/github-universe-2026-evolving-every-layer-of-the-stack">GitHub Universe 2026：堆栈各层的演进 - GitHub 博客</a><br>Jay Parikh · @jayparikh
 
-<p><a href="https://tailscale.com/blog/tailscale-ssh-findings-fixes">Tailscale SSH：发现和修复</a><br>Tailscale版本1.104.4在Tailscale SSH中修复的问题。</p>
+2026年10月28日
 
-<p><a href="https://p99conf.io/2026/10/27/p99-conf-2026-recap/">P99 CONF 2026回顾：两天的故事</a><br>我们的澳大利亚主持人对P99 CONF全天候以及（现在）按需P99 CONF的看法...你必须喜欢这个刚刚完成第六届的会议。我很幸运地帮助主持了最近四届，我认为这个格式非常完美。</p>
+\|
 
-<p><a href="https://blogs.microsoft.com/blog/2026/10/27/the-platform-approach-to-becoming-frontier/">成为前沿的平台方法</a><br>为了推进其向AI驱动组织的转型，Manulife正在采用Microsoft 365 E7：前沿套件，扩展Microsoft...</p>
+6分钟
 
-<p><a href="https://gracefulliberty.com/articles/four-months-of-zig/">Zig的四个月 - Anna Liberty</a><br>在我离开几年后，我回到Zig已经大约四个月了。</p>
+- 分享：
+- 在 X 上分享</p>
 
-<p><a href="https://atgreen.github.io/repl-yell/posts/openldk-java-in-common-lisp/">OpenLDK：将Java世界带入Common Lisp | REPL Yell!</a><br>许多年前，我开发了一个名为gcj的替代Java编译器和运行时，即Java编程语言的GNU编译器。如今，我最喜欢的编程语言是Common Lisp，但我仍然对Java运行时感兴趣。</p>
+<p><a href="https://webrtc.ventures/2026/10/how-to-choose-a-server-side-webrtc-implementation/">如何选择服务器端 WebRTC 实现</a><br>2026年10月21日
 
-<p><a href="https://lwn.net/SubscriberLink/1102102/0c00e4d550f25f8c/">Python的实验性JIT将被移除 [LWN.net]</a><br>欢迎来到LWN.net。以下订阅内容已由LWN订阅者为您提供。数千名订阅者依赖LWN获取Linux和自由软件社区的最佳新闻。</p>
+Hector Zelaya</p>
 
-<p><a href="https://github.blog/engineering/architecture-optimization/the-bridge-to-agent-scale-git-infrastructure/">代理规模Git基础设施的桥梁</a><br>Eleanor White和Victoria Dye。2026年10月21日。8分钟。分享：在X上分享。</p>
+<p><a href="https://avencera.com/blog/agents-replace-onnx-runtime-cudnn-cublas">Rust 中的 GPU 内核：speakrs 比 pyannote 快 60 倍</a><br>speakrs 是我用 Rust 编写的开源说话人分离库。它运行 pyannote 的 community-1 流水线：分段、说话人嵌入，然后是 PLDA 和 VBx 聚类。三周前，其 CUDA 模式通过 ONNX Runtime 运行模型。</p>
 
-<p><a href="https://arstechnica.com/security/2026/10/code-execution-flaw-in-uefi-firmware-threatens-most-servers-on-planet-earth/">UEFI固件中的代码执行缺陷影响地球上大多数服务器</a><br>世界各地的防御者面临着应对又一个失败的代码执行漏洞的负担，这次是大多数世界服务器厂商和数据中心使用的启动时固件中的漏洞。</p>
+<p><a href="https://streamhpc.com/blog/2026-10-28/making-simd-code-scale-to-any-vector-width/">使 SIMD 代码适应任何向量宽度 - Stream HPC</a><br>我将在整篇文章中使用 x86 命名，但这些概念也适用于其他架构。假设读者对 SIMD 和 x86 汇编有基本了解；uops.info 和 Intel 的内部函数指南。</p>
+
+<p><a href="https://ollygarden.com/resources/blog/opentelemetry-profiling-on-a-local-kubernetes-cluster">如何在本地 Kubernetes 上设置 OpenTelemetry 性能分析</a><br>跟踪告诉您哪个请求变慢了。指标告诉您 CPU 使用率上升了。</p>
+
+<p><a href="https://devblogs.microsoft.com/python/announcing-tsp/">Pylance &#43; Pyrefly：将您首选的类型检查器带到 Visual Studio Code - Microsoft Python 开发者博客</a><br>Brett Cannon
+
+首席软件工程经理
+
+在 Microsoft，我们的重点是提供 Python 开发者可能拥有的最佳体验——</p>
+
+<p><a href="https://www.phoronix.com/news/DMA-BUF-IO-uring-Linux-7.4">Linux 7.4 通过 IO_uring 向 I/O 路径引入 DMA-BUF 支持 - Phoronix</a><br>由 Michael Larabel 于 2026 年 10 月 27 日东部时间下午 5:09 在 Linux Storage 中撰写。[19 条评论]
+
+![LINUX STORAGE]</p>
+
+<p><a href="https://javarevisited.substack.com/p/how-to-design-apis-like-a-senior">如何像高级工程师一样设计 API（REST、GraphQL、认证、安全）</a><br>### 通过掌握 API 设计解锁高级工程职位。学习 REST、GraphQL、gRPC、核心原则、安全和可扩展架构。
+
+[![javinpaul 的头像]</p>
+
+<p><a href="https://planetscale.com/blog/what-was-the-turning-point-for-postgres">Postgres 的转折点是什么？ — PlanetScale</a><br>博客 | 工程 | PostgreSQL
+
+# Postgres 的转折点是什么？
+
+Simeon Griggs [@simeonGriggs]</p>
   
 
 <h2>AI</h2>
 
 
-<p><a href="https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/">Genie 4：新一代世界模拟 — Google DeepMind</a><br>2026年10月27日模型。Genie 4：新一代世界模拟。Raia Hadsell、Diego Rivas和Hang Qi。加入Genie 4等待名单。分享。</p>
+<p><a href="https://mp.weixin.qq.com/s/yPD2D-857t4M6AAR0AoHow">AI 越强，工程师越重要！Anthropic点出新战场</a><br>AI正在引发软件工程师的身份危机：当模型越来越会写代码，我们还需要工程师做什么？Anthropic 工程师 Katelyn Lesse 在 X 上给出了一个令人兴奋的答案：AI 能力的上限，不仅取决于模型有多强，更取决于工程师能否构建出释放它的系统。</p>
 
-<p><a href="https://www.anthropic.com/research/early-progress-drug-development">使用Claude加速药物开发的早期进展</a><br>Anthropic的生命科学团队正在努力加速治愈疾病。在过去的几个月里，我们的科学家与六个开发新药的组织进行了深入的研究合作：BigHat Biosciences。</p>
+<p><a href="https://mp.weixin.qq.com/s/mcCZjxc8bDopv_jIgWqiwQ">Thorsten Ball 的 AI Agent 工作心得</a><br>知名程序员 Thorsten Ball 在 X 上分享了截至 2026 年 10 月的 AI Agent 工作心得。最值得关注的变化是：别再教 AI 一步步写代码，而要重新设计整个软件开发流程。</p>
 
-<p><a href="https://felixrieseberg.com/hunger-beats-tenure-advice-for-junior-engineers/">饥饿胜过终身职位：给初级工程师的建议</a><br>饥饿胜过终身职位：给初级工程师的建议。</p>
+<p><a href="https://tonybai.com/2026/10/29/how-openai-reinvented-codex">从一次失败到重塑 ChatGPT：OpenAI 如何在 10 个月内重新发明 Codex？</a><br>OpenAI Codex 的逆袭并非单靠一次模型升级，而是经历了云端产品受挫、本地 Agent 重构、真实工程训练和多 Agent 桌面应用等一系列转变。Every 对 OpenAI 团队的深度采访，揭示了 AI Agent 产品如何从辅助编程走向任务委托，以及模型、执行环境、交互设计与组织机制 如何共同决定产品成败。</p>
+
+<p><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/">介绍 Gemini 4 Carbon</a><br># Gemini 4 Carbon：我们的下一个前沿模型
+
+2026年10月28日
+
+\|
+
+- [x.com]</p>
+
+<p><a href="https://cursor.com/blog/agent-sdk">介绍 Agent SDK · Cursor</a><br>博客 / 产品
+
+软件团队使用定义为代码的代理来处理开发生命周期中的重复性工作。这些代理连接到团队工作的地点，并在相关事件发生时采取行动，无论是审查拉取请求、执行...</p>
+
+<p><a href="https://rea.tools/zh-CN/blog/reverse-engineering-models/">逆向工程需要更大的模型吗？ | REA</a><br>首页 / 博客 / 模型与逆向工程
+
+随笔
+
+# 逆向工程需要更大的模型吗？
+
+作者 N0zoM1z0 · 2026 年 10 月 13 日
+
+要点
+
+- **模型能力会影响编程助手能提出哪些假设。** 后来的会话解决了此前工作未能解决的问题。
+
+- **熟悉的编译器为专用模型提供了具体的学习对象。** 有些精确匹配依赖细小但可以复用的源码模式。
+
+- **也要给代码仓库里的知识一个公平的对照。** 较小的模型配上良好的检索，可能已经掌握足够的知识推进工作。
+
+- **训练模型选择下一个有价值的实验，同时检验它使用的校验基准�</p>
 
 
 <h2>流行工具与项目</h2>
 
 
-<p><a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a><br>OpenTelemetry Collector</p>
+<p><a href="https://github.com/gastownhall/beads">gastownhall/beads</a><br>Beads - A memory upgrade for your coding agent</p>
 
 <p><a href="https://github.com/JuliusBrussee/caveman">JuliusBrussee/caveman</a><br>🪨 why use many token when few token do trick. Viral skill &#43; proxy for coding agents that cuts 65% of tokens by talking like a caveman.</p>
 
-<p><a href="https://github.com/Gaurav-Gosain/tuios">Gaurav-Gosain/tuios</a><br>A terminal window manager that knows what your agents are doing. Tiling panes, workspaces, sessions that survive restarts, and one Inbox for every coding agent. Official only at tuios.dev and this rep</p>
-
-<p><a href="https://github.com/router-for-me/CLIProxyAPI">router-for-me/CLIProxyAPI</a><br>Wrap Antigravity, ChatGPT Codex, Claude Code, Grok Build, Muse Code, Devin as an OpenAI/Gemini/Claude/Codex compatible API service, allowing you to enjoy the free Gemini Series, GPT Series, Grok Serie</p>
+<p><a href="https://github.com/docker/compose">docker/compose</a><br>Define and run multi-container applications with Docker</p>
 
 <p><a href="https://github.com/VictoriaMetrics/VictoriaMetrics">VictoriaMetrics/VictoriaMetrics</a><br>VictoriaMetrics: fast, cost-effective monitoring solution and time series database</p>
 
-<p><a href="https://github.com/multica-ai/multica">multica-ai/multica</a><br>Make humans and AI agents work as one team — open-source and self-hostable.</p>
+<p><a href="https://github.com/agent-substrate/substrate">agent-substrate/substrate</a><br>Agent Substrate: the core system</p>
 
-<p><a href="https://github.com/kopia/kopia">kopia/kopia</a><br>Cross-platform backup tool for Windows, macOS &amp; Linux with fast, incremental backups, client-side end-to-end encryption, compression and data deduplication. CLI and GUI included.</p>
+<p><a href="https://github.com/keploy/keploy">keploy/keploy</a><br>Open-source platform for creating safe, isolated production sandboxes for API, integration, and E2E testing.</p>
 
-<p><a href="https://github.com/moby/moby">moby/moby</a><br>The Moby Project - a collaborative project for the container ecosystem to assemble container-based systems</p>
+<p><a href="https://github.com/google/ax">google/ax</a><br>Agent Executor (AX) is Google&#39;s open agentic orchestration runtime</p>
+
+<p><a href="https://github.com/glanceapp/glance">glanceapp/glance</a><br>A self-hosted dashboard that puts all your feeds in one place</p>
+
+<p><a href="https://github.com/tailscale/tailcat">tailscale/tailcat</a><br>like netcat, but over Tailscale&#39;s data plane, without Tailscale&#39;s control plane</p>
 
 <p><a href="https://github.com/nats-io/nats-server">nats-io/nats-server</a><br>High-Performance server for NATS.io, the cloud and edge native messaging system.</p>
-
-<p><a href="https://github.com/wailsapp/wails">wailsapp/wails</a><br>Create beautiful applications using Go</p>
 
 
 <hr/>
