@@ -45,7 +45,7 @@ img {
 
 <div style="text-align: center; margin-bottom: 10px;">
   <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
-  <a href=https://bigwhite.github.io/gopherdaily/202610/issue-20261029.html style="margin: 0 10px;">Web版</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202610/issue-20261030.html style="margin: 0 10px;">Web版</a> |
   <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
   <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
   <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
@@ -57,9 +57,9 @@ img {
 
 <div>
 <p class="issue" style="text-align:center;">
-  <span style="text-align:center;">20261029</span>
+  <span style="text-align:center;">20261030</span>
 </p>
-<p>每日一谚：Accept interfaces, return structs. </p>
+<p>每日一谚：Keep interfaces small; 1 to 3 methods is ideal. </p>
 </div>
 
 <hr/>
@@ -67,101 +67,49 @@ img {
 <h2>Go技术生态</h2>
 
 
-<p><a href="https://tonybai.com/2026/10/29/dagger-1-0-beta-third-generation-ci-cd-for-ai-agents">Dagger 1.0 Beta 发布：Docker 之父要为 AI Agent 重做 CI/CD</a><br>AI 编程工具正在改变软件生产的速度，但传统 CI/CD 仍然大量依赖 Shell 脚本、任务级调度和文本日志。Dagger 1.0 Beta 试图通过统一的执行模型、增量计算、缓存复用、测试级反馈和远程执行，成为继 Jenkins、GitHub Actions 之后的新一代 CI 平台。它的真正目标，是缩短 Agent 从修改代码到获得可靠反馈的闭环。</p> 
+<p><a href="https://tonybai.com/2026/10/30/ai-software-factory-secure-reference-architecture">AI 软件工厂 1.0：当 Agent 开始写代码、部署和运维，我们需要怎样的架构？</a><br>AI 编程正在从个人开发工具演变为企业级软件生产基础设施。Agent Baseline 发布的《The Secure Software Factory》参考架构，将 Agent 的运行环境、网络访问、依赖供应链以及身份授权划分为四道安全边界，并提出三种逐步增强的自主运行模式。本文从架构设计、执行链路、Go 项目落地和工程治理等角度，拆解软件工厂的核心机制，并给出一套可以逐步实施的参考方案。</p> 
 
-<p><a href="https://mp.weixin.qq.com/s/f8HxVEVv_JkqrJ3IIXYpyg">PostgreSQL凭什么成为数据库首选？</a><br>一个诞生于上世纪80年代的数据库，如何逆袭成为今天开发者和AI智能体的默认选择？PlanetScale近期回顾了PostgreSQL近40年的发展史，发现它的成功并非源于某个单一的技术突破，而是长期积累、关键决策与时代机遇共同作用的结果。</p> 
+<p><a href="https://tinygo.org/blog/2026/tinygo-0.44-smaller-faster-better/">TinyGo 0.44 - 更小、更快、更好 | TinyGo</a><br>TinyGo 0.44 版本发布，程序更小更快，支持微控制器上的更多多核，支持 Arduino UNO R4，提供新的驱动程序，以及重大的蓝牙更新！</p> 
 
 
 <h2>云原生技术</h2>
 
 
-<p><a href="https://seangoedecke.com/you-can-just-ask-ai-to-do-things/">你可以直接让 AI 做事</a><br>正如我之前所说，我认为即使模型进展今天停滞，我们至少在未来一年内仍会看到巨大改进，因为我们正在学习如何更有效地使用现有的模型。</p>
+<p><a href="https://www.cncf.io/blog/2026/10/29/kubecon-cloudnativecon-na-2026-end-user-tab-recommendations-and-tips/">KubeCon &#43; CloudNativeCon 北美 2026：终端用户 TAB 建议和技巧</a><br>大规模零停机 CNI 迁移：从 Canal 到 Cilium 跨越数百个生产集群。在生产环境中迁移 CNI 插件是 Kubernetes 基础设施中最高风险的操作之一。</p>
 
-<p><a href="https://devblogs.microsoft.com/blog/trusted-publishing-visual-studio-marketplace/">使用可信发布安全发布 Visual Studio Marketplace 扩展</a><br>1. 登录 Visual Studio Marketplace。
-2. 打开拥有您的扩展的发布者。
-3. 选择可信发布。
-4. 展开 创建，然后填写下面描述的字段。</p>
+<p><a href="https://www.cncf.io/blog/2026/10/29/the-boundary-problem-in-agentic-ai-is-a-platform-problem/">智能 AI 中的边界问题是平台问题</a><br>这并非反对代理的自主性，而是讨论自主性应归属何处。有用的框架是确定性的主干，非确定性的执行挂靠其上。</p>
 
-<p><a href="https://github.blog/news-insights/company-news/github-universe-2026-evolving-every-layer-of-the-stack">GitHub Universe 2026：堆栈各层的演进 - GitHub 博客</a><br>Jay Parikh · @jayparikh
+<p><a href="https://engineering.fb.com/2026/10/29/security/catching-bugs-before-they-land-jittestings-human-on-the-loop-approach-at-full-scale/">在问题出现前捕获错误：JiTTesting 的大规模人机协同方法</a><br>大多数基于 AI 的代码防错方法使用 LLM 和/或智能 AI 来审查代码并根据先前经验检测故障。它们通过与人审查者相同的审查流程工作，只是速度更快。</p>
 
-2026年10月28日
+<p><a href="https://seangoedecke.com/elegance-and-intelligence-are-anticorrelated/">优雅与智能呈负相关</a><br>有一个著名的冯·诺依曼故事，他被问及如果一只苍蝇在以固定速度相互接近的两名自行车手之间持续飞行，它需要飞行多远。</p>
 
-\|
+<p><a href="https://www.docker.com/blog/coding-agent-horror-stories-the-cve-that-did-not-exist/">编码智能体恐怖故事：不存在的 CVE</a><br>BuaJi 已移至 Docker 沙箱。只读规则现在是环境的属性，而不是脚本中的约定：代码以只读方式挂载，不传递凭据，并且只有一个网络路径是开放的。</p>
 
-6分钟
+<p><a href="https://ebpf.io/blog/cloudflare-replatforming-5/">Cloudflare 的 eBPF 平台转换第 5 部分：大规模运行 eBPF 的技巧</a><br>本系列记录了 Cloudflare 八年来使用 eBPF 的旅程，从专门的 DDoS 工具到其全球网络的可编程骨干。</p>
 
-- 分享：
-- 在 X 上分享</p>
+<p><a href="https://pivotlake.io/blog/its-the-memory-latency-stupid/">是内存延迟，笨蛋</a><br>当您看到数据库 CPU 使用率达到 100% 时，它实际上在做什么？为了简单起见，我们喜欢假设 CPU 线性地运行代码，但事实上 CPU 是极其复杂的实体。</p>
 
-<p><a href="https://webrtc.ventures/2026/10/how-to-choose-a-server-side-webrtc-implementation/">如何选择服务器端 WebRTC 实现</a><br>2026年10月21日
+<p><a href="https://www.dbos.dev/blog/one-million-workflows">Postgres 上每秒 100 万个持久工作流 | DBOS</a><br>在 Postgres 上构建持久工作流引擎时，我们最常被问到的问题是 Postgres 能否扩展。现在，已经有大量关于此的博客文章。</p>
 
-Hector Zelaya</p>
+<p><a href="https://karboosx.net/post/5j7jdDM3/how-to-create-your-own-decentralized-messenger-protocol">如何创建自己的去中心化消息传递协议</a><br>假设您想创建一个系统，其中每个服务器都可以加入网络并开始与该网络中的其他成员交换某些内容。您会如何处理这样的任务？</p>
 
-<p><a href="https://avencera.com/blog/agents-replace-onnx-runtime-cudnn-cublas">Rust 中的 GPU 内核：speakrs 比 pyannote 快 60 倍</a><br>speakrs 是我用 Rust 编写的开源说话人分离库。它运行 pyannote 的 community-1 流水线：分段、说话人嵌入，然后是 PLDA 和 VBx 聚类。三周前，其 CUDA 模式通过 ONNX Runtime 运行模型。</p>
+<p><a href="https://read.thecoder.cafe/p/the-shirky-principle-explained">解释 Shirky 原则：为什么团队保留他们解决的问题</a><br>团队为什么保留他们解决的问题？</p>
 
-<p><a href="https://streamhpc.com/blog/2026-10-28/making-simd-code-scale-to-any-vector-width/">使 SIMD 代码适应任何向量宽度 - Stream HPC</a><br>我将在整篇文章中使用 x86 命名，但这些概念也适用于其他架构。假设读者对 SIMD 和 x86 汇编有基本了解；uops.info 和 Intel 的内部函数指南。</p>
+<p><a href="https://www.cncf.io/blog/2026/08/25/the-lazy-developers-guide-to-observing-your-own-code/">懒人开发者观察自己代码的指南 | CNCF</a><br>本文重点介绍了 CNCF 项目，包括 OpenTelemetry 等。</p>
 
-<p><a href="https://ollygarden.com/resources/blog/opentelemetry-profiling-on-a-local-kubernetes-cluster">如何在本地 Kubernetes 上设置 OpenTelemetry 性能分析</a><br>跟踪告诉您哪个请求变慢了。指标告诉您 CPU 使用率上升了。</p>
-
-<p><a href="https://devblogs.microsoft.com/python/announcing-tsp/">Pylance &#43; Pyrefly：将您首选的类型检查器带到 Visual Studio Code - Microsoft Python 开发者博客</a><br>Brett Cannon
-
-首席软件工程经理
-
-在 Microsoft，我们的重点是提供 Python 开发者可能拥有的最佳体验——</p>
-
-<p><a href="https://www.phoronix.com/news/DMA-BUF-IO-uring-Linux-7.4">Linux 7.4 通过 IO_uring 向 I/O 路径引入 DMA-BUF 支持 - Phoronix</a><br>由 Michael Larabel 于 2026 年 10 月 27 日东部时间下午 5:09 在 Linux Storage 中撰写。[19 条评论]
-
-![LINUX STORAGE]</p>
-
-<p><a href="https://javarevisited.substack.com/p/how-to-design-apis-like-a-senior">如何像高级工程师一样设计 API（REST、GraphQL、认证、安全）</a><br>### 通过掌握 API 设计解锁高级工程职位。学习 REST、GraphQL、gRPC、核心原则、安全和可扩展架构。
-
-[![javinpaul 的头像]</p>
-
-<p><a href="https://planetscale.com/blog/what-was-the-turning-point-for-postgres">Postgres 的转折点是什么？ — PlanetScale</a><br>博客 | 工程 | PostgreSQL
-
-# Postgres 的转折点是什么？
-
-Simeon Griggs [@simeonGriggs]</p>
+<p><a href="https://www.mongodb.com/company/blog/technical/scanning-7-point-25-million-public-repositories-chinas-largest-git-platform-for-secrets">在中国最大的 Git 平台上扫描 725 万个公共仓库以查找密钥</a><br>在中国最大的 Git 平台上扫描了 725 万个公共仓库以查找密钥。</p>
   
 
 <h2>AI</h2>
 
 
-<p><a href="https://mp.weixin.qq.com/s/yPD2D-857t4M6AAR0AoHow">AI 越强，工程师越重要！Anthropic点出新战场</a><br>AI正在引发软件工程师的身份危机：当模型越来越会写代码，我们还需要工程师做什么？Anthropic 工程师 Katelyn Lesse 在 X 上给出了一个令人兴奋的答案：AI 能力的上限，不仅取决于模型有多强，更取决于工程师能否构建出释放它的系统。</p>
+<p><a href="https://simonwillison.net/2026/Oct/29/how-i-built-the-most-ai-pilled-company-in-the-world/">使用自主的 Fable 级模型构建多人游戏世界</a><br>我们的代理直接更改实时代码并每小时发布到生产环境，因此它们自己读取每个错误、错误报告和指标。我们约 60% 的工作始于生产错误、Savi 错误报告或日志中的异常内容。</p>
 
-<p><a href="https://mp.weixin.qq.com/s/mcCZjxc8bDopv_jIgWqiwQ">Thorsten Ball 的 AI Agent 工作心得</a><br>知名程序员 Thorsten Ball 在 X 上分享了截至 2026 年 10 月的 AI Agent 工作心得。最值得关注的变化是：别再教 AI 一步步写代码，而要重新设计整个软件开发流程。</p>
+<p><a href="https://mistral.ai/news/mistral-large-4-oss/">Mistral Large 4 (Le Chonk) 现在已开源 | Mistral</a><br>为程序员构建，受防御者信任。</p>
 
-<p><a href="https://tonybai.com/2026/10/29/how-openai-reinvented-codex">从一次失败到重塑 ChatGPT：OpenAI 如何在 10 个月内重新发明 Codex？</a><br>OpenAI Codex 的逆袭并非单靠一次模型升级，而是经历了云端产品受挫、本地 Agent 重构、真实工程训练和多 Agent 桌面应用等一系列转变。Every 对 OpenAI 团队的深度采访，揭示了 AI Agent 产品如何从辅助编程走向任务委托，以及模型、执行环境、交互设计与组织机制 如何共同决定产品成败。</p>
+<p><a href="https://labs.ycombinator.com/projects/games/index.html">游戏中的代理</a><br>注意：我们正在运行一个新的 Minecraft 殖民地，有 25 个 GPT-6.1 Terra 代理。理解多代理动态是 AI 对齐中最紧迫的挑战之一。</p>
 
-<p><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/">介绍 Gemini 4 Carbon</a><br># Gemini 4 Carbon：我们的下一个前沿模型
-
-2026年10月28日
-
-\|
-
-- [x.com]</p>
-
-<p><a href="https://cursor.com/blog/agent-sdk">介绍 Agent SDK · Cursor</a><br>博客 / 产品
-
-软件团队使用定义为代码的代理来处理开发生命周期中的重复性工作。这些代理连接到团队工作的地点，并在相关事件发生时采取行动，无论是审查拉取请求、执行...</p>
-
-<p><a href="https://rea.tools/zh-CN/blog/reverse-engineering-models/">逆向工程需要更大的模型吗？ | REA</a><br>首页 / 博客 / 模型与逆向工程
-
-随笔
-
-# 逆向工程需要更大的模型吗？
-
-作者 N0zoM1z0 · 2026 年 10 月 13 日
-
-要点
-
-- **模型能力会影响编程助手能提出哪些假设。** 后来的会话解决了此前工作未能解决的问题。
-
-- **熟悉的编译器为专用模型提供了具体的学习对象。** 有些精确匹配依赖细小但可以复用的源码模式。
-
-- **也要给代码仓库里的知识一个公平的对照。** 较小的模型配上良好的检索，可能已经掌握足够的知识推进工作。
-
-- **训练模型选择下一个有价值的实验，同时检验它使用的校验基准�</p>
+<p><a href="https://martinfowler.com/bliki/LLM-Voice.html">LLM 语音</a><br>有时当我阅读一篇文章时，我越来越觉得我正在阅读的是 LLM 的输出。</p>
 
 
 <h2>流行工具与项目</h2>

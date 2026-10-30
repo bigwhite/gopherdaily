@@ -1,0 +1,150 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202610/issue-20261030.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20261030</span>
+</p>
+<p>每日一谚：Keep interfaces small; 1 to 3 methods is ideal. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/10/30/ai-software-factory-secure-reference-architecture">AI 软件工厂 1.0：当 Agent 开始写代码、部署和运维，我们需要怎样的架构？</a><br>AI 编程正在从个人开发工具演变为企业级软件生产基础设施。Agent Baseline 发布的《The Secure Software Factory》参考架构，将 Agent 的运行环境、网络访问、依赖供应链以及身份授权划分为四道安全边界，并提出三种逐步增强的自主运行模式。本文从架构设计、执行链路、Go 项目落地和工程治理等角度，拆解软件工厂的核心机制，并给出一套可以逐步实施的参考方案。</p> 
+
+<p><a href="https://tinygo.org/blog/2026/tinygo-0.44-smaller-faster-better/">TinyGo 0.44 - 更小、更快、更好 | TinyGo</a><br>TinyGo 0.44 版本发布，程序更小更快，支持微控制器上的更多多核，支持 Arduino UNO R4，提供新的驱动程序，以及重大的蓝牙更新！</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/10/29/kubecon-cloudnativecon-na-2026-end-user-tab-recommendations-and-tips/">KubeCon &#43; CloudNativeCon 北美 2026：终端用户 TAB 建议和技巧</a><br>大规模零停机 CNI 迁移：从 Canal 到 Cilium 跨越数百个生产集群。在生产环境中迁移 CNI 插件是 Kubernetes 基础设施中最高风险的操作之一。</p>
+
+<p><a href="https://www.cncf.io/blog/2026/10/29/the-boundary-problem-in-agentic-ai-is-a-platform-problem/">智能 AI 中的边界问题是平台问题</a><br>这并非反对代理的自主性，而是讨论自主性应归属何处。有用的框架是确定性的主干，非确定性的执行挂靠其上。</p>
+
+<p><a href="https://engineering.fb.com/2026/10/29/security/catching-bugs-before-they-land-jittestings-human-on-the-loop-approach-at-full-scale/">在问题出现前捕获错误：JiTTesting 的大规模人机协同方法</a><br>大多数基于 AI 的代码防错方法使用 LLM 和/或智能 AI 来审查代码并根据先前经验检测故障。它们通过与人审查者相同的审查流程工作，只是速度更快。</p>
+
+<p><a href="https://seangoedecke.com/elegance-and-intelligence-are-anticorrelated/">优雅与智能呈负相关</a><br>有一个著名的冯·诺依曼故事，他被问及如果一只苍蝇在以固定速度相互接近的两名自行车手之间持续飞行，它需要飞行多远。</p>
+
+<p><a href="https://www.docker.com/blog/coding-agent-horror-stories-the-cve-that-did-not-exist/">编码智能体恐怖故事：不存在的 CVE</a><br>BuaJi 已移至 Docker 沙箱。只读规则现在是环境的属性，而不是脚本中的约定：代码以只读方式挂载，不传递凭据，并且只有一个网络路径是开放的。</p>
+
+<p><a href="https://ebpf.io/blog/cloudflare-replatforming-5/">Cloudflare 的 eBPF 平台转换第 5 部分：大规模运行 eBPF 的技巧</a><br>本系列记录了 Cloudflare 八年来使用 eBPF 的旅程，从专门的 DDoS 工具到其全球网络的可编程骨干。</p>
+
+<p><a href="https://pivotlake.io/blog/its-the-memory-latency-stupid/">是内存延迟，笨蛋</a><br>当您看到数据库 CPU 使用率达到 100% 时，它实际上在做什么？为了简单起见，我们喜欢假设 CPU 线性地运行代码，但事实上 CPU 是极其复杂的实体。</p>
+
+<p><a href="https://www.dbos.dev/blog/one-million-workflows">Postgres 上每秒 100 万个持久工作流 | DBOS</a><br>在 Postgres 上构建持久工作流引擎时，我们最常被问到的问题是 Postgres 能否扩展。现在，已经有大量关于此的博客文章。</p>
+
+<p><a href="https://karboosx.net/post/5j7jdDM3/how-to-create-your-own-decentralized-messenger-protocol">如何创建自己的去中心化消息传递协议</a><br>假设您想创建一个系统，其中每个服务器都可以加入网络并开始与该网络中的其他成员交换某些内容。您会如何处理这样的任务？</p>
+
+<p><a href="https://read.thecoder.cafe/p/the-shirky-principle-explained">解释 Shirky 原则：为什么团队保留他们解决的问题</a><br>团队为什么保留他们解决的问题？</p>
+
+<p><a href="https://www.cncf.io/blog/2026/08/25/the-lazy-developers-guide-to-observing-your-own-code/">懒人开发者观察自己代码的指南 | CNCF</a><br>本文重点介绍了 CNCF 项目，包括 OpenTelemetry 等。</p>
+
+<p><a href="https://www.mongodb.com/company/blog/technical/scanning-7-point-25-million-public-repositories-chinas-largest-git-platform-for-secrets">在中国最大的 Git 平台上扫描 725 万个公共仓库以查找密钥</a><br>在中国最大的 Git 平台上扫描了 725 万个公共仓库以查找密钥。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Oct/29/how-i-built-the-most-ai-pilled-company-in-the-world/">使用自主的 Fable 级模型构建多人游戏世界</a><br>我们的代理直接更改实时代码并每小时发布到生产环境，因此它们自己读取每个错误、错误报告和指标。我们约 60% 的工作始于生产错误、Savi 错误报告或日志中的异常内容。</p>
+
+<p><a href="https://mistral.ai/news/mistral-large-4-oss/">Mistral Large 4 (Le Chonk) 现在已开源 | Mistral</a><br>为程序员构建，受防御者信任。</p>
+
+<p><a href="https://labs.ycombinator.com/projects/games/index.html">游戏中的代理</a><br>注意：我们正在运行一个新的 Minecraft 殖民地，有 25 个 GPT-6.1 Terra 代理。理解多代理动态是 AI 对齐中最紧迫的挑战之一。</p>
+
+<p><a href="https://martinfowler.com/bliki/LLM-Voice.html">LLM 语音</a><br>有时当我阅读一篇文章时，我越来越觉得我正在阅读的是 LLM 的输出。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/gastownhall/beads">gastownhall/beads</a><br>Beads - A memory upgrade for your coding agent</p>
+
+<p><a href="https://github.com/JuliusBrussee/caveman">JuliusBrussee/caveman</a><br>🪨 why use many token when few token do trick. Viral skill &#43; proxy for coding agents that cuts 65% of tokens by talking like a caveman.</p>
+
+<p><a href="https://github.com/docker/compose">docker/compose</a><br>Define and run multi-container applications with Docker</p>
+
+<p><a href="https://github.com/VictoriaMetrics/VictoriaMetrics">VictoriaMetrics/VictoriaMetrics</a><br>VictoriaMetrics: fast, cost-effective monitoring solution and time series database</p>
+
+<p><a href="https://github.com/agent-substrate/substrate">agent-substrate/substrate</a><br>Agent Substrate: the core system</p>
+
+<p><a href="https://github.com/keploy/keploy">keploy/keploy</a><br>Open-source platform for creating safe, isolated production sandboxes for API, integration, and E2E testing.</p>
+
+<p><a href="https://github.com/google/ax">google/ax</a><br>Agent Executor (AX) is Google&#39;s open agentic orchestration runtime</p>
+
+<p><a href="https://github.com/glanceapp/glance">glanceapp/glance</a><br>A self-hosted dashboard that puts all your feeds in one place</p>
+
+<p><a href="https://github.com/tailscale/tailcat">tailscale/tailcat</a><br>like netcat, but over Tailscale&#39;s data plane, without Tailscale&#39;s control plane</p>
+
+<p><a href="https://github.com/nats-io/nats-server">nats-io/nats-server</a><br>High-Performance server for NATS.io, the cloud and edge native messaging system.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+
