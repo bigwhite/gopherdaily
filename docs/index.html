@@ -45,7 +45,7 @@ img {
 
 <div style="text-align: center; margin-bottom: 10px;">
   <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
-  <a href=https://bigwhite.github.io/gopherdaily/202610/issue-20261030.html style="margin: 0 10px;">Web版</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202611/issue-20261102.html style="margin: 0 10px;">Web版</a> |
   <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
   <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
   <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
@@ -57,9 +57,9 @@ img {
 
 <div>
 <p class="issue" style="text-align:center;">
-  <span style="text-align:center;">20261030</span>
+  <span style="text-align:center;">20261102</span>
 </p>
-<p>每日一谚：Keep interfaces small; 1 to 3 methods is ideal. </p>
+<p>每日一谚：Reflection is never clear </p>
 </div>
 
 <hr/>
@@ -67,73 +67,73 @@ img {
 <h2>Go技术生态</h2>
 
 
-<p><a href="https://tonybai.com/2026/10/30/ai-software-factory-secure-reference-architecture">AI 软件工厂 1.0：当 Agent 开始写代码、部署和运维，我们需要怎样的架构？</a><br>AI 编程正在从个人开发工具演变为企业级软件生产基础设施。Agent Baseline 发布的《The Secure Software Factory》参考架构，将 Agent 的运行环境、网络访问、依赖供应链以及身份授权划分为四道安全边界，并提出三种逐步增强的自主运行模式。本文从架构设计、执行链路、Go 项目落地和工程治理等角度，拆解软件工厂的核心机制，并给出一套可以逐步实施的参考方案。</p> 
+<p><a href="https://tonybai.com/2026/11/02/cve-2026-98432-linux-kernel-vulnerability-go-mptcp">Claude 挖出 Linux 内核高危漏洞，Go 程序为何也受到了牵连？</a><br>Anthropic 借助 Claude 发现 Linux 内核高危漏洞 CVE-2026-98432，并构造了针对 MPTCP 监听服务的远程 root 利用链。由于 Go 1.24 起默认启用 Linux MPTCP Listener，大量 Go 网络服务可能受到影响。本文从漏洞原理、Go 网络行为、缓解方案三个角度，分析这次事件对 Go 开发者的启示</p> 
 
-<p><a href="https://tinygo.org/blog/2026/tinygo-0.44-smaller-faster-better/">TinyGo 0.44 - 更小、更快、更好 | TinyGo</a><br>TinyGo 0.44 版本发布，程序更小更快，支持微控制器上的更多多核，支持 Arduino UNO R4，提供新的驱动程序，以及重大的蓝牙更新！</p> 
+<p><a href="https://tonybai.com/2026/11/01/rsi-harness-nvidia-sol-pi-recursive-self-improvement-agent">递归自我改进（RSI）的 Harness 长什么样？英伟达 SoL-Pi 给出了第一份工程答卷</a><br>英伟达提出 SoL-Pi：一套受递归自我改进（RSI）启发、作用于 Agent Harness 层的自动研究流水线。系统在 535 个可执行环境中 筛选 152 个候选想法，留下 Action Fusion、Online Context Compact、ObservationPack、Evidence-Preserving Reducer 四个机制。EdgeBench 上完整方案保留约 94% 的 Pi 得分，Token 降低约 45%～49%，成本降低约三分之一。本文解读其 RSI 闭环、四个机制、实验结果，并给出面向工&gt;程师的 RSI Harness 搭建清单。</p> 
+
+<p><a href="https://tonybai.com/2026/10/31/steve-yegge-counting-house-ai-enterprise">AI 企业的新模式：Steve Yegge 提出 Counting House，让 AI 在严密护栏下接管千万级业务</a><br>AI 时代，企业需要的未必都是能够自主规划、长期协作的智能 Agent。对于客服、银行、保险等每年处理数百万乃至数千万个业务&gt;案例的场景，Steve Yegge 提出的 Counting House 提供了另一种思路：让无状态的 AI 数字职员在严格的权限、评估与编排机制下工作。通过黄金 样本、分级自主权、错误成本分析和确定性事务执行，企业可以逐步将 AI 从辅助工具升级为规模化业务处理系统。真正的竞争壁垒，也许不在于使 用了哪个模型，而在于企业能否把自身业务规则转化为可验证、可持续演进的工程体系。</p> 
+
+<p><a href="https://packagemain.tech/p/five-go-exercises-worth-trying">值得尝试的五个Go练习</a><br>这是一系列小型Go挑战的集合，每个挑战都包含问题描述、测试和基准测试。</p> 
+
+<p><a href="https://abdolirad.me/articles/go-1-28-landlock-subprocess-sandboxing/">在Go 1.28中使用Landlock对子进程进行沙箱化</a><br>本文介绍了在Go 1.28中如何使用Landlock安全地沙箱化子进程，探讨了外部命令执行的安全问题以及Landlock的概念和变化。</p> 
 
 
 <h2>云原生技术</h2>
 
 
-<p><a href="https://www.cncf.io/blog/2026/10/29/kubecon-cloudnativecon-na-2026-end-user-tab-recommendations-and-tips/">KubeCon &#43; CloudNativeCon 北美 2026：终端用户 TAB 建议和技巧</a><br>大规模零停机 CNI 迁移：从 Canal 到 Cilium 跨越数百个生产集群。在生产环境中迁移 CNI 插件是 Kubernetes 基础设施中最高风险的操作之一。</p>
+<p><a href="https://seangoedecke.com/alignment-is-impossible/">原则上可靠地对齐LLLM是不可能的</a><br>从原则上讲，可靠地对齐大型语言模型是不可能的，这类似于人类有时也会出现的行为转变。</p>
 
-<p><a href="https://www.cncf.io/blog/2026/10/29/the-boundary-problem-in-agentic-ai-is-a-platform-problem/">智能 AI 中的边界问题是平台问题</a><br>这并非反对代理的自主性，而是讨论自主性应归属何处。有用的框架是确定性的主干，非确定性的执行挂靠其上。</p>
+<p><a href="https://victoriametrics.com/blog/structured-log-ingestion-benchmark/">VictoriaLogs与Loki、Elasticsearch、OpenSearch、SigNoz和ClickStack在结构化日志摄取方面的比较</a><br>本文比较了VictoriaLogs与其他日志系统在结构化日志摄取方面的性能表现。</p>
 
-<p><a href="https://engineering.fb.com/2026/10/29/security/catching-bugs-before-they-land-jittestings-human-on-the-loop-approach-at-full-scale/">在问题出现前捕获错误：JiTTesting 的大规模人机协同方法</a><br>大多数基于 AI 的代码防错方法使用 LLM 和/或智能 AI 来审查代码并根据先前经验检测故障。它们通过与人审查者相同的审查流程工作，只是速度更快。</p>
+<p><a href="https://sushantdhiman.dev/blog/database-index-from-scratch/">数据库索引不是魔法。从头开始理解它</a><br>本文从基础开始解释数据库索引的工作原理，帮助读者理解这一重要概念。</p>
 
-<p><a href="https://seangoedecke.com/elegance-and-intelligence-are-anticorrelated/">优雅与智能呈负相关</a><br>有一个著名的冯·诺依曼故事，他被问及如果一只苍蝇在以固定速度相互接近的两名自行车手之间持续飞行，它需要飞行多远。</p>
+<p><a href="https://blog.cloudflare.com/private-origins-public-to-private/">Cloudflare面向私有源的服务现已正式发布</a><br>Cloudflare宣布其面向私有源的服务现已全面可用，为用户提供更安全的网络连接。</p>
 
-<p><a href="https://www.docker.com/blog/coding-agent-horror-stories-the-cve-that-did-not-exist/">编码智能体恐怖故事：不存在的 CVE</a><br>BuaJi 已移至 Docker 沙箱。只读规则现在是环境的属性，而不是脚本中的约定：代码以只读方式挂载，不传递凭据，并且只有一个网络路径是开放的。</p>
+<p><a href="https://blog.gaborkoos.com/posts/2026-11-01-Distributed-Resilience-Cutting-the-Cost-of-Centralized-Coordination/">分布式弹性 - 降低集中式协调的成本</a><br>本文探讨了分布式系统中的弹性设计，重点介绍了断路器、舱壁和速率限制器等机制如何降低集中式协调的成本。</p>
 
-<p><a href="https://ebpf.io/blog/cloudflare-replatforming-5/">Cloudflare 的 eBPF 平台转换第 5 部分：大规模运行 eBPF 的技巧</a><br>本系列记录了 Cloudflare 八年来使用 eBPF 的旅程，从专门的 DDoS 工具到其全球网络的可编程骨干。</p>
+<p><a href="https://rhaas.blogspot.com/2026/10/postgres-19-is-late-and-its-ais-fault.html">Robert Haas：Postgres 19发布延迟，这是AI的错</a><br>PostgreSQL的主要版本发布在过去十年中变得非常规律，但今年的发布却因AI相关原因而推迟。</p>
 
-<p><a href="https://pivotlake.io/blog/its-the-memory-latency-stupid/">是内存延迟，笨蛋</a><br>当您看到数据库 CPU 使用率达到 100% 时，它实际上在做什么？为了简单起见，我们喜欢假设 CPU 线性地运行代码，但事实上 CPU 是极其复杂的实体。</p>
+<p><a href="https://vitaut.net/posts/2026/yy-dtoa/">你从未听说过的最快双精度浮点数转字符串算法</a><br>介绍了一种高效的双精度浮点数转字符串算法，该算法在性能上优于传统方法。</p>
 
-<p><a href="https://www.dbos.dev/blog/one-million-workflows">Postgres 上每秒 100 万个持久工作流 | DBOS</a><br>在 Postgres 上构建持久工作流引擎时，我们最常被问到的问题是 Postgres 能否扩展。现在，已经有大量关于此的博客文章。</p>
+<p><a href="https://blog.cloudflare.com/deploy-with-void">使用Void进行部署 | Cloudflare博客</a><br>Cloudflare推出了新的Void部署工具，简化了应用程序的部署流程。</p>
 
-<p><a href="https://karboosx.net/post/5j7jdDM3/how-to-create-your-own-decentralized-messenger-protocol">如何创建自己的去中心化消息传递协议</a><br>假设您想创建一个系统，其中每个服务器都可以加入网络并开始与该网络中的其他成员交换某些内容。您会如何处理这样的任务？</p>
-
-<p><a href="https://read.thecoder.cafe/p/the-shirky-principle-explained">解释 Shirky 原则：为什么团队保留他们解决的问题</a><br>团队为什么保留他们解决的问题？</p>
-
-<p><a href="https://www.cncf.io/blog/2026/08/25/the-lazy-developers-guide-to-observing-your-own-code/">懒人开发者观察自己代码的指南 | CNCF</a><br>本文重点介绍了 CNCF 项目，包括 OpenTelemetry 等。</p>
-
-<p><a href="https://www.mongodb.com/company/blog/technical/scanning-7-point-25-million-public-repositories-chinas-largest-git-platform-for-secrets">在中国最大的 Git 平台上扫描 725 万个公共仓库以查找密钥</a><br>在中国最大的 Git 平台上扫描了 725 万个公共仓库以查找密钥。</p>
+<p><a href="https://karpathy.bearblog.dev/hacker-tube/">HackerTube – karpathy</a><br>作者对当前YouTube内容质量的批评，指出平台充斥着夸张的缩略图和乏味的推荐内容。</p>
   
 
 <h2>AI</h2>
 
 
-<p><a href="https://simonwillison.net/2026/Oct/29/how-i-built-the-most-ai-pilled-company-in-the-world/">使用自主的 Fable 级模型构建多人游戏世界</a><br>我们的代理直接更改实时代码并每小时发布到生产环境，因此它们自己读取每个错误、错误报告和指标。我们约 60% 的工作始于生产错误、Savi 错误报告或日志中的异常内容。</p>
+<p><a href="https://nolanlawson.com/2026/10/28/the-ai-cost-of-javascript-frameworks/">JavaScript框架的AI成本</a><br>本文探讨了JavaScript框架在AI时代面临的挑战，以及开发者如何基于实际需求而非感觉做出技术选择。</p>
 
-<p><a href="https://mistral.ai/news/mistral-large-4-oss/">Mistral Large 4 (Le Chonk) 现在已开源 | Mistral</a><br>为程序员构建，受防御者信任。</p>
+<p><a href="https://terrytao.wordpress.com/2026/11/01/mathematics-has-changed-lets-act-like-it/">数学已经改变。让我们像这样行动</a><br>数学领域正在发生变革，我们需要适应这种变化，重新思考数学教育和研究的方法。</p>
 
-<p><a href="https://labs.ycombinator.com/projects/games/index.html">游戏中的代理</a><br>注意：我们正在运行一个新的 Minecraft 殖民地，有 25 个 GPT-6.1 Terra 代理。理解多代理动态是 AI 对齐中最紧迫的挑战之一。</p>
+<p><a href="https://factory.com/news/frontier-harness">Droid 1.0：构建前沿工具链 | Factory</a><br>Factory公司发布了Droid 1.0，这是一个用于构建和测试前沿AI模型的新工具链。</p>
 
-<p><a href="https://martinfowler.com/bliki/LLM-Voice.html">LLM 语音</a><br>有时当我阅读一篇文章时，我越来越觉得我正在阅读的是 LLM 的输出。</p>
+<p><a href="https://thedataexchange.media/leo-de-moura-lean-aws/">当AI编写代码时，谁来证明它能正常工作？</a><br>本文探讨了AI生成代码的验证问题，以及形式化证明在确保AI生成代码正确性方面的重要性。</p>
 
 
 <h2>流行工具与项目</h2>
 
 
-<p><a href="https://github.com/gastownhall/beads">gastownhall/beads</a><br>Beads - A memory upgrade for your coding agent</p>
+<p><a href="https://github.com/MHSanaei/3x-ui">MHSanaei/3x-ui</a><br>Supporting multi-protocol multi-user(Vmess, Vless, Trojan, ShadowSocks, Wireguard, Hysteria, Tunnel, Mixed, HTTP, Tun, MTProto، AmneziaWG)</p>
 
-<p><a href="https://github.com/JuliusBrussee/caveman">JuliusBrussee/caveman</a><br>🪨 why use many token when few token do trick. Viral skill &#43; proxy for coding agents that cuts 65% of tokens by talking like a caveman.</p>
+<p><a href="https://github.com/Billionmail/BillionMail">Billionmail/BillionMail</a><br>BillionMail gives you open-source MailServer, NewsLetter, Email Marketing — fully self-hosted, dev-friendly, and free from monthly fees. Join the discord: https://discord.gg/asfXzBUhZr</p>
+
+<p><a href="https://github.com/golang/go">golang/go</a><br>The Go programming language</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.</p>
+
+<p><a href="https://github.com/mayswind/ezbookkeeping">mayswind/ezbookkeeping</a><br>ezBookkeeping is an open source, powerful, self-hosted personal finance app that is easy to use.</p>
+
+<p><a href="https://github.com/IceWhaleTech/CasaOS">IceWhaleTech/CasaOS</a><br>CasaOS - A simple, easy-to-use, elegant open-source Personal Cloud system.</p>
 
 <p><a href="https://github.com/docker/compose">docker/compose</a><br>Define and run multi-container applications with Docker</p>
 
-<p><a href="https://github.com/VictoriaMetrics/VictoriaMetrics">VictoriaMetrics/VictoriaMetrics</a><br>VictoriaMetrics: fast, cost-effective monitoring solution and time series database</p>
+<p><a href="https://github.com/hashicorp/terraform">hashicorp/terraform</a><br>Terraform enables you to safely and predictably create, change, and improve infrastructure. It is a source-available tool that codifies APIs into declarative configuration files that can be shared amo</p>
 
-<p><a href="https://github.com/agent-substrate/substrate">agent-substrate/substrate</a><br>Agent Substrate: the core system</p>
+<p><a href="https://github.com/k3s-io/k3s">k3s-io/k3s</a><br>Lightweight Kubernetes</p>
 
-<p><a href="https://github.com/keploy/keploy">keploy/keploy</a><br>Open-source platform for creating safe, isolated production sandboxes for API, integration, and E2E testing.</p>
-
-<p><a href="https://github.com/google/ax">google/ax</a><br>Agent Executor (AX) is Google&#39;s open agentic orchestration runtime</p>
-
-<p><a href="https://github.com/glanceapp/glance">glanceapp/glance</a><br>A self-hosted dashboard that puts all your feeds in one place</p>
-
-<p><a href="https://github.com/tailscale/tailcat">tailscale/tailcat</a><br>like netcat, but over Tailscale&#39;s data plane, without Tailscale&#39;s control plane</p>
-
-<p><a href="https://github.com/nats-io/nats-server">nats-io/nats-server</a><br>High-Performance server for NATS.io, the cloud and edge native messaging system.</p>
+<p><a href="https://github.com/kubernetes/kubernetes">kubernetes/kubernetes</a><br>Production-Grade Container Scheduling and Management</p>
 
 
 <hr/>
