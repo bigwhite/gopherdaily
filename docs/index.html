@@ -45,7 +45,7 @@ img {
 
 <div style="text-align: center; margin-bottom: 10px;">
   <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
-  <a href=https://bigwhite.github.io/gopherdaily/202611/issue-20261102.html style="margin: 0 10px;">Web版</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202611/issue-20261103.html style="margin: 0 10px;">Web版</a> |
   <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
   <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
   <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
@@ -57,9 +57,9 @@ img {
 
 <div>
 <p class="issue" style="text-align:center;">
-  <span style="text-align:center;">20261102</span>
+  <span style="text-align:center;">20261103</span>
 </p>
-<p>每日一谚：Reflection is never clear </p>
+<p>每日一谚：Prefer value types for small structs to improve GC locality on the stack. </p>
 </div>
 
 <hr/>
@@ -67,73 +67,61 @@ img {
 <h2>Go技术生态</h2>
 
 
-<p><a href="https://tonybai.com/2026/11/02/cve-2026-98432-linux-kernel-vulnerability-go-mptcp">Claude 挖出 Linux 内核高危漏洞，Go 程序为何也受到了牵连？</a><br>Anthropic 借助 Claude 发现 Linux 内核高危漏洞 CVE-2026-98432，并构造了针对 MPTCP 监听服务的远程 root 利用链。由于 Go 1.24 起默认启用 Linux MPTCP Listener，大量 Go 网络服务可能受到影响。本文从漏洞原理、Go 网络行为、缓解方案三个角度，分析这次事件对 Go 开发者的启示</p> 
+<p><a href="https://tonybai.com/2026/11/03/github-octoverse-2026-ai-agents-programming-language-trends">GitHub Octoverse 2026：AI Agent 正在重塑编程语言格局</a><br>从 TypeScript 登顶，到 Rust 一年增长一倍，再到 Go 在主流语言阵营中的位置变化，GitHub Octoverse 2026 揭示了一个值得关注的趋势：AI Agent 不仅改变了程序员编写代码的方式，也开始影响程序员选择什么语言。</p> 
 
-<p><a href="https://tonybai.com/2026/11/01/rsi-harness-nvidia-sol-pi-recursive-self-improvement-agent">递归自我改进（RSI）的 Harness 长什么样？英伟达 SoL-Pi 给出了第一份工程答卷</a><br>英伟达提出 SoL-Pi：一套受递归自我改进（RSI）启发、作用于 Agent Harness 层的自动研究流水线。系统在 535 个可执行环境中 筛选 152 个候选想法，留下 Action Fusion、Online Context Compact、ObservationPack、Evidence-Preserving Reducer 四个机制。EdgeBench 上完整方案保留约 94% 的 Pi 得分，Token 降低约 45%～49%，成本降低约三分之一。本文解读其 RSI 闭环、四个机制、实验结果，并给出面向工&gt;程师的 RSI Harness 搭建清单。</p> 
-
-<p><a href="https://tonybai.com/2026/10/31/steve-yegge-counting-house-ai-enterprise">AI 企业的新模式：Steve Yegge 提出 Counting House，让 AI 在严密护栏下接管千万级业务</a><br>AI 时代，企业需要的未必都是能够自主规划、长期协作的智能 Agent。对于客服、银行、保险等每年处理数百万乃至数千万个业务&gt;案例的场景，Steve Yegge 提出的 Counting House 提供了另一种思路：让无状态的 AI 数字职员在严格的权限、评估与编排机制下工作。通过黄金 样本、分级自主权、错误成本分析和确定性事务执行，企业可以逐步将 AI 从辅助工具升级为规模化业务处理系统。真正的竞争壁垒，也许不在于使 用了哪个模型，而在于企业能否把自身业务规则转化为可验证、可持续演进的工程体系。</p> 
-
-<p><a href="https://packagemain.tech/p/five-go-exercises-worth-trying">值得尝试的五个Go练习</a><br>这是一系列小型Go挑战的集合，每个挑战都包含问题描述、测试和基准测试。</p> 
-
-<p><a href="https://abdolirad.me/articles/go-1-28-landlock-subprocess-sandboxing/">在Go 1.28中使用Landlock对子进程进行沙箱化</a><br>本文介绍了在Go 1.28中如何使用Landlock安全地沙箱化子进程，探讨了外部命令执行的安全问题以及Landlock的概念和变化。</p> 
+<p><a href="https://internals-for-interns.com/posts/how-go-embed-works/">//go:embed 如何工作：从源文件到二进制文件</a><br>这是一篇关于 //go:embed 功能的客座文章，探讨了该特性如何将源文件嵌入到二进制文件中的内部工作原理。</p> 
 
 
 <h2>云原生技术</h2>
 
 
-<p><a href="https://seangoedecke.com/alignment-is-impossible/">原则上可靠地对齐LLLM是不可能的</a><br>从原则上讲，可靠地对齐大型语言模型是不可能的，这类似于人类有时也会出现的行为转变。</p>
+<p><a href="https://www.cncf.io/blog/2026/11/02/the-linkerd-story-the-people-behind-the-service-mesh-a-new-documentary-premieres-at-kubecon-cloudnativecon-north-america-2026/">Linkerd 故事：服务 mesh 背后的人们</a><br>今年11月，云原生计算基金会(CNCF)与 Buoyant 合作，将首映《Linkerd 故事：服务 mesh 背后的人们》这部新纪录片，探索云原生领域先驱开源项目的起源、发展和社区。</p>
 
-<p><a href="https://victoriametrics.com/blog/structured-log-ingestion-benchmark/">VictoriaLogs与Loki、Elasticsearch、OpenSearch、SigNoz和ClickStack在结构化日志摄取方面的比较</a><br>本文比较了VictoriaLogs与其他日志系统在结构化日志摄取方面的性能表现。</p>
+<p><a href="https://seangoedecke.com/audience-capture/">受众俘获</a><br>本文探讨了&#34;不纯工程师&#34;的概念，以及在某些领域中聪明或前沿的从业者如何可能俘获受众，并质疑这种做法是否过于诚实。</p>
 
-<p><a href="https://sushantdhiman.dev/blog/database-index-from-scratch/">数据库索引不是魔法。从头开始理解它</a><br>本文从基础开始解释数据库索引的工作原理，帮助读者理解这一重要概念。</p>
+<p><a href="https://www.docker.com/blog/docker-blueprint-alliance-agent-baseline/">生态系统是答案：Docker、蓝图联盟和智能体时代协作的重要性</a><br>智能体时代强调协作的重要性，Docker 和蓝图联盟推动生态系统发展。智能体支持运行时重编程和借用身份功能，使用户能以自然语言更改智能体行为，无需发布周期。</p>
 
-<p><a href="https://blog.cloudflare.com/private-origins-public-to-private/">Cloudflare面向私有源的服务现已正式发布</a><br>Cloudflare宣布其面向私有源的服务现已全面可用，为用户提供更安全的网络连接。</p>
+<p><a href="https://www.docker.com/blog/docker-sandbox-code-checkout-workflows/">您的代码应该存在于 Docker 沙箱中的何处？</a><br>每个项目使用一个沙箱是实用的思维模型。项目和工具在智能体会话和沙箱重启之间保持持久。智能体可以为每个正在处理的功能创建工作树，推送分支并创建拉取请求进行审查。</p>
 
-<p><a href="https://blog.gaborkoos.com/posts/2026-11-01-Distributed-Resilience-Cutting-the-Cost-of-Centralized-Coordination/">分布式弹性 - 降低集中式协调的成本</a><br>本文探讨了分布式系统中的弹性设计，重点介绍了断路器、舱壁和速率限制器等机制如何降低集中式协调的成本。</p>
+<p><a href="https://victoriametrics.com/blog/finding-why-payments-fail-with-victorialogs-drilldown/">使用 VictoriaLogs 钻取功能查找支付失败原因</a><br>VictoriaLogs 的钻取功能帮助分析支付失败的原因，通过深入日志数据快速定位问题根源。</p>
 
-<p><a href="https://rhaas.blogspot.com/2026/10/postgres-19-is-late-and-its-ais-fault.html">Robert Haas：Postgres 19发布延迟，这是AI的错</a><br>PostgreSQL的主要版本发布在过去十年中变得非常规律，但今年的发布却因AI相关原因而推迟。</p>
+<p><a href="https://blog.cloudflare.com/dns-targeted-zone-builds/">我们将 DNS 构建延迟减半，内存使用减少 85% </a><br>Cloudflare 优化了 DNS 构建流程，将构建延迟减半，同时内存使用减少了 85%，显著提升了性能。</p>
 
-<p><a href="https://vitaut.net/posts/2026/yy-dtoa/">你从未听说过的最快双精度浮点数转字符串算法</a><br>介绍了一种高效的双精度浮点数转字符串算法，该算法在性能上优于传统方法。</p>
+<p><a href="https://corrode.dev/blog/thinking-in-traits/">深入思考 Traits </a><br>Rust 偏好组合而非继承。本文解释了这一原则在实际应用中的含义，以及为什么这种模型是 Rust 的正确选择。</p>
 
-<p><a href="https://blog.cloudflare.com/deploy-with-void">使用Void进行部署 | Cloudflare博客</a><br>Cloudflare推出了新的Void部署工具，简化了应用程序的部署流程。</p>
+<p><a href="https://vercel.com/changelog/blocking-malicious-npm-packages-before-and-during-installation">在安装前后阻止恶意 npm 包 - Vercel</a><br>Vercel 现在在构建过程中于依赖安装前后检查被阻止的 npm 包，帮助防止恶意安装脚本运行。</p>
 
-<p><a href="https://karpathy.bearblog.dev/hacker-tube/">HackerTube – karpathy</a><br>作者对当前YouTube内容质量的批评，指出平台充斥着夸张的缩略图和乏味的推荐内容。</p>
+<p><a href="https://grafana.com/blog/instrumentation-hub-start-your-observability-journey-easier-and-still-stay-in-control/">Grafana Cloud 中的 Instrumentation Hub：更轻松开始，保持控制 | Grafana Labs</a><br>Grafana Cloud 中的 Instrumentation Hub 让用户更轻松地开始可观测性之旅，同时保持对系统的完全控制。</p>
   
 
 <h2>AI</h2>
 
 
-<p><a href="https://nolanlawson.com/2026/10/28/the-ai-cost-of-javascript-frameworks/">JavaScript框架的AI成本</a><br>本文探讨了JavaScript框架在AI时代面临的挑战，以及开发者如何基于实际需求而非感觉做出技术选择。</p>
-
-<p><a href="https://terrytao.wordpress.com/2026/11/01/mathematics-has-changed-lets-act-like-it/">数学已经改变。让我们像这样行动</a><br>数学领域正在发生变革，我们需要适应这种变化，重新思考数学教育和研究的方法。</p>
-
-<p><a href="https://factory.com/news/frontier-harness">Droid 1.0：构建前沿工具链 | Factory</a><br>Factory公司发布了Droid 1.0，这是一个用于构建和测试前沿AI模型的新工具链。</p>
-
-<p><a href="https://thedataexchange.media/leo-de-moura-lean-aws/">当AI编写代码时，谁来证明它能正常工作？</a><br>本文探讨了AI生成代码的验证问题，以及形式化证明在确保AI生成代码正确性方面的重要性。</p>
+<p><a href="https://seangoedecke.com/llms-are-not-superhuman-at-reading-and-writing-neural-network-weights/">LLM 在读取和写入神经网络权重方面并非超人</a><br>Astra 能够直接更新权重很酷，但我们不应将其视为将改变 AI 研究方式的革命性新功能。</p>
 
 
 <h2>流行工具与项目</h2>
 
 
-<p><a href="https://github.com/MHSanaei/3x-ui">MHSanaei/3x-ui</a><br>Supporting multi-protocol multi-user(Vmess, Vless, Trojan, ShadowSocks, Wireguard, Hysteria, Tunnel, Mixed, HTTP, Tun, MTProto، AmneziaWG)</p>
+<p><a href="https://github.com/vxcontrol/pentagi">vxcontrol/pentagi</a><br>Fully autonomous AI Agents system capable of performing complex penetration testing tasks</p>
 
-<p><a href="https://github.com/Billionmail/BillionMail">Billionmail/BillionMail</a><br>BillionMail gives you open-source MailServer, NewsLetter, Email Marketing — fully self-hosted, dev-friendly, and free from monthly fees. Join the discord: https://discord.gg/asfXzBUhZr</p>
+<p><a href="https://github.com/qax-os/excelize">qax-os/excelize</a><br>Go language library for reading and writing Microsoft Excel™ (XLAM / XLSM / XLSX / XLTM / XLTX) spreadsheets</p>
 
-<p><a href="https://github.com/golang/go">golang/go</a><br>The Go programming language</p>
+<p><a href="https://github.com/Asymptote-Labs/agent-beacon">Asymptote-Labs/agent-beacon</a><br>The cross-harness, self-improving memory layer for AI agents. Join our community: https://discord.com/invite/zdNChS2fBu</p>
 
-<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.</p>
+<p><a href="https://github.com/cilium/cilium">cilium/cilium</a><br>eBPF-based Networking, Security, and Observability</p>
 
-<p><a href="https://github.com/mayswind/ezbookkeeping">mayswind/ezbookkeeping</a><br>ezBookkeeping is an open source, powerful, self-hosted personal finance app that is easy to use.</p>
+<p><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a><br>Declarative Continuous Deployment for Kubernetes</p>
 
-<p><a href="https://github.com/IceWhaleTech/CasaOS">IceWhaleTech/CasaOS</a><br>CasaOS - A simple, easy-to-use, elegant open-source Personal Cloud system.</p>
+<p><a href="https://github.com/JuliusBrussee/caveman">JuliusBrussee/caveman</a><br>🪨 why use many token when few token do trick. Viral skill &#43; proxy for coding agents that cuts 65% of tokens by talking like a caveman.</p>
 
-<p><a href="https://github.com/docker/compose">docker/compose</a><br>Define and run multi-container applications with Docker</p>
+<p><a href="https://github.com/gastownhall/beads">gastownhall/beads</a><br>Beads - A memory upgrade for your coding agent</p>
 
-<p><a href="https://github.com/hashicorp/terraform">hashicorp/terraform</a><br>Terraform enables you to safely and predictably create, change, and improve infrastructure. It is a source-available tool that codifies APIs into declarative configuration files that can be shared amo</p>
+<p><a href="https://github.com/CarterPerez-dev/Cybersecurity-Projects">CarterPerez-dev/Cybersecurity-Projects</a><br>Building 70 Projects ranging from beginner to advanced so anyone can — learn from, build upon, use as a reference, or even copy directly. Owned by my cybersecurity company 👇</p>
 
-<p><a href="https://github.com/k3s-io/k3s">k3s-io/k3s</a><br>Lightweight Kubernetes</p>
+<p><a href="https://github.com/gdy666/lucky">gdy666/lucky</a><br>软硬路由公网神器,ipv6/ipv4 端口转发,反向代理,DDNS,WOL,ipv4 stun内网穿透,cron,acme,rclone,ftp,webdav,filebrowser</p>
 
-<p><a href="https://github.com/kubernetes/kubernetes">kubernetes/kubernetes</a><br>Production-Grade Container Scheduling and Management</p>
+<p><a href="https://github.com/warmbly/warmbly">warmbly/warmbly</a><br>The largest open-source B2B cold outreach and email warmup service.</p>
 
 
 <hr/>

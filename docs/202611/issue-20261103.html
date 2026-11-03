@@ -1,0 +1,138 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202611/issue-20261103.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20261103</span>
+</p>
+<p>每日一谚：Prefer value types for small structs to improve GC locality on the stack. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/11/03/github-octoverse-2026-ai-agents-programming-language-trends">GitHub Octoverse 2026：AI Agent 正在重塑编程语言格局</a><br>从 TypeScript 登顶，到 Rust 一年增长一倍，再到 Go 在主流语言阵营中的位置变化，GitHub Octoverse 2026 揭示了一个值得关注的趋势：AI Agent 不仅改变了程序员编写代码的方式，也开始影响程序员选择什么语言。</p> 
+
+<p><a href="https://internals-for-interns.com/posts/how-go-embed-works/">//go:embed 如何工作：从源文件到二进制文件</a><br>这是一篇关于 //go:embed 功能的客座文章，探讨了该特性如何将源文件嵌入到二进制文件中的内部工作原理。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/11/02/the-linkerd-story-the-people-behind-the-service-mesh-a-new-documentary-premieres-at-kubecon-cloudnativecon-north-america-2026/">Linkerd 故事：服务 mesh 背后的人们</a><br>今年11月，云原生计算基金会(CNCF)与 Buoyant 合作，将首映《Linkerd 故事：服务 mesh 背后的人们》这部新纪录片，探索云原生领域先驱开源项目的起源、发展和社区。</p>
+
+<p><a href="https://seangoedecke.com/audience-capture/">受众俘获</a><br>本文探讨了&#34;不纯工程师&#34;的概念，以及在某些领域中聪明或前沿的从业者如何可能俘获受众，并质疑这种做法是否过于诚实。</p>
+
+<p><a href="https://www.docker.com/blog/docker-blueprint-alliance-agent-baseline/">生态系统是答案：Docker、蓝图联盟和智能体时代协作的重要性</a><br>智能体时代强调协作的重要性，Docker 和蓝图联盟推动生态系统发展。智能体支持运行时重编程和借用身份功能，使用户能以自然语言更改智能体行为，无需发布周期。</p>
+
+<p><a href="https://www.docker.com/blog/docker-sandbox-code-checkout-workflows/">您的代码应该存在于 Docker 沙箱中的何处？</a><br>每个项目使用一个沙箱是实用的思维模型。项目和工具在智能体会话和沙箱重启之间保持持久。智能体可以为每个正在处理的功能创建工作树，推送分支并创建拉取请求进行审查。</p>
+
+<p><a href="https://victoriametrics.com/blog/finding-why-payments-fail-with-victorialogs-drilldown/">使用 VictoriaLogs 钻取功能查找支付失败原因</a><br>VictoriaLogs 的钻取功能帮助分析支付失败的原因，通过深入日志数据快速定位问题根源。</p>
+
+<p><a href="https://blog.cloudflare.com/dns-targeted-zone-builds/">我们将 DNS 构建延迟减半，内存使用减少 85% </a><br>Cloudflare 优化了 DNS 构建流程，将构建延迟减半，同时内存使用减少了 85%，显著提升了性能。</p>
+
+<p><a href="https://corrode.dev/blog/thinking-in-traits/">深入思考 Traits </a><br>Rust 偏好组合而非继承。本文解释了这一原则在实际应用中的含义，以及为什么这种模型是 Rust 的正确选择。</p>
+
+<p><a href="https://vercel.com/changelog/blocking-malicious-npm-packages-before-and-during-installation">在安装前后阻止恶意 npm 包 - Vercel</a><br>Vercel 现在在构建过程中于依赖安装前后检查被阻止的 npm 包，帮助防止恶意安装脚本运行。</p>
+
+<p><a href="https://grafana.com/blog/instrumentation-hub-start-your-observability-journey-easier-and-still-stay-in-control/">Grafana Cloud 中的 Instrumentation Hub：更轻松开始，保持控制 | Grafana Labs</a><br>Grafana Cloud 中的 Instrumentation Hub 让用户更轻松地开始可观测性之旅，同时保持对系统的完全控制。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://seangoedecke.com/llms-are-not-superhuman-at-reading-and-writing-neural-network-weights/">LLM 在读取和写入神经网络权重方面并非超人</a><br>Astra 能够直接更新权重很酷，但我们不应将其视为将改变 AI 研究方式的革命性新功能。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/vxcontrol/pentagi">vxcontrol/pentagi</a><br>Fully autonomous AI Agents system capable of performing complex penetration testing tasks</p>
+
+<p><a href="https://github.com/qax-os/excelize">qax-os/excelize</a><br>Go language library for reading and writing Microsoft Excel™ (XLAM / XLSM / XLSX / XLTM / XLTX) spreadsheets</p>
+
+<p><a href="https://github.com/Asymptote-Labs/agent-beacon">Asymptote-Labs/agent-beacon</a><br>The cross-harness, self-improving memory layer for AI agents. Join our community: https://discord.com/invite/zdNChS2fBu</p>
+
+<p><a href="https://github.com/cilium/cilium">cilium/cilium</a><br>eBPF-based Networking, Security, and Observability</p>
+
+<p><a href="https://github.com/argoproj/argo-cd">argoproj/argo-cd</a><br>Declarative Continuous Deployment for Kubernetes</p>
+
+<p><a href="https://github.com/JuliusBrussee/caveman">JuliusBrussee/caveman</a><br>🪨 why use many token when few token do trick. Viral skill &#43; proxy for coding agents that cuts 65% of tokens by talking like a caveman.</p>
+
+<p><a href="https://github.com/gastownhall/beads">gastownhall/beads</a><br>Beads - A memory upgrade for your coding agent</p>
+
+<p><a href="https://github.com/CarterPerez-dev/Cybersecurity-Projects">CarterPerez-dev/Cybersecurity-Projects</a><br>Building 70 Projects ranging from beginner to advanced so anyone can — learn from, build upon, use as a reference, or even copy directly. Owned by my cybersecurity company 👇</p>
+
+<p><a href="https://github.com/gdy666/lucky">gdy666/lucky</a><br>软硬路由公网神器,ipv6/ipv4 端口转发,反向代理,DDNS,WOL,ipv4 stun内网穿透,cron,acme,rclone,ftp,webdav,filebrowser</p>
+
+<p><a href="https://github.com/warmbly/warmbly">warmbly/warmbly</a><br>The largest open-source B2B cold outreach and email warmup service.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+
