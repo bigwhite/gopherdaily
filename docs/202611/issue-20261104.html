@@ -1,0 +1,122 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202611/issue-20261104.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20261104</span>
+</p>
+<p>每日一谚：Use copy() to duplicate slice data safely </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/11/04/go-zero-heap-allocation-noalloc">Go 也要实现零堆分配？noalloc：让每一次内存分配都无处遁形</a><br>noalloc 试图把 Go 的零堆分配从一种依赖经验的优化技巧，变成一种能够持续验证的工程约束。它通过静态分析函数调用链识别堆分配，并提供固定容量的数据结构和 Region 内存复用机制。它并不能消除 Go GC，也不是实时性保证，但为 Go 在高性能、低延迟和资源受限场景 中的优化提供了值得关注的新方向。</p> 
+
+<p><a href="https://tonybai.com/2026/11/04/openai-pando-rebuild-git-for-ai-agent-era">继Anthropic之后，OpenAI 也重建了自己的版本控制系统</a><br>OpenAI 最新披露了内部 Git 后端系统 Pando 的设计。面对 Codex 带来的高并发开发负载，OpenAI 没有抛弃 Git，而是通过因果&gt;一致性、Packfile 复用、区域缓存和后台 Compaction，重新设计 Git 服务端架构。Pando 将 Push 中位延迟降低近 5 倍，每天处理近 PB 级 Git 数据。从 10 周完成系统建设，到 Codex Agent 参与实现，再到 Lean 和 TLA&#43; 参与形式化验证，这个项目不仅展示了分布式存储架构的创新，也 揭示了 AI Agent 正在如何改变软件工程基础设施</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/11/04/openshell-on-kubernetes-a-guide-for-platform-engineers/">Kubernetes上的OpenShell：平台工程师指南</a><br>准备集群。安装强制执行ingress和egress NetworkPolicy的CNI。演示将kindnet替换为Cilium。然后安装Agent Sandbox控制器和CRDs，以及OpenShell gateway Helm图表。创建沙箱。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/">我笔记本电脑上的Qwen 3.8 27B也能解释模型权重</a><br>仅通过查看原始权重，GPT-6 Astra就能判断网络被训练做什么。在没有环境反馈的情况下，它能毫不费力地从零开始编写小型游戏网络，这些网络的表现优于使用PPO训练1亿步的网络。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/Asymptote-Labs/agent-beacon">Asymptote-Labs/agent-beacon</a><br>The cross-harness, self-improving memory layer for AI agents. Join our community: https://discord.com/invite/zdNChS2fBu</p>
+
+<p><a href="https://github.com/guohuiyuan/go-music-dl">guohuiyuan/go-music-dl</a><br>一个基于 Go 语言的全网音乐搜索与下载工具。支持 CLI 命令行与 Web 服务双模式，内置网易云、QQ、酷狗、Bilibili、汽水音乐等 10&#43; 个主流平台，支持多源</p>
+
+<p><a href="https://github.com/superplanehq/superplane">superplanehq/superplane</a><br>Open source factory for one-shot engineering</p>
+
+<p><a href="https://github.com/xpzouying/xiaohongshu-mcp">xpzouying/xiaohongshu-mcp</a><br>MCP for xiaohongshu.com</p>
+
+<p><a href="https://github.com/pocket-id/pocket-id">pocket-id/pocket-id</a><br>The most user-friendly OpenID Connect Certified™ and OAuth 2.0 provider that lets users sign in to your applications with passkeys.</p>
+
+<p><a href="https://github.com/m5stack/StackChan">m5stack/StackChan</a><br>StackChan open source!</p>
+
+<p><a href="https://github.com/influxdata/telegraf">influxdata/telegraf</a><br>Agent for collecting, processing, aggregating, and writing metrics, logs, and other arbitrary data.</p>
+
+<p><a href="https://github.com/QuantumNous/new-api">QuantumNous/new-api</a><br>Open-source AI gateway. Self-hosted LLM gateway with OpenAI-, Claude- and Gemini-compatible APIs, model routing, access control, usage tracking and cost accounting.</p>
+
+<p><a href="https://github.com/coder/coder">coder/coder</a><br>Secure environments for developers and their agents</p>
+
+<p><a href="https://github.com/Tencent/WeKnora">Tencent/WeKnora</a><br>Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomous reasoning agent, and a self-maintaining Wiki.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+
