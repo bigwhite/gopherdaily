@@ -1,0 +1,144 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202611/issue-20261105.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20261105</span>
+</p>
+<p>每日一谚：Use pointer receivers for methods that mutate state or contain large structs. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://mp.weixin.qq.com/s/rS0vW1lq6xmS3FocLdx7Fw">为什么一个JSON库，Go团队花六年才重写完？</a><br>今天，Go JSON v2 的核心开发团队在官方 Blog 发布长文，系统回顾了这项持续多年的工程历程。https://go.dev/blog/jsonv2</p> 
+
+<p><a href="https://tonybai.com/2026/11/05/agent-swarm-vs-single-agent-architecture">从 Agent Swarm 到 Single Agent：AI Agent 的高效架构，正在走向两条路</a><br>AI Agent 架构正在出现两种看似相反的趋势：一边是通过持久化、多上下文和去中心化协作构建 Agent Swarm，另一边是把过度 拆分的 Subagent 合并回单一执行循环。两者并不矛盾。本文从上下文容量、信息交接、并行执行和协调成本出发，分析单 Agent、多 Agent 与 Agent Swarm 的适用边界，并给出一套可落地的架构选择与评测方法。</p> 
+
+<p><a href="https://www.bwplotka.dev/2026/rust-microbenchmarks-benchstat/">benchfmt.rs：将Go的基准测试和benchstat工作流程引入Rust</a><br>benchfmt.rs是一个将Go的基准测试和benchstat工作流程引入Rust的工具。作者Bartek Płotka于2026年11月3日发布了这个项目。</p> 
+
+<p><a href="https://read.thecoder.cafe/p/barista-1">构建Barista—第1部分：Postgres、Embeddings和Jev</a><br>本文是构建Barista系列的第一部分，主要介绍了Postgres数据库、Embeddings技术和Jev的相关内容。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/11/05/kpt-v1-0-0-is-released/">kpt v1.0.0已发布</a><br>独立的kpt为运行在Kubernetes上的应用提供了轻量级的配置包管理，基于配置即数据原则。这些原则允许对云原生应用、集群或任何资源的配置进行声明式操作和验证。</p>
+
+<p><a href="https://dropbox.tech/machine-learning/how-two-engineer-side-projects-became-the-agent-taking-action-inside-dropbox">两个工程师的副项目如何成为Dropbox内部执行操作的智能体</a><br>这篇文章介绍了两个工程师的副项目如何演变为在Dropbox内部执行操作的智能体，以及如何将智能体与Dropbox中的工作内容连接起来。</p>
+
+<p><a href="https://www.reddit.com/r/RedditEng/comments/1xnu8t4/one_more_nine_kafka_availability_during_rolling/">又一个九：滚动重启期间的Kafka可用性</a><br>这篇文章探讨了在Kafka进行滚动重启期间如何保持系统可用性的策略和方法。</p>
+
+<p><a href="https://grafana.com/blog/bridging-alloy-and-opentelemetry-the-otel-engine-is-now-in-public-preview/">连接Alloy和OpenTelemetry：OTel引擎现已进入公开预览 | Grafana Labs</a><br>Grafana Labs宣布Alloy和OpenTelemetry之间的桥梁项目OTel引擎现已进入公开预览阶段。</p>
+
+<p><a href="https://planetscale.com/blog/the-hidden-latency-inside-your-database">数据库中的隐藏延迟 — PlanetScale</a><br>作者Simeon Griggs探讨了数据库中隐藏的延迟问题，并分析了网络附加存储作为选择和默认设置的优缺点。</p>
+
+<p><a href="https://nnethercote.github.io/2026/11/04/how-to-speed-up-the-rust-compiler-in-november-2026.html">2026年11月加速Rust编译器的进展</a><br>作者分享了为Hexcat公司优化Rust编译器性能的第一个月的成果，以及自上次发布以来的进展。</p>
+
+<p><a href="https://dennisforbes.ca/blog/microblog/2026/10/the_accidental_12000x_sqlite_slowdown/">Shlemiel the Painter又回来了：Zig的libc重写如何使SQLite变慢12,000倍</a><br>这篇文章探讨了Zig对libc的重写如何意外地导致SQLite性能下降12,000倍的问题，并引用了Joel Spolsky的智慧观点。</p>
+
+<p><a href="https://entire.com/blog/continuous-integration-with-dagger-is-now-available">使用Dagger的持续集成现已可用 · Entire</a><br>Entire公司宣布使用Dagger的持续集成解决方案现已可用，为开发者提供了更高效的CI/CD体验。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://honnibal.dev/blog/astra-read-write-misleading">&#39;Astra可以读写权重以改进Qwen&#39;的文章具有误导性</a><br>作者指出关于&#39;Astra可以读写权重以改进Qwen&#39;的文章具有误导性，就像魔术师用不同方式表演同一个把戏一样。</p>
+
+<p><a href="https://blog.cosmos-institute.org/p/verification-is-not-knowledge">验证不是知识</a><br>本文探讨了科学不仅需要答案，还需要验证的重要性，以及验证与知识之间的关系。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/oxynote/oxynote">oxynote/oxynote</a><br>Oxynote 是一个自托管的团队文档工具，把服务的说明和实时指标图表放在同一页。每个图表直接运行自己的 Prometheus 或 SQL 查询，页面的修改要经过草稿、diff 和审批，像 pull request 一样。后端用 Go 编写，实时协作编辑基于 Yjs，整套服务打包成一个 Docker 镜像，采用 Apache-2.0 许可证。我们也是 Go 缓存库 ttlcache 的维护者。</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/hashicorp/terraform-provider-azurerm">hashicorp/terraform-provider-azurerm</a><br>Terraform provider for Azure Resource Manager</p>
+
+<p><a href="https://github.com/CarterPerez-dev/Cybersecurity-Projects">CarterPerez-dev/Cybersecurity-Projects</a><br>Building 70 Projects ranging from beginner to advanced so anyone can — learn from, build upon, use as a reference, or even copy directly. Owned by my cybersecurity company 👇</p>
+
+<p><a href="https://github.com/gosom/google-maps-scraper">gosom/google-maps-scraper</a><br>scrape data from Google Maps. Extracts data such as the name, address, phone number, website URL, rating, reviews number, latitude and longitude, reviews,email and more for each place</p>
+
+<p><a href="https://github.com/vxcontrol/pentagi">vxcontrol/pentagi</a><br>Fully autonomous AI Agents system capable of performing complex penetration testing tasks</p>
+
+<p><a href="https://github.com/openchoreo/openchoreo">openchoreo/openchoreo</a><br>OpenChoreo is an internal developer platform for Kubernetes</p>
+
+<p><a href="https://github.com/caddyserver/caddy">caddyserver/caddy</a><br>Fast and extensible multi-platform HTTP/1-2-3 web server with automatic HTTPS</p>
+
+<p><a href="https://github.com/MHSanaei/3x-ui">MHSanaei/3x-ui</a><br>Supporting multi-protocol multi-user(Vmess, Vless, Trojan, ShadowSocks, Wireguard, Hysteria, Tunnel, Mixed, HTTP, Tun, MTProto، AmneziaWG)</p>
+
+<p><a href="https://github.com/guohuiyuan/go-music-dl">guohuiyuan/go-music-dl</a><br>一个基于 Go 语言的全网音乐搜索与下载工具。支持 CLI 命令行与 Web 服务双模式，内置网易云、QQ、酷狗、Bilibili、汽水音乐等 10&#43; 个主流平台，支持多源</p>
+
+<p><a href="https://github.com/trufflesecurity/trufflehog">trufflesecurity/trufflehog</a><br>Find, verify, and analyze leaked credentials</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+
