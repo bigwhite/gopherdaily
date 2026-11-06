@@ -1,0 +1,150 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202611/issue-20261106.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20261106</span>
+</p>
+<p>每日一谚：Close channels from the sender side, never from the receiver side </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/11/06/go-generic-set-proposal-accepted">再见，map[T]struct！Go 泛型 Set 终于被官方接受了</a><br>Go 团队正式接受泛型 Set 提案 #69230！这个基于 map[T]struct{} 的老牌惯用法，终于有望拥有官方认可的泛型抽象。本文回顾 Go Set 十余年的演进历程，拆解新 API 的设计，以及它与泛型、迭代器之间的关系。</p> 
+
+<p><a href="https://blog.jetbrains.com/go/2026/11/05/goland-2026-3-is-now-available/">GoLand 2026.3 现已发布！</a><br>Air 支持 Claude Agent、Codex、Gemini、GitHub Copilot、Junie、OpenCode 和其他 ACP 兼容智能体。它能检测您机器上已安装的智能体，让您一键连接，并可以从智能体注册表中添加更多智能体。</p> 
+
+<p><a href="https://tomasvotruba.com/blog/porting-ecs-to-go">将 ECS 移植到 Go</a><br>在系列文章的前四部分之后，应该清楚为什么我们希望在 PHP 生态系统中使用 Go。本文是关于将 ECS 系统移植到 Go 的第五部分。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/11/05/kpt-v1-0-0-is-released/">kpt v1.0.0 已发布</a><br>独立的 kpt 为运行在 Kubernetes 上的应用程序提供轻量级配置包管理，基于配置即数据原则。这些原则允许对云原生应用程序、集群或任何资源的配置进行声明式操作和验证。</p>
+
+<p><a href="https://tailscale.com/blog/100x-more-programmers">100 倍的程序员</a><br>AI 可能会创造十亿名新程序员。让我们确保他们能保持控制权。</p>
+
+<p><a href="https://seangoedecke.com/a-database-is-a-store-for-global-variables/">数据库是全局变量的存储</a><br>数据库可以被视为全局变量的存储。例如，对可读性和追踪的担忧源于全局变量可能带来的问题。</p>
+
+<p><a href="https://www.docker.com/blog/docker-sandboxes-vs-containers/">Docker 沙箱 vs. 容器：为 AI 智能体选择正确的隔离方式</a><br>容器是与主机内核共享的隔离进程，而 Docker 沙箱是具有自己内核、文件系统、网络和 Docker Engine 的微虚拟机。沙箱可以运行容器，这就是为什么两者容易混淆。</p>
+
+<p><a href="https://github.blog/engineering/architecture-optimization/inside-githubs-new-git-storage-architecture/">深入了解 GitHub 的新 Git 存储架构</a><br>新的 Git 存储架构每秒接受数千次写入，并支持多个写入节点。经验表明，索引传入的数据包和检查对象连接性是写入过程中最消耗 CPU 的部分。</p>
+
+<p><a href="https://v3.parceljs.org/blog/v3-alpha">宣布 Parcel 3 alpha 版</a><br>Parcel 3 是用 Rust 从头重写的版本，比 v2 快 100 倍。它支持用 Rust、Go、Swift 或 C 编写的原生插件，以及 JavaScript 和 TypeScript 插件的自定义运行时。</p>
+
+<p><a href="https://pwn.college/">pwn.college</a><br>pwn.college 是一个教育平台，学习者可以通过实践方式开发和练习核心网络安全技能。进入平台后，用户将获得&#34;白带&#34;，标志着他们黑客生涯的开始。</p>
+
+<p><a href="https://ziglang.org/devlog/2026/#2026-10-24">开发日志 ⚡ Zig 编程语言</a><br>开发日志页面包含对主分支 Zig 最近更改的精选列表。页面提供 2026 年的条目，其他年份可在开发日志存档页面中找到。</p>
+
+<p><a href="https://proofs-rs.github.io/lean-miri/">lean-miri — 一个 proofs.rs 项目</a><br>lean-miri 是 Miri（Rust 的未定义行为检查器）移植到 Lean 4 的版本。它允许在 Miri 的执行模型下陈述和证明 Rust 程序的安全属性。</p>
+
+<p><a href="https://jpountz.github.io/2026/04/19/why-databases-store-their-data-differently.html">为什么数据库以不同方式存储数据</a><br>数据库架构因用途而异。例如，OLTP 数据库和搜索引擎的实现方式有很大不同，这是因为它们的设计目标不同。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://thinkingmachines.ai/news/inkling-2-small/">介绍 Inkling 2 Small - 思维机器实验室</a><br>思维机器实验室今天通过 Inkling 2 Small 介绍了他们的第二代模型。用户可以在 Tinker 上试用该模型，并查看模型卡片了解详情。</p>
+
+<p><a href="https://mcp-explained.com/">MCP 解释 · 模型上下文协议如何工作</a><br>模型上下文协议是一种连接 AI 应用程序与其使用工具和数据的标准。服务器说明它能做什么，应用程序向模型展示这些信息，当模型需要某些东西时，应用程序调用服务器并返回结果。</p>
+
+<p><a href="https://axiommath.ai/research/the-stacks-project-formalized/">在 Lean 中形式化的 Stacks 项目 | Axiom</a><br>Stacks 项目在 Lean 中得到了形式化，将数学证明与计算机科学相结合。该项目将章节树状图作为地面，每个 Lean 声明的高度与其依赖级别相同。</p>
+
+<p><a href="https://wasp.sh/blog/2026/11/03/mcp-vs-api-vs-cli-connect-ai-agents-to-your-app">MCP vs API vs CLI：AI 智能体应如何连接到您的应用程序？| Wasp</a><br>您正在构建一个 Web 应用程序，需要使其对智能体友好。您应该考虑构建 MCP 服务器、REST API、CLI，或全部构建，以使它们为智能体带来最大价值。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/dsx-ai-factory/nvke">GitHub - dsx-ai-factory/nvke: NVIDIA Kubernetes 引擎 (NVKE)。裸机上 GPU Kubernetes 的管理平面。</a><br>该项目提供裸机上 GPU Kubernetes 的管理平面。用户可以通过分支和标签页面查看项目历史和提交记录。</p>
+
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+
+<p><a href="https://github.com/hashicorp/terraform-provider-azurerm">hashicorp/terraform-provider-azurerm</a><br>Terraform provider for Azure Resource Manager</p>
+
+<p><a href="https://github.com/CarterPerez-dev/Cybersecurity-Projects">CarterPerez-dev/Cybersecurity-Projects</a><br>Building 70 Projects ranging from beginner to advanced so anyone can — learn from, build upon, use as a reference, or even copy directly. Owned by my cybersecurity company 👇</p>
+
+<p><a href="https://github.com/gosom/google-maps-scraper">gosom/google-maps-scraper</a><br>scrape data from Google Maps. Extracts data such as the name, address, phone number, website URL, rating, reviews number, latitude and longitude, reviews,email and more for each place</p>
+
+<p><a href="https://github.com/vxcontrol/pentagi">vxcontrol/pentagi</a><br>Fully autonomous AI Agents system capable of performing complex penetration testing tasks</p>
+
+<p><a href="https://github.com/openchoreo/openchoreo">openchoreo/openchoreo</a><br>OpenChoreo is an internal developer platform for Kubernetes</p>
+
+<p><a href="https://github.com/caddyserver/caddy">caddyserver/caddy</a><br>Fast and extensible multi-platform HTTP/1-2-3 web server with automatic HTTPS</p>
+
+<p><a href="https://github.com/MHSanaei/3x-ui">MHSanaei/3x-ui</a><br>Supporting multi-protocol multi-user(Vmess, Vless, Trojan, ShadowSocks, Wireguard, Hysteria, Tunnel, Mixed, HTTP, Tun, MTProto، AmneziaWG)</p>
+
+<p><a href="https://github.com/guohuiyuan/go-music-dl">guohuiyuan/go-music-dl</a><br>一个基于 Go 语言的全网音乐搜索与下载工具。支持 CLI 命令行与 Web 服务双模式，内置网易云、QQ、酷狗、Bilibili、汽水音乐等 10&#43; 个主流平台，支持多源</p>
+
+<p><a href="https://github.com/trufflesecurity/trufflehog">trufflesecurity/trufflehog</a><br>Find, verify, and analyze leaked credentials</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+
