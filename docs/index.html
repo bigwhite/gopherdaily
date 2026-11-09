@@ -45,7 +45,7 @@ img {
 
 <div style="text-align: center; margin-bottom: 10px;">
   <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
-  <a href=https://bigwhite.github.io/gopherdaily/202611/issue-20261106.html style="margin: 0 10px;">Web版</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202611/issue-20261109.html style="margin: 0 10px;">Web版</a> |
   <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
   <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
   <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
@@ -57,9 +57,9 @@ img {
 
 <div>
 <p class="issue" style="text-align:center;">
-  <span style="text-align:center;">20261106</span>
+  <span style="text-align:center;">20261109</span>
 </p>
-<p>每日一谚：Close channels from the sender side, never from the receiver side </p>
+<p>每日一谚：Beware of goroutine leaks in HTTP handlers and long-running background workers </p>
 </div>
 
 <hr/>
@@ -67,73 +67,75 @@ img {
 <h2>Go技术生态</h2>
 
 
-<p><a href="https://tonybai.com/2026/11/06/go-generic-set-proposal-accepted">再见，map[T]struct！Go 泛型 Set 终于被官方接受了</a><br>Go 团队正式接受泛型 Set 提案 #69230！这个基于 map[T]struct{} 的老牌惯用法，终于有望拥有官方认可的泛型抽象。本文回顾 Go Set 十余年的演进历程，拆解新 API 的设计，以及它与泛型、迭代器之间的关系。</p> 
+<p><a href="https://tonybai.com/2026/11/09/go-maps-grow-go-1-28">再见，Go map 的渐进式扩容！Go 1.28 将迎来 maps.Grow</a><br>Go 语言的 map 虽使用便捷，但面对已存在的 map 进行大批量追加写入时，无法主动预留空间、易引发多轮渐进式扩容与内存抖 动的痛点长期存在。Go 团队近期正式接受并完成了 Proposal #81698：将在 Go 1.28 的标准库中引入 maps.Grow，并同步为 maps.Copy 赋予自 动预扩容能力。实测大 map 批量复制耗时最多锐减约 57%，内存分配减少约 50%。本文深度解析新 API 的设计细节、性能基准及背后的工程哲学。</p> 
 
-<p><a href="https://blog.jetbrains.com/go/2026/11/05/goland-2026-3-is-now-available/">GoLand 2026.3 现已发布！</a><br>Air 支持 Claude Agent、Codex、Gemini、GitHub Copilot、Junie、OpenCode 和其他 ACP 兼容智能体。它能检测您机器上已安装的智能体，让您一键连接，并可以从智能体注册表中添加更多智能体。</p> 
+<p><a href="https://tonybai.com/2026/11/07/why-go-json-v2-took-six-years">为什么一个 JSON 库，Go 团队花了六年才重写完？</a><br>Go 1.27 正式引入稳定版 `encoding/json/v2`，标志着一项持续近六年的标准库重构工作终于落地。这项工作源于旧版 `encoding/json` 长期存在的设计缺陷：严格性不足、API 扩展困难、流式处理能力有限，以及性能上的结构性瓶颈。由于 Go 1 兼容性承诺，Go 团队&gt;无法直接修改旧 API 的既有行为，只能另起炉灶，重新设计 JSON 处理架构。从 2020 年的原型探索，到社区公开讨论、正式 Proposal、Go 1.25 实验，再到 Go 1.27 正式稳定，JSON v2 不仅重构了 JSON 处理机制，还通过统一底层实现，让新旧 API 能够长期共存。这六年，Go 团队&gt;交付的不只是一个新 JSON 库，更是一堂关于大型基础设施如何演进的工程课。</p> 
 
-<p><a href="https://tomasvotruba.com/blog/porting-ecs-to-go">将 ECS 移植到 Go</a><br>在系列文章的前四部分之后，应该清楚为什么我们希望在 PHP 生态系统中使用 Go。本文是关于将 ECS 系统移植到 Go 的第五部分。</p> 
+<p><a href="https://tonybai.com/2026/11/07/when-ai-writes-code-who-proves-it-works">Lean 创始人：当 AI 开始写代码，谁来证明它是正确的？</a><br>AI 正在大幅降低软件开发中的代码生成成本，但代码生成并不等于软件正确。Lean 创始人 Leo de Moura 认为，形式化验证可&gt;能迎来自己的“ImageNet 时刻”：大模型正在使自动形式化和机器可检查的证明变得实用。未来的软件工程，可能从以代码为中心，转向以规格说 明、形式化模型和可验证性质为中心。真正重要的资产，不再只是代码，而是能够证明软件符合预期的知识体系。</p> 
+
+<p><a href="https://lleg.dev/posts/go-127--v2-10x-claim-1x-structs-60x-recursive/">Go的json/v2声称反序列化速度提高10倍，但我在结构体上获得1.1倍，在一种模式上获得60倍提升</a><br>Go团队于2026年11月4日发布了&#34;Go的JSON新API&#34;。经过约六年的设计工作，Go 1.27将`encoding//v2`和`encoding//text`作为稳定包发布。</p> 
+
+<p><a href="https://mtlynch.io/notes/go-must-create-pattern/">Go测试的MustCreate模式</a><br>我最近发现了一种让Go测试更具可读性和减少重复性的便捷方法。假设我有一个可能失败的构造函数。</p> 
+
+<p><a href="https://gopheria.com/blog/pprof-alloc-space-versus-inuse-space/">堆分析器命名了一个不是我编写的函数</a><br>一个程序分配了782.4 MiB内存并保留了其中的1.1 MiB。</p> 
+
+<p><a href="https://abdolirad.me/articles/go-1-28-landlock-subprocess-sandboxing/">在Go 1.28中使用Landlock对子进程进行沙箱化</a><br>运行外部命令很容易。但安全性如何？Landlock是什么？Go 1.28有什么变化？</p> 
+
+<p><a href="https://cekrem.github.io/posts/go--v2-finally-says-no/">Go 1.27: encoding//v2，更严格的默认设置，以及对nil切片的[]支持</a><br>Go团队在Go 1.27中将`encoding//v2`作为稳定版本发布。自1.25版本以来它已在`GOEXPERIMENT=v2`后可用，我一直想尝试它（但从未实现）。现在我终于尝试了。</p> 
 
 
 <h2>云原生技术</h2>
 
 
-<p><a href="https://www.cncf.io/blog/2026/11/05/kpt-v1-0-0-is-released/">kpt v1.0.0 已发布</a><br>独立的 kpt 为运行在 Kubernetes 上的应用程序提供轻量级配置包管理，基于配置即数据原则。这些原则允许对云原生应用程序、集群或任何资源的配置进行声明式操作和验证。</p>
+<p><a href="https://tonybai.com/2026/11/08/uber-failover-architecture-ufa-nsdi26">不是所有服务都值得“双活”：Uber容灾架构的降本哲学</a><br>Uber 在顶级系统会议 NSDI&#39;26 上披露了其新一代容灾架构 UFA：过去十年为应对年均不到 20 小时的全量峰值故障，全公司 6000 多个微服务长期预留 2 倍容量，导致 400 万核 CPU 机队利用率常年仅 20%。通过系统性消灭 4155 个“下游挂导致核心挂”的 fail-close &gt;隐性依赖，并将服务划分为 Always-On、Active-Migrate 等四级容灾档位进行安全超卖，Uber 用两年时间砍掉 102.5 万核 CPU，全局利用率拉 升至 31%，同时核心行程可用率始终稳定在 99.97% 以上。</p>
 
-<p><a href="https://tailscale.com/blog/100x-more-programmers">100 倍的程序员</a><br>AI 可能会创造十亿名新程序员。让我们确保他们能保持控制权。</p>
+<p><a href="https://tonybai.com/2026/11/09/cpp26-historic-dis-rejection-herb-sutter">C&#43;&#43; 史上首次被否决！C&#43;&#43; 之父与标准委员会，终于闹掰了？</a><br>2026 年 10 月，C&#43;&#43;26 的最终国际标准草案（DIS）在 ISO 成员国投票中罕见遭到否决，遭遇 C&#43;&#43; 历史上首次重大挫败。这场&gt;风波的核心在于围绕新特性“契约（Contracts）”的剧烈分歧——C&#43;&#43; 之父 Bjarne Stroustrup 等人直指其存在根本缺陷，而委员会重要人物 Herb Sutter 随后发文探讨“当语言创造者与标准所有者发生严重分歧”的历史出路。本文深度还原投票内幕、技术博弈、六条潜在解决路径，并探讨&gt;大型编程语言治理体系面临的深层挑战。</p>
 
-<p><a href="https://seangoedecke.com/a-database-is-a-store-for-global-variables/">数据库是全局变量的存储</a><br>数据库可以被视为全局变量的存储。例如，对可读性和追踪的担忧源于全局变量可能带来的问题。</p>
+<p><a href="https://frontier.replit.com/sandbox-engine-microvms-part-1/">深入了解Replit的新沙箱引擎，第一部分：通向MicroVMs的路径</a><br>Replit的新沙箱引擎内部：通向MicroVMs的路径，具有在Cloud Hypervisor和KVM上运行的隔离Linux内核。</p>
 
-<p><a href="https://www.docker.com/blog/docker-sandboxes-vs-containers/">Docker 沙箱 vs. 容器：为 AI 智能体选择正确的隔离方式</a><br>容器是与主机内核共享的隔离进程，而 Docker 沙箱是具有自己内核、文件系统、网络和 Docker Engine 的微虚拟机。沙箱可以运行容器，这就是为什么两者容易混淆。</p>
+<p><a href="https://github.blog/engineering/architecture-optimization/inside-githubs-new-git-storage-architecture/">深入了解GitHub的新Git存储架构 - GitHub博客</a><br>Karthik Raman和Brian Celenza于2026年11月5日撰写。阅读时间：16分钟。分享：在X上分享。</p>
 
-<p><a href="https://github.blog/engineering/architecture-optimization/inside-githubs-new-git-storage-architecture/">深入了解 GitHub 的新 Git 存储架构</a><br>新的 Git 存储架构每秒接受数千次写入，并支持多个写入节点。经验表明，索引传入的数据包和检查对象连接性是写入过程中最消耗 CPU 的部分。</p>
+<p><a href="https://mitchellh.com/writing/libghostty-1-0">Libghostty 1.0 – Mitchell Hashimoto</a><br>Mitchell Hashimoto于2026年11月6日发布。`libghostty-vt` 1.0现已发布。[libghostty]是一个便携式高性能终端仿真C库，直接从Ghostty核心提取。1.0版本。</p>
 
-<p><a href="https://v3.parceljs.org/blog/v3-alpha">宣布 Parcel 3 alpha 版</a><br>Parcel 3 是用 Rust 从头重写的版本，比 v2 快 100 倍。它支持用 Rust、Go、Swift 或 C 编写的原生插件，以及 JavaScript 和 TypeScript 插件的自定义运行时。</p>
+<p><a href="https://joturk.net/posts/dtls">实现DTLS 1.3到底有多难？</a><br>2026年1月，我莫名其妙地成为了Pion的DTLS 1.3实现的负责人并构建了大部分内容。当时它还只是一个想法，我并不真正了解DTLS 1.3的工作原理。</p>
 
-<p><a href="https://pwn.college/">pwn.college</a><br>pwn.college 是一个教育平台，学习者可以通过实践方式开发和练习核心网络安全技能。进入平台后，用户将获得&#34;白带&#34;，标志着他们黑客生涯的开始。</p>
-
-<p><a href="https://ziglang.org/devlog/2026/#2026-10-24">开发日志 ⚡ Zig 编程语言</a><br>开发日志页面包含对主分支 Zig 最近更改的精选列表。页面提供 2026 年的条目，其他年份可在开发日志存档页面中找到。</p>
-
-<p><a href="https://proofs-rs.github.io/lean-miri/">lean-miri — 一个 proofs.rs 项目</a><br>lean-miri 是 Miri（Rust 的未定义行为检查器）移植到 Lean 4 的版本。它允许在 Miri 的执行模型下陈述和证明 Rust 程序的安全属性。</p>
-
-<p><a href="https://jpountz.github.io/2026/04/19/why-databases-store-their-data-differently.html">为什么数据库以不同方式存储数据</a><br>数据库架构因用途而异。例如，OLTP 数据库和搜索引擎的实现方式有很大不同，这是因为它们的设计目标不同。</p>
+<p><a href="https://blog.zortax.de/posts/a-critique-of-gpui">对GPUI的批判</a><br>唯一重要的问题。GPUI：通知是zone.js。使GPUI精确反而破坏了GPUI。Elm在小规模时看似简单。</p>
   
 
 <h2>AI</h2>
 
 
-<p><a href="https://thinkingmachines.ai/news/inkling-2-small/">介绍 Inkling 2 Small - 思维机器实验室</a><br>思维机器实验室今天通过 Inkling 2 Small 介绍了他们的第二代模型。用户可以在 Tinker 上试用该模型，并查看模型卡片了解详情。</p>
+<p><a href="https://tonybai.com/2026/11/07/anthropic-components-of-agent-memory">从记忆到进化：Anthropic 揭秘 Agent Memory 的底层设计</a><br>Anthropic 最新研究揭示了 Agent Memory 的四层架构，以及 Dreaming 机制如何让 Agent 在任务间隙整理经验、纠正错误、构 建知识 Wiki。通过多个实验，研究证明了记忆质量比记忆数量更重要，也展示了 Agent 从简单信息存储走向持续经验学习的可能路径。</p>
 
-<p><a href="https://mcp-explained.com/">MCP 解释 · 模型上下文协议如何工作</a><br>模型上下文协议是一种连接 AI 应用程序与其使用工具和数据的标准。服务器说明它能做什么，应用程序向模型展示这些信息，当模型需要某些东西时，应用程序调用服务器并返回结果。</p>
+<p><a href="https://caleb.software/posts/claude-to-pi.html">再见Claude，你好Pi</a><br>2026年9月21日。我一直是Claude Code的长期用户，自从它一年多前在Claude Pro订阅计划中可用以来。</p>
 
-<p><a href="https://axiommath.ai/research/the-stacks-project-formalized/">在 Lean 中形式化的 Stacks 项目 | Axiom</a><br>Stacks 项目在 Lean 中得到了形式化，将数学证明与计算机科学相结合。该项目将章节树状图作为地面，每个 Lean 声明的高度与其依赖级别相同。</p>
+<p><a href="https://www.lorekit.io/blog/open-agent-memory-format">Agent记忆需要它的OpenTelemetry时刻</a><br>列出您的编码工具保存它们&#34;记住&#34;内容的所有地方。当今的典型设置：大多数仓库中的`AGENTS.md`或`CLAUDE.md`，以及`.cursor/rules/*`。</p>
 
-<p><a href="https://wasp.sh/blog/2026/11/03/mcp-vs-api-vs-cli-connect-ai-agents-to-your-app">MCP vs API vs CLI：AI 智能体应如何连接到您的应用程序？| Wasp</a><br>您正在构建一个 Web 应用程序，需要使其对智能体友好。您应该考虑构建 MCP 服务器、REST API、CLI，或全部构建，以使它们为智能体带来最大价值。</p>
+<p><a href="https://packagemain.tech/p/the-future-of-software-engineering">软件工程的未来是无聊的</a><br>我们曾经花时间用代码解决问题，现在我们变成了无人真正理解的代码的维护者。</p>
 
 
 <h2>流行工具与项目</h2>
 
 
-<p><a href="https://github.com/dsx-ai-factory/nvke">GitHub - dsx-ai-factory/nvke: NVIDIA Kubernetes 引擎 (NVKE)。裸机上 GPU Kubernetes 的管理平面。</a><br>该项目提供裸机上 GPU Kubernetes 的管理平面。用户可以通过分支和标签页面查看项目历史和提交记录。</p>
+<p><a href="https://github.com/dsx-ai-factory/nvke">dsx-ai-factory/nvke</a><br>NVIDIA Kubernetes Engine (NVKE). A management plane for GPU Kubernetes on bare metal.</p>
 
-<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
+<p><a href="https://github.com/henrygd/beszel">henrygd/beszel</a><br>Lightweight server monitoring with historical data, docker stats, and alerts.</p>
 
-<p><a href="https://github.com/hashicorp/terraform-provider-azurerm">hashicorp/terraform-provider-azurerm</a><br>Terraform provider for Azure Resource Manager</p>
+<p><a href="https://github.com/prometheus/prometheus">prometheus/prometheus</a><br>The Prometheus monitoring system and time series database.</p>
 
-<p><a href="https://github.com/CarterPerez-dev/Cybersecurity-Projects">CarterPerez-dev/Cybersecurity-Projects</a><br>Building 70 Projects ranging from beginner to advanced so anyone can — learn from, build upon, use as a reference, or even copy directly. Owned by my cybersecurity company 👇</p>
+<p><a href="https://github.com/Christ9038/Ydisks-Xianyu-Helper">Christ9038/Ydisks-Xianyu-Helper</a><br>闲鱼多账号自动发货、消息回复系统——基于 Go 与 React 构建</p>
 
-<p><a href="https://github.com/gosom/google-maps-scraper">gosom/google-maps-scraper</a><br>scrape data from Google Maps. Extracts data such as the name, address, phone number, website URL, rating, reviews number, latitude and longitude, reviews,email and more for each place</p>
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.</p>
 
 <p><a href="https://github.com/vxcontrol/pentagi">vxcontrol/pentagi</a><br>Fully autonomous AI Agents system capable of performing complex penetration testing tasks</p>
 
-<p><a href="https://github.com/openchoreo/openchoreo">openchoreo/openchoreo</a><br>OpenChoreo is an internal developer platform for Kubernetes</p>
+<p><a href="https://github.com/kgretzky/evilginx2">kgretzky/evilginx2</a><br>Standalone man-in-the-middle attack framework used for phishing login credentials along with session cookies, allowing for the bypass of 2-factor authentication</p>
 
-<p><a href="https://github.com/caddyserver/caddy">caddyserver/caddy</a><br>Fast and extensible multi-platform HTTP/1-2-3 web server with automatic HTTPS</p>
+<p><a href="https://github.com/woodpecker-ci/woodpecker">woodpecker-ci/woodpecker</a><br>Woodpecker is a simple, yet powerful CI/CD engine with great extensibility.</p>
 
-<p><a href="https://github.com/MHSanaei/3x-ui">MHSanaei/3x-ui</a><br>Supporting multi-protocol multi-user(Vmess, Vless, Trojan, ShadowSocks, Wireguard, Hysteria, Tunnel, Mixed, HTTP, Tun, MTProto، AmneziaWG)</p>
+<p><a href="https://github.com/Gaurav-Gosain/tuios">Gaurav-Gosain/tuios</a><br>A terminal window manager that knows what your agents are doing. Tiling panes, workspaces, sessions that survive restarts, and one Inbox for every coding agent. Official only at tuios.dev and this rep</p>
 
-<p><a href="https://github.com/guohuiyuan/go-music-dl">guohuiyuan/go-music-dl</a><br>一个基于 Go 语言的全网音乐搜索与下载工具。支持 CLI 命令行与 Web 服务双模式，内置网易云、QQ、酷狗、Bilibili、汽水音乐等 10&#43; 个主流平台，支持多源</p>
-
-<p><a href="https://github.com/trufflesecurity/trufflehog">trufflesecurity/trufflehog</a><br>Find, verify, and analyze leaked credentials</p>
+<p><a href="https://github.com/google/gvisor">google/gvisor</a><br>Application Kernel for Containers</p>
 
 
 <hr/>

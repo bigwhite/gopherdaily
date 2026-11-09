@@ -1,0 +1,152 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202611/issue-20261109.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20261109</span>
+</p>
+<p>每日一谚：Beware of goroutine leaks in HTTP handlers and long-running background workers </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/11/09/go-maps-grow-go-1-28">再见，Go map 的渐进式扩容！Go 1.28 将迎来 maps.Grow</a><br>Go 语言的 map 虽使用便捷，但面对已存在的 map 进行大批量追加写入时，无法主动预留空间、易引发多轮渐进式扩容与内存抖 动的痛点长期存在。Go 团队近期正式接受并完成了 Proposal #81698：将在 Go 1.28 的标准库中引入 maps.Grow，并同步为 maps.Copy 赋予自 动预扩容能力。实测大 map 批量复制耗时最多锐减约 57%，内存分配减少约 50%。本文深度解析新 API 的设计细节、性能基准及背后的工程哲学。</p> 
+
+<p><a href="https://tonybai.com/2026/11/07/why-go-json-v2-took-six-years">为什么一个 JSON 库，Go 团队花了六年才重写完？</a><br>Go 1.27 正式引入稳定版 `encoding/json/v2`，标志着一项持续近六年的标准库重构工作终于落地。这项工作源于旧版 `encoding/json` 长期存在的设计缺陷：严格性不足、API 扩展困难、流式处理能力有限，以及性能上的结构性瓶颈。由于 Go 1 兼容性承诺，Go 团队&gt;无法直接修改旧 API 的既有行为，只能另起炉灶，重新设计 JSON 处理架构。从 2020 年的原型探索，到社区公开讨论、正式 Proposal、Go 1.25 实验，再到 Go 1.27 正式稳定，JSON v2 不仅重构了 JSON 处理机制，还通过统一底层实现，让新旧 API 能够长期共存。这六年，Go 团队&gt;交付的不只是一个新 JSON 库，更是一堂关于大型基础设施如何演进的工程课。</p> 
+
+<p><a href="https://tonybai.com/2026/11/07/when-ai-writes-code-who-proves-it-works">Lean 创始人：当 AI 开始写代码，谁来证明它是正确的？</a><br>AI 正在大幅降低软件开发中的代码生成成本，但代码生成并不等于软件正确。Lean 创始人 Leo de Moura 认为，形式化验证可&gt;能迎来自己的“ImageNet 时刻”：大模型正在使自动形式化和机器可检查的证明变得实用。未来的软件工程，可能从以代码为中心，转向以规格说 明、形式化模型和可验证性质为中心。真正重要的资产，不再只是代码，而是能够证明软件符合预期的知识体系。</p> 
+
+<p><a href="https://lleg.dev/posts/go-127--v2-10x-claim-1x-structs-60x-recursive/">Go的json/v2声称反序列化速度提高10倍，但我在结构体上获得1.1倍，在一种模式上获得60倍提升</a><br>Go团队于2026年11月4日发布了&#34;Go的JSON新API&#34;。经过约六年的设计工作，Go 1.27将`encoding//v2`和`encoding//text`作为稳定包发布。</p> 
+
+<p><a href="https://mtlynch.io/notes/go-must-create-pattern/">Go测试的MustCreate模式</a><br>我最近发现了一种让Go测试更具可读性和减少重复性的便捷方法。假设我有一个可能失败的构造函数。</p> 
+
+<p><a href="https://gopheria.com/blog/pprof-alloc-space-versus-inuse-space/">堆分析器命名了一个不是我编写的函数</a><br>一个程序分配了782.4 MiB内存并保留了其中的1.1 MiB。</p> 
+
+<p><a href="https://abdolirad.me/articles/go-1-28-landlock-subprocess-sandboxing/">在Go 1.28中使用Landlock对子进程进行沙箱化</a><br>运行外部命令很容易。但安全性如何？Landlock是什么？Go 1.28有什么变化？</p> 
+
+<p><a href="https://cekrem.github.io/posts/go--v2-finally-says-no/">Go 1.27: encoding//v2，更严格的默认设置，以及对nil切片的[]支持</a><br>Go团队在Go 1.27中将`encoding//v2`作为稳定版本发布。自1.25版本以来它已在`GOEXPERIMENT=v2`后可用，我一直想尝试它（但从未实现）。现在我终于尝试了。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://tonybai.com/2026/11/08/uber-failover-architecture-ufa-nsdi26">不是所有服务都值得“双活”：Uber容灾架构的降本哲学</a><br>Uber 在顶级系统会议 NSDI&#39;26 上披露了其新一代容灾架构 UFA：过去十年为应对年均不到 20 小时的全量峰值故障，全公司 6000 多个微服务长期预留 2 倍容量，导致 400 万核 CPU 机队利用率常年仅 20%。通过系统性消灭 4155 个“下游挂导致核心挂”的 fail-close &gt;隐性依赖，并将服务划分为 Always-On、Active-Migrate 等四级容灾档位进行安全超卖，Uber 用两年时间砍掉 102.5 万核 CPU，全局利用率拉 升至 31%，同时核心行程可用率始终稳定在 99.97% 以上。</p>
+
+<p><a href="https://tonybai.com/2026/11/09/cpp26-historic-dis-rejection-herb-sutter">C&#43;&#43; 史上首次被否决！C&#43;&#43; 之父与标准委员会，终于闹掰了？</a><br>2026 年 10 月，C&#43;&#43;26 的最终国际标准草案（DIS）在 ISO 成员国投票中罕见遭到否决，遭遇 C&#43;&#43; 历史上首次重大挫败。这场&gt;风波的核心在于围绕新特性“契约（Contracts）”的剧烈分歧——C&#43;&#43; 之父 Bjarne Stroustrup 等人直指其存在根本缺陷，而委员会重要人物 Herb Sutter 随后发文探讨“当语言创造者与标准所有者发生严重分歧”的历史出路。本文深度还原投票内幕、技术博弈、六条潜在解决路径，并探讨&gt;大型编程语言治理体系面临的深层挑战。</p>
+
+<p><a href="https://frontier.replit.com/sandbox-engine-microvms-part-1/">深入了解Replit的新沙箱引擎，第一部分：通向MicroVMs的路径</a><br>Replit的新沙箱引擎内部：通向MicroVMs的路径，具有在Cloud Hypervisor和KVM上运行的隔离Linux内核。</p>
+
+<p><a href="https://github.blog/engineering/architecture-optimization/inside-githubs-new-git-storage-architecture/">深入了解GitHub的新Git存储架构 - GitHub博客</a><br>Karthik Raman和Brian Celenza于2026年11月5日撰写。阅读时间：16分钟。分享：在X上分享。</p>
+
+<p><a href="https://mitchellh.com/writing/libghostty-1-0">Libghostty 1.0 – Mitchell Hashimoto</a><br>Mitchell Hashimoto于2026年11月6日发布。`libghostty-vt` 1.0现已发布。[libghostty]是一个便携式高性能终端仿真C库，直接从Ghostty核心提取。1.0版本。</p>
+
+<p><a href="https://joturk.net/posts/dtls">实现DTLS 1.3到底有多难？</a><br>2026年1月，我莫名其妙地成为了Pion的DTLS 1.3实现的负责人并构建了大部分内容。当时它还只是一个想法，我并不真正了解DTLS 1.3的工作原理。</p>
+
+<p><a href="https://blog.zortax.de/posts/a-critique-of-gpui">对GPUI的批判</a><br>唯一重要的问题。GPUI：通知是zone.js。使GPUI精确反而破坏了GPUI。Elm在小规模时看似简单。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://tonybai.com/2026/11/07/anthropic-components-of-agent-memory">从记忆到进化：Anthropic 揭秘 Agent Memory 的底层设计</a><br>Anthropic 最新研究揭示了 Agent Memory 的四层架构，以及 Dreaming 机制如何让 Agent 在任务间隙整理经验、纠正错误、构 建知识 Wiki。通过多个实验，研究证明了记忆质量比记忆数量更重要，也展示了 Agent 从简单信息存储走向持续经验学习的可能路径。</p>
+
+<p><a href="https://caleb.software/posts/claude-to-pi.html">再见Claude，你好Pi</a><br>2026年9月21日。我一直是Claude Code的长期用户，自从它一年多前在Claude Pro订阅计划中可用以来。</p>
+
+<p><a href="https://www.lorekit.io/blog/open-agent-memory-format">Agent记忆需要它的OpenTelemetry时刻</a><br>列出您的编码工具保存它们&#34;记住&#34;内容的所有地方。当今的典型设置：大多数仓库中的`AGENTS.md`或`CLAUDE.md`，以及`.cursor/rules/*`。</p>
+
+<p><a href="https://packagemain.tech/p/the-future-of-software-engineering">软件工程的未来是无聊的</a><br>我们曾经花时间用代码解决问题，现在我们变成了无人真正理解的代码的维护者。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/dsx-ai-factory/nvke">dsx-ai-factory/nvke</a><br>NVIDIA Kubernetes Engine (NVKE). A management plane for GPU Kubernetes on bare metal.</p>
+
+<p><a href="https://github.com/henrygd/beszel">henrygd/beszel</a><br>Lightweight server monitoring with historical data, docker stats, and alerts.</p>
+
+<p><a href="https://github.com/prometheus/prometheus">prometheus/prometheus</a><br>The Prometheus monitoring system and time series database.</p>
+
+<p><a href="https://github.com/Christ9038/Ydisks-Xianyu-Helper">Christ9038/Ydisks-Xianyu-Helper</a><br>闲鱼多账号自动发货、消息回复系统——基于 Go 与 React 构建</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.</p>
+
+<p><a href="https://github.com/vxcontrol/pentagi">vxcontrol/pentagi</a><br>Fully autonomous AI Agents system capable of performing complex penetration testing tasks</p>
+
+<p><a href="https://github.com/kgretzky/evilginx2">kgretzky/evilginx2</a><br>Standalone man-in-the-middle attack framework used for phishing login credentials along with session cookies, allowing for the bypass of 2-factor authentication</p>
+
+<p><a href="https://github.com/woodpecker-ci/woodpecker">woodpecker-ci/woodpecker</a><br>Woodpecker is a simple, yet powerful CI/CD engine with great extensibility.</p>
+
+<p><a href="https://github.com/Gaurav-Gosain/tuios">Gaurav-Gosain/tuios</a><br>A terminal window manager that knows what your agents are doing. Tiling panes, workspaces, sessions that survive restarts, and one Inbox for every coding agent. Official only at tuios.dev and this rep</p>
+
+<p><a href="https://github.com/google/gvisor">google/gvisor</a><br>Application Kernel for Containers</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+
