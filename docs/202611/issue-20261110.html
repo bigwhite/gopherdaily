@@ -1,0 +1,158 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202611/issue-20261110.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20261110</span>
+</p>
+<p>每日一谚：Use sync.Once for thread-safe lazy initialization </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/11/10/go-cgo-without-c-toolchain-proposal-update">Go cgo 去 C 工具链提案最新进展：Cherry Mui 给出更具体的落地方案</a><br>Go 核心团队正在推进一项重要的 cgo 架构改造。继 Matloob 提出「cgo without a C toolchain」后，Cherry Mui 于 11 月 4 日发布了用于 Proposal Review 的精简设计。这次更新明确了 `cmd/go` 的模式选择机制、Binding 文件的新指令体系、`runtime/cgo` 的 Go 化改造，以及 `CGO_ENABLED=auto` 在交叉编译中的新角色。本文逐一拆解这些变化，看看 Go 团队准备如何让 cgo 在不安装 GCC／Clang 的&gt;情况下，直接调用已经编译好的 C 库。</p> 
+
+<p><a href="https://blog.jetbrains.com/go/2026/11/10/state-of-golang-2026/">2026年Go语言现状：自去年以来Golang生态系统发生了哪些变化</a><br>Go开发者关注在审查AI生成代码时的要点。当审查AI代理为工作任务生成的代码时，你会注意哪些方面？</p> 
+
+<p><a href="https://internals-for-interns.com/posts/go-compiler-pgo/">深入PGO内部机制</a><br>这是理解Go语言系列的第二部分。本文深入探讨PGO(配置文件引导优化)的工作原理，帮助开发者了解Go编译器的优化技术。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/11/09/new-research-virtual-machines-remain-central-to-cloud-native-infrastructure-as-ai-workloads-evolve/">新研究：随着AI工作负载的演变，虚拟机仍然是云原生基础设施的核心</a><br>该研究基于2026年9月对492名参与构建、运营或保护云原生基础设施的专业人士和领导者的网络调查。受访者代表其组织回答了相关问题。</p>
+
+<p><a href="https://www.cncf.io/blog/2026/11/09/run-linux-applications-in-hypervisor-isolated-micro-vms-with-hyperlight/">使用Hyperlight在hypervisor隔离的微虚拟机中运行Linux应用程序</a><br>传统选择通常需要在不同属性之间权衡。进程或语言沙箱可以在毫秒级启动，但代码与主机之间只有软件保护：沙箱或共享内核中的任何漏洞都可能导致代码安全风险。</p>
+
+<p><a href="https://engineering.fb.com/2026/11/09/developer-tools/extending-lldb-to-debug-applications-that-span-cpus-and-gpus/">扩展LLDB以调试跨CPU和GPU的应用程序</a><br>LLDB连接到lldb-server并发现可用的加速器插件。插件可以请求LLDB在主机进程中设置内部断点，这些断点标识重要的运行时事件，如GPU调试会话可以开始的点。</p>
+
+<p><a href="https://tailscale.com/blog/oauth-apps-ga">Grok Bot已集成Tailscale—现在你也可以使用</a><br>无需暴露网络即可实现代理访问—Tailscale OAuth应用现已正式发布。</p>
+
+<p><a href="https://netflixtechblog.com/fact-checking-at-scale-building-a-more-accurate-and-efficient-synopsis-factuality-system-d7d85859d808?source=rss----2615bd06b42e---4">大规模事实核查：构建更准确高效的摘要事实性系统</a><br>Cascade系统提高了质量。我们的主要指标Recall-FAIL在节目和剧集级别的摘要上都有所改善，而对Recall-PASS的影响有限。换句话说，我们现在能捕获更多的Gold FAIL摘要，同时不牺牲我们PASS判断的可靠性。</p>
+
+<p><a href="https://engineering.atspotify.com/2026/11/ai-product-management-at-spotify-a-view-from-three-angles/">Spotify的AI产品管理：从三个角度的观察</a><br>几乎所有关于产品管理和AI的文章或播客都将&#34;AI产品经理&#34;描述为一个单一职位。但实际情况可能更加复杂...</p>
+
+<p><a href="https://www.reddit.com/r/RedditEng/comments/1xs39qk/beyond_static_credentials_reddits_journey_to/">超越静态凭证：Reddit向工作负载身份和mTLS的演进</a><br>Reddit分享了其从静态凭证向工作负载身份和mTLS迁移的经验，展示了如何增强系统安全性和灵活性。</p>
+
+<p><a href="https://devblogs.microsoft.com/blog/do-ai-coding-agents-care-about-semver/">AI编码代理是否关心语义版本控制？</a><br>语义版本控制告诉开发者升级的风险程度。补丁修复错误，次版本添加不破坏任何功能的新特性，而主版本则会引入破坏性变更，使您了解升级前需要仔细检查的程度。</p>
+
+<p><a href="https://product.hubspot.com/blog/hedging-erasure-coded-reads-in-hdfs">HDFS中擦除编码读取的优化策略</a><br>本文由HubSpot大数据团队高级工程经理Ray Mattingly撰写，探讨了HDFS中擦除编码读取的优化方法。</p>
+
+<p><a href="https://zackoverflow.dev/writing/zig-vs-rust-in-2026">2026年Zig与Rust的比较</a><br>作者三年前在编码代理出现之前，用Zig和不安全的Rust编写了字节码虚拟机和垃圾收集器，认为在编写不安全代码的人体工程学方面，Zig更具优势。</p>
+
+<p><a href="https://frontier.replit.com/sandbox-engine-microvms-part-1/">Replit新沙箱引擎内部机制，第一部分：通往微虚拟机的路径</a><br>本文介绍了Replit新沙箱引擎的设计理念，展示了如何在Cloud Hypervisor和KVM上运行隔离的Linux内核，实现更安全的代码执行环境。</p>
+
+<p><a href="https://bloggeek.me/is-webrtc-safe/">WebRTC安全吗？2026年安全与隐私解析</a><br>本文由Tsahi Levent-Levi撰写，深入分析了WebRTC技术的安全性和隐私保护机制，帮助读者了解其潜在风险和防护措施。</p>
+
+<p><a href="https://benmandrew.com/articles/what-is-malloc-doing-anyway">malloc到底在做什么？| Ben M. Andrew</a><br>malloc提供了简洁明了的接口：请求一定量的内存，获得指向连续字节块的void指针。使用完毕后，用相同的指针调用free，内存就会释放。</p>
+
+<p><a href="https://blog.cloudflare.com/dns-cache-memory-optimization-1111/">通过优化1.1.1.1的DNS缓存节省100TB内存 | Cloudflare博客</a><br>Cloudflare分享了其优化DNS缓存技术的经验，通过创新算法将内存使用减少了100TB，同时保持了高性能和可靠性。</p>
+
+<p><a href="https://blog.cloudflare.com/optimizing-core-unit-boot-time/">我们将核心单元启动时间从小时级缩短到分钟级 | Cloudflare博客</a><br>Cloudflare介绍了其如何通过系统级优化将核心单元的启动时间从数小时缩短到几分钟，显著提高了系统可用性和响应速度。</p>
+
+<p><a href="https://rust-osdev.com/this-month/2026-10/">Rust操作系统开发十月动态：2026年10月 | Rust OSDev</a><br>欢迎阅读新一期的&#34;Rust操作系统开发月度动态&#34;。本文概述了Rust操作系统开发生态系统中的显著变化和重要进展。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Nov/10/muse-ember/">推出我们最小、最高效的模型：Muse Ember</a><br>Muse Ember是一款新型AI模型，体积小但效率高，在处理不同规模的提示时都表现出色，成本效益优于同类产品。</p>
+
+<p><a href="https://www.anthropic.com/claude-fable-and-mythos-5-2">推出Claude Fable 5.2和Claude Mythos 5.2</a><br>Anthropic发布了Claude Fable 5.2和Claude Mythos 5.2，这些模型专为解决最复杂的技术挑战而设计，在编码、推理和视觉领域都有显著改进。</p>
+
+<p><a href="https://www.nabo.dev/blogs/kernel-primer">（第1/3部分）GPU和内核优化入门 | Nabil Omi</a><br>本文是GPU和内核优化系列的第一部分，介绍了GPU架构基础和内核优化的核心概念，为后续深入讨论奠定基础。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/gosom/google-maps-scraper">gosom/google-maps-scraper</a><br>scrape data from Google Maps. Extracts data such as the name, address, phone number, website URL, rating, reviews number, latitude and longitude, reviews,email and more for each place</p>
+
+<p><a href="https://github.com/sundowndev/phoneinfoga">sundowndev/phoneinfoga</a><br>Information gathering framework for phone numbers</p>
+
+<p><a href="https://github.com/superplanehq/superplane">superplanehq/superplane</a><br>Open source factory for one-shot engineering</p>
+
+<p><a href="https://github.com/majd/ipatool">majd/ipatool</a><br>Command-line tool that allows you to search for iOS, iPadOS, tvOS, watchOS, visionOS, and macOS apps on the App Store, and download .ipa or macOS .pkg app packages.</p>
+
+<p><a href="https://github.com/dsx-ai-factory/nvke">dsx-ai-factory/nvke</a><br>NVIDIA Kubernetes Engine (NVKE). A management plane for GPU Kubernetes on bare metal.</p>
+
+<p><a href="https://github.com/TwiN/gatus">TwiN/gatus</a><br>Automated developer-oriented status page with alerting and incident support</p>
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>smart charging ☀️🚘</p>
+
+<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>The universal proxy platform</p>
+
+<p><a href="https://github.com/kgretzky/evilginx2">kgretzky/evilginx2</a><br>Standalone man-in-the-middle attack framework used for phishing login credentials along with session cookies, allowing for the bypass of 2-factor authentication</p>
+
+<p><a href="https://github.com/woodpecker-ci/woodpecker">woodpecker-ci/woodpecker</a><br>Woodpecker is a simple, yet powerful CI/CD engine with great extensibility.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+
