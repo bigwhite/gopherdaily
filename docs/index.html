@@ -45,7 +45,7 @@ img {
 
 <div style="text-align: center; margin-bottom: 10px;">
   <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
-  <a href=https://bigwhite.github.io/gopherdaily/202611/issue-20261110.html style="margin: 0 10px;">Web版</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202611/issue-20261111.html style="margin: 0 10px;">Web版</a> |
   <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
   <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
   <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
@@ -57,9 +57,9 @@ img {
 
 <div>
 <p class="issue" style="text-align:center;">
-  <span style="text-align:center;">20261110</span>
+  <span style="text-align:center;">20261111</span>
 </p>
-<p>每日一谚：Use sync.Once for thread-safe lazy initialization </p>
+<p>每日一谚：Never start a goroutine without knowing how it will stop </p>
 </div>
 
 <hr/>
@@ -67,81 +67,71 @@ img {
 <h2>Go技术生态</h2>
 
 
-<p><a href="https://tonybai.com/2026/11/10/go-cgo-without-c-toolchain-proposal-update">Go cgo 去 C 工具链提案最新进展：Cherry Mui 给出更具体的落地方案</a><br>Go 核心团队正在推进一项重要的 cgo 架构改造。继 Matloob 提出「cgo without a C toolchain」后，Cherry Mui 于 11 月 4 日发布了用于 Proposal Review 的精简设计。这次更新明确了 `cmd/go` 的模式选择机制、Binding 文件的新指令体系、`runtime/cgo` 的 Go 化改造，以及 `CGO_ENABLED=auto` 在交叉编译中的新角色。本文逐一拆解这些变化，看看 Go 团队准备如何让 cgo 在不安装 GCC／Clang 的&gt;情况下，直接调用已经编译好的 C 库。</p> 
+<p><a href="https://tonybai.com/2026/11/11/state-of-golang-2026-ai-agents-ecosystem">JetBrains Go 生态 2026 年度报告：AI Agent 正在重塑 Go 开发者的工作方式</a><br>JetBrains 2026 年 Go 生态报告揭示了 Go 社区正在发生的变化：开发者群体更加成熟，标准库重新获得青睐，TypeScript 成&gt;为 Go 最常见的项目搭档，而 AI Agent 已经深度融入日常开发。86% 的 Go 开发者每周使用终端 AI Agent，但他们仍然坚持人工审查。Go 并&gt;没有因为 AI 浪潮而失去自己的工程价值，反而可能因为稳定、简洁、工具链统一等特性，在 Agentic Engineering 时代迎来新的机会。</p> 
 
-<p><a href="https://blog.jetbrains.com/go/2026/11/10/state-of-golang-2026/">2026年Go语言现状：自去年以来Golang生态系统发生了哪些变化</a><br>Go开发者关注在审查AI生成代码时的要点。当审查AI代理为工作任务生成的代码时，你会注意哪些方面？</p> 
+<p><a href="https://tonybai.com/2026/11/11/musk-rust-c-ai-inference-stack">马斯克一句“真男人自己管内存”，把 Rust 程序员惹急了！</a><br>Musk 关于 C 和 Rust 的几句话，引发了一场编程语言争论。但真正值得关注的，是 xAI 为 Grok 4.8 重写 RL 和推理技术栈的工程选择。C 的控制力、Rust 的内存安全、AI 基础设施的性能压力，以及 AI Agent 对编程语言生态的潜在改变，都指向一个新的问题：未来的软件系统，是否还需要一种通吃所有场景的编程语言？</p> 
 
-<p><a href="https://internals-for-interns.com/posts/go-compiler-pgo/">深入PGO内部机制</a><br>这是理解Go语言系列的第二部分。本文深入探讨PGO(配置文件引导优化)的工作原理，帮助开发者了解Go编译器的优化技术。</p> 
+<p><a href="https://eli.thegreenplace.net/2026/monads-in-lean/">Lean语言中的单子</a><br>单子在函数式编程语言中最重要的用例之一是通过计算来建模可变状态。有状态的计算被建模为一个函数，它接收初始状态并返回一个包含结果值和新的更新状态的元组。</p> 
 
 
 <h2>云原生技术</h2>
 
 
-<p><a href="https://www.cncf.io/blog/2026/11/09/new-research-virtual-machines-remain-central-to-cloud-native-infrastructure-as-ai-workloads-evolve/">新研究：随着AI工作负载的演变，虚拟机仍然是云原生基础设施的核心</a><br>该研究基于2026年9月对492名参与构建、运营或保护云原生基础设施的专业人士和领导者的网络调查。受访者代表其组织回答了相关问题。</p>
+<p><a href="https://www.cncf.io/blog/2026/11/10/jaeger-previews-ai-assisted-troubleshooting-and-genai-observability-for-opentelemetry-traces-at-kubecon/">Jaeger在KubeCon上预览AI辅助故障排除和GenAI可观测性功能</a><br>**询问Jaeger**：一个实验性的产品内自然语言助手，允许工程师以对话方式调查追踪。响应直接流式传输到界面，显示工具调用，帮助用户理解助手如何得出结论。</p>
 
-<p><a href="https://www.cncf.io/blog/2026/11/09/run-linux-applications-in-hypervisor-isolated-micro-vms-with-hyperlight/">使用Hyperlight在hypervisor隔离的微虚拟机中运行Linux应用程序</a><br>传统选择通常需要在不同属性之间权衡。进程或语言沙箱可以在毫秒级启动，但代码与主机之间只有软件保护：沙箱或共享内核中的任何漏洞都可能导致代码安全风险。</p>
+<p><a href="https://www.cncf.io/blog/2026/11/10/open-cluster-management-ocm-becomes-a-cncf-incubating-project/">Open Cluster Management (OCM) 成为 CNCF 孵化项目</a><br>**集群管理器**：中心端控制平面，协调注册、工作、放置和附加组件。**Klusterlet**：每个托管集群上的代理，向中心注册并应用其指令。</p>
 
-<p><a href="https://engineering.fb.com/2026/11/09/developer-tools/extending-lldb-to-debug-applications-that-span-cpus-and-gpus/">扩展LLDB以调试跨CPU和GPU的应用程序</a><br>LLDB连接到lldb-server并发现可用的加速器插件。插件可以请求LLDB在主机进程中设置内部断点，这些断点标识重要的运行时事件，如GPU调试会话可以开始的点。</p>
+<p><a href="https://www.cncf.io/blog/2026/11/10/donating-kuberay-to-cncf/">向CNCF捐赠KubeRay</a><br>**使用OpenTelemetry、Prometheus和Fluent Bit进行可观测性**：Ray在其指标管道中使用OpenTelemetry并以Prometheus格式暴露指标，使运行KubeRay的平台团队能够监控集群利用率、任务执行和Ray Serve延迟。</p>
 
-<p><a href="https://tailscale.com/blog/oauth-apps-ga">Grok Bot已集成Tailscale—现在你也可以使用</a><br>无需暴露网络即可实现代理访问—Tailscale OAuth应用现已正式发布。</p>
+<p><a href="https://www.cncf.io/blog/2026/11/10/welcoming-openshell-to-the-cncf-open-governance-to-secure-agentic-ai/">欢迎OpenShell加入CNCF：开放治理以保障代理式AI安全</a><br>**扩展实现**：计算、凭据管理、推理和日志的参考实现，以及共享文档和一致性测试，确保第三方集成行为一致。**策略和治理模式**。</p>
 
-<p><a href="https://netflixtechblog.com/fact-checking-at-scale-building-a-more-accurate-and-efficient-synopsis-factuality-system-d7d85859d808?source=rss----2615bd06b42e---4">大规模事实核查：构建更准确高效的摘要事实性系统</a><br>Cascade系统提高了质量。我们的主要指标Recall-FAIL在节目和剧集级别的摘要上都有所改善，而对Recall-PASS的影响有限。换句话说，我们现在能捕获更多的Gold FAIL摘要，同时不牺牲我们PASS判断的可靠性。</p>
+<p><a href="https://www.cncf.io/blog/2026/11/10/istio-enables-global-availability-for-all-workloads-traditional-agentic-and-beyond/">Istio实现所有工作负载的全球可用性——传统、代理式及更多</a><br>AI代理与传统云原生应用程序的部署正在增加，跨各种工作负载保护和网络流量管理变得更加复杂。平台运营商需要一致的安全性、可见性和控制，而不会引入额外的运营开销。</p>
 
-<p><a href="https://engineering.atspotify.com/2026/11/ai-product-management-at-spotify-a-view-from-three-angles/">Spotify的AI产品管理：从三个角度的观察</a><br>几乎所有关于产品管理和AI的文章或播客都将&#34;AI产品经理&#34;描述为一个单一职位。但实际情况可能更加复杂...</p>
+<p><a href="https://www.cncf.io/blog/2026/11/10/cloudnativepg-becomes-a-cncf-incubating-project/">CloudNativePG成为CNCF孵化项目</a><br>**Operator和集群资源**：控制器和中央自定义资源，用于声明和协调整个PostgreSQL集群。它直接管理Pod、卷、服务和Secret，不使用StatefulSets，逐个编排故障转移和滚动更新。</p>
 
-<p><a href="https://www.reddit.com/r/RedditEng/comments/1xs39qk/beyond_static_credentials_reddits_journey_to/">超越静态凭证：Reddit向工作负载身份和mTLS的演进</a><br>Reddit分享了其从静态凭证向工作负载身份和mTLS迁移的经验，展示了如何增强系统安全性和灵活性。</p>
+<p><a href="https://engineering.fb.com/2026/11/10/open-source/tlx-a-hardware-native-gpu-compiler-for-production-ml/">我们如何构建TLX：面向大规模生产ML的硬件原生GPU编译器</a><br>TLX在Blackwell上：显式的warp-group编排和流水线。matmul_kernel函数使用tlx.local_alloc分配本地内存，用于矩阵乘法操作。</p>
 
-<p><a href="https://devblogs.microsoft.com/blog/do-ai-coding-agents-care-about-semver/">AI编码代理是否关心语义版本控制？</a><br>语义版本控制告诉开发者升级的风险程度。补丁修复错误，次版本添加不破坏任何功能的新特性，而主版本则会引入破坏性变更，使您了解升级前需要仔细检查的程度。</p>
+<p><a href="https://tailscale.com/blog/skill-sharing-with-aperture">使用Aperture在用户、团队和代理之间共享技能</a><br>Aperture将团队的代理技能集中在一个地方，供用户和代理随时使用。</p>
 
-<p><a href="https://product.hubspot.com/blog/hedging-erasure-coded-reads-in-hdfs">HDFS中擦除编码读取的优化策略</a><br>本文由HubSpot大数据团队高级工程经理Ray Mattingly撰写，探讨了HDFS中擦除编码读取的优化方法。</p>
+<p><a href="https://seangoedecke.com/glue-work-is-still-harmful-in-the-age-of-ai/">在AI时代，粘合性工作仍然有害</a><br>LLM能自动完成所有粘合性工作吗？绝对不能。许多工程师出于一种狂热的乐观主义尝试这样做，但这确实是个坏主意。与其他工程师的沟通不能委托给LLM。</p>
 
-<p><a href="https://zackoverflow.dev/writing/zig-vs-rust-in-2026">2026年Zig与Rust的比较</a><br>作者三年前在编码代理出现之前，用Zig和不安全的Rust编写了字节码虚拟机和垃圾收集器，认为在编写不安全代码的人体工程学方面，Zig更具优势。</p>
+<p><a href="https://www.pingcap.com/blog/integrating-vector-search-into-tidb-for-ai-applications/">TiDB中向量搜索如何为AI应用程序工作</a><br>**实时搜索新鲜度**：在TiDB中将向量与事务元数据一起存储消除了数据同步延迟，确保RAG应用程序始终检索最新的文档上下文。</p>
 
-<p><a href="https://frontier.replit.com/sandbox-engine-microvms-part-1/">Replit新沙箱引擎内部机制，第一部分：通往微虚拟机的路径</a><br>本文介绍了Replit新沙箱引擎的设计理念，展示了如何在Cloud Hypervisor和KVM上运行隔离的Linux内核，实现更安全的代码执行环境。</p>
+<p><a href="https://medium.com/airbnb-engineering/skipper-airbnbs-embedded-workflow-engine-is-now-open-source-78dd354f472b?source=rss----53c7c27702d5---4">Skipper，Airbnb的嵌入式工作流引擎，现已开源</a><br>PublishListing类继承自Workflow，包含reviewApproved状态字段和publish方法，用于处理发布请求。</p>
 
-<p><a href="https://bloggeek.me/is-webrtc-safe/">WebRTC安全吗？2026年安全与隐私解析</a><br>本文由Tsahi Levent-Levi撰写，深入分析了WebRTC技术的安全性和隐私保护机制，帮助读者了解其潜在风险和防护措施。</p>
-
-<p><a href="https://benmandrew.com/articles/what-is-malloc-doing-anyway">malloc到底在做什么？| Ben M. Andrew</a><br>malloc提供了简洁明了的接口：请求一定量的内存，获得指向连续字节块的void指针。使用完毕后，用相同的指针调用free，内存就会释放。</p>
-
-<p><a href="https://blog.cloudflare.com/dns-cache-memory-optimization-1111/">通过优化1.1.1.1的DNS缓存节省100TB内存 | Cloudflare博客</a><br>Cloudflare分享了其优化DNS缓存技术的经验，通过创新算法将内存使用减少了100TB，同时保持了高性能和可靠性。</p>
-
-<p><a href="https://blog.cloudflare.com/optimizing-core-unit-boot-time/">我们将核心单元启动时间从小时级缩短到分钟级 | Cloudflare博客</a><br>Cloudflare介绍了其如何通过系统级优化将核心单元的启动时间从数小时缩短到几分钟，显著提高了系统可用性和响应速度。</p>
-
-<p><a href="https://rust-osdev.com/this-month/2026-10/">Rust操作系统开发十月动态：2026年10月 | Rust OSDev</a><br>欢迎阅读新一期的&#34;Rust操作系统开发月度动态&#34;。本文概述了Rust操作系统开发生态系统中的显著变化和重要进展。</p>
+<p><a href="https://philipotoole.com/rqlite-10-6-1-to-10-7-1-encrypted-cloud-backups-security-fixes-and-internode-reliability/">rqlite 10.6.1到10.7.1：加密云备份、安全修复和节点间可靠性</a><br>rqlite是一个轻量级、开源、容错的关系型数据库，构建在SQLite和Raft共识协议之上。10.6版本到10.7版本增加了加密云备份、安全修复和节点间可靠性改进。</p>
   
 
 <h2>AI</h2>
 
 
-<p><a href="https://simonwillison.net/2026/Nov/10/muse-ember/">推出我们最小、最高效的模型：Muse Ember</a><br>Muse Ember是一款新型AI模型，体积小但效率高，在处理不同规模的提示时都表现出色，成本效益优于同类产品。</p>
+<p><a href="https://evanxmerz.com/post/ai-usage-generates-a-fragile-codebase/">AI使用产生脆弱的代码库</a><br>AI使用会产生脆弱的代码库，需要谨慎处理以确保代码质量和可维护性。</p>
 
-<p><a href="https://www.anthropic.com/claude-fable-and-mythos-5-2">推出Claude Fable 5.2和Claude Mythos 5.2</a><br>Anthropic发布了Claude Fable 5.2和Claude Mythos 5.2，这些模型专为解决最复杂的技术挑战而设计，在编码、推理和视觉领域都有显著改进。</p>
-
-<p><a href="https://www.nabo.dev/blogs/kernel-primer">（第1/3部分）GPU和内核优化入门 | Nabil Omi</a><br>本文是GPU和内核优化系列的第一部分，介绍了GPU架构基础和内核优化的核心概念，为后续深入讨论奠定基础。</p>
+<p><a href="https://hbr.org/2026/11/why-leaders-need-to-rethink-their-approach-to-ai-oversight">为什么领导者需要重新思考他们对AI监督的方法</a><br>领导者需要重新思考他们对AI监督的方法，以应对快速发展的AI技术带来的挑战和机遇。</p>
 
 
 <h2>流行工具与项目</h2>
 
 
+<p><a href="https://github.com/dsx-ai-factory/nvke">dsx-ai-factory/nvke</a><br>NVIDIA Kubernetes Engine (NVKE). A management plane for GPU Kubernetes on bare metal.</p>
+
+<p><a href="https://github.com/JuliusBrussee/caveman">JuliusBrussee/caveman</a><br>🪨 why use many token when few token do trick. Viral skill &#43; proxy for coding agents that cuts 65% of tokens by talking like a caveman.</p>
+
+<p><a href="https://github.com/Tencent/WeKnora">Tencent/WeKnora</a><br>Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomous reasoning agent, and a self-maintaining Wiki.</p>
+
 <p><a href="https://github.com/gosom/google-maps-scraper">gosom/google-maps-scraper</a><br>scrape data from Google Maps. Extracts data such as the name, address, phone number, website URL, rating, reviews number, latitude and longitude, reviews,email and more for each place</p>
+
+<p><a href="https://github.com/agent-substrate/substrate">agent-substrate/substrate</a><br>Agent Substrate: the core system</p>
 
 <p><a href="https://github.com/sundowndev/phoneinfoga">sundowndev/phoneinfoga</a><br>Information gathering framework for phone numbers</p>
 
-<p><a href="https://github.com/superplanehq/superplane">superplanehq/superplane</a><br>Open source factory for one-shot engineering</p>
+<p><a href="https://github.com/github/github-mcp-server">github/github-mcp-server</a><br>GitHub&#39;s official MCP Server</p>
 
-<p><a href="https://github.com/majd/ipatool">majd/ipatool</a><br>Command-line tool that allows you to search for iOS, iPadOS, tvOS, watchOS, visionOS, and macOS apps on the App Store, and download .ipa or macOS .pkg app packages.</p>
+<p><a href="https://github.com/trufflesecurity/trufflehog">trufflesecurity/trufflehog</a><br>Find, verify, and analyze leaked credentials</p>
 
-<p><a href="https://github.com/dsx-ai-factory/nvke">dsx-ai-factory/nvke</a><br>NVIDIA Kubernetes Engine (NVKE). A management plane for GPU Kubernetes on bare metal.</p>
+<p><a href="https://github.com/github/gh-aw">github/gh-aw</a><br>GitHub Agentic Workflows</p>
 
-<p><a href="https://github.com/TwiN/gatus">TwiN/gatus</a><br>Automated developer-oriented status page with alerting and incident support</p>
-
-<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>smart charging ☀️🚘</p>
-
-<p><a href="https://github.com/SagerNet/sing-box">SagerNet/sing-box</a><br>The universal proxy platform</p>
-
-<p><a href="https://github.com/kgretzky/evilginx2">kgretzky/evilginx2</a><br>Standalone man-in-the-middle attack framework used for phishing login credentials along with session cookies, allowing for the bypass of 2-factor authentication</p>
-
-<p><a href="https://github.com/woodpecker-ci/woodpecker">woodpecker-ci/woodpecker</a><br>Woodpecker is a simple, yet powerful CI/CD engine with great extensibility.</p>
+<p><a href="https://github.com/mikefarah/yq">mikefarah/yq</a><br>yq is a portable command-line YAML, JSON, XML, CSV, TOML, HCL and properties processor</p>
 
 
 <hr/>

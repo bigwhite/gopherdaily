@@ -1,0 +1,148 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202611/issue-20261111.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20261111</span>
+</p>
+<p>每日一谚：Never start a goroutine without knowing how it will stop </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/11/11/state-of-golang-2026-ai-agents-ecosystem">JetBrains Go 生态 2026 年度报告：AI Agent 正在重塑 Go 开发者的工作方式</a><br>JetBrains 2026 年 Go 生态报告揭示了 Go 社区正在发生的变化：开发者群体更加成熟，标准库重新获得青睐，TypeScript 成&gt;为 Go 最常见的项目搭档，而 AI Agent 已经深度融入日常开发。86% 的 Go 开发者每周使用终端 AI Agent，但他们仍然坚持人工审查。Go 并&gt;没有因为 AI 浪潮而失去自己的工程价值，反而可能因为稳定、简洁、工具链统一等特性，在 Agentic Engineering 时代迎来新的机会。</p> 
+
+<p><a href="https://tonybai.com/2026/11/11/musk-rust-c-ai-inference-stack">马斯克一句“真男人自己管内存”，把 Rust 程序员惹急了！</a><br>Musk 关于 C 和 Rust 的几句话，引发了一场编程语言争论。但真正值得关注的，是 xAI 为 Grok 4.8 重写 RL 和推理技术栈的工程选择。C 的控制力、Rust 的内存安全、AI 基础设施的性能压力，以及 AI Agent 对编程语言生态的潜在改变，都指向一个新的问题：未来的软件系统，是否还需要一种通吃所有场景的编程语言？</p> 
+
+<p><a href="https://eli.thegreenplace.net/2026/monads-in-lean/">Lean语言中的单子</a><br>单子在函数式编程语言中最重要的用例之一是通过计算来建模可变状态。有状态的计算被建模为一个函数，它接收初始状态并返回一个包含结果值和新的更新状态的元组。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/11/10/jaeger-previews-ai-assisted-troubleshooting-and-genai-observability-for-opentelemetry-traces-at-kubecon/">Jaeger在KubeCon上预览AI辅助故障排除和GenAI可观测性功能</a><br>**询问Jaeger**：一个实验性的产品内自然语言助手，允许工程师以对话方式调查追踪。响应直接流式传输到界面，显示工具调用，帮助用户理解助手如何得出结论。</p>
+
+<p><a href="https://www.cncf.io/blog/2026/11/10/open-cluster-management-ocm-becomes-a-cncf-incubating-project/">Open Cluster Management (OCM) 成为 CNCF 孵化项目</a><br>**集群管理器**：中心端控制平面，协调注册、工作、放置和附加组件。**Klusterlet**：每个托管集群上的代理，向中心注册并应用其指令。</p>
+
+<p><a href="https://www.cncf.io/blog/2026/11/10/donating-kuberay-to-cncf/">向CNCF捐赠KubeRay</a><br>**使用OpenTelemetry、Prometheus和Fluent Bit进行可观测性**：Ray在其指标管道中使用OpenTelemetry并以Prometheus格式暴露指标，使运行KubeRay的平台团队能够监控集群利用率、任务执行和Ray Serve延迟。</p>
+
+<p><a href="https://www.cncf.io/blog/2026/11/10/welcoming-openshell-to-the-cncf-open-governance-to-secure-agentic-ai/">欢迎OpenShell加入CNCF：开放治理以保障代理式AI安全</a><br>**扩展实现**：计算、凭据管理、推理和日志的参考实现，以及共享文档和一致性测试，确保第三方集成行为一致。**策略和治理模式**。</p>
+
+<p><a href="https://www.cncf.io/blog/2026/11/10/istio-enables-global-availability-for-all-workloads-traditional-agentic-and-beyond/">Istio实现所有工作负载的全球可用性——传统、代理式及更多</a><br>AI代理与传统云原生应用程序的部署正在增加，跨各种工作负载保护和网络流量管理变得更加复杂。平台运营商需要一致的安全性、可见性和控制，而不会引入额外的运营开销。</p>
+
+<p><a href="https://www.cncf.io/blog/2026/11/10/cloudnativepg-becomes-a-cncf-incubating-project/">CloudNativePG成为CNCF孵化项目</a><br>**Operator和集群资源**：控制器和中央自定义资源，用于声明和协调整个PostgreSQL集群。它直接管理Pod、卷、服务和Secret，不使用StatefulSets，逐个编排故障转移和滚动更新。</p>
+
+<p><a href="https://engineering.fb.com/2026/11/10/open-source/tlx-a-hardware-native-gpu-compiler-for-production-ml/">我们如何构建TLX：面向大规模生产ML的硬件原生GPU编译器</a><br>TLX在Blackwell上：显式的warp-group编排和流水线。matmul_kernel函数使用tlx.local_alloc分配本地内存，用于矩阵乘法操作。</p>
+
+<p><a href="https://tailscale.com/blog/skill-sharing-with-aperture">使用Aperture在用户、团队和代理之间共享技能</a><br>Aperture将团队的代理技能集中在一个地方，供用户和代理随时使用。</p>
+
+<p><a href="https://seangoedecke.com/glue-work-is-still-harmful-in-the-age-of-ai/">在AI时代，粘合性工作仍然有害</a><br>LLM能自动完成所有粘合性工作吗？绝对不能。许多工程师出于一种狂热的乐观主义尝试这样做，但这确实是个坏主意。与其他工程师的沟通不能委托给LLM。</p>
+
+<p><a href="https://www.pingcap.com/blog/integrating-vector-search-into-tidb-for-ai-applications/">TiDB中向量搜索如何为AI应用程序工作</a><br>**实时搜索新鲜度**：在TiDB中将向量与事务元数据一起存储消除了数据同步延迟，确保RAG应用程序始终检索最新的文档上下文。</p>
+
+<p><a href="https://medium.com/airbnb-engineering/skipper-airbnbs-embedded-workflow-engine-is-now-open-source-78dd354f472b?source=rss----53c7c27702d5---4">Skipper，Airbnb的嵌入式工作流引擎，现已开源</a><br>PublishListing类继承自Workflow，包含reviewApproved状态字段和publish方法，用于处理发布请求。</p>
+
+<p><a href="https://philipotoole.com/rqlite-10-6-1-to-10-7-1-encrypted-cloud-backups-security-fixes-and-internode-reliability/">rqlite 10.6.1到10.7.1：加密云备份、安全修复和节点间可靠性</a><br>rqlite是一个轻量级、开源、容错的关系型数据库，构建在SQLite和Raft共识协议之上。10.6版本到10.7版本增加了加密云备份、安全修复和节点间可靠性改进。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://evanxmerz.com/post/ai-usage-generates-a-fragile-codebase/">AI使用产生脆弱的代码库</a><br>AI使用会产生脆弱的代码库，需要谨慎处理以确保代码质量和可维护性。</p>
+
+<p><a href="https://hbr.org/2026/11/why-leaders-need-to-rethink-their-approach-to-ai-oversight">为什么领导者需要重新思考他们对AI监督的方法</a><br>领导者需要重新思考他们对AI监督的方法，以应对快速发展的AI技术带来的挑战和机遇。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/dsx-ai-factory/nvke">dsx-ai-factory/nvke</a><br>NVIDIA Kubernetes Engine (NVKE). A management plane for GPU Kubernetes on bare metal.</p>
+
+<p><a href="https://github.com/JuliusBrussee/caveman">JuliusBrussee/caveman</a><br>🪨 why use many token when few token do trick. Viral skill &#43; proxy for coding agents that cuts 65% of tokens by talking like a caveman.</p>
+
+<p><a href="https://github.com/Tencent/WeKnora">Tencent/WeKnora</a><br>Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomous reasoning agent, and a self-maintaining Wiki.</p>
+
+<p><a href="https://github.com/gosom/google-maps-scraper">gosom/google-maps-scraper</a><br>scrape data from Google Maps. Extracts data such as the name, address, phone number, website URL, rating, reviews number, latitude and longitude, reviews,email and more for each place</p>
+
+<p><a href="https://github.com/agent-substrate/substrate">agent-substrate/substrate</a><br>Agent Substrate: the core system</p>
+
+<p><a href="https://github.com/sundowndev/phoneinfoga">sundowndev/phoneinfoga</a><br>Information gathering framework for phone numbers</p>
+
+<p><a href="https://github.com/github/github-mcp-server">github/github-mcp-server</a><br>GitHub&#39;s official MCP Server</p>
+
+<p><a href="https://github.com/trufflesecurity/trufflehog">trufflesecurity/trufflehog</a><br>Find, verify, and analyze leaked credentials</p>
+
+<p><a href="https://github.com/github/gh-aw">github/gh-aw</a><br>GitHub Agentic Workflows</p>
+
+<p><a href="https://github.com/mikefarah/yq">mikefarah/yq</a><br>yq is a portable command-line YAML, JSON, XML, CSV, TOML, HCL and properties processor</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+
