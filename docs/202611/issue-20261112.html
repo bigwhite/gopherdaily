@@ -1,0 +1,134 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202611/issue-20261112.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20261112</span>
+</p>
+<p>每日一谚：Always test concurrent code using the race detector (`go test -race`). </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/11/12/go-turns-17-ai-era-roadmap">Go 17 岁了：AI 时代，Go 团队正在下一盘什么棋？</a><br>Go 迎来开源发布 17 周年。Go 技术负责人 Austin Clements 在官方博客中回顾了过去一年 Go 1.26 和 Go 1.27 的重要进展， 也披露了 Go 1.28 的部分规划。泛型、JSON v2、Green Tea GC、SIMD、后量子密码学、goroutine 泄漏分析……这些技术进展背后，更值得关注的是 Go 团队正在重新定义开发工具链：通过 Modernizers、gopls、MCP Server 和 pkg.go.dev API，让 AI Agent 也能像人类开发者一样，获 得准确、权威、可执行的 Go 工程知识。17 岁的 Go，正在为 AI 时代的软件工程做准备。</p> 
+
+<p><a href="https://importstatic.com/go/go-1-27-4-cgo-security-flags">Go 1.27.4 安全更新：cgo 标志和 net/http 修复</a><br>使用 Go 1.27.3、1.27.4、1.26.10 和 1.26.11 在 darwin/arm64 上测试；Apple clang 21.0.0；govulncheck v1.9.0。使用 cgo 的依赖项可以通过在其 `#cgo` 指令中放置标志，使 C 编译器或链接器在构建机器上运行其代码。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/11/11/openshell-on-kubernetes-a-guide-for-platform-engineers/">Kubernetes 上的 OpenShell：平台工程师指南</a><br>准备集群。安装强制执行入口和出口 NetworkPolicy 的 CNI。演示用 Cilium 替换 kindnet。然后安装 Agent Sandbox 控制器和 CRDs，然后安装 OpenShell 网关 Helm 图表。创建沙箱。</p>
+
+<p><a href="https://www.cncf.io/blog/2026/11/11/platform-engineering-needs-to-become-more-humanand-less/">平台工程需要变得更加人性化...而非其他</a><br>这从身份开始。每个代理都必须有自己的身份，与启动它的人相关联，权限范围限定为任务，并设置与任务匹配的过期时间。任务结束时，访问也随之结束。</p>
+
+<p><a href="https://p99conf.io/2026/11/11/ipl-livestreaming/">向 3200 万并发观众直播体育赛事：工程经验教训</a><br>Ashutosh Agrawal 分享了他在 IPL 板球决赛期间如何处理创纪录的并发观众级别。现场体育涉及无数未知因素，但有一点是确定的：现场视频必须为所有球迷完美播放——同时播放。</p>
+
+<p><a href="https://aws.amazon.com/blogs/aws/test-your-applications-against-aws-locally-with-aws-emulator/">使用 AWS Emulator 在本地测试您的应用程序</a><br>AWS Emulator 是一个开源工具，允许开发人员在本地环境中测试与 AWS 服务交互的应用程序，无需实际连接到 AWS 云服务。</p>
+
+<p><a href="https://www.netmux.com/blog/history-of-password-cracking">密码破解的历史</a><br>密码破解技术随着计算能力的提升而不断发展，从简单的字典攻击到复杂的彩虹表和暴力破解方法，反映了安全领域持续的攻防对抗。</p>
+
+<p><a href="https://devblogs.microsoft.com/dotnet/announcing-dotnet-11/">宣布 .NET 11</a><br>今天，我们很高兴地宣布 .NET 11 的发布！这个版本带来了性能改进、新功能和更新的 API，旨在提高开发者的生产力和应用程序的性能。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Nov/11/gemini-decisions-api/">Gemini 决策 API</a><br>Gemini Decisions API 提供了基于概率的决策功能，可以评估不同选项的可能性，如&#34;dragon&#34;、&#34;robot&#34;、&#34;france&#34;和&#34;usa&#34;等，并返回相应的概率值。</p>
+
+<p><a href="https://alignment.openai.com/cot-monitorability-model-lifecycle">什么会影响模型生命周期中的思维链可监控性？</a><br>本文探讨了预训练、架构、强化学习和模型生成数据如何影响思维链（CoT）的可监控性，Jeffrey G. 于 2026 年 11 月 10 日发表。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/gosom/google-maps-scraper">gosom/google-maps-scraper</a><br>scrape data from Google Maps. Extracts data such as the name, address, phone number, website URL, rating, reviews number, latitude and longitude, reviews,email and more for each place</p>
+
+<p><a href="https://github.com/evcc-io/evcc">evcc-io/evcc</a><br>smart charging ☀️🚘</p>
+
+<p><a href="https://github.com/henrygd/beszel">henrygd/beszel</a><br>Lightweight server monitoring with historical data, docker stats, and alerts.</p>
+
+<p><a href="https://github.com/trufflesecurity/trufflehog">trufflesecurity/trufflehog</a><br>Find, verify, and analyze leaked credentials</p>
+
+<p><a href="https://github.com/Tencent/LoopForge">Tencent/LoopForge</a><br>Self-hosted workflows for coding-agent delivery. Orchestrate CodeBuddy, Codex and Claude Code with scripts and human approval gates. Includes Local workflows for coding assistants.</p>
+
+<p><a href="https://github.com/projectdiscovery/nuclei">projectdiscovery/nuclei</a><br>Nuclei is a fast, customizable vulnerability scanner powered by the global security community and built on a simple YAML-based DSL, enabling collaboration to tackle trending vulnerabilities on the int</p>
+
+<p><a href="https://github.com/alibaba/open-code-review">alibaba/open-code-review</a><br>Secure, fast, efficient, battle-tested at Alibaba&#39;s scale. Hybrid architecture code review tool: deterministic pipelines &#43; LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE,</p>
+
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.</p>
+
+<p><a href="https://github.com/agent-substrate/substrate">agent-substrate/substrate</a><br>Agent Substrate: the core system</p>
+
+<p><a href="https://github.com/unstablebuild/rune">unstablebuild/rune</a><br>a fast, GPU-accelerated, full-featured IDE and terminal multiplexer, suitable both for automatic and manual programming.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+
