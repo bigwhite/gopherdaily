@@ -1,0 +1,152 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202611/issue-20261113.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20261113</span>
+</p>
+<p>每日一谚：Avoid exporting struct fields unless mutation from outside is intended. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/11/13/go-ordered-map-sorted-collection-proposal-60630">Go 终于要有官方有序 Map 了！继泛型 Set 之后，Go Collection API 再进一步</a><br>Go 的集合 API 正在迎来一轮值得关注的演进。继泛型 Set 提案被接受后，有序 Map/Set 提案 #60630 也获得了接受。这不仅&gt;意味着开发者未来可能拥有官方生态背书的有序集合，也体现了 Go 团队对泛型、迭代器和通用数据结构之间关系的持续探索。</p> 
+
+<p><a href="https://tonybai.com/2026/11/13/ai-era-what-should-software-engineers-do-now">AI 时代，程序员最需要改变的，是对自己价值的认知</a><br>当 AI 能够极速且低成本地编写代码，程序员传统的“技术栈护城河”正在加速消融。结合 GoDaddy 资深工程师 Scott Bolinger 与知名极客 Dan Luu 的前沿思考，本文深度探讨了 AI 时代软件工程师的认知跃迁：构建普通 SaaS 不再是难题，工程师应该跳出代码局部实现 ，跨越到涵盖产品定位、商业逻辑与用户心理的“商业全栈（Business Stack）”。更关键的是，不要用过去昂贵的成本模型限制今天的想象力——&gt;由代码生产者蜕变为富有创造力的问题解决者，对软件抱有更大的野心。</p> 
+
+<p><a href="https://dolthub.com/blog/2026-11-13-lazy-flush/">延迟刷新</a><br>在事务中，对表的修改对同一事务内的读写者可见，并且在`COMMIT`之前不会持久化（或者在`ROLLBACK`时被丢弃）。Dolt通过从当前RootValue读取并将结果立即具体化为新的RootValue来处理这一点。</p> 
+
+<p><a href="https://victoriametrics.com/blog/introducing-victoriastack-the-right-database-for-every-signal/">介绍VictoriaStack：适合每种信号的数据库</a><br>VictoriaStack是专为处理各种信号类型而设计的数据库解决方案，旨在提供高效的数据存储和检索能力。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.cncf.io/blog/2026/11/12/gang-scheduling-and-topology-aware-placement-for-ai-training-in-kubernetes/">Kubernetes中AI训练的集群调度和拓扑感知放置</a><br>`kueue_evicted_workloads_total`指标通过原因标签跟踪驱逐情况，区分每次驱逐的原因。当TAS下的节点发生故障且Kueue无法找到替代节点时，它会以`reason=&#34;NodeFailures&#34;`原因驱逐受影响的工作负载。</p>
+
+<p><a href="https://blogs.microsoft.com/blog/2026/11/12/from-ai-ambition-to-business-impact/">从AI雄心到商业影响</a><br>**Publicis Groupe**正与我们的工程师合作，将AI融入其核心业务和客户服务中。微软工程师与Publicis团队并肩合作，基于Microsoft IQ设计并构建智能流程，使智能体能够处理业务上下文和数据。</p>
+
+<p><a href="https://geohot.github.io//blog/jekyll/update/2026/11/13/first-strike.html">首次打击</a><br>这是一项对美国长期发展有意义的策略。尽可能多地向中国销售AI芯片，用所得资金购买太阳能电池板和电池工厂，并尽快扩大电力产能。从根本上说，计算能力是电力的函数。</p>
+
+<p><a href="https://medium.com/pinterest-engineering/how-pinterest-improved-analytics-agent-compliance-with-loop-engineering-d3c52d0abaa2?source=rss----4c5a5f6279b6---4">Pinterest如何通过循环工程改进分析智能体合规性</a><br>**当前结果**：每个测试套件的评分，包括未用于调整的验证案例。**失败原因**：仍然失败的案例及其可能的原因，帮助智能体解决更广泛的问题模式，而不是一次只处理一个示例。</p>
+
+<p><a href="https://blog.rust-lang.org/2026/11/12/Rust-1.100.0/">宣布Rust 1.100.0版本 | Rust博客</a><br>Rust团队很高兴宣布Rust的新版本1.100.0。Rust是一种编程语言，使每个人都能构建可靠和高效的软件。如果您通过`rustup`安装了早期版本的Rust，可以获取1.100.0版本。</p>
+
+<p><a href="https://rust-glancer.github.io/blog/persistent-incrementality-in-rust/">Rust中的持久增量计算 · Rust Glancer</a><br>有一个很棒的概念：增量计算。这个概念很简单，如果您计算了某些内容，然后输入发生变化，这并不意味着您需要重新计算所有内容。</p>
+
+<p><a href="https://www.ibm.com/quantum/blog/dev-tools-qdc-2026">QDC 2026：量子开发者需要了解的内容 | IBM量子计算博客</a><br>这是IBM量子开发者大会2026上发布的硬件、软件和工作流程的开发者指南，帮助量子开发者了解最新技术动态。</p>
+
+<p><a href="https://forge-blog.github.io/posts/rust-std-memory-safety/">Rust标准库中的内存安全问题 · FORGE实验室</a><br>微软的FORGE实验室在Rust标准库（`std`和`core`）中发现了多个内存安全问题，包括完全用安全Rust编写的代码可能触发未定义行为的情况。</p>
+
+<p><a href="https://blog.cloudflare.com/choosing-quepaxa/">选择QuePaxa：一种不寻常的共识算法 | Cloudflare博客</a><br>Cloudflare选择了QuePaxa这种不寻常的共识算法，这是一种专为分布式系统设计的新型共识机制，提供了独特的性能和可靠性优势。</p>
+
+<p><a href="https://deepsystemstuff.com/patent-for-pagerank-algorithm-who-made-google-search-what-it-is-today-has-expired-what-does-it-means-for-open-source-developers/">Google搜索的基础PageRank专利已过期。这将产生什么影响</a><br>PageRank和BackRub的诞生（1996-1998）：1996年，Larry Page（PageRank名称的来源）和Sergey Brin是斯坦福大学的博士生，正在开发**BackRub**——一种能够分析&#34;反向链接&#34;（入站链接）的网络爬虫。</p>
+
+<p><a href="http://letoverlambda.com/">Let Over Lambda</a><br>这是一本关于Lisp语言50年发展历程的书籍，由Doug Hoyte撰写，深入探讨了Lisp编程语言的核心理念和高级技术。</p>
+
+<p><a href="https://makepad.github.io/relax/">Relax：无需等待的Rust</a><br>Relax是一个用Rust编写的高编译器和JIT运行时，它可以在构建程序的同时运行程序，无需等待完整编译完成，直接从源代码运行Cargo包。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://incubator.to/u/titpetric/structural-guards-and-coding-agents">结构化防护和编码智能体 · 孵化器</a><br>使用编码智能体（它们不完全像人）时，对所需输出进行断言变得有些繁琐。我的方法是不这样做，至少在我提示所需内容时是这样，而是期望随着时间的推移进行修正。那么，这些修正如何发生呢？</p>
+
+<p><a href="https://developers.openai.com/blog/securing-persistent-agents-like-openclaw-at-openai">在OpenAI保护像OpenClaw这样的持久智能体</a><br>当OpenClaw在一年前推出时，它向世界展示了持久智能体的能力。OpenAI正在采取措施确保这类持久智能体的安全性和可靠性。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/croit/ceph-rust">croit/ceph-rust：从头用Rust重写的Ceph...</a><br>这是一个从头用Rust重写的Ceph项目，提供线兼容的守护进程和客户端库，以实现性能和稳定性的巨大飞跃。包括具有自己NVMe存储的OSD、CephFS2、librustyrados等组件。</p>
+
+<p><a href="https://github.com/alibaba/open-code-review">alibaba/open-code-review</a><br>Secure, fast, efficient, battle-tested at Alibaba&#39;s scale. Hybrid architecture code review tool: deterministic pipelines &#43; LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE,</p>
+
+<p><a href="https://github.com/tailscale/tailcat">tailscale/tailcat</a><br>like netcat, but over Tailscale&#39;s data plane, without Tailscale&#39;s control plane</p>
+
+<p><a href="https://github.com/Tencent/LoopForge">Tencent/LoopForge</a><br>Self-hosted workflows for coding-agent delivery. Orchestrate CodeBuddy, Codex and Claude Code with scripts and human approval gates. Includes Local workflows for coding assistants.</p>
+
+<p><a href="https://github.com/Tencent/WeKnora">Tencent/WeKnora</a><br>Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomous reasoning agent, and a self-maintaining Wiki.</p>
+
+<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with Kimi, GLM, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.</p>
+
+<p><a href="https://github.com/Gentleman-Programming/gentle-ai">Gentleman-Programming/gentle-ai</a><br>Gentle-AI configures the AI coding agents you already use: Claude Code, Cursor, OpenCode, Codex, Pi, and more. Choose persistent memory, Organic-Driven Development, curated skills, MCP servers, person</p>
+
+<p><a href="https://github.com/modelcontextprotocol/go-sdk">modelcontextprotocol/go-sdk</a><br>The official Go SDK for Model Context Protocol servers and clients. Maintained in collaboration with Google.</p>
+
+<p><a href="https://github.com/multica-ai/multica">multica-ai/multica</a><br>Make humans and AI agents work as one team — open-source and self-hostable.</p>
+
+<p><a href="https://github.com/hashicorp/vault">hashicorp/vault</a><br>A tool for secrets management, encryption as a service, and privileged access management</p>
+
+<p><a href="https://github.com/agent-substrate/substrate">agent-substrate/substrate</a><br>Agent Substrate: the core system</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+
