@@ -45,7 +45,7 @@ img {
 
 <div style="text-align: center; margin-bottom: 10px;">
   <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
-  <a href=https://bigwhite.github.io/gopherdaily/202611/issue-20261113.html style="margin: 0 10px;">Web版</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202611/issue-20261116.html style="margin: 0 10px;">Web版</a> |
   <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
   <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
   <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
@@ -57,9 +57,9 @@ img {
 
 <div>
 <p class="issue" style="text-align:center;">
-  <span style="text-align:center;">20261113</span>
+  <span style="text-align:center;">20261116</span>
 </p>
-<p>每日一谚：Avoid exporting struct fields unless mutation from outside is intended. </p>
+<p>每日一谚：Keep channel ownership local to the goroutine that writes to it. </p>
 </div>
 
 <hr/>
@@ -67,75 +67,75 @@ img {
 <h2>Go技术生态</h2>
 
 
-<p><a href="https://tonybai.com/2026/11/13/go-ordered-map-sorted-collection-proposal-60630">Go 终于要有官方有序 Map 了！继泛型 Set 之后，Go Collection API 再进一步</a><br>Go 的集合 API 正在迎来一轮值得关注的演进。继泛型 Set 提案被接受后，有序 Map/Set 提案 #60630 也获得了接受。这不仅&gt;意味着开发者未来可能拥有官方生态背书的有序集合，也体现了 Go 团队对泛型、迭代器和通用数据结构之间关系的持续探索。</p> 
+<p><a href="https://tonybai.com/2026/11/16/go-simd-api-graduation-proposal-83009">Go SIMD 要转正了：一份 API 规范背后的设计野心</a><br>经过多个版本的实验探索，Go 技术负责人 Austin Clements 正式提交 Proposal #83009，提议将 simd 与 simd/archsimd 中经 过验证的核心 API 移出实验开关、走向正式转正。这项工作不仅建立了“上层长度无关的可移植包 &#43; 下层硬件特化包”的双层架构，更确立了“One name means one thing”的跨平台语义一致性原则。最亮眼的工程突破在于引入了一份用 Go 编写的“可执行 API 规范”，实现了 API 定义、文 档生成与跨架构行为测试的闭环自证。本文深度拆解 Go SIMD 从底层指令试验迈向成熟工程体系的技术底牌。</p> 
 
-<p><a href="https://tonybai.com/2026/11/13/ai-era-what-should-software-engineers-do-now">AI 时代，程序员最需要改变的，是对自己价值的认知</a><br>当 AI 能够极速且低成本地编写代码，程序员传统的“技术栈护城河”正在加速消融。结合 GoDaddy 资深工程师 Scott Bolinger 与知名极客 Dan Luu 的前沿思考，本文深度探讨了 AI 时代软件工程师的认知跃迁：构建普通 SaaS 不再是难题，工程师应该跳出代码局部实现 ，跨越到涵盖产品定位、商业逻辑与用户心理的“商业全栈（Business Stack）”。更关键的是，不要用过去昂贵的成本模型限制今天的想象力——&gt;由代码生产者蜕变为富有创造力的问题解决者，对软件抱有更大的野心。</p> 
+<p><a href="https://antonz.org/probabilistic-data-structures/">Go中的概率数据结构</a><br>概率数据结构能对处理的数据问题提供近似答案。集合是否包含特定项目？集合中有多少个唯一项目？哪些项目出现频率最高？</p> 
 
-<p><a href="https://dolthub.com/blog/2026-11-13-lazy-flush/">延迟刷新</a><br>在事务中，对表的修改对同一事务内的读写者可见，并且在`COMMIT`之前不会持久化（或者在`ROLLBACK`时被丢弃）。Dolt通过从当前RootValue读取并将结果立即具体化为新的RootValue来处理这一点。</p> 
+<p><a href="https://resend.com/blog/migrating-our-email-api-to-go">将我们的电子邮件API服务迁移到Go · Resend</a><br>重建API意味着保留多年的决策，包括那些未写入文档的决策。对于Resend来说，这包括匹配错误响应、幂等行为、速率限制、存储数据和电子邮件内容本身。</p> 
 
-<p><a href="https://victoriametrics.com/blog/introducing-victoriastack-the-right-database-for-every-signal/">介绍VictoriaStack：适合每种信号的数据库</a><br>VictoriaStack是专为处理各种信号类型而设计的数据库解决方案，旨在提供高效的数据存储和检索能力。</p> 
+<p><a href="https://justinfx.com/2026/11/10/go-gui-five-ways/">一个Go应用，五种实现方式</a><br>我一直关注Go的GUI选项。我的GUI背景主要是Qt，在Python和C&#43;&#43;中都有使用，并在Wētā FX用它编写了一些相当大的应用程序。所以当我刚开始使用Go时，我真正想要的只是另一个Qt。</p> 
+
+<p><a href="https://skudra.net/blog/field-pointers-as-column-names">将字段指针作为列名：无需代码生成的编译检查Go查询 | ant</a><br>每次为Go项目选择数据库库时，都归结为我宁愿忍受哪个问题。GORM和Bun将列名作为字符串处理，所以`Where(&#34;agee &gt; ?&#34;, 18)`可以编译但在查询运行时会失败。</p> 
+
+<p><a href="https://internals-for-interns.com/posts/go-compiler-pgo/">深入PGO内部机制</a><br>这是理解Go系列的第二部分。前一篇讨论了SIMD和Go的关系。本文将深入探讨PGO（Profile-Guided Optimization）的工作原理及其在Go编译器中的应用。</p> 
 
 
 <h2>云原生技术</h2>
 
 
-<p><a href="https://www.cncf.io/blog/2026/11/12/gang-scheduling-and-topology-aware-placement-for-ai-training-in-kubernetes/">Kubernetes中AI训练的集群调度和拓扑感知放置</a><br>`kueue_evicted_workloads_total`指标通过原因标签跟踪驱逐情况，区分每次驱逐的原因。当TAS下的节点发生故障且Kueue无法找到替代节点时，它会以`reason=&#34;NodeFailures&#34;`原因驱逐受影响的工作负载。</p>
+<p><a href="https://www.mtsoukalos.eu/2026/11/why-zig-over-c-for-systems-programming/">为什么在系统编程中选择Zig而非C</a><br>在我写了《为什么在系统编程中选择Zig而非Rust》之后，下一个显而易见的问题就是C。关于Rust的问题涉及安全性以及我愿意为此接受多少仪式性代码。</p>
 
-<p><a href="https://blogs.microsoft.com/blog/2026/11/12/from-ai-ambition-to-business-impact/">从AI雄心到商业影响</a><br>**Publicis Groupe**正与我们的工程师合作，将AI融入其核心业务和客户服务中。微软工程师与Publicis团队并肩合作，基于Microsoft IQ设计并构建智能流程，使智能体能够处理业务上下文和数据。</p>
+<p><a href="https://discourse.haskell.org/t/a-technical-vision-for-the-haskell-ecosystem/15078">Haskell生态系统的技术愿景</a><br>Haskell基金会发布了Haskell生态系统的技术愿景。该愿景由技术领导委员会制定，旨在指导Haskell语言未来的发展方向和重点领域。</p>
 
-<p><a href="https://geohot.github.io//blog/jekyll/update/2026/11/13/first-strike.html">首次打击</a><br>这是一项对美国长期发展有意义的策略。尽可能多地向中国销售AI芯片，用所得资金购买太阳能电池板和电池工厂，并尽快扩大电力产能。从根本上说，计算能力是电力的函数。</p>
+<p><a href="https://blog.rust-lang.org/2026/11/11/gsoc-2026-results/">Google夏季代码营2026年成果 | Rust博客</a><br>Rust项目今年第三次参加了Google夏季代码营(GSoC)。该项目选定了多个项目参与，旨在为开源社区培养新人才。</p>
 
-<p><a href="https://medium.com/pinterest-engineering/how-pinterest-improved-analytics-agent-compliance-with-loop-engineering-d3c52d0abaa2?source=rss----4c5a5f6279b6---4">Pinterest如何通过循环工程改进分析智能体合规性</a><br>**当前结果**：每个测试套件的评分，包括未用于调整的验证案例。**失败原因**：仍然失败的案例及其可能的原因，帮助智能体解决更广泛的问题模式，而不是一次只处理一个示例。</p>
+<p><a href="https://theconsensus.dev/p/2026/11/08/c-memory-management-survey.html">40个主要C项目的内存管理调查</a><br>一项对40个主要C项目的调查显示，仅8个项目完全使用malloc/free进行内存分配，仅2个项目从不使用malloc/free，15个项目在某些时候使用了区域内存管理，7个项目采用了其他内存管理策略。</p>
 
-<p><a href="https://blog.rust-lang.org/2026/11/12/Rust-1.100.0/">宣布Rust 1.100.0版本 | Rust博客</a><br>Rust团队很高兴宣布Rust的新版本1.100.0。Rust是一种编程语言，使每个人都能构建可靠和高效的软件。如果您通过`rustup`安装了早期版本的Rust，可以获取1.100.0版本。</p>
-
-<p><a href="https://rust-glancer.github.io/blog/persistent-incrementality-in-rust/">Rust中的持久增量计算 · Rust Glancer</a><br>有一个很棒的概念：增量计算。这个概念很简单，如果您计算了某些内容，然后输入发生变化，这并不意味着您需要重新计算所有内容。</p>
-
-<p><a href="https://www.ibm.com/quantum/blog/dev-tools-qdc-2026">QDC 2026：量子开发者需要了解的内容 | IBM量子计算博客</a><br>这是IBM量子开发者大会2026上发布的硬件、软件和工作流程的开发者指南，帮助量子开发者了解最新技术动态。</p>
-
-<p><a href="https://forge-blog.github.io/posts/rust-std-memory-safety/">Rust标准库中的内存安全问题 · FORGE实验室</a><br>微软的FORGE实验室在Rust标准库（`std`和`core`）中发现了多个内存安全问题，包括完全用安全Rust编写的代码可能触发未定义行为的情况。</p>
-
-<p><a href="https://blog.cloudflare.com/choosing-quepaxa/">选择QuePaxa：一种不寻常的共识算法 | Cloudflare博客</a><br>Cloudflare选择了QuePaxa这种不寻常的共识算法，这是一种专为分布式系统设计的新型共识机制，提供了独特的性能和可靠性优势。</p>
-
-<p><a href="https://deepsystemstuff.com/patent-for-pagerank-algorithm-who-made-google-search-what-it-is-today-has-expired-what-does-it-means-for-open-source-developers/">Google搜索的基础PageRank专利已过期。这将产生什么影响</a><br>PageRank和BackRub的诞生（1996-1998）：1996年，Larry Page（PageRank名称的来源）和Sergey Brin是斯坦福大学的博士生，正在开发**BackRub**——一种能够分析&#34;反向链接&#34;（入站链接）的网络爬虫。</p>
-
-<p><a href="http://letoverlambda.com/">Let Over Lambda</a><br>这是一本关于Lisp语言50年发展历程的书籍，由Doug Hoyte撰写，深入探讨了Lisp编程语言的核心理念和高级技术。</p>
-
-<p><a href="https://makepad.github.io/relax/">Relax：无需等待的Rust</a><br>Relax是一个用Rust编写的高编译器和JIT运行时，它可以在构建程序的同时运行程序，无需等待完整编译完成，直接从源代码运行Cargo包。</p>
+<p><a href="https://slack.engineering/slacks-migration-to-a-cellular-architecture/">Slack向cell架构的迁移</a><br>Slack工程团队将其系统迁移到细胞架构，以提高系统的可扩展性和可靠性。这种架构类似于生物细胞，将系统划分为独立但相互协作的单元，每个单元负责特定功能。</p>
   
 
 <h2>AI</h2>
 
 
-<p><a href="https://incubator.to/u/titpetric/structural-guards-and-coding-agents">结构化防护和编码智能体 · 孵化器</a><br>使用编码智能体（它们不完全像人）时，对所需输出进行断言变得有些繁琐。我的方法是不这样做，至少在我提示所需内容时是这样，而是期望随着时间的推移进行修正。那么，这些修正如何发生呢？</p>
+<p><a href="https://tonybai.com/2026/11/15/ai-human-civilization-acceleration-and-successor">AI 正在逼迫人类加速？一个细思极恐的猜想：我们会不会亲手培养出自己的继任者？</a><br>AI 让人类生产力飞速提升，却也让整个社会陷入更快的竞争节奏。从个人到企业，再到大模型厂商，所有人都在不断加速。也许 这背后并不存在一只拥有意识的 AI 之手，但人类正在通过竞争、资本和技术投入，主动推动 AI 的能力进化。更值得警惕的是，AI 未必需要产 生统治人类的野心。只要人类不断把决策、执行和管理权交给 AI，最终就可能亲手培养出自己的文明继任者。</p>
 
-<p><a href="https://developers.openai.com/blog/securing-persistent-agents-like-openclaw-at-openai">在OpenAI保护像OpenClaw这样的持久智能体</a><br>当OpenClaw在一年前推出时，它向世界展示了持久智能体的能力。OpenAI正在采取措施确保这类持久智能体的安全性和可靠性。</p>
+<p><a href="https://tonybai.com/2026/11/14/ai-era-cloud-native-paradigm-reversed-agents-are-pets">AI 时代，云原生范式被反转：Agent 不再是 Cattle，而是你的 Pet</a><br>云原生时代，我们努力让服务器变成可以随时替换的 Cattle；AI Agent 时代，Steve Yegge 却发现，长期协作的 Agent 正在变 成需要精心培养的 Pet。从 Gas Town 到 Wheelhouse，他用数十个 Agent 构建了一家 AI 软件工厂，也揭示了 Agent 身份、长期记忆、组织治 理和人类创造力等新问题。AI 时代，软件工程正在从管理计算资源，走向管理一个由数字员工组成的组织。</p>
+
+<p><a href="https://www.anthropic.com/research/building-strong-safety-evaluations">构建强大的安全评估</a><br>安全评估为我们对AI模型做出的最关键决策提供依据，包括模型是否准备部署、应配备哪些保护措施以及下一轮安全训练和研究应关注什么。</p>
+
+<p><a href="https://huggingface.co/blog/ggml-org/llama-cpp-v1">llama.cpp v1.0.0：本地AI生态系统更坚实的基础</a><br>llama.cpp v1.0.0版本为本地AI生态系统提供了更坚实的基础。这个重要更新优化了模型性能，提高了推理效率，并增强了与各种硬件的兼容性。</p>
+
+<p><a href="https://gabeorlanski.github.io/posts/slop-moves-up/">Slop正在向上层移动</a><br>Slop项目正在从底层向上层迁移，2025年的代码主要解决了冗长检查、死代码和被忽略的错误问题。这一迁移旨在提高代码质量和可维护性。</p>
+
+<p><a href="https://jakub.jankiewicz.org/blog/ai-code-open-source/">所有AI生成的代码都应该是开源的</a><br>我认为所有AI生成的代码都应该是开源的。首先，AI模型是在大量开源代码上训练的，这些代码自RMS宣布GNU项目和自由软件运动以来就已经存在。</p>
+
+<p><a href="https://www.baseten.co/blog/the-efficient-frontier-of-llm-inference">LLM推理的有效前沿</a><br>LLM推理的有效前沿探讨了不同的推理技术如何在模型性能和资源消耗之间取得平衡。这些技术旨在优化大型语言模型的推理效率，同时保持输出质量。</p>
+
+<p><a href="https://qwen.ai/blog?id=qwen4-max">Qwen 4 max发布</a><br></p>
 
 
 <h2>流行工具与项目</h2>
 
 
-<p><a href="https://github.com/croit/ceph-rust">croit/ceph-rust：从头用Rust重写的Ceph...</a><br>这是一个从头用Rust重写的Ceph项目，提供线兼容的守护进程和客户端库，以实现性能和稳定性的巨大飞跃。包括具有自己NVMe存储的OSD、CephFS2、librustyrados等组件。</p>
-
 <p><a href="https://github.com/alibaba/open-code-review">alibaba/open-code-review</a><br>Secure, fast, efficient, battle-tested at Alibaba&#39;s scale. Hybrid architecture code review tool: deterministic pipelines &#43; LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE,</p>
-
-<p><a href="https://github.com/tailscale/tailcat">tailscale/tailcat</a><br>like netcat, but over Tailscale&#39;s data plane, without Tailscale&#39;s control plane</p>
 
 <p><a href="https://github.com/Tencent/LoopForge">Tencent/LoopForge</a><br>Self-hosted workflows for coding-agent delivery. Orchestrate CodeBuddy, Codex and Claude Code with scripts and human approval gates. Includes Local workflows for coding assistants.</p>
 
-<p><a href="https://github.com/Tencent/WeKnora">Tencent/WeKnora</a><br>Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomous reasoning agent, and a self-maintaining Wiki.</p>
+<p><a href="https://github.com/google/ax">google/ax</a><br>Agent Executor (AX) is Google&#39;s open agentic orchestration runtime</p>
 
-<p><a href="https://github.com/ollama/ollama">ollama/ollama</a><br>Get up and running with Kimi, GLM, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.</p>
+<p><a href="https://github.com/tailscale/tailcat">tailscale/tailcat</a><br>like netcat, but over Tailscale&#39;s data plane, without Tailscale&#39;s control plane</p>
 
-<p><a href="https://github.com/Gentleman-Programming/gentle-ai">Gentleman-Programming/gentle-ai</a><br>Gentle-AI configures the AI coding agents you already use: Claude Code, Cursor, OpenCode, Codex, Pi, and more. Choose persistent memory, Organic-Driven Development, curated skills, MCP servers, person</p>
+<p><a href="https://github.com/kubescape/kubescape">kubescape/kubescape</a><br>Kubescape is an open-source Kubernetes security platform for your IDE, CI/CD pipelines, and clusters. It includes risk analysis, security, compliance, and misconfiguration scanning, saving Kubernetes </p>
 
-<p><a href="https://github.com/modelcontextprotocol/go-sdk">modelcontextprotocol/go-sdk</a><br>The official Go SDK for Model Context Protocol servers and clients. Maintained in collaboration with Google.</p>
+<p><a href="https://github.com/trustwallet/assets">trustwallet/assets</a><br>A comprehensive, up-to-date collection of information about several thousands (!) of crypto tokens.</p>
 
-<p><a href="https://github.com/multica-ai/multica">multica-ai/multica</a><br>Make humans and AI agents work as one team — open-source and self-hostable.</p>
+<p><a href="https://github.com/HuskerMinion/techo5">HuskerMinion/techo5</a><br>Open firmware for the Echo Show 5, 1st and 2nd gen: Alpine Linux instead of Android, no Alexa. A local Home Assistant voice satellite with its own touch screen, on-device wake word, SSH and A/B over-t</p>
 
-<p><a href="https://github.com/hashicorp/vault">hashicorp/vault</a><br>A tool for secrets management, encryption as a service, and privileged access management</p>
+<p><a href="https://github.com/gravitational/teleport">gravitational/teleport</a><br>The easiest, and most secure way to access and protect all of your infrastructure.</p>
 
-<p><a href="https://github.com/agent-substrate/substrate">agent-substrate/substrate</a><br>Agent Substrate: the core system</p>
+<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.</p>
+
+<p><a href="https://github.com/erigontech/erigon">erigontech/erigon</a><br>Ethereum implementation on the efficiency frontier</p>
 
 
 <hr/>
