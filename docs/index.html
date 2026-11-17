@@ -45,7 +45,7 @@ img {
 
 <div style="text-align: center; margin-bottom: 10px;">
   <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
-  <a href=https://bigwhite.github.io/gopherdaily/202611/issue-20261116.html style="margin: 0 10px;">Web版</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202611/issue-20261117.html style="margin: 0 10px;">Web版</a> |
   <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
   <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
   <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
@@ -57,9 +57,9 @@ img {
 
 <div>
 <p class="issue" style="text-align:center;">
-  <span style="text-align:center;">20261116</span>
+  <span style="text-align:center;">20261117</span>
 </p>
-<p>每日一谚：Keep channel ownership local to the goroutine that writes to it. </p>
+<p>每日一谚：Reflection is never clear </p>
 </div>
 
 <hr/>
@@ -67,75 +67,61 @@ img {
 <h2>Go技术生态</h2>
 
 
-<p><a href="https://tonybai.com/2026/11/16/go-simd-api-graduation-proposal-83009">Go SIMD 要转正了：一份 API 规范背后的设计野心</a><br>经过多个版本的实验探索，Go 技术负责人 Austin Clements 正式提交 Proposal #83009，提议将 simd 与 simd/archsimd 中经 过验证的核心 API 移出实验开关、走向正式转正。这项工作不仅建立了“上层长度无关的可移植包 &#43; 下层硬件特化包”的双层架构，更确立了“One name means one thing”的跨平台语义一致性原则。最亮眼的工程突破在于引入了一份用 Go 编写的“可执行 API 规范”，实现了 API 定义、文 档生成与跨架构行为测试的闭环自证。本文深度拆解 Go SIMD 从底层指令试验迈向成熟工程体系的技术底牌。</p> 
+<p><a href="https://internals-for-interns.com/posts/linux-kernel-ebpf/">深入理解linux eBPF</a><br>这是Linux内核系列的第12部分，介绍了eBPF技术及其在Linux内核中的应用。文章涵盖了从内核启动到系统调用和内存管理的基础知识。</p> 
 
-<p><a href="https://antonz.org/probabilistic-data-structures/">Go中的概率数据结构</a><br>概率数据结构能对处理的数据问题提供近似答案。集合是否包含特定项目？集合中有多少个唯一项目？哪些项目出现频率最高？</p> 
+<p><a href="https://www.meetneptune.com/engineering/node-to-go-in-two-weeks">我们如何在两周内将整个后端从Node迁移到Go</a><br>10月30日，我们合并了一个具有空路由表的Go服务器。11月13日，我们删除了Node后端。在此期间，所有请求、后台作业和登录都进行了迁移，同时夫妇及其律师继续使用Neptune，团队其余成员在同一代码库上继续开发。</p> 
 
-<p><a href="https://resend.com/blog/migrating-our-email-api-to-go">将我们的电子邮件API服务迁移到Go · Resend</a><br>重建API意味着保留多年的决策，包括那些未写入文档的决策。对于Resend来说，这包括匹配错误响应、幂等行为、速率限制、存储数据和电子邮件内容本身。</p> 
-
-<p><a href="https://justinfx.com/2026/11/10/go-gui-five-ways/">一个Go应用，五种实现方式</a><br>我一直关注Go的GUI选项。我的GUI背景主要是Qt，在Python和C&#43;&#43;中都有使用，并在Wētā FX用它编写了一些相当大的应用程序。所以当我刚开始使用Go时，我真正想要的只是另一个Qt。</p> 
-
-<p><a href="https://skudra.net/blog/field-pointers-as-column-names">将字段指针作为列名：无需代码生成的编译检查Go查询 | ant</a><br>每次为Go项目选择数据库库时，都归结为我宁愿忍受哪个问题。GORM和Bun将列名作为字符串处理，所以`Where(&#34;agee &gt; ?&#34;, 18)`可以编译但在查询运行时会失败。</p> 
-
-<p><a href="https://internals-for-interns.com/posts/go-compiler-pgo/">深入PGO内部机制</a><br>这是理解Go系列的第二部分。前一篇讨论了SIMD和Go的关系。本文将深入探讨PGO（Profile-Guided Optimization）的工作原理及其在Go编译器中的应用。</p> 
+<p><a href="https://tonybai.com/2026/11/17/rust-ai-borrow-checker-appeasement-debt">Rust 本想消灭 40 年技术债，AI 却造出了新债</a><br>Rust 本想终结 C/C&#43;&#43; 四十年的内存安全技术债，AI 却在不知不觉中造出了新债。近日 Reddit r/rust 社区一则关于代码审计&gt;的实录引爆全网：Claude 将 1.2 万行 TypeScript 游戏引擎迁移至 Rust，虽然通过了全部 3091 项确定性测试，却为了讨好借用检查器而在热 循环中塞入 175 次 clone()、滥用 mem::take() 并膨胀出单文件 1.2 万行的巨石代码。本文深度剖析这种“借用检查器迎合型技术债”的成因与 重构经验，揭示 AI 编程时代技术债生产自动化的严峻挑战。</p> 
 
 
 <h2>云原生技术</h2>
 
 
-<p><a href="https://www.mtsoukalos.eu/2026/11/why-zig-over-c-for-systems-programming/">为什么在系统编程中选择Zig而非C</a><br>在我写了《为什么在系统编程中选择Zig而非Rust》之后，下一个显而易见的问题就是C。关于Rust的问题涉及安全性以及我愿意为此接受多少仪式性代码。</p>
+<p><a href="https://kubernetes.io/blog/2026/11/16/ipvs-removal/">计划移除kube-proxy IPVS后端</a><br>首先，`iptables`在_数据平面_延迟（客户端建立与服务连接的速度）方面存在问题，因为kube-proxy会为每个服务IP写入单独的iptables规则，导致每个新连接都需要与一系列长规则进行匹配。</p>
 
-<p><a href="https://discourse.haskell.org/t/a-technical-vision-for-the-haskell-ecosystem/15078">Haskell生态系统的技术愿景</a><br>Haskell基金会发布了Haskell生态系统的技术愿景。该愿景由技术领导委员会制定，旨在指导Haskell语言未来的发展方向和重点领域。</p>
+<p><a href="https://www.docker.com/blog/docker-sandboxes-firecrawl-web-access/">使用Firecrawl工具为Docker沙箱提供沙箱智能体的实时网络访问</a><br>**针对当前API编写代码，而不是记忆中的API**。在调用库或SaaS API之前，智能体会抓取其参考页面和变更日志，使用当前参数名称并识别训练截止日期后发布的弃用功能。</p>
 
-<p><a href="https://blog.rust-lang.org/2026/11/11/gsoc-2026-results/">Google夏季代码营2026年成果 | Rust博客</a><br>Rust项目今年第三次参加了Google夏季代码营(GSoC)。该项目选定了多个项目参与，旨在为开源社区培养新人才。</p>
+<p><a href="https://geohot.github.io//blog/jekyll/update/2026/11/17/my-empire-of-dirt.html">我的肮脏帝国</a><br>我成长过程中阅读了这些人读过的相同的LessWrong文章，但我没有预料到他们会做出导致不良AI结果的事情。我不相信AI末日论，因为我更相信人们，认为任何有能力的人都不会愚蠢到召唤恶魔并认为它...</p>
 
-<p><a href="https://theconsensus.dev/p/2026/11/08/c-memory-management-survey.html">40个主要C项目的内存管理调查</a><br>一项对40个主要C项目的调查显示，仅8个项目完全使用malloc/free进行内存分配，仅2个项目从不使用malloc/free，15个项目在某些时候使用了区域内存管理，7个项目采用了其他内存管理策略。</p>
+<p><a href="https://medium.com/pinterest-engineering/rebuilding-guardian-how-pinterest-upgraded-its-real-time-abuse-platform-to-modern-infrastructure-56e45ee8f471?source=rss----4c5a5f6279b6---4">重建Guardian：Pinterest如何将其实时滥用平台升级到现代基础设施...</a><br>**可扩展性**成为日益增长的问题。Guardian V1使用单体架构支持交互式查询、连续事件到动作处理和回填工作流，随着流量和工作负载量增加，独立优化每个路径变得越来越困难。</p>
 
-<p><a href="https://slack.engineering/slacks-migration-to-a-cellular-architecture/">Slack向cell架构的迁移</a><br>Slack工程团队将其系统迁移到细胞架构，以提高系统的可扩展性和可靠性。这种架构类似于生物细胞，将系统划分为独立但相互协作的单元，每个单元负责特定功能。</p>
+<p><a href="https://www.reddit.com/r/RedditEng/comments/1xy2y4i/what_it_took_to_make_images_load_faster_on_reddit/">让Reddit Android上的图片加载更快需要什么</a><br>通过优化图像处理、缓存策略和异步加载技术，Reddit Android应用显著提高了图片加载速度，改善了用户体验。</p>
+
+<p><a href="https://www.heroku.com/blog/heroku-at-kubecon-recap-meeting-builders-where-they-build/">Heroku在KubeCon回顾：在开发者构建的地方与他们见面</a><br>**安全和治理是当务之急**，随着AI工作流程和企业内部公民构建应用的扩展。领导者希望团队使用AI工具快速构建，但在任何生成代码到达生产环境之前，需要严格的护栏、隔离和自动补丁。</p>
+
+<p><a href="https://vincent.build/openclaw-ci-cost-reduction/">使OpenClaw CI更快且便宜95%</a><br>当我首次谈论暗工厂——智能体使用其他智能体构建软件时，人们都笑了。现在有更多人以这种方式使用智能体。我们的智能体遇到了不同的限制：不是令牌、内存或磁盘，而是测试。</p>
   
 
 <h2>AI</h2>
 
 
-<p><a href="https://tonybai.com/2026/11/15/ai-human-civilization-acceleration-and-successor">AI 正在逼迫人类加速？一个细思极恐的猜想：我们会不会亲手培养出自己的继任者？</a><br>AI 让人类生产力飞速提升，却也让整个社会陷入更快的竞争节奏。从个人到企业，再到大模型厂商，所有人都在不断加速。也许 这背后并不存在一只拥有意识的 AI 之手，但人类正在通过竞争、资本和技术投入，主动推动 AI 的能力进化。更值得警惕的是，AI 未必需要产 生统治人类的野心。只要人类不断把决策、执行和管理权交给 AI，最终就可能亲手培养出自己的文明继任者。</p>
+<p><a href="https://simonwillison.net/2026/Nov/17/go-proverbs/">引用Go格言</a><br>少量复制优于少量依赖。</p>
 
-<p><a href="https://tonybai.com/2026/11/14/ai-era-cloud-native-paradigm-reversed-agents-are-pets">AI 时代，云原生范式被反转：Agent 不再是 Cattle，而是你的 Pet</a><br>云原生时代，我们努力让服务器变成可以随时替换的 Cattle；AI Agent 时代，Steve Yegge 却发现，长期协作的 Agent 正在变 成需要精心培养的 Pet。从 Gas Town 到 Wheelhouse，他用数十个 Agent 构建了一家 AI 软件工厂，也揭示了 Agent 身份、长期记忆、组织治 理和人类创造力等新问题。AI 时代，软件工程正在从管理计算资源，走向管理一个由数字员工组成的组织。</p>
-
-<p><a href="https://www.anthropic.com/research/building-strong-safety-evaluations">构建强大的安全评估</a><br>安全评估为我们对AI模型做出的最关键决策提供依据，包括模型是否准备部署、应配备哪些保护措施以及下一轮安全训练和研究应关注什么。</p>
-
-<p><a href="https://huggingface.co/blog/ggml-org/llama-cpp-v1">llama.cpp v1.0.0：本地AI生态系统更坚实的基础</a><br>llama.cpp v1.0.0版本为本地AI生态系统提供了更坚实的基础。这个重要更新优化了模型性能，提高了推理效率，并增强了与各种硬件的兼容性。</p>
-
-<p><a href="https://gabeorlanski.github.io/posts/slop-moves-up/">Slop正在向上层移动</a><br>Slop项目正在从底层向上层迁移，2025年的代码主要解决了冗长检查、死代码和被忽略的错误问题。这一迁移旨在提高代码质量和可维护性。</p>
-
-<p><a href="https://jakub.jankiewicz.org/blog/ai-code-open-source/">所有AI生成的代码都应该是开源的</a><br>我认为所有AI生成的代码都应该是开源的。首先，AI模型是在大量开源代码上训练的，这些代码自RMS宣布GNU项目和自由软件运动以来就已经存在。</p>
-
-<p><a href="https://www.baseten.co/blog/the-efficient-frontier-of-llm-inference">LLM推理的有效前沿</a><br>LLM推理的有效前沿探讨了不同的推理技术如何在模型性能和资源消耗之间取得平衡。这些技术旨在优化大型语言模型的推理效率，同时保持输出质量。</p>
-
-<p><a href="https://qwen.ai/blog?id=qwen4-max">Qwen 4 max发布</a><br></p>
+<p><a href="https://blog.primeradiant.com/external-sandboxes-for-coding-agents/">编码智能体的外部沙箱</a><br>我们将这种模式称为外部沙箱。我们的工作包括三个原型沙箱实现 - 一个使用Node.js和WebAssembly，一个使用Apple容器，还有一个使用Microsoft的Quicksand和QEMU。</p>
 
 
 <h2>流行工具与项目</h2>
 
 
+<p><a href="https://github.com/getarcaneapp/arcane">getarcaneapp/arcane</a><br>Modern Docker Management, Designed for Everyone</p>
+
 <p><a href="https://github.com/alibaba/open-code-review">alibaba/open-code-review</a><br>Secure, fast, efficient, battle-tested at Alibaba&#39;s scale. Hybrid architecture code review tool: deterministic pipelines &#43; LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE,</p>
 
 <p><a href="https://github.com/Tencent/LoopForge">Tencent/LoopForge</a><br>Self-hosted workflows for coding-agent delivery. Orchestrate CodeBuddy, Codex and Claude Code with scripts and human approval gates. Includes Local workflows for coding assistants.</p>
 
-<p><a href="https://github.com/google/ax">google/ax</a><br>Agent Executor (AX) is Google&#39;s open agentic orchestration runtime</p>
-
-<p><a href="https://github.com/tailscale/tailcat">tailscale/tailcat</a><br>like netcat, but over Tailscale&#39;s data plane, without Tailscale&#39;s control plane</p>
+<p><a href="https://github.com/Asymptote-Labs/agent-beacon">Asymptote-Labs/agent-beacon</a><br>The cross-harness, self-improving memory layer for AI agents. Join our community: https://discord.com/invite/zdNChS2fBu</p>
 
 <p><a href="https://github.com/kubescape/kubescape">kubescape/kubescape</a><br>Kubescape is an open-source Kubernetes security platform for your IDE, CI/CD pipelines, and clusters. It includes risk analysis, security, compliance, and misconfiguration scanning, saving Kubernetes </p>
 
-<p><a href="https://github.com/trustwallet/assets">trustwallet/assets</a><br>A comprehensive, up-to-date collection of information about several thousands (!) of crypto tokens.</p>
+<p><a href="https://github.com/Billionmail/BillionMail">Billionmail/BillionMail</a><br>BillionMail gives you open-source MailServer, NewsLetter, Email Marketing — fully self-hosted, dev-friendly, and free from monthly fees. Join the discord: https://discord.gg/asfXzBUhZr</p>
 
-<p><a href="https://github.com/HuskerMinion/techo5">HuskerMinion/techo5</a><br>Open firmware for the Echo Show 5, 1st and 2nd gen: Alpine Linux instead of Android, no Alexa. A local Home Assistant voice satellite with its own touch screen, on-device wake word, SSH and A/B over-t</p>
+<p><a href="https://github.com/gnacho/netpulse">gnacho/netpulse</a><br>PWA dashboard for monitoring OpenWrt/GL.iNet home networks: fleet status, per-router health, devices, WireGuard peers, AdGuard Home stats and alerts in real time (SSE). Go backend &#43; React 19 frontend,</p>
 
-<p><a href="https://github.com/gravitational/teleport">gravitational/teleport</a><br>The easiest, and most secure way to access and protect all of your infrastructure.</p>
+<p><a href="https://github.com/agent-substrate/substrate">agent-substrate/substrate</a><br>Agent Substrate: the core system</p>
 
-<p><a href="https://github.com/XTLS/Xray-core">XTLS/Xray-core</a><br>Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.</p>
+<p><a href="https://github.com/openbkn-ai/bkn-foundry">openbkn-ai/bkn-foundry</a><br>BKN Foundry is the Ontology back-end foundation of OpenBKN. It transforms ontology-driven business semantics into runtime services: data, logic, actions, security governance, and observability.</p>
 
-<p><a href="https://github.com/erigontech/erigon">erigontech/erigon</a><br>Ethereum implementation on the efficiency frontier</p>
+<p><a href="https://github.com/golang/go">golang/go</a><br>The Go programming language</p>
 
 
 <hr/>

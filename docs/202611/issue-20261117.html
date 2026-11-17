@@ -1,0 +1,138 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202611/issue-20261117.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20261117</span>
+</p>
+<p>每日一谚：Reflection is never clear </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://internals-for-interns.com/posts/linux-kernel-ebpf/">深入理解linux eBPF</a><br>这是Linux内核系列的第12部分，介绍了eBPF技术及其在Linux内核中的应用。文章涵盖了从内核启动到系统调用和内存管理的基础知识。</p> 
+
+<p><a href="https://www.meetneptune.com/engineering/node-to-go-in-two-weeks">我们如何在两周内将整个后端从Node迁移到Go</a><br>10月30日，我们合并了一个具有空路由表的Go服务器。11月13日，我们删除了Node后端。在此期间，所有请求、后台作业和登录都进行了迁移，同时夫妇及其律师继续使用Neptune，团队其余成员在同一代码库上继续开发。</p> 
+
+<p><a href="https://tonybai.com/2026/11/17/rust-ai-borrow-checker-appeasement-debt">Rust 本想消灭 40 年技术债，AI 却造出了新债</a><br>Rust 本想终结 C/C&#43;&#43; 四十年的内存安全技术债，AI 却在不知不觉中造出了新债。近日 Reddit r/rust 社区一则关于代码审计&gt;的实录引爆全网：Claude 将 1.2 万行 TypeScript 游戏引擎迁移至 Rust，虽然通过了全部 3091 项确定性测试，却为了讨好借用检查器而在热 循环中塞入 175 次 clone()、滥用 mem::take() 并膨胀出单文件 1.2 万行的巨石代码。本文深度剖析这种“借用检查器迎合型技术债”的成因与 重构经验，揭示 AI 编程时代技术债生产自动化的严峻挑战。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://kubernetes.io/blog/2026/11/16/ipvs-removal/">计划移除kube-proxy IPVS后端</a><br>首先，`iptables`在_数据平面_延迟（客户端建立与服务连接的速度）方面存在问题，因为kube-proxy会为每个服务IP写入单独的iptables规则，导致每个新连接都需要与一系列长规则进行匹配。</p>
+
+<p><a href="https://www.docker.com/blog/docker-sandboxes-firecrawl-web-access/">使用Firecrawl工具为Docker沙箱提供沙箱智能体的实时网络访问</a><br>**针对当前API编写代码，而不是记忆中的API**。在调用库或SaaS API之前，智能体会抓取其参考页面和变更日志，使用当前参数名称并识别训练截止日期后发布的弃用功能。</p>
+
+<p><a href="https://geohot.github.io//blog/jekyll/update/2026/11/17/my-empire-of-dirt.html">我的肮脏帝国</a><br>我成长过程中阅读了这些人读过的相同的LessWrong文章，但我没有预料到他们会做出导致不良AI结果的事情。我不相信AI末日论，因为我更相信人们，认为任何有能力的人都不会愚蠢到召唤恶魔并认为它...</p>
+
+<p><a href="https://medium.com/pinterest-engineering/rebuilding-guardian-how-pinterest-upgraded-its-real-time-abuse-platform-to-modern-infrastructure-56e45ee8f471?source=rss----4c5a5f6279b6---4">重建Guardian：Pinterest如何将其实时滥用平台升级到现代基础设施...</a><br>**可扩展性**成为日益增长的问题。Guardian V1使用单体架构支持交互式查询、连续事件到动作处理和回填工作流，随着流量和工作负载量增加，独立优化每个路径变得越来越困难。</p>
+
+<p><a href="https://www.reddit.com/r/RedditEng/comments/1xy2y4i/what_it_took_to_make_images_load_faster_on_reddit/">让Reddit Android上的图片加载更快需要什么</a><br>通过优化图像处理、缓存策略和异步加载技术，Reddit Android应用显著提高了图片加载速度，改善了用户体验。</p>
+
+<p><a href="https://www.heroku.com/blog/heroku-at-kubecon-recap-meeting-builders-where-they-build/">Heroku在KubeCon回顾：在开发者构建的地方与他们见面</a><br>**安全和治理是当务之急**，随着AI工作流程和企业内部公民构建应用的扩展。领导者希望团队使用AI工具快速构建，但在任何生成代码到达生产环境之前，需要严格的护栏、隔离和自动补丁。</p>
+
+<p><a href="https://vincent.build/openclaw-ci-cost-reduction/">使OpenClaw CI更快且便宜95%</a><br>当我首次谈论暗工厂——智能体使用其他智能体构建软件时，人们都笑了。现在有更多人以这种方式使用智能体。我们的智能体遇到了不同的限制：不是令牌、内存或磁盘，而是测试。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Nov/17/go-proverbs/">引用Go格言</a><br>少量复制优于少量依赖。</p>
+
+<p><a href="https://blog.primeradiant.com/external-sandboxes-for-coding-agents/">编码智能体的外部沙箱</a><br>我们将这种模式称为外部沙箱。我们的工作包括三个原型沙箱实现 - 一个使用Node.js和WebAssembly，一个使用Apple容器，还有一个使用Microsoft的Quicksand和QEMU。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/getarcaneapp/arcane">getarcaneapp/arcane</a><br>Modern Docker Management, Designed for Everyone</p>
+
+<p><a href="https://github.com/alibaba/open-code-review">alibaba/open-code-review</a><br>Secure, fast, efficient, battle-tested at Alibaba&#39;s scale. Hybrid architecture code review tool: deterministic pipelines &#43; LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE,</p>
+
+<p><a href="https://github.com/Tencent/LoopForge">Tencent/LoopForge</a><br>Self-hosted workflows for coding-agent delivery. Orchestrate CodeBuddy, Codex and Claude Code with scripts and human approval gates. Includes Local workflows for coding assistants.</p>
+
+<p><a href="https://github.com/Asymptote-Labs/agent-beacon">Asymptote-Labs/agent-beacon</a><br>The cross-harness, self-improving memory layer for AI agents. Join our community: https://discord.com/invite/zdNChS2fBu</p>
+
+<p><a href="https://github.com/kubescape/kubescape">kubescape/kubescape</a><br>Kubescape is an open-source Kubernetes security platform for your IDE, CI/CD pipelines, and clusters. It includes risk analysis, security, compliance, and misconfiguration scanning, saving Kubernetes </p>
+
+<p><a href="https://github.com/Billionmail/BillionMail">Billionmail/BillionMail</a><br>BillionMail gives you open-source MailServer, NewsLetter, Email Marketing — fully self-hosted, dev-friendly, and free from monthly fees. Join the discord: https://discord.gg/asfXzBUhZr</p>
+
+<p><a href="https://github.com/gnacho/netpulse">gnacho/netpulse</a><br>PWA dashboard for monitoring OpenWrt/GL.iNet home networks: fleet status, per-router health, devices, WireGuard peers, AdGuard Home stats and alerts in real time (SSE). Go backend &#43; React 19 frontend,</p>
+
+<p><a href="https://github.com/agent-substrate/substrate">agent-substrate/substrate</a><br>Agent Substrate: the core system</p>
+
+<p><a href="https://github.com/openbkn-ai/bkn-foundry">openbkn-ai/bkn-foundry</a><br>BKN Foundry is the Ontology back-end foundation of OpenBKN. It transforms ontology-driven business semantics into runtime services: data, logic, actions, security governance, and observability.</p>
+
+<p><a href="https://github.com/golang/go">golang/go</a><br>The Go programming language</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+
