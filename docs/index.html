@@ -45,7 +45,7 @@ img {
 
 <div style="text-align: center; margin-bottom: 10px;">
   <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
-  <a href=https://bigwhite.github.io/gopherdaily/202611/issue-20261118.html style="margin: 0 10px;">Web版</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202611/issue-20261119.html style="margin: 0 10px;">Web版</a> |
   <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
   <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
   <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
@@ -57,9 +57,9 @@ img {
 
 <div>
 <p class="issue" style="text-align:center;">
-  <span style="text-align:center;">20261118</span>
+  <span style="text-align:center;">20261119</span>
 </p>
-<p>每日一谚：Define sentinel errors as immutable variables </p>
+<p>每日一谚：Keep error messages lowercase and without trailing punctuation. </p>
 </div>
 
 <hr/>
@@ -67,90 +67,85 @@ img {
 <h2>Go技术生态</h2>
 
 
-<p><a href="https://tonybai.com/2026/11/18/build-mcp-in-golang">AI 已经会写代码了，为什么还用不好你的业务系统？</a><br>API 能被程序调用，不等于 AI 应用就能可靠地使用它。作为《用 Go 构建 MCP 服务》专栏开篇词，本&gt;文深入剖析了 Model Context Protocol (MCP) 在 AI 时代重塑后端系统交互的核心价值：无需重写既有业务逻辑，只需 在现有 Go 服务外构建一层标准化、类型化且安全的 MCP 适配层。文章清晰界定了 MCP 与 CLI 工具的场景边界，并全&gt;景展现了如何基于真实企业订单系统，逐步攻克工具契约设计、stdio 与 HTTP 传输、身份传递、写操作幂等及可观测性 等生产级工程落地难题。</p> 
+<p><a href="https://tonybai.com/2026/11/19/go-test-user-defined-analyzers-proposal">Alan Donovan 提出新 Proposal：要让 go test 运行自定义静态分析器！</a><br>Go 团队正在探索让 `go test` 支持项目自定义静态分析器。Alan Donovan 的 Proposal 不仅希望解决项目内部代码规范和公共 API 使用检查的问题，还希望让这些检查成为可版本化、可复现的项目级能力。更值得关注的是，社区讨论推动了设计从最初的源码注释方案演 进到 `go.vet` 配置机制，并补充了 Analyzer 禁用、调试和性能分析等能力。这可能让 Go 的静态分析真正进入每个项目的日常开发循环。</p> 
 
-<p><a href="https://tailscale.com/blog/netmap-caching">Netmap缓存：在不可靠连接上保持Tailscale运行</a><br>Tailscale现在可以从保存的tailnet地图副本启动，加快每个人的启动时间并缓解一些不良连接问题。</p> 
+<p><a href="https://threedots.tech/post/making-games-in-go-ecs/">使用 Go 开发游戏：实体组件系统 (ECS)</a><br>本文介绍了如何在 Go 游戏开发中实现实体组件系统(ECS)，这是一种高效的游戏架构模式，有助于管理复杂的游戏对象和交互。</p> 
+
+<p><a href="https://sergey.kamardin.org/articles/incident-pipelines-with-spooler/">使用 Spooler 处理事件管道</a><br>本文介绍了如何使用 Spooler 构建事件处理管道，帮助团队更有效地管理和响应系统事件。2026年11月发布。</p> 
+
+<p><a href="https://modern-c.blogspot.com/2026/11/what-github-secure-open-source-fund.html">GitHub 安全开源基金对 modernc.org/sqlite 的影响</a><br>GitHub 安全开源基金为 modernc.org/sqlite 项目提供了安全审计和漏洞修复支持，显著提升了项目的安全性和可靠性。</p> 
 
 
 <h2>云原生技术</h2>
 
 
-<p><a href="https://www.cncf.io/blog/2026/11/17/is-your-opentelemetry-pipeline-becoming-a-performance-bottleneck/">您的OpenTelemetry管道是否成为性能瓶颈？</a><br>将收集与集中处理分离。两层架构可以使用轻量级边缘收集器进行本地收集，使用网关收集器进行更昂贵的处理。这允许管道的不同部分根据其工作负载进行扩展。</p>
+<p><a href="https://www.cncf.io/blog/2026/11/18/optimizing-kubernetes-admission-control-where-kyvernos-cel-admission-cost-actually-goes/">优化 Kubernetes 准入控制：Kyverno 的 CEL 准入成本分析</a><br>文章分析了 Kyverno 的 CEL 准入控制器的性能开销，帮助用户理解配置与性能的关系，优化 Kubernetes 环境中的策略执行效率。</p>
 
-<p><a href="https://blogs.microsoft.com/blog/2026/11/17/ignite-2026-building-the-frontier-ecosystem/">Ignite 2026：构建前沿生态系统</a><br>除了我们在产品方面所做的工作外，我们还在整个生态系统中工作，确保每个人都能安全地快速、大规模地创新。今天，我们几乎可以看到模型触及的所有内容。但我们无法看到模型内部发生的事情。</p>
+<p><a href="https://www.docker.com/blog/agentic-ai-security-docker-governance/">信任层：使用 Docker AI 治理保护代理式 AI</a><br>文章探讨了如何通过 Docker AI 治理建立代理式 AI 的安全控制层，确保 AI 代理的行为可预测、可控制，同时保持系统的灵活性和功能性。</p>
 
-<p><a href="https://geohot.github.io//blog/jekyll/update/2026/11/18/my-empire-of-sunshine-and-roses.html">我的阳光与玫瑰帝国</a><br>我花了很多时间思考差异历史。改变世界的意义不在于拥有一堆人们说是你的东西，或一堆人们说是你的成就。</p>
+<p><a href="https://nesbitt.io/2026/11/18/this-week-in-source-control.html">源码控制本周动态：2026年11月18日</a><br>本周源码控制领域的重要新闻包括 CVE-2026-125423 漏洞，该漏洞允许在仓库初始化完成前推送代码，可能导致服务器端 git hook 被覆盖。</p>
 
-<p><a href="https://netflixtechblog.com/engineering-ai-discover-e244944cdc38?source=rss----2615bd06b42e---4">工程AI发现</a><br>将LLMs适配到没有为其设计的产品和架构中。传统推荐器根据过去的行为对标题进行排名。LLMs可以做更多的事情：理解成员的需求并计划如何回应。</p>
+<p><a href="https://engineering.fb.com/2026/11/18/ml-applications/ai-agents-to-scale-ml-innovations-across-ads-ranking-models/">Meta 如何使用 AI 代理扩展广告排名模型的机器学习创新</a><br>Meta 利用 AI 代理自动化广告排名模型的开发和优化过程，通过模板泛化技术实现了机器学习创新的大规模应用和部署。</p>
 
-<p><a href="https://github.blog/engineering/engineering-principles/building-the-agent-host-protocol-for-sessions-that-continue-across-devices/">构建跨设备持续会话的智能体主机协议</a><br>在GitHub上探索智能体主机协议&gt;</p>
+<p><a href="https://engineering.fb.com/2026/11/18/ml-applications/design-once-deploy-at-scale-template-driven-ml-ecosystem/">一次设计，规模部署：构建模板驱动的机器学习生态系统</a><br>随着机器学习生态系统扩展到大量生产模型，瓶颈已不再是发明新技术，而是在碎片化的模型空间中可靠高效地部署这些模型，实现整体提升。</p>
 
-<p><a href="https://medium.com/airbnb-engineering/de-identifying-text-at-scale-how-airbnb-protects-personal-data-in-ai-training-32f3ff8ff7d0?source=rss----53c7c27702d5---4">大规模文本去标识化：Airbnb如何在AI训练中保护个人数据</a><br>可配置的去标识化。哪个运算符应用于哪个实体类型可以根据模型和用例进行配置，反映了上面§2.1中的可配置检测。将文本输入模型训练的管道希望对需要自然阅读的内容使用基于faker的运算符。</p>
+<p><a href="https://aws.amazon.com/blogs/aws/aws-lambda-now-supports-gpu-instances-for-event-functions-on-lambda-managed-instances/">AWS Lambda 现支持 Lambda 托管实例上的 GPU 实例用于事件函数</a><br>AWS Lambda 新增了对 GPU 实例的支持，使开发者能够在 Lambda 托管实例上运行需要 GPU 计算的事件函数，提升机器学习和高性能计算任务的性能。</p>
 
-<p><a href="https://edvong.com/bypass-orphan-rule/">如何绕过Rust的孤儿规则</a><br>如何绕过Rust的孤儿规则
-目录
-1. 孤儿规则实际上在保护什么？
-2. 为什么两种常见的变通方法不够</p>
+<p><a href="https://oxc.rs/blog/2026-11-17-faster-type-aware-linting-with-tsrs">使用 tsrs 实现更快类型感知的代码检查</a><br>Oxlint 引入 tsrs 作为 tsgolint 的替代方案，用于类型感知的代码检查，这是 Cloudflare 和 VoidZero 在十月发布的 TypeScript 的 Rust 移植版本。</p>
 
-<p><a href="https://event-driven.io/en/make_the_change_easy_make_the_easy_change/">让变更变得简单，然后进行简单的变更</a><br>我们正处于代码审查世界大战的中间。许多人声称他们拖慢了我们的速度。Scotty，我们需要在三分钟内达到曲速，否则我们都完蛋了！坦率地说，我从来不是pull请求的忠实粉丝，但不知何故，我总是反对移除审查部分。为什么？</p>
+<p><a href="https://www.firezone.dev/blog/apple-client-performance">macOS 上的 WireGuard 速度达 5&#43; Gbit/s | Firezone 博客</a><br>Firezone 致力于在所有平台上提供最快的 WireGuard VPN 服务，突破了以往 VPN 性能优化主要局限于 Linux 平台的限制，实现了 macOS 平台的高速网络传输。</p>
 
-<p><a href="https://daniel.haxx.se/blog/2026/11/17/actual-curl-rewrites-in-rust/">curl之父批用rust重写</a><br>长期以来，我们收到了关于用rust重写curl的重复请求或问题。通常是个玩笑，但也是认真的。</p>
+<p><a href="https://jimmyhmiller.com/magic-of-partial-evaluation">部分求值的魔力 — Jimmy Miller</a><br>软件工程中存在一些纯粹而优美的概念，无论它们是否有实用价值，也不论是否能说服同事接受，这些计算系统的工作方式本身就具有迷人的魅力。</p>
 
-<p><a href="https://developer.chrome.com/blog/top-10-things-ai-gets-wrong-in-web-dev">AI在Web开发中出错的十大事情</a><br>现代Web指南现已稳定！使用专家审核的Web开发最佳实践升级您的编码智能体。</p>
+<p><a href="https://pion.ly/blog/pion-interceptor-webrtc-for-hackers/">Pion Interceptor：黑客的 WebRTC - Pion</a><br>Pion 项目从独特的用例出发，旨在解决现有 WebRTC 软件难以处理特殊/小众需求的问题，为开发者提供更灵活的 WebRTC 实现方案。</p>
 
-<p><a href="https://martinfowler.com/articles/deterministic-simulation-testing.html">确定性模拟测试</a><br>确定性模拟测试
-分布式系统难以测试，因为部分故障与实时流量重叠
-并且相同的故障在不同的运行中可能产生不同的执行轨迹。</p>
+<p><a href="https://brooker.co.za/blog/2026/11/18/workload-mix.html">流量组合很重要 - Marc 的博客</a><br>文章探讨了不同类型流量组合对系统性能的影响，以及如何优化流量处理策略，提高系统整体效率和响应能力。</p>
 
-<p><a href="https://www.oreilly.com/radar/why-git-needs-help-moving-from-files-to-systems-for-source-control/">为什么Git需要帮助：从文件到系统的源代码控制转变 – O&#39;Reilly</a><br>尝试O&#39;Reilly学习平台
-使用O&#39;Reilly学习平台,...</p>
+<p><a href="https://vercel.com/blog/eve-is-now-generally-available">推出 eve 1.0 - Vercel</a><br>Vercel 发布了 eve 1.0，这是一个用于构建生产就绪型代理的开源框架。自六月公开预览以来，团队与早期采用者合作完成了230多个版本发布和数千个拉取请求的合并。</p>
+
+<p><a href="https://www.freecodecamp.org/news/speed-up-ci-in-the-age-of-ai-written-code/">AI 代码时代如何加速 CI</a><br>随着 AI 生成代码的普及，持续集成(CI)流程面临新的挑战。文章探讨了优化 CI 流程的策略，包括智能测试选择、并行化构建和缓存优化等方法。</p>
+
+<p><a href="https://corrode.dev/blog/otto-rust-interview/">OTTO 为何选择 Rust</a><br>文章介绍了 OTTO 公司选择 Rust 进行技术迁移的原因，包括性能提升、内存安全性和并发优势等方面，以及迁移过程中的经验与挑战。</p>
+
+<p><a href="https://clickhouse.com/blog/tuning-postgres-read-replicas">负载越高速度越快：优化 Postgres 读取副本 | ClickHouse</a><br>文章探讨了如何通过优化 PostgreSQL 读取副本的配置和处理策略，在高负载情况下实现更快的查询响应，打破传统认知中负载与性能的反比关系。</p>
   
 
 <h2>AI</h2>
 
 
-<p><a href="https://simonwillison.net/2026/Nov/17/external-sandboxes-for-coding-agents/">编码智能体的外部沙箱</a><br>沙箱还包括一个可选的HTTP/HTTPS允许列表智能体，因此您可以精确控制智能体代码被允许与哪些主机通信 - 还有一个凭据替换机制，可以在不与智能体共享秘密的情况下进行身份验证的API调用。</p>
+<p><a href="https://tonybai.com/2026/11/19/inside-openai-codex-sandbox">AI Agent 的安全边界：深入 OpenAI Codex Sandbox 设计</a><br>当 AI Agent 获得 Shell 权限，仅靠 System Prompt 的口头约束已经无法抵御提示词注入、凭证泄露与环境破坏。OpenAI 官方 近期揭秘了 Codex Sandbox 的工程设计：摒弃脱离宿主环境的传统 Docker 容器，利用 macOS Seatbelt、Linux Bubblewrap&#43;seccomp 与 Windows MXC 原生机制，在文件系统与网络两条核心边界上构建不可随意突破的操作系统级强制隔离。本文深入拆解其 Harness 权限申请与审批分离&gt;、子进程安全继承、MCP Server 专属沙箱以及企业级策略治理的完整落地实践。</p>
 
-<p><a href="https://microsoft.ai/news/introducing-mai-code-2-and-mai-code-2-flash/">MAI Code 2和Code 2 Flash：可扩展价格下的日常编码 | Microsoft AI</a><br>返回新闻
-分享
-## 分享此文章</p>
+<p><a href="https://engineering.fb.com/2026/11/18/ml-applications/design-once-deploy-at-scale-template-driven-ml-ecosystem/">一次设计，规模部署：构建模板驱动的机器学习生态系统</a><br>随着机器学习生态系统扩展到大量生产模型，瓶颈已不再是发明新技术，而是在碎片化的模型空间中可靠高效地部署这些模型，实现整体提升。</p>
 
-<p><a href="https://runta.com/blog/introducing-frontierharness-eval-v1-1/">推出FrontierHarness Eval v1.1 — RUNTA</a><br>所有博客
-## TL;DR
-我们与Baseten合作，使用83B token和27,280次智能体运行构建了最大规模的harness排行榜。我们想回答两个问题：当你切换模型时，是否也应该考虑切换harness？</p>
+<p><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/">推出 Gemini 4 Neon</a><br>Google 于 2026 年 11 月 18 日发布了 Gemini 4 Neon 模型，这是 Gemini 系列的最新成员，在性能和效率方面都有显著提升。</p>
 
-<p><a href="https://llmspeed.dev/">llmspeed — 在购买前感受本地LLM速度</a><br></p>
+<p><a href="https://kernel.dev/blog/why-is-gemini-4-carbon-taking-so-long/">为什么 Gemini 4 Carbon 发布如此之久？</a><br>Gemini 4 Carbon 的发布延迟引发了广泛关注，据内部评估显示，该模型在完成某些任务时耗时接近一小时，这表明模型可能需要进一步优化才能达到发布标准。</p>
 
-<p><a href="https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/">如何在Gemini中使用任务进行个人助理</a><br>让Gemini为你工作
-2026年11月17日</p>
-
-<p><a href="https://appliedreasoning.netlify.app/">AI工作的应用推理</a><br>AI工作的应用推理
-约135分钟阅读
-关于清晰思考、良好解决问题以及从AI智能体获得最佳工作的完整指南。</p>
+<p><a href="https://futurism.com/future-society/absolutely-everything-is-getting-hacked">一切都在被黑客攻击</a><br>随着数字化程度不断提高，从个人设备到企业系统，从基础设施到关键服务，几乎所有领域都面临着日益增长的网络威胁和安全挑战。</p>
 
 
 <h2>流行工具与项目</h2>
 
 
+<p><a href="https://github.com/getarcaneapp/arcane">getarcaneapp/arcane</a><br>Modern Docker Management, Designed for Everyone</p>
+
 <p><a href="https://github.com/alibaba/open-code-review">alibaba/open-code-review</a><br>Secure, fast, efficient, battle-tested at Alibaba&#39;s scale. Hybrid architecture code review tool: deterministic pipelines &#43; LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE,</p>
+
+<p><a href="https://github.com/docker/compose">docker/compose</a><br>Define and run multi-container applications with Docker</p>
 
 <p><a href="https://github.com/Tencent/LoopForge">Tencent/LoopForge</a><br>Self-hosted workflows for coding-agent delivery. Orchestrate CodeBuddy, Codex and Claude Code with scripts and human approval gates. Includes Local workflows for coding assistants.</p>
 
-<p><a href="https://github.com/getarcaneapp/arcane">getarcaneapp/arcane</a><br>Modern Docker Management, Designed for Everyone</p>
+<p><a href="https://github.com/golang/go">golang/go</a><br>The Go programming language</p>
 
-<p><a href="https://github.com/JuliusBrussee/caveman">JuliusBrussee/caveman</a><br>why use many token when few token do trick. Skill &#43; local proxy for coding agents: shorter answers, smaller tool output, every original recoverable.</p>
+<p><a href="https://github.com/opensandbox-group/OpenSandbox">opensandbox-group/OpenSandbox</a><br>Secure, Fast, and Extensible Sandbox runtime for AI agents.</p>
 
-<p><a href="https://github.com/crossplane/crossplane">crossplane/crossplane</a><br>The Cloud Native Control Plane</p>
+<p><a href="https://github.com/agent-substrate/substrate">agent-substrate/substrate</a><br>Agent Substrate: the core system</p>
 
-<p><a href="https://github.com/seaweedfs/seaweedfs">seaweedfs/seaweedfs</a><br>SeaweedFS is a distributed storage system for object storage (S3), file systems, Iceberg table buckets, and Lance vector buckets, designed to handle billions of files with O(1) disk access and effortl</p>
+<p><a href="https://github.com/vxcontrol/pentagi">vxcontrol/pentagi</a><br>Fully autonomous AI Agents system capable of performing complex penetration testing tasks</p>
 
-<p><a href="https://github.com/knadh/listmonk">knadh/listmonk</a><br>High performance, self-hosted, newsletter and mailing list manager with a modern dashboard. Single binary app.</p>
+<p><a href="https://github.com/aquasecurity/trivy">aquasecurity/trivy</a><br>Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more</p>
 
-<p><a href="https://github.com/guohuiyuan/go-music-dl">guohuiyuan/go-music-dl</a><br>一个基于 Go 语言的全网音乐搜索与下载工具。支持 CLI 命令行与 Web 服务双模式，内置网易云、QQ、酷狗、Bilibili、汽水音乐等 10&#43; 个主流平台，支持多源</p>
-
-<p><a href="https://github.com/Christ9038/Ydisks-Xianyu-Helper">Christ9038/Ydisks-Xianyu-Helper</a><br>闲鱼多账号自动发货、消息回复系统——基于 Go 与 React 构建</p>
-
-<p><a href="https://github.com/QuantumNous/new-api">QuantumNous/new-api</a><br>Open-source AI gateway. Self-hosted LLM gateway with OpenAI-, Claude- and Gemini-compatible APIs, model routing, access control, usage tracking and cost accounting.</p>
+<p><a href="https://github.com/gtsteffaniak/filebrowser">gtsteffaniak/filebrowser</a><br>📂 Web File Browser</p>
 
 
 <hr/>
