@@ -1,0 +1,146 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202611/issue-20261120.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20261120</span>
+</p>
+<p>每日一谚：Don not swallow errors; either log them or return them, but never both. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/11/20/ai-is-creating-complex-systems-we-cannot-control">重读 How Complex Systems Fail 后，我发现：AI 正在制造我们无法驾驭的复杂系统</a><br>AI 正在让软件开发变得前所未有地高效，但也让构建复杂系统的门槛大幅降低。重读 Richard I. Cook 在 1998 年提出的《How Complex Systems Fail》，我们会发现，复杂系统的失效规律并没有因为 AI 而改变，反而可能因为 Agent 自主性、自动化执行和多智能体协&gt;作而变得更加突出。本文从故障级联、潜伏缺陷、系统退化、人机协作和安全防御五个维度，重新审视这 18 条经典原则，并探讨 AI 时代软件&gt;工程应该如何应对复杂性失控。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/iuaVHJ6E_iPNeWSQiMAadQ">AI Agent 的安全边界：深入 OpenAI Codex Sandbox 设计</a><br>当 AI Agent 获得 Shell 权限，仅靠 System Prompt 的口头约束已经无法抵御提示词注入、凭证泄露与环境破坏。OpenAI 官方 近期揭秘了 Codex Sandbox 的工程设计：摒弃脱离宿主环境的传统 Docker 容器，利用 macOS Seatbelt、Linux Bubblewrap&#43;seccomp 与 Windows MXC 原生机制，在文件系统与网络两条核心边界上构建不可随意突破的操作系统级强制隔离。本文深入拆解其 Harness 权限申请与审批分离&gt;、子进程安全继承、MCP Server 专属沙箱以及企业级策略治理的完整落地实践。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://www.docker.com/blog/meet-the-new-docker-built-to-run-on-trust/">认识新 Docker：建立在信任之上运行</a><br>Docker 产品团队不断创新以应对市场变化，其内部演变的速度和规模要求外部同样重大的变革。新 Docker 建立在信任之上，为用户提供更可靠的服务。</p>
+
+<p><a href="https://blog.exe.dev/rex">Rex-on-exe - exe.dev 博客</a><br>本文介绍了如何使用 Rex 连接到虚拟机，并解释了 Rex 的内部工作原理。对于将 Rex 作为日常 shell 使用的用户，还说明了如何添加 exe 功能。</p>
+
+<p><a href="https://zerodha.tech/blog/high-performance-distributed-blob-storage/">基于 SQLite 的分布式高性能 blob 存储</a><br>本文介绍了基于 SQLite 的分布式高性能 blob 存储解决方案。作者 Sarat Chandra 是软件工程师，他在文章中详细阐述了这一技术的实现原理和应用场景。</p>
+
+<p><a href="https://architectlabs.com/blog/frostbite">介绍 Frostbite：一种由 AI 端到端发现、设计和验证的新 CPU 架构 | 架构实验室</a><br>本文介绍了 Frostbite，一种由 AI 端到端发现、设计和验证的新 CPU 架构。在之前的 Redwood 项目中，AI 系统已经能够以创纪录的时间实现、验证和部署推理加速器。</p>
+
+<p><a href="https://moq.dev/blog/webrtc-is-still-the-problem/">OpenAI 仍有 WebRTC 问题 - 基于 QUIC 的媒体传输</a><br>作者批评了 OpenAI 使用 WebRTC 的做法，这篇文章在 Hacker News 上引起了广泛关注。本文继续探讨 OpenAI 在 WebRTC 方面存在的问题。</p>
+
+<p><a href="https://aarol.dev/posts/zig-allocator/">一切都关于分配器allocator - aarol.dev</a><br>本文探讨了内存分配器的重要性。由于 AI 数据中心的扩张，全球内存供应变得紧张，导致大内存设备价格大幅上涨。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://mp.weixin.qq.com/s/Nh5orklmpi7gymyCcZqOdw">通用人工智能不是终点，而是超级智能的起点</a><br>我们一直在等待 AGI（通用人工智能），但 Google DeepMind 研究科学家 Tim Genewein 最近提出了一个更值得思考的问题：AGI之后，世界会走向哪里？ 在他发表于 DeepMind Institute 的文章《What comes after AGI?》中，一个核心判断是：AGI不是人工智能发展的终点，而可能只是超级智能（ASI）的起点。</p>
+
+<p><a href="https://simonwillison.net/2026/Nov/20/token-fraud-is-here-and-its-bad/">Token 欺诈已经出现而且很糟糕 (YouTube)</a><br>Token 欺诈问题已经出现，欺诈者使用特定提示（如骑自行车的鹈鹕 SVG）来识别底层模型。不同模型家族有独特特征，可用于识别和攻击。</p>
+
+<p><a href="https://simonwillison.net/2026/Nov/19/postgresql-19/">PostgreSQL 19 发布</a><br>PostgreSQL 19 已发布，新版本增强了 MediaWiki 功能，确保用户看到 wiki 事件按时间顺序排列。系统允许几秒钟的延迟，只要后续请求保持一致性。</p>
+
+<p><a href="https://thebuildingmachine.com/p/a-look-inside-the-factory">工厂内部观察 - Calvin Grunewald 著</a><br>本文深入探讨了工厂内部运作，展示了 clankers 的构建过程。作者 Calvin Grunewald 揭示了工业生产背后的技术和流程。</p>
+
+<p><a href="https://stripe.dev/evals">Stripe 集成评估标准</a><br>Stripe 发布了集成评估基准，用于衡量编码代理构建高质量集成的能力。定期发布的结果可帮助企业选择最适合的代理配置。</p>
+
+<p><a href="https://akingscote.co.uk/posts/ai-sandboxing/">沙箱与 AI </a><br>2026 年，AI 沙箱技术已成为一个复杂而耗时的生态系统。关键在于平衡限制代理权限与允许执行特权操作之间的关系。</p>
+
+<p><a href="https://blog.vandesande.design/every-one-shot-is-slop">one shot的神话</a><br>本文探讨了一击即中方法的局限性，作者分享了他构建等距世界地图的经验。AI 创作往往需要多次尝试和调整，而非一次成功。</p>
+
+<p><a href="https://cloud.google.com/blog/products/application-development/lessons-from-building-sashiko-an-agentic-code-review-system">构建 Sashiko（代理代码审查系统）的经验教训 | Google Cloud 博客</a><br>Google 分享了构建 Sashiko（面向 Linux 的代理代码审查系统）的经验。该系统由 AI 和基础设施团队开发，旨在提高代码审查效率和质量。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/datazip-inc/olake-go">datazip-inc/olake-go</a><br>OLake Go: open-source replication from databases, Kafka and S3 to Apache Iceberg and Parquet. Sources: Postgres, MySQL, MongoDB, Oracle, MSSQL, DB2, Kafka, S3. Formerly datazip-inc/olake. Table mainte</p>
+
+<p><a href="https://github.com/vxcontrol/pentagi">vxcontrol/pentagi</a><br>Fully autonomous AI Agents system capable of performing complex penetration testing tasks</p>
+
+<p><a href="https://github.com/Tencent/LoopForge">Tencent/LoopForge</a><br>Self-hosted workflows for coding-agent delivery. Orchestrate CodeBuddy, Codex and Claude Code with scripts and human approval gates. Includes Local workflows for coding assistants.</p>
+
+<p><a href="https://github.com/agent-substrate/substrate">agent-substrate/substrate</a><br>Agent Substrate: the core system</p>
+
+<p><a href="https://github.com/getarcaneapp/arcane">getarcaneapp/arcane</a><br>Modern Docker Management, Designed for Everyone</p>
+
+<p><a href="https://github.com/multica-ai/multica">multica-ai/multica</a><br>Make humans and AI agents work as one team — open-source and self-hostable.</p>
+
+<p><a href="https://github.com/opensandbox-group/OpenSandbox">opensandbox-group/OpenSandbox</a><br>Secure, Fast, and Extensible Sandbox runtime for AI agents.</p>
+
+<p><a href="https://github.com/nats-io/nats-server">nats-io/nats-server</a><br>High-Performance server for NATS.io, the cloud and edge native messaging system.</p>
+
+<p><a href="https://github.com/gastownhall/beads">gastownhall/beads</a><br>Beads - A memory upgrade for your coding agent</p>
+
+<p><a href="https://github.com/TencentCloud/CubeSandbox">TencentCloud/CubeSandbox</a><br>Instant, Concurrent, Secure and Lightweight Sandbox for AI Agents.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+
