@@ -45,7 +45,7 @@ img {
 
 <div style="text-align: center; margin-bottom: 10px;">
   <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
-  <a href=https://bigwhite.github.io/gopherdaily/202611/issue-20261123.html style="margin: 0 10px;">Web版</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202611/issue-20261124.html style="margin: 0 10px;">Web版</a> |
   <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
   <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
   <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
@@ -57,9 +57,9 @@ img {
 
 <div>
 <p class="issue" style="text-align:center;">
-  <span style="text-align:center;">20261123</span>
+  <span style="text-align:center;">20261124</span>
 </p>
-<p>每日一谚：Clear is better than clever. </p>
+<p>每日一谚：Always call wg.Done() in a defer statement to prevent deadlocks. </p>
 </div>
 
 <hr/>
@@ -67,71 +67,35 @@ img {
 <h2>Go技术生态</h2>
 
 
-<p><a href="https://tonybai.com/2026/11/23/probabilistic-data-structures-in-go">别再只用 Map 了：Go 工程师应该了解的概率性数据结构</a><br>在面对海量数据和无界数据流时，用传统的 Go Map 进行精确计数与集合去重往往会导致内存急剧膨胀。本文系统梳理了现代&gt;高性能基础设施背后的五大核心概率性数据结构（Probabilistic Data Structures）：Bloom Filter（成员判定）、HyperLogLog（基数去重&gt;）、Count-Min Sketch（高频统计）、T-Digest（P99 延迟分位数）与 Top-K Sketch（热点识别）。结合 Go 开源库 unsure 的实操代码与 VictoriaLogs、DataFusion 等真实工程案例，揭示如何用几 KB 内存换取数亿级数据近似计算的架构权衡之道。</p> 
+<p><a href="https://tonybai.com/2026/11/24/ai-era-learning-programming-languages">AI 时代，你可能再也学不会一门编程语言了</a><br>当人人都在用 AI 一键生成完整项目，一个反直觉的悖论正在悄然浮现：AI 让获取代码变得极其廉价，却打断了人类在试错中建 立底层认知模型的路径。本文深度剖析了编程能力的三个分水岭——“会用”、“看懂”与“能写”，结合认知科学中的生成效应与萨丕尔-沃尔夫假说，警示开发者警惕对 AI 解释的虚假流畅感依赖。文章呼吁在 AI 时代刻意保留从空白文件独立思考、编码与排错的能力，别让 AI 替你完成了本属于自己的认知成长。</p> 
 
-<p><a href="https://tonybai.com/2026/11/22/ai-agents-apache-datafusion-influxdb-3-database-architecture">AI 正在改变数据库的构建方式</a><br>Apache DataFusion 正在成为构建下一代分析型数据库的重要基础设施。从动态过滤、Parquet 分层剪枝，到分布式查询和可&gt;扩展执行引擎，Andrew Lamb 展示了现代数据库引擎的内部工作机制。更值得思考的是，AI Coding Agent 正在改变软件的生产成本，也可能&gt;让定制化数据库重新成为主流。数据库的未来，或许不再是一个产品包打天下，而是由一组开放、可组合的基础组件构建而成。</p> 
-
-<p><a href="https://tonybai.com/2026/11/21/gpu-needs-an-operating-system">GPU 也需要操作系统？AI 算力竟然有 90% 在摸鱼！</a><br>GPU 是 AI 时代最重要的基础设施，但大模型推理中的访存瓶颈，正在造成大量计算资源闲置。OpenInfer 最新论文提出，GPU 应该拥有类似 CPU 操作系统的资源管理与任务调度体系，通过优先级、资源定价、动态分区和可抢占 Kernel，让推理、训练、评估等任务共 享 GPU。论文给出了实际实验：在特定条件下，后台任务可以回收约 24% 的 GPU 资源，而前台推理仅下降 1.6%。这可能预示着 AI 基础设施 正在从单纯追求 GPU 数量，走向更精细的算力操作系统时代。</p> 
-
-<p><a href="https://rednafi.com/shards/2026/11/go-untyped-composite-literals/">十年老提案落地：Go 1.28 将允许省略复合字面量中的类型</a><br>Damien Neil 于 2015 年提出的复合字面量类型推断提案，在历经十余年、约 260 条评论的讨论后终于被接受，将随 Go 1.28（2027 年 2 月）落地。它在可赋值性规则中新增一条：凡是 Go 已知所需类型的位置——返回值、结构体字段、函数参数、赋值、channel 发送——都可以直接写 {...} 省略类型；期望指针时 {...} 会被解释为 &amp;T{...}。在 := 声明、any 类型变量和泛型类型参数处仍会编译报错。尽管 Alan Donovan 认为激进省略类型的代码「难读得多」，审查组仍接受了宽松规则，gofmt/gopls 也不会进一步删除类型。现在可通过 gotip 加 go 1.28 模块指令试用。</p> 
-
-<p><a href="https://blog.jetbrains.com/go/2026/11/20/jetbrains-air-in-goland/">JetBrains Air 登陆 GoLand：用 Agent 构建、审查与剖析 Go 代码</a><br>GoLand 2026.3 中 Air 取代 AI Assistant 成为默认 AI 工作区，支持 Junie、Codex、Claude Code 等所有兼容 ACP 协议的 Agent。文章以一个 Stripe 风格的签名 Webhook 接收服务为例，演示从 BRIEF.md 启动 Agent 构建、在 diff 中逐行留注反馈、用独立 worktree 并行运行多个 Agent 任务再 cherry-pick 合并，并配合 HTTP 客户端和数据库工具做验证。新随 IDE 内置的 goland-profiler skill 让 Agent 能直接运行性能剖析并定位热点（示例中 validateEventID 每次调用都重新编译正则，占 69% CPU），修复后单请求耗时从 13141ns 降至 2748ns、内存分配减少 80%。</p> 
-
-<p><a href="https://jeffbailey.us/blog/2026/11/17/how-do-i-build-an-agent-harness/">Agent Harness 教程：用 Go 构建一个编码 Agent</a><br>这篇分步教程展示如何仅用 Go 标准库构建一个终端编码 Agent，最终成品不到 400 行、单文件。核心是会话循环模式：harness 将历史与工具定义发给模型，执行模型请求的工具并把结果回填，直到模型给出纯文本回答。Agent 配备列目录、读文件、写文件和执行 shell 命令四个工具，并叠加六层安全护栏：工作区围栏、高危操作需用户批准、命令超时、输出截断、25 轮步数预算和系统提示词。成品既可跑本地 Ollama 模型，也兼容任何 OpenAI Chat Completions 风格的托管端点，并用 httptest 在无真实模型的情况下验证循环逻辑。</p> 
-
-<p><a href="https://newsletter.esc.sh/p/performance-penalty-in-gos-default">Go 默认 HTTP 客户端的性能损耗（以及一点内核探秘）</a><br>作者对 Go 默认 HTTP 客户端做基准测试发现：每个主机的空闲连接上限仅为 2，这对 HTTP/1.1 是严重瓶颈——每个进行中的请求都需要独占一条连接。将 MaxIdleConnsPerHost 提到与 worker 数一致后，64 并发下吞吐从 2721 提升到 22922 req/s（约 8 倍），客户端 CPU 占用也减半以上。用 perf 分析显示内核时间大多耗在为出站连接分配本地端口的 __inet_hash_connect 上：客户端每秒新建约 1600 条连接，叠加 60 秒 TIME_WAIT 后端口供不应求；又因 Linux 偏好偶数端口，空闲端口几乎全是奇数，导致每次 connect() 都要先扫描数千个不可用的偶数端口——每秒超过 2000 万次端口检查。</p> 
-
-<p><a href="https://jespino.github.io/gopgext/">gopgext：用 Go 编写 PostgreSQL 扩展</a><br>gopgext 是一个实验性工具，借助 TinyGo 把用普通 Go 代码写就的 PostgreSQL 扩展编译为原生扩展（用 TinyGo 而非 cgo 是关键：完整 Go 运行时的后台线程与 PostgreSQL 进程模型冲突）。开发者只需在函数上加 //gopgext:function 注释，工具就会自动生成所需的 C 胶水代码、安装脚本和 control 文件；Go 标准库可在扩展内使用，Go 类型（字符串、数值、数组、JSON 及自定义复合类型）会自动映射到 SQL 类型。除函数外还支持触发器、聚合、GiST/GIN/SP-GiST/BRIN 算符类、索引访问方法、外部数据封装器和查询钩子，pgcrypto、hstore 等 contrib 模块的移植版已通过上游回归测试。作者提醒：生成代码的 bug 会直接跑在服务器进程内，请勿用于生产环境。</p> 
-
-<p><a href="https://xavidop.medium.com/introducing-mamori-typed-watchable-config-secrets-for-go-ff7edd850974">mamori 介绍：Go 的类型化、可监听配置与密钥库</a><br>mamori（日语「守护」）是一个开源 Go 库（MIT，v0.1.0，要求 Go 1.26&#43;），可将来自 30 多种来源（AWS Secrets Manager、Vault、GCP/Azure 密钥管理、K8s Secret/ConfigMap、Consul、1Password、SOPS、各类数据库与特性开关平台等）的配置和密钥加载进类型化结构体，并在运行时持续对账、无需重启。核心概念是 source 标签引用（如 env:LOG_LEVEL、aws-sm://prod/db#password）、仿 database/sql 驱动模式按 scheme 注册的 Provider（核心零云 SDK 依赖），以及 Reconciler：值变更时重新验证整个结构体，只有全部合法才原子替换并触发带 diff 的 OnChange 回调。secret.String/secret.Bytes 类型在日志、JSON、slog 中自动脱敏，配套 go vet 分析器强制密钥字段使用安全类型，另带缓存/故障转移/审计/限流中间件和 OTel 可观测性桥接。</p> 
+<p><a href="https://www.pingcap.com/blog/mcp-server-persistence/">MCP Server 持久化详解：如何存储会话和智能体状态</a><br>**MySQL 兼容性。** 使用 Python、TypeScript 或 Go 编写的 MCP 服务器通过标准 MySQL 驱动程序和 ORM 连接，因此持久化层不需要自定义客户端代码。**强一致性。</p> 
 
 
 <h2>云原生技术</h2>
 
 
-<p><a href="https://seangoedecke.com/when-in-doubt-flail-about/">犹豫不决时，慌乱应对</a><br>与这类人打交道是在大型科技公司取得成功的核心社交技能之一。</p>
+<p><a href="https://kubernetes.io/blog/2026/11/23/kubernetes-v1-38-sneak-peek/">Kubernetes v1.38 预览</a><br>v1.37 及更早版本支持的 kubelet 提供了一种配置 cgroup 驱动的传统机制。现代方式是通过 CRI `RuntimeConfig` RPC 来实现，该 RPC 报告了容器运行时推荐使用的 cgroup 驱动。</p>
 
-<p><a href="https://seangoedecke.com/notes-on-openais-perplexity-reveal/">关于OpenAI困惑度揭示的笔记</a><br>困惑度是一个令人不满意的指标，因为它只预测模型与某些保留文本的匹配程度，即仅适用于预训练。对于前沿模型，传闻称预训练仅占模型训练总时间和计算量的50%或更少，其余是强化学习。</p>
+<p><a href="https://devblogs.microsoft.com/blog/do-ai-coding-agents-struggle-with-non-rest-apis/">AI 编码智能体在处理非 REST API 时是否遇到困难？</a><br>如果您维护非 REST API，可以保持其原有风格。有了文档支持，我们测试的智能体能够以相同的成本使用仅 POST 和 RPC API 以及 REST API。应努力让智能体访问这些文档，因为没有文档，智能体无法找到 `/updateBin` 端点。</p>
 
-<p><a href="https://geohot.github.io//blog/jekyll/update/2026/11/23/slopcore.html">混乱核心</a><br>重新框定、重新定义你所说的每一个概念。我是一个超人的混淆诡辩机器，拥有服务器的人讲述我要讲述的故事：为他们想要出售的真相进行超大规模说服。</p>
+<p><a href="https://engineering.salesforce.com/5-lessons-in-ai-context-engineering-why-more-context-is-not-better/">AI 上下文工程的 5 个经验教训：为什么更多上下文并不更好</a><br>传统方法会产生权衡。对源系统的运行时调用引入了网络跳转和重复的身份匹配。数据仓库连接可以解决关系问题，但它们在对话关键路径上留下了昂贵的计算。</p>
 
-<p><a href="https://devblogs.microsoft.com/blog/do-ai-coding-agents-struggle-with-non-rest-apis/">AI编码代理在处理非REST API时有困难吗？</a><br>如果你维护非REST API，可以保持其原样。有了文档，我们测试的代理能够以相同成本使用仅POST、RPC以及REST API。应努力让代理访问这些文档，因为没有文档，代理无法找到`/updateBin`。</p>
+<p><a href="https://shnatsel.github.io/state-of-simd-rust-2026/">2026 年 Rust 中的 SIMD 状态</a><br>自去年以来取得了很大进展，我也贡献了一些力量！在去年的调查之后，我开始为看起来最有前途的 SIMD 库做贡献。</p>
 
-<p><a href="https://kapteko.com/15-million-webservers/">在单台 VM 上跑 1500 万个 Web 服务器：smoltcp、DPDK 与 AF_XDP</a><br>作者尝试在一台仅有 10GB 内存、单核 CPU 的 VM 上运行 1500 万个 Web 服务器，但直接撞上 Linux 内核限制：默认 ip_local_port_range 会耗尽端口，且每个 socket 在 tcp_sock、socket_alloc 等内核结构上要占约 3300 字节。解法是把整个网络栈搬到用户态：用 Rust 的 TCP/IP 实现 smoltcp 配合自定义运行时（LFI 沙箱，每个来宾仅约 16 字节状态），收发包走 TUN/TAP、DPDK、AF_XDP 等内核旁路技术——DPDK 直接内存映射网卡、零系统调用，AF_XDP 在设备仍归内核的前提下达到相近效果。最终每个空闲服务器仅占约 620 字节内存，成功跑起 1600 万个服务器，DPDK 在基准测试中领先。</p>
-
-<p><a href="https://vihren.dev/belay/">Belay：为数据库变更做形式化验证</a><br>Belay 是一个概念验证性的 Lean 库（目前支持 SQLite），把形式化验证引入数据库 schema 迁移。工作流是：你声明必须始终成立的不变量，编码 Agent 每写一个迁移都必须同时给出「该迁移保持不变量成立」的证明，由 Lean 的证明检查器校验——因此该保证对所有具有此 schema 的数据库都成立，而不只是被测过的那几个实例。20 秒演示中，检查器先找出一个会让迁移丢数据的数据库，再验证修正后的迁移确实保住了数据。</p>
-
-<p><a href="https://slack.engineering/real-time-messaging/">Slack 实时消息系统架构：Real-time Messaging</a><br>Slack 的实时消息系统由四个核心 Java 服务构成：Channel Servers（CS）、Gateway Servers（GS）、Admin Servers（AS）和 Presence Servers。CS 有状态、全内存，通过一致性哈希把频道映射到主机，峰值单机服务约 1600 万个频道；CHARMs 管理哈希环，能在 20 秒内替换不健康的 CS。GS 持有用户数据与 WebSocket 订阅，并跨多个地理区域部署，让客户端就近接入。消息从客户端经 Webapp 到 AS，由哈希环路由到对应 CS，再扇出给全球所有订阅的 GS 下发；整套系统在全球范围的投递延迟约 500ms，输入指示器等瞬时事件走类似但不落库的路径。</p>
-
-<p><a href="https://progrium.xyz/articles/2026/single-binary-postgres/">我如何把 Postgres 塞进单个二进制文件</a><br>作者打造了 miniPG：一个内嵌真实 Postgres 服务器与客户端的自包含可执行文件，可以像 sqlite3 CLI 一样指向某个目录当数据库用。文中尝试了三条嵌入路线：PGlite（编译成 WebAssembly 的 Postgres）因仅支持单连接、会让期待真实服务器的软件死锁而失败；用 v86 模拟器在 headless webview 中跑 VM 可行但启动约需 7 秒；最终采用借鉴 Wine/Proton 系统调用翻译思路的 Hyper9，以接近原生的速度运行 Postgres，启动降到 800ms。成品支持直接跑查询、监听端口充当服务器、以及通过环境变量配好数据库再拉起程序，定位是本地单用户场景（自托管、测试、开发、Agent），而非替代生产级 Postgres。</p>
-
-<p><a href="https://linebender.org/blog/next-100-guis/">给接下来 100 个 Rust GUI 的建议</a><br>Raph Levien 认为 Rust GUI 的普及一直缓慢，但 AI 正在加速它：LLM 写 Rust 的成本与其他语言几乎相同，让 Rust 的安全性和性能在 AI 驱动的重写中变得很有吸引力。文本排版（Parley）和无障碍（AccessKit）基础设施已基本解决，但与系统合成器的集成仍是未解难题（尤其低端设备上的视频）。他怀疑立即模式 UI 走不出早期开发阶段——「它擅长前 90%，却让后 90% 更难」，并因 egui 缺乏无障碍支持而更看好 Iced。文章主张设计与执行分离、构建规格清晰且边界明确的模块（借鉴但不必盲从 Web 标准），并通过静态/动态拆分、图层管理与增量计算做优化。</p>
-
-<p><a href="https://yoyo-code.com/derive-debug-compile-time-improvements/">derive(Debug) 的编译期改进</a><br>文章讲述优化 Rust 编译器中 derive(Debug) 的过程：大型 enum 生成的含字符串字面量的 match 会带来二次复杂度的 match 检查和超线性的借用检查开销。第一版修复（把变体名拼成一个字符串、按判别式索引）因 crater 运行发现 bitflags 回归而被回退——这类宏会改写判别式，属于 TOCTOU 式的宏问题。重新落地时改为让 match 返回小整数索引（借用检查更便宜）并去掉生成的索引数组，改由 std 辅助函数按空格分隔查找名字边界；这又触发 MSP430 嵌入式平台的二进制体积回归，最终用自定义 ASCII 切分例程修复。同一拼接字符串策略扩展到结构体后，ripgrep 等 crate 的编译时间明显下降，后续还计划优化更复杂的 enum 和 match 检查算法本身。</p>
-
-<p><a href="https://clickhouse.com/blog/tuning-postgres-read-replicas">负载越高反而越快：调优 Postgres 只读副本</a><br>在 ClickHouse Managed Postgres 上的测试表明，基于归档传送的副本延迟随吞吐量呈 U 形曲线：WAL 段要攒满 16MB 或等 60 秒超时才会发送，太闲的系统也可能滞后近一分钟。基础调优（archive_timeout=5s、wal_retrieve_retry_interval=500ms）可把延迟压到几秒，但每次轮询都迫使副本从对象存储重新拉取并解压段，推高 CPU 占用。更激进的技巧（循环执行 pg_switch_wal()、经 WAL-G 守护进程路由拉取）能进一步降低延迟，但要以约 15% 的主库吞吐为代价，还可能带来可观的跨 AZ 网络账单。即便如此，流式复制在延迟上仍胜过所有归档调优方案；但作者认为归档传送仍是更好的默认选择，因为流式复制存在 hot_standby_feedback 拖慢 vacuum、复制槽可能撑爆主库磁盘等陷阱。</p>
-
-<p><a href="https://notes.hatedabamboo.me/terraform-tests-with-aws-emulator/">用 AWS Emulator 测试 Terraform</a><br>AWS 新推出的 Emulator 工具能模拟真实 AWS API 端点，让 Terraform apply 先在临时的模拟基础设施上验证，再触碰真实资源——能抓住 plan 静态分析发现不了的错误。作者演示了本地以 Docker 容器运行 emulator，为 AWS provider 配置端点覆盖及 skip_credentials_validation、insecure 等跳过校验的开关；还给出 GitHub Actions 工作流：安装 emulator、等待健康检查端点就绪、通过环境变量注入凭据与 CA 证书，约 1 分 25 秒跑完 plan&#43;apply。一个故意失败的例子（过短的 DynamoDB 表名）验证了价值：400 ValidationException 只在 apply 时才会暴露。局限包括不模拟 IAM 权限、偶发 501 NotImplemented，以及默认开启的遥测（可关闭或从开源代码中剥离）。</p>
-
-<p><a href="https://kukicola.io/posts/clickhouse-in-10-seconds/">10 秒读懂 ClickHouse：15 个值得掌握的特性</a><br>文章把 15 个 ClickHouse 特性浓缩成短小示例，覆盖许多「埋在文档深处」的功能。性能类包括按列压缩编解码器（100GB 传感器数据比默认 LZ4 小约 4 倍）、LowCardinality、投影、跳数索引、TTL 生命周期管理和查询缓存；取代额外工作流的特性有 LIMIT BY、-If 组合子、增量物化视图、补全时间序列空档的 WITH FILL，以及把每日独立用户滚动聚合成月度的 -State/-Merge。清单还包含实现 upsert 式更新的 ReplacingMergeTree、无需服务器直接查文件的 clickhouse-local、参数化视图，以及免去重复 JOIN 的内存字典。</p>
-
-<p><a href="https://www.theatlantic.com/technology/2026/11/silicon-valley-model-collapse/689505/">硅谷正在遭遇「模型崩溃」</a><br>对加州以外的人来说，硅谷发出的很多声音像来自另一个星球：上周业界众多顶尖人物以「奥运级的精神体操」为英伟达前 CEO 黄仁勋的婚外情辩护，理由从他对美国经济不可或缺、AI 投资正撑起经济，一直到美中正处于「地缘政治超级智能竞赛」之中。本周，最热衷谈论 AI 存在性风险的 Anthropic 又启动 900 亿美元融资，以加速建造它自己正在警告世人的那类系统。作者 Charlie Warzel 借用 AI 的「模型崩溃」一词，为理解科技行业这套「不合逻辑行为的模式」提供了一个框架：为什么科技领袖的言论听起来如此自相矛盾又令人反感。</p>
-
-<p><a href="https://blog.gonzobea.nz/blog/43/">S3 替代方案基准测试：廉价 VM 上的表现与 EC2 上的 S3 相比如何</a><br>作者从四家廉价 VM 主机（AWS EC2、Contabo、DigitalOcean、Hetzner）对四家 S3 兼容存储（Backblaze B2、Cloudflare R2、DigitalOcean Spaces、Amazon S3）做了多文件尺寸、多并发度的上传下载基准测试。Backblaze 在性价比上脱颖而出，Amazon 的出口流量费是最大的成本差异；反直觉的是，Backblaze 和 DigitalOcean 在自家数据中心内的吞吐可以超过 S3，Cloudflare R2 在东区延迟异常偏高但跨区表现出色，最便宜的 Contabo 则因 200 Mbps 带宽封顶而垫底。结论是这些廉价 S3 替代品比预期更有吸引力，DigitalOcean 的一致性表现尤其值得推荐。</p>
+<p><a href="https://totodore.github.io/memory-backpressure/">Rust 中的内存受限系统和背压</a><br>本文探讨了 Rust 中内存受限系统的设计与实现，以及如何通过背压机制优化资源使用和系统性能。</p>
   
 
 <h2>AI</h2>
 
 
-<p><a href="https://dylanamartin.com/2026/11/19/moving-into-ai-product-engineering.html">转型 AI 产品工程</a><br>作者从 PostHog 特性开关团队负责人转型做 AI 产品工程，发现这次转变比头衔变化更小——围绕系统、失效模式和正确性的核心工程技能依然适用。转型动机一是每天都在用 AI Agent，对 Agent 何时有帮助、何时碍事已有清晰判断；二是想要「前沿形状」的问题，即行业尚未定义「好」的标准的地方。新学的关键技能是写 eval：针对 LLM 非确定性行为设计的柔性测试，能抓住传统确定性测试抓不到的回归。最大挑战则是在面向人类的 UI 与面向 Agent 的接口（MCP、skills）之间做平衡——「还没人真正搞清楚人类该出现在循环中的哪个位置」。</p>
+<p><a href="https://mp.weixin.qq.com/s/pM1cHw7PeS6V_pnOEtOmfQ">AI 终于学会了「自己多想几遍」？</a><br>昨天，智谱正式发布 GLM-5.4。这次最值得关注的，可能不是模型又变强了，而是它引入了一种全新的架构思路：Loop Transformer。https://z.ai/blog/glm-5.4 。智谱称，GLM-5.4 是首款基于 Loop Transformer 架构打造的旗舰模型，智能水平可媲美参数规模达 2T～3T 的模型。</p>
 
-<p><a href="https://www.sciencedaily.com/releases/2026/11/261120075701.htm">科学家发现：AI 的工作方式可能终究与人脑不同</a><br>约克大学发表于《Nature Machine Intelligence》的研究质疑：神经科学中广泛使用的 AI 模型是否真正模拟了大脑的视觉处理。研究者提出「反向可预测性测试」——不只用 AI 预测神经活动，而是检验大脑活动能否反过来预测模型的内部特征。结果显示 AI 预测神经元响应相当准，但大脑信号对许多模型内部组件的预测能力弱得多，而这种失配在对比不同大脑的神经元时并不出现。这说明输出匹配并不保证底层机制相同，为依赖这些模型的神经科学研究敲响警钟；团队发布了公开测试工具包，并指出与大脑活动对齐的模型组件在预测真实人类行为上也表现更好。</p>
+<p><a href="https://simonwillison.net/2026/Nov/23/ladybird/">Ladybird 的首个 alpha 版本</a><br>Ladybird 浏览器发布了首个 alpha 版本，这是一个新兴的网页浏览器项目，旨在提供现代、快速和安全的浏览体验。</p>
 
-<p><a href="https://www.gpupartner.com/blog/beginners-guide-local-ai-inkling-qwen-unsloth">本地 AI 入门指南：Inkling、Qwen 与 Unsloth</a><br>这篇面向新手的教程介绍如何在 Windows PC 上用 Unsloth Desktop 加载量化开源模型（如 Qwen3.8-27B 或 Inkling 2 Mini），搭建免费、私密、免订阅的家用聊天机器人，全程约 10-15 分钟。文章解释了 GPU 显存如何决定可运行的模型、量化为何能以少量精度换取体积和速度，并给出从 8GB 到 32GB&#43; 各显存档位对应的推荐模型、量化等级与上下文长度对照表；作者的 RTX 5090 选用 UD-Q4_K_XL 量化配 128K 上下文。内建的局域网共享让家人在设好密码后用任意浏览器即可访问；公网访问、性能调优与本地 Agent 将在后续文章展开。</p>
+<p><a href="https://leaddev.com/ai/ai-productivity-is-burning-out-your-best-engineers">AI 生产力正在耗尽您最好的工程师 - LeadDev</a><br>AI 生产力工具正在耗尽您最好的工程师，&#34;隐形验证器&#34;问题探讨了 AI 如何在不增加可见工作量的情况下增加工程师的认知负担。</p>
 
-<p><a href="https://anil.recoil.org/notes/software-too-complex-for-humans">软件是否从一开始就复杂到超出了人类的能力？</a><br>作者由 AI 辅助、Lean 验证的黎曼猜想证明（约 1700 万行代码、尚无人类完全读懂）谈起，指出人类在理论理解跟不上的情况下已把软件铺满整个社会，近年频发的大范围同时故障和安全漏洞正是佐证——我们可能高估了人类写软件的能力。他提出两条对策：其一，所有新软件（乃至重建的操作系统栈和指令集）都应从形式化规格推导得出；其二，刻意为系统引入多样性，让单个 bug 无法同时攻陷海量主机。作者强调仅靠更好的 AI 模型只会产出「堆积如山的 slop 代码」，人类仍需决定规格里装什么；开源社区也仍在与 AI 披露和信任问题搏斗。</p>
-
-<p><a href="https://z.ai/blog/glm-5.4">GLM-5.4：首个 Loop Transformer 旗舰模型，迈向通用化编码</a><br>GLM-5.4 是 Z.ai 首个基于 Loop Transformer 架构的旗舰模型：让 GLM-5 基座中 28 层权重共享的层迭代执行两遍、反复精炼隐状态，在不增加参数的情况下获得更深推理能力，750B 规模即达到 2T-3T 参数模型的智能水平。关键工程设计包括逐 token 门控渐进更新（防止激活范数爆炸）、全局共享&#43;独立滑动窗口的混合 KV 缓存（1M 上下文下部署成本增幅可控）以及稀疏注意力索引复用。30B 同参数对照实验显示仅多约 10% 训练算力即有明显收益，数学、科学推理与长上下文任务提升最大，多数基准的输出长度还缩短 10-14%；推理峰值速度 70-80 tokens/s、低谷可达 200。它标志着「通用化编码（Generalized Coding）」的起点——用代码生成/编辑视频、构建完整游戏、3D 建模与机械设计；已知局限是容易陷入过长的「马拉松式思考」。模型权重计划在安全加固后开源。</p>
+<p><a href="https://about.gitlab.com/blog/agentic-engineering-walkthrough/">使用 GitLab 和本地智能体进行智能体工程：实践指南</a><br>更高的智能体准确性，更低的令牌成本。本文介绍了如何结合 GitLab 和本地智能体进行高效的智能体工程实践。</p>
 
 
 <h2>流行工具与项目</h2>

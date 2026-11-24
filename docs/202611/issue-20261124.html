@@ -1,0 +1,136 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202611/issue-20261124.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20261124</span>
+</p>
+<p>每日一谚：Always call wg.Done() in a defer statement to prevent deadlocks. </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/11/24/ai-era-learning-programming-languages">AI 时代，你可能再也学不会一门编程语言了</a><br>当人人都在用 AI 一键生成完整项目，一个反直觉的悖论正在悄然浮现：AI 让获取代码变得极其廉价，却打断了人类在试错中建 立底层认知模型的路径。本文深度剖析了编程能力的三个分水岭——“会用”、“看懂”与“能写”，结合认知科学中的生成效应与萨丕尔-沃尔夫假说，警示开发者警惕对 AI 解释的虚假流畅感依赖。文章呼吁在 AI 时代刻意保留从空白文件独立思考、编码与排错的能力，别让 AI 替你完成了本属于自己的认知成长。</p> 
+
+<p><a href="https://www.pingcap.com/blog/mcp-server-persistence/">MCP Server 持久化详解：如何存储会话和智能体状态</a><br>**MySQL 兼容性。** 使用 Python、TypeScript 或 Go 编写的 MCP 服务器通过标准 MySQL 驱动程序和 ORM 连接，因此持久化层不需要自定义客户端代码。**强一致性。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://kubernetes.io/blog/2026/11/23/kubernetes-v1-38-sneak-peek/">Kubernetes v1.38 预览</a><br>v1.37 及更早版本支持的 kubelet 提供了一种配置 cgroup 驱动的传统机制。现代方式是通过 CRI `RuntimeConfig` RPC 来实现，该 RPC 报告了容器运行时推荐使用的 cgroup 驱动。</p>
+
+<p><a href="https://devblogs.microsoft.com/blog/do-ai-coding-agents-struggle-with-non-rest-apis/">AI 编码智能体在处理非 REST API 时是否遇到困难？</a><br>如果您维护非 REST API，可以保持其原有风格。有了文档支持，我们测试的智能体能够以相同的成本使用仅 POST 和 RPC API 以及 REST API。应努力让智能体访问这些文档，因为没有文档，智能体无法找到 `/updateBin` 端点。</p>
+
+<p><a href="https://engineering.salesforce.com/5-lessons-in-ai-context-engineering-why-more-context-is-not-better/">AI 上下文工程的 5 个经验教训：为什么更多上下文并不更好</a><br>传统方法会产生权衡。对源系统的运行时调用引入了网络跳转和重复的身份匹配。数据仓库连接可以解决关系问题，但它们在对话关键路径上留下了昂贵的计算。</p>
+
+<p><a href="https://shnatsel.github.io/state-of-simd-rust-2026/">2026 年 Rust 中的 SIMD 状态</a><br>自去年以来取得了很大进展，我也贡献了一些力量！在去年的调查之后，我开始为看起来最有前途的 SIMD 库做贡献。</p>
+
+<p><a href="https://totodore.github.io/memory-backpressure/">Rust 中的内存受限系统和背压</a><br>本文探讨了 Rust 中内存受限系统的设计与实现，以及如何通过背压机制优化资源使用和系统性能。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://mp.weixin.qq.com/s/pM1cHw7PeS6V_pnOEtOmfQ">AI 终于学会了「自己多想几遍」？</a><br>昨天，智谱正式发布 GLM-5.4。这次最值得关注的，可能不是模型又变强了，而是它引入了一种全新的架构思路：Loop Transformer。https://z.ai/blog/glm-5.4 。智谱称，GLM-5.4 是首款基于 Loop Transformer 架构打造的旗舰模型，智能水平可媲美参数规模达 2T～3T 的模型。</p>
+
+<p><a href="https://simonwillison.net/2026/Nov/23/ladybird/">Ladybird 的首个 alpha 版本</a><br>Ladybird 浏览器发布了首个 alpha 版本，这是一个新兴的网页浏览器项目，旨在提供现代、快速和安全的浏览体验。</p>
+
+<p><a href="https://leaddev.com/ai/ai-productivity-is-burning-out-your-best-engineers">AI 生产力正在耗尽您最好的工程师 - LeadDev</a><br>AI 生产力工具正在耗尽您最好的工程师，&#34;隐形验证器&#34;问题探讨了 AI 如何在不增加可见工作量的情况下增加工程师的认知负担。</p>
+
+<p><a href="https://about.gitlab.com/blog/agentic-engineering-walkthrough/">使用 GitLab 和本地智能体进行智能体工程：实践指南</a><br>更高的智能体准确性，更低的令牌成本。本文介绍了如何结合 GitLab 和本地智能体进行高效的智能体工程实践。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/datazip-inc/olake-go">datazip-inc/olake-go</a><br>OLake Go: open-source replication from databases, Kafka and S3 to Apache Iceberg and Parquet. Sources: Postgres, MySQL, MongoDB, Oracle, MSSQL, DB2, Kafka, S3. Formerly datazip-inc/olake. Table mainte</p>
+
+<p><a href="https://github.com/vxcontrol/pentagi">vxcontrol/pentagi</a><br>Fully autonomous AI Agents system capable of performing complex penetration testing tasks</p>
+
+<p><a href="https://github.com/Tencent/LoopForge">Tencent/LoopForge</a><br>Self-hosted workflows for coding-agent delivery. Orchestrate CodeBuddy, Codex and Claude Code with scripts and human approval gates. Includes Local workflows for coding assistants.</p>
+
+<p><a href="https://github.com/agent-substrate/substrate">agent-substrate/substrate</a><br>Agent Substrate: the core system</p>
+
+<p><a href="https://github.com/getarcaneapp/arcane">getarcaneapp/arcane</a><br>Modern Docker Management, Designed for Everyone</p>
+
+<p><a href="https://github.com/multica-ai/multica">multica-ai/multica</a><br>Make humans and AI agents work as one team — open-source and self-hostable.</p>
+
+<p><a href="https://github.com/opensandbox-group/OpenSandbox">opensandbox-group/OpenSandbox</a><br>Secure, Fast, and Extensible Sandbox runtime for AI agents.</p>
+
+<p><a href="https://github.com/nats-io/nats-server">nats-io/nats-server</a><br>High-Performance server for NATS.io, the cloud and edge native messaging system.</p>
+
+<p><a href="https://github.com/gastownhall/beads">gastownhall/beads</a><br>Beads - A memory upgrade for your coding agent</p>
+
+<p><a href="https://github.com/TencentCloud/CubeSandbox">TencentCloud/CubeSandbox</a><br>Instant, Concurrent, Secure &amp; Lightweight Sandbox for AI Agents.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+
