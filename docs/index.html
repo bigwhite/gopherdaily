@@ -45,7 +45,7 @@ img {
 
 <div style="text-align: center; margin-bottom: 10px;">
   <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
-  <a href=https://bigwhite.github.io/gopherdaily/202611/issue-20261124.html style="margin: 0 10px;">Web版</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202611/issue-20261125.html style="margin: 0 10px;">Web版</a> |
   <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
   <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
   <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
@@ -57,9 +57,9 @@ img {
 
 <div>
 <p class="issue" style="text-align:center;">
-  <span style="text-align:center;">20261124</span>
+  <span style="text-align:center;">20261125</span>
 </p>
-<p>每日一谚：Always call wg.Done() in a defer statement to prevent deadlocks. </p>
+<p>每日一谚：Slices are dynamic windows over arrays; beware of holding memory unexpectedly </p>
 </div>
 
 <hr/>
@@ -67,39 +67,47 @@ img {
 <h2>Go技术生态</h2>
 
 
-<p><a href="https://tonybai.com/2026/11/24/ai-era-learning-programming-languages">AI 时代，你可能再也学不会一门编程语言了</a><br>当人人都在用 AI 一键生成完整项目，一个反直觉的悖论正在悄然浮现：AI 让获取代码变得极其廉价，却打断了人类在试错中建 立底层认知模型的路径。本文深度剖析了编程能力的三个分水岭——“会用”、“看懂”与“能写”，结合认知科学中的生成效应与萨丕尔-沃尔夫假说，警示开发者警惕对 AI 解释的虚假流畅感依赖。文章呼吁在 AI 时代刻意保留从空白文件独立思考、编码与排错的能力，别让 AI 替你完成了本属于自己的认知成长。</p> 
+<p><a href="https://tonybai.com/2026/11/25/an-overview-of-go-tooling-v2">Go 工具链全景：2026 版——从 go install 到 gopls 与 MCP 的高效开发指南</a><br>2019 年，Alex Edwards 的《An Overview of Go&#39;s Tooling》曾是 Go Weekly 年度阅读量最高的文章之一，也是无数 Gopher &gt;的工具速查手册。七年后，面对模块化、gopls 与 AI 编码助手全面普及的全新生态，作者对原文进行了彻底重写。本文即该文的完整中文翻译&gt;，系统梳理 2026 年 Go 工具链全貌：用 go install、go run 与 go tool 三种方式运行第三方工具；用 gopls 语言服务器与 MCP 协议赋能编 辑器和 AI 助手；用 govulncheck、staticcheck、nilaway、errcheck 等工具守护代码质量；用 go work 工作区管理多模块依赖；用模糊测试&gt;、基准测试、pprof 性能剖析、PGO 与执行追踪诊断并优化应用。无论你是 Go 新手还是老手，这份工具指南都值得收藏备查。</p> 
 
-<p><a href="https://www.pingcap.com/blog/mcp-server-persistence/">MCP Server 持久化详解：如何存储会话和智能体状态</a><br>**MySQL 兼容性。** 使用 Python、TypeScript 或 Go 编写的 MCP 服务器通过标准 MySQL 驱动程序和 ORM 连接，因此持久化层不需要自定义客户端代码。**强一致性。</p> 
+<p><a href="https://tonybai.com/2026/11/25/go-goroutine-stack-growth-optimization-uber">Go 的 goroutine 栈增长，为什么会吃掉 Uber 近 4% CPU？</a><br>Uber 大规模 Go 服务集群发现，goroutine 栈增长竟然消耗了约 3.9% 的 CPU。问题出在 Go Runtime 现有的自适应栈大小机制无法及时捕获短生命周期 goroutine 的栈需求。Uber 工程师 Krishna Swaroop 将生产实践带回 Go 社区，通过栈缓存、内存预算和 token 机&gt;制，探索降低 Stack Growth 成本的新方案。这场优化也让我们重新认识了 Go Runtime 中一个容易被忽略的性能瓶颈。</p> 
+
+<p><a href="https://blog.jetbrains.com/go/2026/11/25/go-by-goland-public-preview/">GoLand 现已在 Cursor 和 VS Code 中可用</a><br>代码导航功能：跳转到定义和实现，查找所有使用情况，并探索整个项目的调用和类型层次结构。代码分析功能：通过检查捕获问题，包括数据流分析，并应用快速修复。</p> 
+
+<p><a href="https://theconsensus.dev/p/2026/11/15/cgos-pointer-check.html">cgo 的指针检查问题 - The Consensus</a><br>cgo 进行语法转换时不知道 Go 类型，这几乎不可察觉的源代码更改可以将一个 48ns 的调用变成一个 76µs 的调用。</p> 
 
 
 <h2>云原生技术</h2>
 
 
-<p><a href="https://kubernetes.io/blog/2026/11/23/kubernetes-v1-38-sneak-peek/">Kubernetes v1.38 预览</a><br>v1.37 及更早版本支持的 kubelet 提供了一种配置 cgroup 驱动的传统机制。现代方式是通过 CRI `RuntimeConfig` RPC 来实现，该 RPC 报告了容器运行时推荐使用的 cgroup 驱动。</p>
+<p><a href="https://mp.weixin.qq.com/s/CVbPmrzFkGgvmyote8PP-g">德国电商巨头OTTO为什么把后端迁移到Rust？</a><br>德国电商巨头 OTTO，正在把原来基于 TypeScript 和 Kotlin/Spring 的后端系统迁移到 Rust。这是一次由真实工程问题驱动的技术迁移。 OTTO 工程师 Falk Woldmann Lu 分享了迁移经历，其中有几个数据相当亮眼</p>
 
-<p><a href="https://devblogs.microsoft.com/blog/do-ai-coding-agents-struggle-with-non-rest-apis/">AI 编码智能体在处理非 REST API 时是否遇到困难？</a><br>如果您维护非 REST API，可以保持其原有风格。有了文档支持，我们测试的智能体能够以相同的成本使用仅 POST 和 RPC API 以及 REST API。应努力让智能体访问这些文档，因为没有文档，智能体无法找到 `/updateBin` 端点。</p>
+<p><a href="https://www.cncf.io/blog/2026/11/25/%f0%9f%9a%80-the-story-behind-drone-2-my-kubecon-cloudnativecon-north-america-2026-keynote/">🚀 Drone 2 背后的故事：我在 KubeCon &#43; CloudNativeCon North America 2026 上的主题演讲</a><br>最后但同样重要的是，感谢 agent-substrate、kagent 和 agentgateway 社区！他们回答了我提出的每一个问题，响应速度极快，并且随时准备在需要时进行实时调试。没有你们，我无法完成这一切！💜</p>
 
-<p><a href="https://engineering.salesforce.com/5-lessons-in-ai-context-engineering-why-more-context-is-not-better/">AI 上下文工程的 5 个经验教训：为什么更多上下文并不更好</a><br>传统方法会产生权衡。对源系统的运行时调用引入了网络跳转和重复的身份匹配。数据仓库连接可以解决关系问题，但它们在对话关键路径上留下了昂贵的计算。</p>
+<p><a href="https://devblogs.microsoft.com/blog/do-inconsistent-docs-hurt-ai-coding-agents/">不一致的文档是否会影响 AI 编程智能体？</a><br>要了解矛盾对智能体的影响，您需要将从包含矛盾的页面工作的智能体与从已修复页面工作的相同智能体进行比较。</p>
 
-<p><a href="https://shnatsel.github.io/state-of-simd-rust-2026/">2026 年 Rust 中的 SIMD 状态</a><br>自去年以来取得了很大进展，我也贡献了一些力量！在去年的调查之后，我开始为看起来最有前途的 SIMD 库做贡献。</p>
+<p><a href="https://devblogs.microsoft.com/blog/is-sort-by-impact-just-vibes/">&#39;按影响排序&#39;只是感觉吗？</a><br>如果您要求智能体按影响或类似优先级或重要性等同样模糊的词对任何内容进行排序，请说明您的意思，例如预期收入或每天努力的价值。如果不这样做，智能体会为您选择一个，可能不是您想要的那个。</p>
 
-<p><a href="https://totodore.github.io/memory-backpressure/">Rust 中的内存受限系统和背压</a><br>本文探讨了 Rust 中内存受限系统的设计与实现，以及如何通过背压机制优化资源使用和系统性能。</p>
+<p><a href="https://cetra3.github.io/blog/state-of-allocators-2026-finally-stabilised/">2026 年分配器状态 - 终于稳定了！</a><br>距离上一篇文章仅过去了几个月，我很高兴看到，在十年的停滞不前后，分配器终于稳定了！虽然感觉 never 类型确实抢了一些风头，rust `1.</p>
+
+<p><a href="https://www.infoq.com/news/2026/11/agoda-modular-monolith-framework/">Agoda 通过模块化架构将 API 代码审查时间减少 64% - InfoQ</a><br>Agoda 通过模块化架构将 API 代码审查时间减少了 64%。</p>
   
 
 <h2>AI</h2>
 
 
-<p><a href="https://mp.weixin.qq.com/s/pM1cHw7PeS6V_pnOEtOmfQ">AI 终于学会了「自己多想几遍」？</a><br>昨天，智谱正式发布 GLM-5.4。这次最值得关注的，可能不是模型又变强了，而是它引入了一种全新的架构思路：Loop Transformer。https://z.ai/blog/glm-5.4 。智谱称，GLM-5.4 是首款基于 Loop Transformer 架构打造的旗舰模型，智能水平可媲美参数规模达 2T～3T 的模型。</p>
+<p><a href="https://mp.weixin.qq.com/s/iCNlwT6zCRCPdntBzaX-Uw">AI 时代，Uncle Bob 给程序员敲响警钟</a><br>AI 写代码越来越快，程序员还需要学习软件工程基本功吗？ 《Clean Code》作者 Uncle Bob（Robert C. Martin）在接受 Matt Pocock 专访时，给出了一个非常明确的答案：软件基本功不仅没有过时，反而比以往更加重要。</p>
 
-<p><a href="https://simonwillison.net/2026/Nov/23/ladybird/">Ladybird 的首个 alpha 版本</a><br>Ladybird 浏览器发布了首个 alpha 版本，这是一个新兴的网页浏览器项目，旨在提供现代、快速和安全的浏览体验。</p>
+<p><a href="https://simonwillison.net/2026/Nov/24/llm-inflection-points/">十二个月内的三个 LLM 转折点</a><br>测试人员指出，Claude Opus 4.5 能够处理模糊性并权衡利弊而无需人工指导。他们告诉我们，当面对复杂的多系统错误时，Opus 4.5 能够找出解决方案。他们说对于 Sonnet 4 来说几乎不可能完成的任务。</p>
 
-<p><a href="https://leaddev.com/ai/ai-productivity-is-burning-out-your-best-engineers">AI 生产力正在耗尽您最好的工程师 - LeadDev</a><br>AI 生产力工具正在耗尽您最好的工程师，&#34;隐形验证器&#34;问题探讨了 AI 如何在不增加可见工作量的情况下增加工程师的认知负担。</p>
+<p><a href="https://simonwillison.net/2026/Nov/24/astra-historical-mystery/">GPT 6.2 Astra 解决了一个历史之谜</a><br>但如果数学经验有任何指导意义，我们也可以预见，在明年春天或夏天的某个时候，我们将面临一种信心危机，因为我们努力理解如何应对能够做人类历史学家无法完成的事情的智能体系统。</p>
 
-<p><a href="https://about.gitlab.com/blog/agentic-engineering-walkthrough/">使用 GitLab 和本地智能体进行智能体工程：实践指南</a><br>更高的智能体准确性，更低的令牌成本。本文介绍了如何结合 GitLab 和本地智能体进行高效的智能体工程实践。</p>
+<p><a href="https://claude.dev/blog/the-work-after-you-open-a-pr/">使用 Claude Code 发布的实用指南 / claude.dev 博客</a><br></p>
 
 
 <h2>流行工具与项目</h2>
 
+
+<p><a href="https://github.com/intent-driven-dev/intent-driven-template">GitHub - intent-driven-dev/intent-driven-template: 用于意图驱动开发的 OpenSpec 模板，包含规范、ADR、C4 图、Gherkin、TDD、多模型对抗规范编写、领域词汇表和可重用工程工作流程。与 OpenCode、Codex CLI、Copilot CLI 和 Claude Code 兼容。支持规范即源。· GitHub</a><br></p>
 
 <p><a href="https://github.com/datazip-inc/olake-go">datazip-inc/olake-go</a><br>OLake Go: open-source replication from databases, Kafka and S3 to Apache Iceberg and Parquet. Sources: Postgres, MySQL, MongoDB, Oracle, MSSQL, DB2, Kafka, S3. Formerly datazip-inc/olake. Table mainte</p>
 

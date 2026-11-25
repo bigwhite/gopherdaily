@@ -1,0 +1,144 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202611/issue-20261125.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20261125</span>
+</p>
+<p>每日一谚：Slices are dynamic windows over arrays; beware of holding memory unexpectedly </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/11/25/an-overview-of-go-tooling-v2">Go 工具链全景：2026 版——从 go install 到 gopls 与 MCP 的高效开发指南</a><br>2019 年，Alex Edwards 的《An Overview of Go&#39;s Tooling》曾是 Go Weekly 年度阅读量最高的文章之一，也是无数 Gopher &gt;的工具速查手册。七年后，面对模块化、gopls 与 AI 编码助手全面普及的全新生态，作者对原文进行了彻底重写。本文即该文的完整中文翻译&gt;，系统梳理 2026 年 Go 工具链全貌：用 go install、go run 与 go tool 三种方式运行第三方工具；用 gopls 语言服务器与 MCP 协议赋能编 辑器和 AI 助手；用 govulncheck、staticcheck、nilaway、errcheck 等工具守护代码质量；用 go work 工作区管理多模块依赖；用模糊测试&gt;、基准测试、pprof 性能剖析、PGO 与执行追踪诊断并优化应用。无论你是 Go 新手还是老手，这份工具指南都值得收藏备查。</p> 
+
+<p><a href="https://tonybai.com/2026/11/25/go-goroutine-stack-growth-optimization-uber">Go 的 goroutine 栈增长，为什么会吃掉 Uber 近 4% CPU？</a><br>Uber 大规模 Go 服务集群发现，goroutine 栈增长竟然消耗了约 3.9% 的 CPU。问题出在 Go Runtime 现有的自适应栈大小机制无法及时捕获短生命周期 goroutine 的栈需求。Uber 工程师 Krishna Swaroop 将生产实践带回 Go 社区，通过栈缓存、内存预算和 token 机&gt;制，探索降低 Stack Growth 成本的新方案。这场优化也让我们重新认识了 Go Runtime 中一个容易被忽略的性能瓶颈。</p> 
+
+<p><a href="https://blog.jetbrains.com/go/2026/11/25/go-by-goland-public-preview/">GoLand 现已在 Cursor 和 VS Code 中可用</a><br>代码导航功能：跳转到定义和实现，查找所有使用情况，并探索整个项目的调用和类型层次结构。代码分析功能：通过检查捕获问题，包括数据流分析，并应用快速修复。</p> 
+
+<p><a href="https://theconsensus.dev/p/2026/11/15/cgos-pointer-check.html">cgo 的指针检查问题 - The Consensus</a><br>cgo 进行语法转换时不知道 Go 类型，这几乎不可察觉的源代码更改可以将一个 48ns 的调用变成一个 76µs 的调用。</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://mp.weixin.qq.com/s/CVbPmrzFkGgvmyote8PP-g">德国电商巨头OTTO为什么把后端迁移到Rust？</a><br>德国电商巨头 OTTO，正在把原来基于 TypeScript 和 Kotlin/Spring 的后端系统迁移到 Rust。这是一次由真实工程问题驱动的技术迁移。 OTTO 工程师 Falk Woldmann Lu 分享了迁移经历，其中有几个数据相当亮眼</p>
+
+<p><a href="https://www.cncf.io/blog/2026/11/25/%f0%9f%9a%80-the-story-behind-drone-2-my-kubecon-cloudnativecon-north-america-2026-keynote/">🚀 Drone 2 背后的故事：我在 KubeCon &#43; CloudNativeCon North America 2026 上的主题演讲</a><br>最后但同样重要的是，感谢 agent-substrate、kagent 和 agentgateway 社区！他们回答了我提出的每一个问题，响应速度极快，并且随时准备在需要时进行实时调试。没有你们，我无法完成这一切！💜</p>
+
+<p><a href="https://devblogs.microsoft.com/blog/do-inconsistent-docs-hurt-ai-coding-agents/">不一致的文档是否会影响 AI 编程智能体？</a><br>要了解矛盾对智能体的影响，您需要将从包含矛盾的页面工作的智能体与从已修复页面工作的相同智能体进行比较。</p>
+
+<p><a href="https://devblogs.microsoft.com/blog/is-sort-by-impact-just-vibes/">&#39;按影响排序&#39;只是感觉吗？</a><br>如果您要求智能体按影响或类似优先级或重要性等同样模糊的词对任何内容进行排序，请说明您的意思，例如预期收入或每天努力的价值。如果不这样做，智能体会为您选择一个，可能不是您想要的那个。</p>
+
+<p><a href="https://cetra3.github.io/blog/state-of-allocators-2026-finally-stabilised/">2026 年分配器状态 - 终于稳定了！</a><br>距离上一篇文章仅过去了几个月，我很高兴看到，在十年的停滞不前后，分配器终于稳定了！虽然感觉 never 类型确实抢了一些风头，rust `1.</p>
+
+<p><a href="https://www.infoq.com/news/2026/11/agoda-modular-monolith-framework/">Agoda 通过模块化架构将 API 代码审查时间减少 64% - InfoQ</a><br>Agoda 通过模块化架构将 API 代码审查时间减少了 64%。</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://mp.weixin.qq.com/s/iCNlwT6zCRCPdntBzaX-Uw">AI 时代，Uncle Bob 给程序员敲响警钟</a><br>AI 写代码越来越快，程序员还需要学习软件工程基本功吗？ 《Clean Code》作者 Uncle Bob（Robert C. Martin）在接受 Matt Pocock 专访时，给出了一个非常明确的答案：软件基本功不仅没有过时，反而比以往更加重要。</p>
+
+<p><a href="https://simonwillison.net/2026/Nov/24/llm-inflection-points/">十二个月内的三个 LLM 转折点</a><br>测试人员指出，Claude Opus 4.5 能够处理模糊性并权衡利弊而无需人工指导。他们告诉我们，当面对复杂的多系统错误时，Opus 4.5 能够找出解决方案。他们说对于 Sonnet 4 来说几乎不可能完成的任务。</p>
+
+<p><a href="https://simonwillison.net/2026/Nov/24/astra-historical-mystery/">GPT 6.2 Astra 解决了一个历史之谜</a><br>但如果数学经验有任何指导意义，我们也可以预见，在明年春天或夏天的某个时候，我们将面临一种信心危机，因为我们努力理解如何应对能够做人类历史学家无法完成的事情的智能体系统。</p>
+
+<p><a href="https://claude.dev/blog/the-work-after-you-open-a-pr/">使用 Claude Code 发布的实用指南 / claude.dev 博客</a><br></p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/intent-driven-dev/intent-driven-template">GitHub - intent-driven-dev/intent-driven-template: 用于意图驱动开发的 OpenSpec 模板，包含规范、ADR、C4 图、Gherkin、TDD、多模型对抗规范编写、领域词汇表和可重用工程工作流程。与 OpenCode、Codex CLI、Copilot CLI 和 Claude Code 兼容。支持规范即源。· GitHub</a><br></p>
+
+<p><a href="https://github.com/datazip-inc/olake-go">datazip-inc/olake-go</a><br>OLake Go: open-source replication from databases, Kafka and S3 to Apache Iceberg and Parquet. Sources: Postgres, MySQL, MongoDB, Oracle, MSSQL, DB2, Kafka, S3. Formerly datazip-inc/olake. Table mainte</p>
+
+<p><a href="https://github.com/vxcontrol/pentagi">vxcontrol/pentagi</a><br>Fully autonomous AI Agents system capable of performing complex penetration testing tasks</p>
+
+<p><a href="https://github.com/Tencent/LoopForge">Tencent/LoopForge</a><br>Self-hosted workflows for coding-agent delivery. Orchestrate CodeBuddy, Codex and Claude Code with scripts and human approval gates. Includes Local workflows for coding assistants.</p>
+
+<p><a href="https://github.com/agent-substrate/substrate">agent-substrate/substrate</a><br>Agent Substrate: the core system</p>
+
+<p><a href="https://github.com/getarcaneapp/arcane">getarcaneapp/arcane</a><br>Modern Docker Management, Designed for Everyone</p>
+
+<p><a href="https://github.com/multica-ai/multica">multica-ai/multica</a><br>Make humans and AI agents work as one team — open-source and self-hostable.</p>
+
+<p><a href="https://github.com/opensandbox-group/OpenSandbox">opensandbox-group/OpenSandbox</a><br>Secure, Fast, and Extensible Sandbox runtime for AI agents.</p>
+
+<p><a href="https://github.com/nats-io/nats-server">nats-io/nats-server</a><br>High-Performance server for NATS.io, the cloud and edge native messaging system.</p>
+
+<p><a href="https://github.com/gastownhall/beads">gastownhall/beads</a><br>Beads - A memory upgrade for your coding agent</p>
+
+<p><a href="https://github.com/TencentCloud/CubeSandbox">TencentCloud/CubeSandbox</a><br>Instant, Concurrent, Secure &amp; Lightweight Sandbox for AI Agents.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+
