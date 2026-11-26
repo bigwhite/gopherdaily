@@ -45,7 +45,7 @@ img {
 
 <div style="text-align: center; margin-bottom: 10px;">
   <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
-  <a href=https://bigwhite.github.io/gopherdaily/202611/issue-20261125.html style="margin: 0 10px;">Web版</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202611/issue-20261126.html style="margin: 0 10px;">Web版</a> |
   <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
   <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
   <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
@@ -57,9 +57,9 @@ img {
 
 <div>
 <p class="issue" style="text-align:center;">
-  <span style="text-align:center;">20261125</span>
+  <span style="text-align:center;">20261126</span>
 </p>
-<p>每日一谚：Slices are dynamic windows over arrays; beware of holding memory unexpectedly </p>
+<p>每日一谚：Always test concurrent code using the race detector (go test -race). </p>
 </div>
 
 <hr/>
@@ -67,47 +67,29 @@ img {
 <h2>Go技术生态</h2>
 
 
-<p><a href="https://tonybai.com/2026/11/25/an-overview-of-go-tooling-v2">Go 工具链全景：2026 版——从 go install 到 gopls 与 MCP 的高效开发指南</a><br>2019 年，Alex Edwards 的《An Overview of Go&#39;s Tooling》曾是 Go Weekly 年度阅读量最高的文章之一，也是无数 Gopher &gt;的工具速查手册。七年后，面对模块化、gopls 与 AI 编码助手全面普及的全新生态，作者对原文进行了彻底重写。本文即该文的完整中文翻译&gt;，系统梳理 2026 年 Go 工具链全貌：用 go install、go run 与 go tool 三种方式运行第三方工具；用 gopls 语言服务器与 MCP 协议赋能编 辑器和 AI 助手；用 govulncheck、staticcheck、nilaway、errcheck 等工具守护代码质量；用 go work 工作区管理多模块依赖；用模糊测试&gt;、基准测试、pprof 性能剖析、PGO 与执行追踪诊断并优化应用。无论你是 Go 新手还是老手，这份工具指南都值得收藏备查。</p> 
+<p><a href="https://tonybai.com/2026/11/26/go-1-28-gotip-cgo-bindings">Go 1.28 新特性抢先体验：gotip 玩转无 C 工具链的 cgo</a><br>Go 1.28 开发分支已经可以通过 gotip 提前体验 cgo bindings。本文以 Ubuntu 26.04 为实验环境，使用一个预编译的 C 动态 库，演示如何在不调用 GCC 的情况下构建 Go 程序，并进一步探索 C 函数、Struct、全局变量和自动生成 Binding 文件的使用方式。</p> 
 
-<p><a href="https://tonybai.com/2026/11/25/go-goroutine-stack-growth-optimization-uber">Go 的 goroutine 栈增长，为什么会吃掉 Uber 近 4% CPU？</a><br>Uber 大规模 Go 服务集群发现，goroutine 栈增长竟然消耗了约 3.9% 的 CPU。问题出在 Go Runtime 现有的自适应栈大小机制无法及时捕获短生命周期 goroutine 的栈需求。Uber 工程师 Krishna Swaroop 将生产实践带回 Go 社区，通过栈缓存、内存预算和 token 机&gt;制，探索降低 Stack Growth 成本的新方案。这场优化也让我们重新认识了 Go Runtime 中一个容易被忽略的性能瓶颈。</p> 
-
-<p><a href="https://blog.jetbrains.com/go/2026/11/25/go-by-goland-public-preview/">GoLand 现已在 Cursor 和 VS Code 中可用</a><br>代码导航功能：跳转到定义和实现，查找所有使用情况，并探索整个项目的调用和类型层次结构。代码分析功能：通过检查捕获问题，包括数据流分析，并应用快速修复。</p> 
-
-<p><a href="https://theconsensus.dev/p/2026/11/15/cgos-pointer-check.html">cgo 的指针检查问题 - The Consensus</a><br>cgo 进行语法转换时不知道 Go 类型，这几乎不可察觉的源代码更改可以将一个 48ns 的调用变成一个 76µs 的调用。</p> 
+<p><a href="https://mp.weixin.qq.com/s/KXMnjuTYRWm-GcV8ZzeDbg">AI开始自己找Bug！Datadog开源Rust测试神器</a><br>Datadog 最近开源了一个很有意思的项目：Ephyra。它用 Rust 实现，定位是面向 LLM 时代的属性测试（Property-Based Testing）框架。它最特别的地方在于：不只是让 AI 写测试，而是让 AI 持续优化测试策略，主动寻找程序中尚未被覆盖的代码路径！</p> 
 
 
 <h2>云原生技术</h2>
 
 
-<p><a href="https://mp.weixin.qq.com/s/CVbPmrzFkGgvmyote8PP-g">德国电商巨头OTTO为什么把后端迁移到Rust？</a><br>德国电商巨头 OTTO，正在把原来基于 TypeScript 和 Kotlin/Spring 的后端系统迁移到 Rust。这是一次由真实工程问题驱动的技术迁移。 OTTO 工程师 Falk Woldmann Lu 分享了迁移经历，其中有几个数据相当亮眼</p>
+<p><a href="https://mp.weixin.qq.com/s/fLxq-q4vJmBJdZZkMxxIdQ">Anthropic 用Claude完成一次大型 Rust迁移</a><br>Anthropic 最近分享了一次非常有意思的工程实践：他们把支撑 Claude、Claude Code 等产品的 Messages API，从 Python 全面迁移到了 Rust。结果相当惊人</p>
 
-<p><a href="https://www.cncf.io/blog/2026/11/25/%f0%9f%9a%80-the-story-behind-drone-2-my-kubecon-cloudnativecon-north-america-2026-keynote/">🚀 Drone 2 背后的故事：我在 KubeCon &#43; CloudNativeCon North America 2026 上的主题演讲</a><br>最后但同样重要的是，感谢 agent-substrate、kagent 和 agentgateway 社区！他们回答了我提出的每一个问题，响应速度极快，并且随时准备在需要时进行实时调试。没有你们，我无法完成这一切！💜</p>
-
-<p><a href="https://devblogs.microsoft.com/blog/do-inconsistent-docs-hurt-ai-coding-agents/">不一致的文档是否会影响 AI 编程智能体？</a><br>要了解矛盾对智能体的影响，您需要将从包含矛盾的页面工作的智能体与从已修复页面工作的相同智能体进行比较。</p>
-
-<p><a href="https://devblogs.microsoft.com/blog/is-sort-by-impact-just-vibes/">&#39;按影响排序&#39;只是感觉吗？</a><br>如果您要求智能体按影响或类似优先级或重要性等同样模糊的词对任何内容进行排序，请说明您的意思，例如预期收入或每天努力的价值。如果不这样做，智能体会为您选择一个，可能不是您想要的那个。</p>
-
-<p><a href="https://cetra3.github.io/blog/state-of-allocators-2026-finally-stabilised/">2026 年分配器状态 - 终于稳定了！</a><br>距离上一篇文章仅过去了几个月，我很高兴看到，在十年的停滞不前后，分配器终于稳定了！虽然感觉 never 类型确实抢了一些风头，rust `1.</p>
-
-<p><a href="https://www.infoq.com/news/2026/11/agoda-modular-monolith-framework/">Agoda 通过模块化架构将 API 代码审查时间减少 64% - InfoQ</a><br>Agoda 通过模块化架构将 API 代码审查时间减少了 64%。</p>
+<p><a href="https://www.docker.com/blog/prove-your-ai-agent-guardrails-work/">证明您的AI智能体防护措施有效</a><br>该策略名为&#39;bank-demo-filesystem&#39;，应用于组织级别，规则操作为允许，文件系统路径为&#39;~/sbx-bank-demo/workspace&#39;及其所有子目录，权限为读写，规则名称为&#39;bank-demo-workspace&#39;</p>
   
 
 <h2>AI</h2>
 
 
-<p><a href="https://mp.weixin.qq.com/s/iCNlwT6zCRCPdntBzaX-Uw">AI 时代，Uncle Bob 给程序员敲响警钟</a><br>AI 写代码越来越快，程序员还需要学习软件工程基本功吗？ 《Clean Code》作者 Uncle Bob（Robert C. Martin）在接受 Matt Pocock 专访时，给出了一个非常明确的答案：软件基本功不仅没有过时，反而比以往更加重要。</p>
+<p><a href="https://simonwillison.net/2026/Nov/26/sqlite3-rsync/">sqlite3_rsync：SQLite数据库远程复制工具</a><br>该协议的核心思想是副本将页面或页面组的加密哈希发送到原始端。原始端返回不同的页面内容，或者如果多页面哈希不匹配，则请求更细粒度的哈希。</p>
 
-<p><a href="https://simonwillison.net/2026/Nov/24/llm-inflection-points/">十二个月内的三个 LLM 转折点</a><br>测试人员指出，Claude Opus 4.5 能够处理模糊性并权衡利弊而无需人工指导。他们告诉我们，当面对复杂的多系统错误时，Opus 4.5 能够找出解决方案。他们说对于 Sonnet 4 来说几乎不可能完成的任务。</p>
-
-<p><a href="https://simonwillison.net/2026/Nov/24/astra-historical-mystery/">GPT 6.2 Astra 解决了一个历史之谜</a><br>但如果数学经验有任何指导意义，我们也可以预见，在明年春天或夏天的某个时候，我们将面临一种信心危机，因为我们努力理解如何应对能够做人类历史学家无法完成的事情的智能体系统。</p>
-
-<p><a href="https://claude.dev/blog/the-work-after-you-open-a-pr/">使用 Claude Code 发布的实用指南 / claude.dev 博客</a><br></p>
+<p><a href="https://thinkingmachines.ai/news/inkling-2-mini/">发布 Inkling 2 Mini 版！</a><br>今天，我们发布了 Inkling 2 Mini 版本。这款模型速度快、性能强大，体积也足够小，可以运行在笔记本电脑上。Inkling 2 Mini 是一种循环变换器模型，该模型对模型的中间层进行了三次迭代处理，以处理更多的参数。这使得模型能够在较少的参数数量下进行推理，从而在需要高质量推理能力的任务中得出正确的答案。</p>
 
 
 <h2>流行工具与项目</h2>
 
-
-<p><a href="https://github.com/intent-driven-dev/intent-driven-template">GitHub - intent-driven-dev/intent-driven-template: 用于意图驱动开发的 OpenSpec 模板，包含规范、ADR、C4 图、Gherkin、TDD、多模型对抗规范编写、领域词汇表和可重用工程工作流程。与 OpenCode、Codex CLI、Copilot CLI 和 Claude Code 兼容。支持规范即源。· GitHub</a><br></p>
 
 <p><a href="https://github.com/datazip-inc/olake-go">datazip-inc/olake-go</a><br>OLake Go: open-source replication from databases, Kafka and S3 to Apache Iceberg and Parquet. Sources: Postgres, MySQL, MongoDB, Oracle, MSSQL, DB2, Kafka, S3. Formerly datazip-inc/olake. Table mainte</p>
 
@@ -119,7 +101,7 @@ img {
 
 <p><a href="https://github.com/getarcaneapp/arcane">getarcaneapp/arcane</a><br>Modern Docker Management, Designed for Everyone</p>
 
-<p><a href="https://github.com/multica-ai/multica">multica-ai/multica</a><br>Make humans and AI agents work as one team — open-source and self-hostable.</p>
+<p><a href="https://github.com/multica-ai/multica">multica-ai/multica</a><br>Shared task board where people and AI coding agents work as teammates. Source-available, self-hostable.</p>
 
 <p><a href="https://github.com/opensandbox-group/OpenSandbox">opensandbox-group/OpenSandbox</a><br>Secure, Fast, and Extensible Sandbox runtime for AI agents.</p>
 

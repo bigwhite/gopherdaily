@@ -1,0 +1,126 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GopherDaily</title>
+
+<style>
+
+h1, h2 {
+  background-color: #4877d9;
+  color: white;
+  padding: 5px;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+p {
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 600px;
+}
+
+a {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
+
+	
+</head>
+
+<body>
+
+<div style="text-align: center; margin-bottom: 10px;">
+  <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202611/issue-20261126.html style="margin: 0 10px;">Web版</a> |
+  <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
+  <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
+  <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
+</div>
+
+<img src="http://image.tonybai.com/img/202011/gopher-daily-logo.png" width="600px"/>
+
+<h1>GopherDaily</h1>
+
+<div>
+<p class="issue" style="text-align:center;">
+  <span style="text-align:center;">20261126</span>
+</p>
+<p>每日一谚：Always test concurrent code using the race detector (go test -race). </p>
+</div>
+
+<hr/>
+
+<h2>Go技术生态</h2>
+
+
+<p><a href="https://tonybai.com/2026/11/26/go-1-28-gotip-cgo-bindings">Go 1.28 新特性抢先体验：gotip 玩转无 C 工具链的 cgo</a><br>Go 1.28 开发分支已经可以通过 gotip 提前体验 cgo bindings。本文以 Ubuntu 26.04 为实验环境，使用一个预编译的 C 动态 库，演示如何在不调用 GCC 的情况下构建 Go 程序，并进一步探索 C 函数、Struct、全局变量和自动生成 Binding 文件的使用方式。</p> 
+
+<p><a href="https://mp.weixin.qq.com/s/KXMnjuTYRWm-GcV8ZzeDbg">AI开始自己找Bug！Datadog开源Rust测试神器</a><br>Datadog 最近开源了一个很有意思的项目：Ephyra。它用 Rust 实现，定位是面向 LLM 时代的属性测试（Property-Based Testing）框架。它最特别的地方在于：不只是让 AI 写测试，而是让 AI 持续优化测试策略，主动寻找程序中尚未被覆盖的代码路径！</p> 
+
+
+<h2>云原生技术</h2>
+
+
+<p><a href="https://mp.weixin.qq.com/s/fLxq-q4vJmBJdZZkMxxIdQ">Anthropic 用Claude完成一次大型 Rust迁移</a><br>Anthropic 最近分享了一次非常有意思的工程实践：他们把支撑 Claude、Claude Code 等产品的 Messages API，从 Python 全面迁移到了 Rust。结果相当惊人</p>
+
+<p><a href="https://www.docker.com/blog/prove-your-ai-agent-guardrails-work/">证明您的AI智能体防护措施有效</a><br>该策略名为&#39;bank-demo-filesystem&#39;，应用于组织级别，规则操作为允许，文件系统路径为&#39;~/sbx-bank-demo/workspace&#39;及其所有子目录，权限为读写，规则名称为&#39;bank-demo-workspace&#39;</p>
+  
+
+<h2>AI</h2>
+
+
+<p><a href="https://simonwillison.net/2026/Nov/26/sqlite3-rsync/">sqlite3_rsync：SQLite数据库远程复制工具</a><br>该协议的核心思想是副本将页面或页面组的加密哈希发送到原始端。原始端返回不同的页面内容，或者如果多页面哈希不匹配，则请求更细粒度的哈希。</p>
+
+<p><a href="https://thinkingmachines.ai/news/inkling-2-mini/">发布 Inkling 2 Mini 版！</a><br>今天，我们发布了 Inkling 2 Mini 版本。这款模型速度快、性能强大，体积也足够小，可以运行在笔记本电脑上。Inkling 2 Mini 是一种循环变换器模型，该模型对模型的中间层进行了三次迭代处理，以处理更多的参数。这使得模型能够在较少的参数数量下进行推理，从而在需要高质量推理能力的任务中得出正确的答案。</p>
+
+
+<h2>流行工具与项目</h2>
+
+
+<p><a href="https://github.com/datazip-inc/olake-go">datazip-inc/olake-go</a><br>OLake Go: open-source replication from databases, Kafka and S3 to Apache Iceberg and Parquet. Sources: Postgres, MySQL, MongoDB, Oracle, MSSQL, DB2, Kafka, S3. Formerly datazip-inc/olake. Table mainte</p>
+
+<p><a href="https://github.com/vxcontrol/pentagi">vxcontrol/pentagi</a><br>Fully autonomous AI Agents system capable of performing complex penetration testing tasks</p>
+
+<p><a href="https://github.com/Tencent/LoopForge">Tencent/LoopForge</a><br>Self-hosted workflows for coding-agent delivery. Orchestrate CodeBuddy, Codex and Claude Code with scripts and human approval gates. Includes Local workflows for coding assistants.</p>
+
+<p><a href="https://github.com/agent-substrate/substrate">agent-substrate/substrate</a><br>Agent Substrate: the core system</p>
+
+<p><a href="https://github.com/getarcaneapp/arcane">getarcaneapp/arcane</a><br>Modern Docker Management, Designed for Everyone</p>
+
+<p><a href="https://github.com/multica-ai/multica">multica-ai/multica</a><br>Shared task board where people and AI coding agents work as teammates. Source-available, self-hostable.</p>
+
+<p><a href="https://github.com/opensandbox-group/OpenSandbox">opensandbox-group/OpenSandbox</a><br>Secure, Fast, and Extensible Sandbox runtime for AI agents.</p>
+
+<p><a href="https://github.com/nats-io/nats-server">nats-io/nats-server</a><br>High-Performance server for NATS.io, the cloud and edge native messaging system.</p>
+
+<p><a href="https://github.com/gastownhall/beads">gastownhall/beads</a><br>Beads - A memory upgrade for your coding agent</p>
+
+<p><a href="https://github.com/TencentCloud/CubeSandbox">TencentCloud/CubeSandbox</a><br>Instant, Concurrent, Secure &amp; Lightweight Sandbox for AI Agents.</p>
+
+
+<hr/>
+
+<div>
+<p>编辑:Tony Bai</p>
+<p>编辑主页:<a href="https://tonybai.com">tonybai.com</a></p>
+<p>GopherDaily项目:<a href="https://github.com/bigwhite/gopherdaily">github.com/bigwhite/gopherdaily</a></p>
+<p>Copyright 2019-2024 GopherDaily</p> 
+</div>
+
+</body>
+</html>
+
