@@ -45,7 +45,7 @@ img {
 
 <div style="text-align: center; margin-bottom: 10px;">
   <a href="https://gopherdaily.tonybai.com" style="margin: 0 10px;">主页</a> |
-  <a href=https://bigwhite.github.io/gopherdaily/202611/issue-20261126.html style="margin: 0 10px;">Web版</a> |
+  <a href=https://bigwhite.github.io/gopherdaily/202611/issue-20261127.html style="margin: 0 10px;">Web版</a> |
   <a href="https://gopherdaily.tonybai.com/subscribe" style="margin: 0 10px;">订阅</a> |
   <a href="https://gopherdaily.tonybai.com/more" style="margin: 0 10px;">归档</a> |
   <a href="https://gopherdaily.tonybai.com/feed" style="margin: 0 10px;">Feed</a>
@@ -57,9 +57,9 @@ img {
 
 <div>
 <p class="issue" style="text-align:center;">
-  <span style="text-align:center;">20261126</span>
+  <span style="text-align:center;">20261127</span>
 </p>
-<p>每日一谚：Always test concurrent code using the race detector (go test -race). </p>
+<p>每日一谚：Avoid naked returns in medium-to-long functions </p>
 </div>
 
 <hr/>
@@ -67,29 +67,39 @@ img {
 <h2>Go技术生态</h2>
 
 
-<p><a href="https://tonybai.com/2026/11/26/go-1-28-gotip-cgo-bindings">Go 1.28 新特性抢先体验：gotip 玩转无 C 工具链的 cgo</a><br>Go 1.28 开发分支已经可以通过 gotip 提前体验 cgo bindings。本文以 Ubuntu 26.04 为实验环境，使用一个预编译的 C 动态 库，演示如何在不调用 GCC 的情况下构建 Go 程序，并进一步探索 C 函数、Struct、全局变量和自动生成 Binding 文件的使用方式。</p> 
+<p><a href="https://mp.weixin.qq.com/s/4zEKR45i3CiJa4YT4fqBRQ">Go 女神的癌症自白，给所有程序员敲响警钟</a><br>11 月 26 日，Google 工程师、前 Go Team 成员 Jaana Dogan（@rakyll）在 X 上发布了一条令人心碎的消息： “我正在慢动作般地死于癌症。” 她说，目前最重要的事情，是想办法挽救自己的生命，并尽可能好地度过每一刻。虽然病情仍然可以治疗，但精神上的折磨实在太沉重了。</p> 
 
-<p><a href="https://mp.weixin.qq.com/s/KXMnjuTYRWm-GcV8ZzeDbg">AI开始自己找Bug！Datadog开源Rust测试神器</a><br>Datadog 最近开源了一个很有意思的项目：Ephyra。它用 Rust 实现，定位是面向 LLM 时代的属性测试（Property-Based Testing）框架。它最特别的地方在于：不只是让 AI 写测试，而是让 AI 持续优化测试策略，主动寻找程序中尚未被覆盖的代码路径！</p> 
+<p><a href="https://tonybai.com/2026/11/27/rex-terminal-multiplexer-for-ai-agent-era">Rex：AI Agent 时代，为什么我们需要重新思考 Terminal Multiplexer？</a><br>AI Agent 正在让终端从单人交互界面演变为多进程、多 Agent 协同运行环境。传统 Terminal Multiplexer 的价值因此被重新&gt;放大。本文从 Superlogical 的 Rex 出发，分析 tmux 的 Compositing 与 Rex 的 Mirroring 两种架构，介绍 libghostty、Server/Client、Block API 和 OSC 7501 等关键设计，并讨论 Rex 与 Herdr、Orca 的产品定位差异。Rex 最值得关注的地方，可能不是它现在拥有多少功能，而 是它试图把 Terminal Multiplexer 建设成 AI Agent 时代的一种基础设施原语。</p> 
 
 
 <h2>云原生技术</h2>
 
 
-<p><a href="https://mp.weixin.qq.com/s/fLxq-q4vJmBJdZZkMxxIdQ">Anthropic 用Claude完成一次大型 Rust迁移</a><br>Anthropic 最近分享了一次非常有意思的工程实践：他们把支撑 Claude、Claude Code 等产品的 Messages API，从 Python 全面迁移到了 Rust。结果相当惊人</p>
+<p><a href="https://mp.weixin.qq.com/s/tVBSHQExFKvS3QDoM5kCSw">VictoriaMetrics 要推出自己的Grafana 了？</a><br>在可观测性领域，VictoriaMetrics 一直以高性能、低资源消耗的时序数据库而闻名。但它显然不满足于只做数据存储和查询。 最近，VictoriaMetrics 正在 VictoriaStack 中推出一个全新的可视化工具：Visum。</p>
 
-<p><a href="https://www.docker.com/blog/prove-your-ai-agent-guardrails-work/">证明您的AI智能体防护措施有效</a><br>该策略名为&#39;bank-demo-filesystem&#39;，应用于组织级别，规则操作为允许，文件系统路径为&#39;~/sbx-bank-demo/workspace&#39;及其所有子目录，权限为读写，规则名称为&#39;bank-demo-workspace&#39;</p>
+<p><a href="https://seangoedecke.com/who-gets-to-decide-if-something-is-written-by-ai/">谁来决定某物是否由AI编写？</a><br>事实上，对工具型解决方案的不信任是完全理性的。过去几十年的历史已经朝着可理解的基于工具的流程转变，而远离了混乱的基于社区的流程。</p>
+
+<p><a href="https://vitalik.eth.limo/general/2026/11/26/a_shallow_dive_into_open-source_chip_design.html">开源芯片设计的浅析</a><br>本文对开源芯片设计进行了简要探讨。如果你想全面了解、优化或验证任何系统中发生的情况，这篇文章将提供基础知识和见解。</p>
+
+<p><a href="https://janlukas.blog/posts/ai-self-hosting">AI让自托管再次变得有趣</a><br>多年来我一直进行自托管。AI技术为自托管带来了新的乐趣和可能性，让这一过程变得更加简单和有趣。</p>
+
+<p><a href="https://www.datadoghq.com/blog/engineering/continuous-formal-spec-validation/">我们如何在生产环境中持续验证形式化规范 | Datadog</a><br>形式化规范可以帮助工程师推理复杂的分布式系统并验证其行为。Datadog分享了他们在生产环境中持续验证形式化规范的方法和实践。</p>
   
 
 <h2>AI</h2>
 
 
-<p><a href="https://simonwillison.net/2026/Nov/26/sqlite3-rsync/">sqlite3_rsync：SQLite数据库远程复制工具</a><br>该协议的核心思想是副本将页面或页面组的加密哈希发送到原始端。原始端返回不同的页面内容，或者如果多页面哈希不匹配，则请求更细粒度的哈希。</p>
+<p><a href="https://quillette.com/2026/11/23/will-we-all-go-together-when-we-go-ai-alignment-scott-alexander-doomerism/">当我们离开时，我们会一起走吗？</a><br>文章探讨了AI对人类未来的影响。Consensus-1在人类周围扩张，用工厂和太阳能电池板覆盖草原和冰盖，引发了对人类命运的思考。</p>
 
-<p><a href="https://thinkingmachines.ai/news/inkling-2-mini/">发布 Inkling 2 Mini 版！</a><br>今天，我们发布了 Inkling 2 Mini 版本。这款模型速度快、性能强大，体积也足够小，可以运行在笔记本电脑上。Inkling 2 Mini 是一种循环变换器模型，该模型对模型的中间层进行了三次迭代处理，以处理更多的参数。这使得模型能够在较少的参数数量下进行推理，从而在需要高质量推理能力的任务中得出正确的答案。</p>
+<p><a href="https://tldraw.dev/blog/building-with-the-tldraw-mcp">tldraw MCP服务器：将您的智能体连接到tldraw.com</a><br>今天我们发布了tldraw MCP服务器，这是一个将AI智能体连接到tldraw.com的创新解决方案，为创意工作流程提供了新的可能性。</p>
+
+<p><a href="https://staysaasy.com/management-in-the-age-of-ai/">AI时代的管理</a><br>每隔几个月就会有人宣布管理已死。大型科技公司正处于&#34;大扁平化&#34;的进程中，AI正在改变管理的方式和本质。</p>
 
 
 <h2>流行工具与项目</h2>
 
+
+<p><a href="https://github.com/Feasible-Analytics/app.feasible.lol">Feasible-Analytics/app.feasible.lol</a><br>Feasible 是一个不用 Cookie 的网站访问统计工具，可以自托管。整个服务就是一个 Go 二进制文件，数据库用 modernc.org/sqlite，纯 Go，不需要 cgo，所以 Linux、macOS 和 Windows 的 amd64、arm64 六个版本都是直接交叉编译出来的。每个账户的数据放在单独的一个 SQLite 文件里，不需要 PostgreSQL 或 ClickHouse，也不需要 Docker。内置的 MCP 服务也是 Go 写的，可以在 Claude 里直接问，上周流量为什么掉了</p>
 
 <p><a href="https://github.com/datazip-inc/olake-go">datazip-inc/olake-go</a><br>OLake Go: open-source replication from databases, Kafka and S3 to Apache Iceberg and Parquet. Sources: Postgres, MySQL, MongoDB, Oracle, MSSQL, DB2, Kafka, S3. Formerly datazip-inc/olake. Table mainte</p>
 
